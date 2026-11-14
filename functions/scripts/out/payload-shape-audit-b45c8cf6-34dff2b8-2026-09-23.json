@@ -1,0 +1,908 @@
+{
+  "generatedAt": "2026-09-22T21:40:00.080Z",
+  "scans": {
+    "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+      "leafPaths": {
+        "raw": 3296,
+        "folded": 1008
+      },
+      "distinctObjectShapes": 58,
+      "shapes": [
+        {
+          "signature": "cvPct,max,mean,median,min,n,p10,p90,sourceCadenceUpdates",
+          "count": 80,
+          "examplePath": "body.findings.channels.battery_temp_c.INIT",
+          "fieldCount": 9,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "attested,category,confidence,entersFault,entersGrade,evidence,evidenceUnit,healthBearing,kind,notMeasuredReason,outcome,raw,testId,unstable",
+          "count": 73,
+          "examplePath": "body.testResults",
+          "fieldCount": 14,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categoryName,componentName,rawValue,rawValueUnit,status,testId",
+          "count": 66,
+          "examplePath": "body.testResults.raw",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,id,severity,title",
+          "count": 28,
+          "examplePath": "body.categoryStates.issues",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categoryName,componentName,notes,rawValue,rawValueUnit,status,testId",
+          "count": 19,
+          "examplePath": "body.testResults.raw",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "field,reason,scope,value",
+          "count": 13,
+          "examplePath": "body.findings.notMeasuredFields",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,coverage,declaredCount,deterministicLetter,executedCount,failCount,gatesApplied,passCount,score,state,testIds,warningCount",
+          "count": 13,
+          "examplePath": "body.categoryStates.categories.thermal",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "attested,category,confidence,entersFault,entersGrade,evidence,evidenceUnit,healthBearing,kind,notMeasuredReason,outcome,permission,raw,testId,unstable",
+          "count": 12,
+          "examplePath": "body.testResults",
+          "fieldCount": 15,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "BURST,COMBINED,COOLDOWN,CPU_SUSTAINED,GPU_SUSTAINED,INIT,MEMORY,STORAGE",
+          "count": 10,
+          "examplePath": "body.findings.channels.battery_temp_c",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedThisLetter,category,ceilingLetter,coveragePct,name,source,status",
+          "count": 9,
+          "examplePath": "body.categoryStates.categories.cpu.gatesApplied",
+          "fieldCount": 9,
+          "label": "gate على مستوى الفئة (categories.<cat>.gatesApplied[])"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedOverall,category,ceilingLetter,coveragePct,name,note,source,status",
+          "count": 9,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 10,
+          "label": "gate overall + note"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedOverall,category,ceilingLetter,coveragePct,name,source,status",
+          "count": 5,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 9,
+          "label": "gate على مستوى overall (overall.gatesApplied[])"
+        },
+        {
+          "signature": "class,criterion,entersFault,entersGrade,found,label,rawValue,rawValueUnit,referenceCvPct,referenceNote,testStatus",
+          "count": 4,
+          "examplePath": "body.findings.unstableMeasurements.C-04",
+          "fieldCount": 11,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cappedOverall,category,ceilingLetter,name,source,status",
+          "count": 4,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "meanWindowMaxRatio,medianWindowMaxRatio,minWindowMaxRatio,windows",
+          "count": 3,
+          "examplePath": "body.findings.sustainedCeiling.phase3",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cappedThisLetter,category,ceilingLetter,name,source,status",
+          "count": 3,
+          "examplePath": "body.categoryStates.categories.cpu.gatesApplied",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,evidence,evidenceUnit,id,severity,title",
+          "count": 3,
+          "examplePath": "body.categoryStates.issues",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "median,n",
+          "count": 2,
+          "examplePath": "body.findings.graphics.phase4",
+          "fieldCount": 2,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "reason,status",
+          "count": 2,
+          "examplePath": "body.findings.battery.consist",
+          "fieldCount": 2,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cappedThisLetter,category,ceilingLetter,name,note,source,status",
+          "count": 2,
+          "examplePath": "body.categoryStates.categories.security.gatesApplied",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categoryStates,findings,isFreeTrial,language,previousScan,priorRejection,scanId,testResults",
+          "count": 1,
+          "examplePath": "body",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "advisoryMeasurements,battery,channels,graphics,meta,notMeasuredFields,notMeasuredReason,perChannelUpdateCount,status,storage,sustainedCeiling,thermal,unstableMeasurements",
+          "count": 1,
+          "examplePath": "body.findings",
+          "fieldCount": 13,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "api,deviceModel,expectedSamples,fieldsVersion,sampleCount,scanId,wallMs",
+          "count": 1,
+          "examplePath": "body.findings.meta",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "battery_current_ua,battery_level_pct,battery_temp_c,battery_voltage_mv,cpu_freq_max_khz,cpu_usage_pct,gpu_fps,memory_bandwidth_mbps,package_power_mw,storage_throughput_mbps",
+          "count": 1,
+          "examplePath": "body.findings.channels",
+          "fieldCount": 10,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "battery_current_ua,battery_level_pct,battery_temp_c,battery_voltage_mv",
+          "count": 1,
+          "examplePath": "body.findings.perChannelUpdateCount",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "combined,notMeasuredReason,peakFreqKhz,peakFreqSource,phase3,phase5,recoveryPhase7Ratio,status",
+          "count": 1,
+          "examplePath": "body.findings.sustainedCeiling",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "notMeasuredReason,phase4,phase4DriftRatio,phase5,ratioPhase5OverPhase4,status,vsyncLockFraction120,vsyncLockFraction60,vsyncLockFraction90,vsyncLockSampleCount",
+          "count": 1,
+          "examplePath": "body.findings.graphics",
+          "fieldCount": 10,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cap,ccDerived,ccUpdates,charge_counter,consist,designCapacityMah,fieldsVersion,info,qCcMah,qIntMah,socAtEnd,socAtStart",
+          "count": 1,
+          "examplePath": "body.findings.battery",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "dischargeRateUnderLoadMa,rho,rhoNote,voltageStabilityGate,voltageStabilityMv,voltageStabilityNote,voltageStabilitySocAtStart",
+          "count": 1,
+          "examplePath": "body.findings.battery.info",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "nSamples,passes,sourceCadenceUpdates",
+          "count": 1,
+          "examplePath": "body.findings.battery.info.voltageStabilityGate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "series,snapshot",
+          "count": 1,
+          "examplePath": "body.findings.battery.charge_counter",
+          "fieldCount": 2,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "note,rawValue,reason,status,unit,unitSource",
+          "count": 1,
+          "examplePath": "body.findings.battery.charge_counter.snapshot",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "rawValues,reason,status,unit,unitSource",
+          "count": 1,
+          "examplePath": "body.findings.battery.charge_counter.series",
+          "fieldCount": 5,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "capacityDerived,inCacheMbps,kneeGb,kneeState,note,postCacheMbps,status",
+          "count": 1,
+          "examplePath": "body.findings.storage",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "availableGb,availablePct,source,status,totalGb",
+          "count": 1,
+          "examplePath": "body.findings.storage.capacityDerived",
+          "fieldCount": 5,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "batteryTempRise,thermalHeadroomPeak,thermalStatusMax",
+          "count": 1,
+          "examplePath": "body.findings.thermal",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cadenceUpdatesWholeScan,nSamplesWholeScan,ratePerMinPhases345,reason,status,valueC",
+          "count": 1,
+          "examplePath": "body.findings.thermal.batteryTempRise",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "C-03,C-04,S-04,S-05",
+          "count": 1,
+          "examplePath": "body.findings.unstableMeasurements",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "S-06",
+          "count": 1,
+          "examplePath": "body.findings.advisoryMeasurements",
+          "fieldCount": 1,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "class,entersFault,entersGrade,found,label,rawValue,rawValueUnit,testStatus",
+          "count": 1,
+          "examplePath": "body.findings.advisoryMeasurements.S-06",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categories,issues,overall",
+          "count": 1,
+          "examplePath": "body.categoryStates",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "audio,battery,camera,cellular,cpu,display,gps,gpu,input,memory,security,sensors,storage,thermal,wireless",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories",
+          "fieldCount": 15,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "batteryAggregate,batteryIndicators,category,confidence,coverage,declaredCount,deterministicLetter,executedCount,failCount,gatesApplied,noLetterReason,passCount,score,state,tag,verdictLabel,warningCount",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery",
+          "fieldCount": 17,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "BAT-COULOMB,BAT-FCC,BAT-R-APPARENT,BAT-THERMAL-EFF",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "comparedToModelBaseline,deltaTC,energyWh,gate,id,note,socAtWindowEnd,socAtWindowStart,status,unit,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-THERMAL-EFF",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cadenceWhole,passes,required",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-THERMAL-EFF.gate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "gate,iUnderLoadUa,id,socAtWindowEnd,socAtWindowStart,status,unit,unitCaveat,vFirst10sMv,vUnderLoadMv,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-R-APPARENT",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "nSamples,passes,required,sourceCadenceUpdates",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-R-APPARENT.gate",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "designCapacityMah,gate,id,intervalCount,ratioToDesign,socAtWindowEnd,socAtWindowStart,status,unit,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-FCC",
+          "fieldCount": 11,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "intervalCount,passes,required",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-FCC.gate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "consistencyGateNote,consistencyK,gate,id,socAtWindowEnd,socAtWindowStart,status,unit,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-COULOMB",
+          "fieldCount": 10,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "passes,qIntMah,required",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-COULOMB.gate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "confidence,displayGrade,judgment",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryAggregate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,coverage,declaredCount,deterministicLetter,executedCount,failCount,floorApplied,gatesApplied,passCount,score,state,testIds,warningCount",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.security",
+          "fieldCount": 13,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedThisLetter,category,ceilingLetter,coveragePct,name,note,source,status",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.security.gatesApplied",
+          "fieldCount": 10,
+          "label": "gate فئة + note (\"السقف أسوأ من الحرف الأساسي\")"
+        },
+        {
+          "signature": "coverage,gatesApplied,harnessError,harnessErrorReason,letter,letterSource,llmOverall,measuredCategoriesMean,noDataAtAll,partialAssessment,partialAssessmentTag,partialBadLetterUngated",
+          "count": 1,
+          "examplePath": "body.categoryStates.overall",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "coveragePct,label,text",
+          "count": 1,
+          "examplePath": "body.categoryStates.overall.partialAssessmentTag",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cappedOverall,category,ceilingLetter,name,note,source,status",
+          "count": 1,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        }
+      ],
+      "findingsKeyPathCount": 985
+    },
+    "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+      "leafPaths": {
+        "raw": 3300,
+        "folded": 1008
+      },
+      "distinctObjectShapes": 58,
+      "shapes": [
+        {
+          "signature": "cvPct,max,mean,median,min,n,p10,p90,sourceCadenceUpdates",
+          "count": 80,
+          "examplePath": "body.findings.channels.battery_temp_c.INIT",
+          "fieldCount": 9,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "attested,category,confidence,entersFault,entersGrade,evidence,evidenceUnit,healthBearing,kind,notMeasuredReason,outcome,raw,testId,unstable",
+          "count": 73,
+          "examplePath": "body.testResults",
+          "fieldCount": 14,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categoryName,componentName,rawValue,rawValueUnit,status,testId",
+          "count": 66,
+          "examplePath": "body.testResults.raw",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,id,severity,title",
+          "count": 27,
+          "examplePath": "body.categoryStates.issues",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categoryName,componentName,notes,rawValue,rawValueUnit,status,testId",
+          "count": 19,
+          "examplePath": "body.testResults.raw",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "field,reason,scope,value",
+          "count": 13,
+          "examplePath": "body.findings.notMeasuredFields",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "attested,category,confidence,entersFault,entersGrade,evidence,evidenceUnit,healthBearing,kind,notMeasuredReason,outcome,permission,raw,testId,unstable",
+          "count": 12,
+          "examplePath": "body.testResults",
+          "fieldCount": 15,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,coverage,declaredCount,deterministicLetter,executedCount,failCount,gatesApplied,passCount,score,state,testIds,warningCount",
+          "count": 12,
+          "examplePath": "body.categoryStates.categories.thermal",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "BURST,COMBINED,COOLDOWN,CPU_SUSTAINED,GPU_SUSTAINED,INIT,MEMORY,STORAGE",
+          "count": 10,
+          "examplePath": "body.findings.channels.battery_temp_c",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedOverall,category,ceilingLetter,coveragePct,name,note,source,status",
+          "count": 9,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 10,
+          "label": "gate overall + note"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedThisLetter,category,ceilingLetter,coveragePct,name,source,status",
+          "count": 8,
+          "examplePath": "body.categoryStates.categories.cpu.gatesApplied",
+          "fieldCount": 9,
+          "label": "gate على مستوى الفئة (categories.<cat>.gatesApplied[])"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedOverall,category,ceilingLetter,coveragePct,name,source,status",
+          "count": 5,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 9,
+          "label": "gate على مستوى overall (overall.gatesApplied[])"
+        },
+        {
+          "signature": "class,criterion,entersFault,entersGrade,found,label,rawValue,rawValueUnit,referenceCvPct,referenceNote,testStatus",
+          "count": 4,
+          "examplePath": "body.findings.unstableMeasurements.C-04",
+          "fieldCount": 11,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cappedOverall,category,ceilingLetter,name,source,status",
+          "count": 4,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,evidence,evidenceUnit,id,severity,title",
+          "count": 4,
+          "examplePath": "body.categoryStates.issues",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "meanWindowMaxRatio,medianWindowMaxRatio,minWindowMaxRatio,windows",
+          "count": 3,
+          "examplePath": "body.findings.sustainedCeiling.phase3",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cappedThisLetter,category,ceilingLetter,name,source,status",
+          "count": 3,
+          "examplePath": "body.categoryStates.categories.cpu.gatesApplied",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "median,n",
+          "count": 2,
+          "examplePath": "body.findings.graphics.phase4",
+          "fieldCount": 2,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "reason,status",
+          "count": 2,
+          "examplePath": "body.findings.battery.consist",
+          "fieldCount": 2,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "category,coverage,declaredCount,deterministicLetter,executedCount,failCount,floorApplied,gatesApplied,passCount,score,state,testIds,warningCount",
+          "count": 2,
+          "examplePath": "body.categoryStates.categories.storage",
+          "fieldCount": 13,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "allNonMeasurement,belowThreshold,cappedThisLetter,category,ceilingLetter,coveragePct,name,note,source,status",
+          "count": 2,
+          "examplePath": "body.categoryStates.categories.storage.gatesApplied",
+          "fieldCount": 10,
+          "label": "gate فئة + note (\"السقف أسوأ من الحرف الأساسي\")"
+        },
+        {
+          "signature": "cappedThisLetter,category,ceilingLetter,name,note,source,status",
+          "count": 2,
+          "examplePath": "body.categoryStates.categories.security.gatesApplied",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categoryStates,findings,isFreeTrial,language,previousScan,priorRejection,scanId,testResults",
+          "count": 1,
+          "examplePath": "body",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "advisoryMeasurements,battery,channels,graphics,meta,notMeasuredFields,notMeasuredReason,perChannelUpdateCount,status,storage,sustainedCeiling,thermal,unstableMeasurements",
+          "count": 1,
+          "examplePath": "body.findings",
+          "fieldCount": 13,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "api,deviceModel,expectedSamples,fieldsVersion,sampleCount,scanId,wallMs",
+          "count": 1,
+          "examplePath": "body.findings.meta",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "battery_current_ua,battery_level_pct,battery_temp_c,battery_voltage_mv,cpu_freq_max_khz,cpu_usage_pct,gpu_fps,memory_bandwidth_mbps,package_power_mw,storage_throughput_mbps",
+          "count": 1,
+          "examplePath": "body.findings.channels",
+          "fieldCount": 10,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "battery_current_ua,battery_level_pct,battery_temp_c,battery_voltage_mv",
+          "count": 1,
+          "examplePath": "body.findings.perChannelUpdateCount",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "combined,notMeasuredReason,peakFreqKhz,peakFreqSource,phase3,phase5,recoveryPhase7Ratio,status",
+          "count": 1,
+          "examplePath": "body.findings.sustainedCeiling",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "notMeasuredReason,phase4,phase4DriftRatio,phase5,ratioPhase5OverPhase4,status,vsyncLockFraction120,vsyncLockFraction60,vsyncLockFraction90,vsyncLockSampleCount",
+          "count": 1,
+          "examplePath": "body.findings.graphics",
+          "fieldCount": 10,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cap,ccDerived,ccUpdates,charge_counter,consist,designCapacityMah,fieldsVersion,info,qCcMah,qIntMah,socAtEnd,socAtStart",
+          "count": 1,
+          "examplePath": "body.findings.battery",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "dischargeRateUnderLoadMa,rho,rhoNote,voltageStabilityGate,voltageStabilityMv,voltageStabilityNote,voltageStabilitySocAtStart",
+          "count": 1,
+          "examplePath": "body.findings.battery.info",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "nSamples,passes,sourceCadenceUpdates",
+          "count": 1,
+          "examplePath": "body.findings.battery.info.voltageStabilityGate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "series,snapshot",
+          "count": 1,
+          "examplePath": "body.findings.battery.charge_counter",
+          "fieldCount": 2,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "note,rawValue,reason,status,unit,unitSource",
+          "count": 1,
+          "examplePath": "body.findings.battery.charge_counter.snapshot",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "rawValues,reason,status,unit,unitSource",
+          "count": 1,
+          "examplePath": "body.findings.battery.charge_counter.series",
+          "fieldCount": 5,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "capacityDerived,inCacheMbps,kneeGb,kneeState,note,postCacheMbps,status",
+          "count": 1,
+          "examplePath": "body.findings.storage",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "availableGb,availablePct,source,status,totalGb",
+          "count": 1,
+          "examplePath": "body.findings.storage.capacityDerived",
+          "fieldCount": 5,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "batteryTempRise,thermalHeadroomPeak,thermalStatusMax",
+          "count": 1,
+          "examplePath": "body.findings.thermal",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cadenceUpdatesWholeScan,nSamplesWholeScan,ratePerMinPhases345,reason,status,valueC",
+          "count": 1,
+          "examplePath": "body.findings.thermal.batteryTempRise",
+          "fieldCount": 6,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "C-03,C-04,S-04,S-05",
+          "count": 1,
+          "examplePath": "body.findings.unstableMeasurements",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "S-06",
+          "count": 1,
+          "examplePath": "body.findings.advisoryMeasurements",
+          "fieldCount": 1,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "class,entersFault,entersGrade,found,label,rawValue,rawValueUnit,testStatus",
+          "count": 1,
+          "examplePath": "body.findings.advisoryMeasurements.S-06",
+          "fieldCount": 8,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "categories,issues,overall",
+          "count": 1,
+          "examplePath": "body.categoryStates",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "audio,battery,camera,cellular,cpu,display,gps,gpu,input,memory,security,sensors,storage,thermal,wireless",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories",
+          "fieldCount": 15,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "batteryAggregate,batteryIndicators,category,confidence,coverage,declaredCount,deterministicLetter,executedCount,failCount,gatesApplied,noLetterReason,passCount,score,state,tag,verdictLabel,warningCount",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery",
+          "fieldCount": 17,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "BAT-COULOMB,BAT-FCC,BAT-R-APPARENT,BAT-THERMAL-EFF",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "comparedToModelBaseline,deltaTC,energyWh,gate,id,note,socAtWindowEnd,socAtWindowStart,status,unit,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-THERMAL-EFF",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cadenceWhole,passes,required",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-THERMAL-EFF.gate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "gate,iUnderLoadUa,id,socAtWindowEnd,socAtWindowStart,status,unit,unitCaveat,vFirst10sMv,vUnderLoadMv,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-R-APPARENT",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "nSamples,passes,required,sourceCadenceUpdates",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-R-APPARENT.gate",
+          "fieldCount": 4,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "designCapacityMah,gate,id,intervalCount,ratioToDesign,socAtWindowEnd,socAtWindowStart,status,unit,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-FCC",
+          "fieldCount": 11,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "intervalCount,passes,required",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-FCC.gate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "consistencyGateNote,consistencyK,gate,id,socAtWindowEnd,socAtWindowStart,status,unit,value,verdict",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-COULOMB",
+          "fieldCount": 10,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "passes,qIntMah,required",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryIndicators.BAT-COULOMB.gate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "confidence,displayGrade,judgment",
+          "count": 1,
+          "examplePath": "body.categoryStates.categories.battery.batteryAggregate",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "coverage,gatesApplied,harnessError,harnessErrorReason,letter,letterSource,llmOverall,measuredCategoriesMean,noDataAtAll,partialAssessment,partialAssessmentTag,partialBadLetterUngated",
+          "count": 1,
+          "examplePath": "body.categoryStates.overall",
+          "fieldCount": 12,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "coveragePct,label,text",
+          "count": 1,
+          "examplePath": "body.categoryStates.overall.partialAssessmentTag",
+          "fieldCount": 3,
+          "label": "(بلا تسمية يدوية)"
+        },
+        {
+          "signature": "cappedOverall,category,ceilingLetter,name,note,source,status",
+          "count": 1,
+          "examplePath": "body.categoryStates.overall.gatesApplied",
+          "fieldCount": 7,
+          "label": "(بلا تسمية يدوية)"
+        }
+      ],
+      "findingsKeyPathCount": 985
+    }
+  },
+  "findingsKeyDiffBetweenScans": {
+    "onlyIn_b45c8cf6": [],
+    "onlyIn_34dff2b8": [],
+    "note": "أي مفتاح هنا موجود في فحص واحد وغائب عن الآخر — دليل تجريبي مباشر أنه مفتاح ديناميكي (اسم قناة/معرّف اختبار)، لا اسم ثابت في findings.js"
+  },
+  "currentExclusionList": {
+    "category": [
+      "finalLetter",
+      "adjustmentEvidence",
+      "adjustmentReason",
+      "adjustmentApplied",
+      "llmSuggestedLetter"
+    ],
+    "overall": [
+      "adjustments",
+      "disputed"
+    ]
+  },
+  "a104Reference": {
+    "file": "functions/src/analysis/analyzeDevice.js",
+    "functionStartLine": 61,
+    "function": "buildCategoryEntryForStorage",
+    "commonFieldsListed": [
+      "state",
+      "letter",
+      "letterSource",
+      "adjustmentReason",
+      "adjustmentEvidence",
+      "coverage",
+      "reason",
+      "letterCeilingReason",
+      "testIds"
+    ],
+    "commonFieldsCount": 9,
+    "batteryExtraFieldsListed": [
+      "confidence",
+      "tag",
+      "indicators",
+      "socAtStart",
+      "socAtEnd"
+    ],
+    "batteryExtraFieldsCount": 5,
+    "totalFieldsListedForBatteryCategory": 14
+  },
+  "middleGroundOption": {
+    "description": "قائمة بيضاء على نوع \"كائن gate\" فقط (يُعرَّف بنيوياً: name+ceilingLetter+status معاً) — كل نوع آخر (findings/testResults/categoryEntry/إلخ) يمرّ بلا قائمة",
+    "gateObjectsFoundByStructure": 34,
+    "currentGateObjectFieldUnion": [
+      "allNonMeasurement",
+      "belowThreshold",
+      "cappedOverall",
+      "cappedThisLetter",
+      "category",
+      "ceilingLetter",
+      "coveragePct",
+      "name",
+      "note",
+      "source",
+      "status"
+    ],
+    "currentGateObjectFieldCount": 11,
+    "proposedMinimalGateFields": [
+      "name",
+      "category",
+      "ceilingLetter",
+      "status",
+      "source"
+    ],
+    "proposedMinimalGateFieldCount": 5,
+    "note": "source مُدرَج هنا كـ\"سبب موجز\" مرشَّح — راجع تقرير المهمّة لمناقشة هل هو تفصيل أم الحاجة نفسها؛ لم يُطبَّق شيء هنا، قياس فقط"
+  }
+}

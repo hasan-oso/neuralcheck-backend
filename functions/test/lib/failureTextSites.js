@@ -1,0 +1,137 @@
+'use strict';
+
+// failureTextSites — جرد مواضع تنقية نصّ الخطأ في functions/src (S-SUB / A-SUB الموجة الأولى، البند ١٣، 2026-10-17 +03). مصدر واحد للقائمتين (القاعدة 24):
+//   SANITIZED_SITES  المواضع التي تطبع أو تُرجع نصّ خطأ جاء من مزوّد (Gemini/DeepSeek/Firestore/FCM/SMTP/Storage/puppeteer) فتُنقّيه بـutils/failureText.js (sanitizeFailureText).
+//   RESIDUAL         كل سطر ما زال يحمل `.message` أو `.stack` أو `String(err)` في functions/src — لا يمرّ إلا بسبب مكتوب. أيّ سطر ثالث يخرج عن القائمتين يُسقط test/failureTextSites.test.js.
+// القرار: «تنقية في أول التزام للخادم» (قرار المستخدم ١٣، منقول عن أمر المنسّق order-backend-engineer-asub-wave1-2026-10-17.md — غير متحقَّق من هذا المستودع). والمنقّي الموجود لا جديد (الأمر).
+
+/** [الملفّ، النصّ الحرفي الذي يجب أن يرد، عدد وروده]. تُقارَن بعد نزع التعليقات. */
+const SANITIZED_SITES = [
+  ['src/admin/runConsistencyTest.js', 'error: failureTextOnce(err),', 1],
+  ['src/analysis/analyzeDevice.js', 'serverSamplesSavePromise رمت رغم توثيقها ألّا ترمي — ${failText(e)}', 1],
+  ['src/analysis/analyzeDevice.js', 'profile update failed: ${failText(e)}', 1],
+  ['src/analysis/analyzeDevice.js', 'the reservation: ${failText(releaseErr)}', 1],
+  ['src/analysis/analyzeDevice.js', 'claim cleanup failed for ${hashIdForLog(scanId)}:`,\n                failText(e));', 1],
+  ['src/analysis/callAI.js', 'primaryError = failureTextOnce(err);', 2],
+  ['src/analysis/callAI.js', '`${failureTextOnce(geminiErr)}`,', 2],
+  ['src/analysis/callAI.js', 'throw markFailureTextSanitized(new Error(', 2],
+  ['src/analysis/callDeepSeek.js', 'markFailureTextSanitized(this);', 1],
+  ['src/analysis/callGemini.js', 'markFailureTextSanitized(this);', 1],
+  ['src/analysis/callDeepSeek.js', '(limit=${DEEPSEEK_TIMEOUT_MS}ms): ${sanitizeFailureText(err)}`);', 1],
+  ['src/analysis/callDeepSeek.js', '`${sanitizeFailureText(err)}`,\n        isTimeout', 1],
+  ['src/analysis/callDeepSeek.js', 'const errText = sanitizeFailureText(Object.assign(new Error(errBody), {code: response.status}));', 1],
+  ['src/analysis/callDeepSeek.js', '`DeepSeek HTTP ${response.status}: ${errText}`,', 1],
+  ['src/analysis/callDeepSeek.js', '`${errText}`);', 1],
+  ['src/analysis/callDeepSeek.js', 'const em = sanitizeFailureText(new Error(envelope.error.message ||', 1],
+  ['src/analysis/callGemini.js', '`${sanitizeFailureText(err)}`);', 1],
+  ['src/analysis/callGemini.js', '`Gemini call failed after ${ms}ms: ${sanitizeFailureText(err)}`,', 1],
+  // S-M02 (2026-10-18): استثناء تحليل مسار M-02 يُكتب في المخرَج والشذوذ منقّىً (الصنف والرمز والنصّ) — fv68Reader.readTouchPath
+  ['src/analysis/fv68Reader.js', 'const message = sanitizeFailureText(e);', 1],
+  // S-B5 (2026-10-21): قارئ أعمدة مكتبة الخصائص واللحظات — استثناء قراءة الأعمدة يُكتب في المخرَج منقّىً (scanColumns.readScanColumns)
+  ['src/analysis/scanColumns.js', 'detail: sanitizeFailureText(e)};', 1],
+  ['src/analysis/languageValidator.js', 'error: failureTextOnce(e), calledModel: true', 1],
+  ['src/analysis/resolveV7Report.js', 'partial display: ${failureTextOnce(e)}`);', 1],
+  ['src/analysis/resolveV7Report.js', '`HARD_FAILURE:${failureTextOnce(e)}`', 1],
+  ['src/analysis/runAnalysisInternal.js', 'findDeviceProfile/comparison failed: ${sanitizeFailureText(e)}`', 1],
+  ['src/analysis/runAnalysisInternal.js', 'v7Error ? failureTextOnce(v7Error) : "resolveV7Report returned no result"', 1],
+  ['src/analysis/runAnalysisInternal.js', 'aiFallbackReason: v7Error ? failureTextOnce(v7Error) : "resolveV7Report failed",', 1],
+  ['src/analysis/runAnalysisInternal.js', 'console.error("AI analysis failed:", failureTextOnce(error));', 1],
+  ['src/analysis/runAnalysisInternal.js', 'aiFallbackReason = failureTextOnce(error);', 1],
+  ['src/evaluations/resolvePendingEvaluation.js', '`${failText(e)}`);', 1],
+  ['src/notifications/checkExpiringSubscriptions.js', 'console.error("FCM failed:", sanitizeFailureText(e));', 1],
+  ['src/notifications/checkExpiringSubscriptions.js', 'hashIdForLog(doc.id), sanitizeFailureText(e));', 3],
+  ['src/notifications/checkExpiringSubscriptions.js', 'section=${section} FAILED: ${sanitizeFailureText(e)}`);', 1],
+  ['src/notifications/sendNotificationEmail.js', 'console.error("Failed to send FCM push for grant:", sanitizeFailureText(e));', 1],
+  ['src/notifications/sendNotificationEmail.js', 'console.error("Failed to send notification email:", sanitizeFailureText(e));', 1],
+  ['src/payments/confirmPayment.js', 'console.error("Failed to send confirmation email:", sanitizeFailureText(e));', 1],
+  ['src/payments/confirmPayment.js', 'console.error("Failed to send FCM push:", sanitizeFailureText(e));', 1],
+  ['src/payments/rejectPayment.js', 'console.error("Failed to send rejection email:", sanitizeFailureText(e));', 1],
+  ['src/payments/rejectPayment.js', 'console.error("Failed to send FCM push:", sanitizeFailureText(e));', 1],
+  ['src/profiles/appendScanToHistory.js', 'Failed for profile ${profileId}: ${failText(e)}`', 1],
+  ['src/profiles/createDeviceProfile.js', 'Failed to create profile ${profileId}: ${sanitizeFailureText(e)}`', 1],
+  ['src/profiles/findDeviceProfile.js', 'Primary lookup failed: ${sanitizeFailureText(e)}`', 1],
+  ['src/profiles/findDeviceProfile.js', '${stage.field} lookup failed: ${sanitizeFailureText(e)}`', 1],
+  ['src/profiles/findDeviceProfile.js', 'layerD+E lookup failed: ${sanitizeFailureText(e)}`', 1],
+  ['src/reports/generateReportPdf.js', 'console.error("PDF generation failed:", failText(e));', 1],
+  ['src/reports/generateReportPdf.js', '"فشل توليد PDF: " + failText(e),', 1],
+  ['src/reports/generateReportPdf.js', 'console.error("Storage upload failed:", failText(e));', 1],
+  ['src/reports/generateReportPdf.js', '"فشل حفظ PDF: " + failText(e)', 1],
+  ['src/reports/generateReportPdf.js', 'console.error("Failed to sign URL:", failText(e));', 1],
+  ['src/reports/generateReportPdf.js', '"فشل توليد الرابط: " + failText(e) +', 1],
+  ['src/reports/verifyReport.js', 'sanitizeFailureText(error),', 1],
+  ['src/sessions/createScanSession.js', 'const sanitizedForLog = sanitizeFailureText(error);', 1],
+  ['src/sessions/joinScanSession.js', 'console.error("FCM to owner failed:", sanitizeFailureText(e));', 1],
+  ['src/users/redeemPromoCode.js', 'console.error("Failed to send promo email:", sanitizeFailureText(e));', 1],
+  ['src/users/redeemPromoCode.js', 'console.error("Failed to send FCM for promo:", sanitizeFailureText(e));', 1],
+  ['src/users/registerUser.js', 'defaulting to 0:", sanitizeFailureText(e));', 1],
+  ['src/users/registerUser.js', 'console.error("Failed to send welcome email:", sanitizeFailureText(e));', 1],
+  ['src/utils/resolveAiConfig.js', 'read failed (${sanitizeFailureText(e)}) — ', 1],
+  ['src/utils/resolveCacheConfig.js', 'read failed (${sanitizeFailureText(e)}) — ', 1],
+  ['src/utils/resolveGeminiFallbackConfig.js', 'read failed (${sanitizeFailureText(e)}) — ', 1],
+];
+
+// أسباب الاستبعاد (حرف لكل سبب، تُستعمل في RESIDUAL):
+const WHY = {
+  OWN_TEXT: 'نصّ كتبه هذا المستودع في HttpsError أو جدول رفض (ليس نصّ مزوّد)',
+  OWN_ERROR: 'خطأ يرميه كودنا نفسه بنصّ ثابت (assertReportRawFits) — لا مزوّد',
+  PARSER_OF_MODEL_CONTENT: 'خطأ JSON.parse/jsonrepair المحلّي على محتوى النموذج؛ المحتوى نفسه يُطبع أصلاً في raw_head/raw_tail وتنقيته تُعمي التشخيص (الرموز الطويلة)، وليس نصّ خطأ مزوّد',
+  NOT_AN_ERROR: 'حقل message في ردّ النموذج (محتوى) لا نصّ خطأ',
+  SANITIZER_INPUT: 'مُدخل المنقّي نفسه: النصّ يُنقّى في السطر ذاته',
+  FRAMES_ONLY: 'إطارات المكدّس وحدها بعد حذف سطر الرسالة (verifyReport)',
+  INTERNAL_COMPUTE: 'خطأ حساب داخلي على بيانات القياس بكودنا (لا مزوّد ولا مسار مستند ولا شبكة)',
+};
+
+/** [الملفّ، السطر بعد النزع والقصّ، السبب]. */
+const RESIDUAL = [
+  ['src/analysis/analyzeDevice.js', 'throw new HttpsError(expiry.code, expiry.message, {reasonCode: analyzeSessionReasonForCaller(sessionData, callerUid, expiry.reason)});', WHY.OWN_TEXT],
+  ['src/analysis/analyzeDevice.js', 'console.error(`[analyzeDevice] ${e.message} scanId=${hashIdForLog(scanId)}`);', WHY.OWN_ERROR],
+  ['src/analysis/callDeepSeek.js', 'const content = envelope.choices?.[0]?.message?.content;', WHY.NOT_AN_ERROR],
+  ['src/analysis/callDeepSeek.js', 'const em = sanitizeFailureText(new Error(envelope.error.message ||', WHY.SANITIZER_INPUT],
+  ['src/analysis/callDeepSeek.js', 'console.error(`[deepseek] JSON.parse failed: ${parseErr.message}`);', WHY.PARSER_OF_MODEL_CONTENT],
+  ['src/analysis/callDeepSeek.js', 'console.error(`[deepseek] JSON repair also failed: ${repairErr.message}`);', WHY.PARSER_OF_MODEL_CONTENT],
+  ['src/analysis/callDeepSeek.js', '`DeepSeek output unparseable (${parseErr.message}; repair also failed)`,', WHY.PARSER_OF_MODEL_CONTENT],
+  ['src/analysis/callGemini.js', 'console.error(`[gemini] JSON.parse failed: ${parseErr.message}`);', WHY.PARSER_OF_MODEL_CONTENT],
+  ['src/analysis/callGemini.js', 'console.error(`[gemini] JSON repair also failed: ${repairErr.message}`);', WHY.PARSER_OF_MODEL_CONTENT],
+  ['src/analysis/callGemini.js', '`Gemini output unparseable (${parseErr.message}; repair also failed)`,', WHY.PARSER_OF_MODEL_CONTENT],
+  ['src/analysis/findings.js', 'console.error(`[findings] malformed samples — falling back to HARNESS_ERROR: ${err.message || err}`);', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/fv68Reader.js', 'return {readerVersion: 1, readerError: String((e && e.message) || e), anomalies: []};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('primitives(' + key + '): ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('correlation(' + pair.a + ',' + pair.b + ',' + pair.phase + '): ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "computation_status: 'ERROR', reason: e.message,", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('shapes.cpu_freq_response: ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', 'shapes.cpu_freq_response = {error: e.message};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('shapes.thermal_progression: ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', 'shapes.thermal_progression = {error: e.message};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('shapes.battery_under_load: ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', 'shapes.battery_under_load = {error: e.message};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('shapes.voltage_vs_current: ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', 'shapes.voltage_vs_current = {error: e.message};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('shapes.power_profile: ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', 'shapes.power_profile = {error: e.message};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('shapes.engagement: ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', 'shapes.engagement = {error: e.message};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', "errors.push('shapes.storage_memory: ' + e.message);", WHY.INTERNAL_COMPUTE],
+  ['src/analysis/precompute.js', 'shapes.storage_memory = {error: e.message};', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/runAnalysisInternal.js', 'console.error(`[findings] computeFindings threw unexpectedly — omitting from result: ${e.message || e}`);', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/runAnalysisInternal.js', 'console.error(`[categoryStates] computeCategoryStates threw unexpectedly — omitting from result: ${e.message || e}`);', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/runLabPipeline.js', 'errors.push({stage: "normalize", error: e.message});', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/runLabPipeline.js', 'errors.push({stage: "layer1", error: e.message});', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/runLabPipeline.js', 'errors.push({stage: "layer2", error: e.message});', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/runLabPipeline.js', 'errors.push({stage: "layer3", error: e.message});', WHY.INTERNAL_COMPUTE],
+  ['src/analysis/scanRefusal.js', 'throw new HttpsError(wire.code, wire.message, {reasonCode: wire.reasonCode});', WHY.OWN_TEXT],
+  ['src/evaluations/submitEvaluation.js', 'refuse(expiry.reason, null, expiry.code, expiry.message);', WHY.OWN_TEXT],
+  ['src/lab/layer2/features/voltage_spectral.js', "evidence: { method: 'fft_phase6_voltage', reason: 'resample_failed', error: e.message },", WHY.INTERNAL_COMPUTE],
+  ['src/reports/verifyReport.js', 'String(error.stack || "").split("\\n").filter((l) => /^\\s+at /.test(l)).join("\\n"));', WHY.FRAMES_ONLY],
+  ['src/sessions/cancelScanSession.js', 'throw new HttpsError(spec.code, spec.message, {reasonCode: spec.clientReasonCode});', WHY.OWN_TEXT],
+  ['src/sessions/createScanSession.js', 'console.error("createScanSession FAILED (خطأ معروف):", error.code, error.message);', WHY.OWN_TEXT],
+  ['src/sessions/createScanSession.js', 'throw new HttpsError(expired.code, expired.message, {reasonCode: expired.reasonCode});', WHY.OWN_TEXT],
+  ['src/sessions/joinScanSession.js', 'return {refusal: {reason: J.EXPIRES_AT_INVALID, code: expiry.code, message: expiry.message}};', WHY.OWN_TEXT],
+  ['src/sessions/joinScanSession.js', 'return {refusal: {reason: wire.reasonCode, code: wire.code, message: wire.message, extra: ` owner=${hashIdForLog(data.ownerId)}`}};', WHY.OWN_TEXT],
+  ['src/sessions/sessionTimeout.js', 'if (refusal) throw new HttpsError(refusal.code, refusal.message);', WHY.OWN_TEXT],
+];
+
+/** كل ملفّ يستورد المنقّي مباشرةً من utils/failureText (غير ملفّات إعادة التصدير القديمة الثلاثة التي تبقى مستورِدة). */
+const LEGACY_IMPORTERS = ['src/analysis/serverRawSamplesStorage.js', 'src/analysis/writeRawAiResponses.js', 'src/evaluations/submitEvaluationRefusal.js'];
+const IMPORTERS = [...new Set([...LEGACY_IMPORTERS, ...SANITIZED_SITES.map((s) => s[0])])].sort();
+
+module.exports = {SANITIZED_SITES, RESIDUAL, WHY, IMPORTERS, LEGACY_IMPORTERS};

@@ -1,0 +1,1982 @@
+{
+  "scanId": "b45c8cf6-e376-4765-8703-f68e9bc69844",
+  "requestedAt": "2026-09-23T01:12:07.172Z",
+  "completedAt": "2026-09-23T01:13:20.298Z",
+  "wallMs": 73126,
+  "payloadBytes": 70266,
+  "modelNote": "النموذج: الافتراضي — settings/ai غير موجود (404) في الإنتاج اليوم؛ إن أُنشئ تغيّر هذا. [منقول من المنسّق، NEURALCHECK-FINDINGS.md:214 — غير متحقَّق من هذا المستودع]",
+  "threw": null,
+  "attempts": [
+    {
+      "seq": 1,
+      "scanId": "b45c8cf6-e376-4765-8703-f68e9bc69844",
+      "priorRejectionSent": null,
+      "threw": null,
+      "result": {
+        "aiModel": "deepseek-flash",
+        "duration": 73124,
+        "bodyBuildMs": 1,
+        "pipeline": "v7_findings_based",
+        "guard": {
+          "ok": true,
+          "shape": {
+            "ok": true,
+            "errors": []
+          },
+          "issueKeys": {
+            "ok": true,
+            "inventedIds": []
+          },
+          "numbers": {
+            "ok": true,
+            "unmatchedFields": [],
+            "excludedDevice": [
+              {
+                "field": "narrative.details",
+                "number": -8
+              },
+              {
+                "field": "narrative.details",
+                "number": 13
+              },
+              {
+                "field": "narrative.details",
+                "number": 2.4
+              }
+            ]
+          },
+          "languageLeaks": [],
+          "excluded": {
+            "deviceSpecNumbers": [
+              {
+                "field": "narrative.details",
+                "number": -8
+              },
+              {
+                "field": "narrative.details",
+                "number": 13
+              },
+              {
+                "field": "narrative.details",
+                "number": 2.4
+              }
+            ],
+            "languageTokens": [
+              {
+                "path": "narrative.details",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.details",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.details",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.details",
+                "token": "STATE",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.details",
+                "token": "FAIL",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.details",
+                "token": "FLOOR",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GHz",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GOOD",
+                "category": "device_spec"
+              },
+              {
+                "path": "narrative.details",
+                "token": "mAh",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "mAh",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "mA",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "mV",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "MB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "MB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "MB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "MB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "x2280",
+                "category": "device_spec"
+              },
+              {
+                "path": "narrative.details",
+                "token": "Hz",
+                "category": "measurement_unit"
+              },
+              {
+                "path": "narrative.details",
+                "token": "Mbps",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.details",
+                "token": "GHz",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.details",
+                "token": "dBm",
+                "category": "measurement_unit"
+              },
+              {
+                "path": "narrative.buyerAdvice.photographer",
+                "token": "MB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-T-01]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-T-01]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-T-02]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-T-02]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-T-03]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-T-03]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-G-03]",
+                "token": "NOT",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-G-03]",
+                "token": "TESTED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-G-04]",
+                "token": "NOT",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-G-04]",
+                "token": "TESTED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-G-05]",
+                "token": "NOT",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-G-05]",
+                "token": "TESTED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-01]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-01]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-02]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-02]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-03]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-03]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-04]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-04]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-05]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-05]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-06]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-06]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-07]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-07]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-08]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-08]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-10]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-CM-10]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-L-02]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-L-02]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-L-03]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-L-03]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[ISS-SEC-04]",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[ISS-SEC-05]",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[ISS-SEC-06]",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SEC-07]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SEC-07]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SN-07]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SN-07]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SN-08]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SN-08]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SN-09]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-SN-09]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-N-03]",
+                "token": "CAPABILITY",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-N-03]",
+                "token": "BLOCKED",
+                "category": "gate_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-N-04]",
+                "token": "PERMISSION",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "narrative.issueDescriptions[DISC-N-04]",
+                "token": "DENIED",
+                "category": "gate_name"
+              },
+              {
+                "path": "crossChecks[0].description",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "crossChecks[0].description",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "crossChecks[0].description",
+                "token": "SEC",
+                "category": "gate_name"
+              },
+              {
+                "path": "crossChecks[2].description",
+                "token": "STATE",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "crossChecks[2].description",
+                "token": "MEASUREMENT",
+                "category": "gate_name"
+              },
+              {
+                "path": "crossChecks[2].description",
+                "token": "MEASUREMENT",
+                "category": "gate_name"
+              },
+              {
+                "path": "modelObservations[0].text",
+                "token": "GB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "modelObservations[0].text",
+                "token": "MB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "modelObservations[0].text",
+                "token": "MB",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "modelObservations[1].text",
+                "token": "charge",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "modelObservations[1].text",
+                "token": "counter",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "modelObservations[1].text",
+                "token": "mAh",
+                "category": "unit_symbol"
+              },
+              {
+                "path": "modelObservations[1].text",
+                "token": "charge",
+                "category": "findings_field_name"
+              },
+              {
+                "path": "modelObservations[1].text",
+                "token": "counter",
+                "category": "findings_field_name"
+              }
+            ]
+          }
+        }
+      },
+      "network": [
+        {
+          "seq": 1,
+          "host": "api.deepseek.com",
+          "at": "2026-09-23T01:12:07.175Z",
+          "allowedSeq": 1,
+          "headerMs": 1235,
+          "status": 200,
+          "ok": true,
+          "model": "deepseek-flash",
+          "finishReason": "stop",
+          "usage": {
+            "prompt_tokens": 28540,
+            "completion_tokens": 16920,
+            "total_tokens": 45460,
+            "prompt_tokens_details": {
+              "cached_tokens": 28288
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 13165
+            },
+            "prompt_cache_hit_tokens": 28288,
+            "prompt_cache_miss_tokens": 252
+          }
+        }
+      ]
+    }
+  ],
+  "finalResult": {
+    "aiModel": "deepseek-flash",
+    "duration": 73124,
+    "pipeline": "v7_findings_based",
+    "bodyBuildMs": 1,
+    "guardFinal": {
+      "ok": true,
+      "shape": {
+        "ok": true,
+        "errors": []
+      },
+      "issueKeys": {
+        "ok": true,
+        "inventedIds": []
+      },
+      "numbers": {
+        "ok": true,
+        "unmatchedFields": [],
+        "excludedDevice": [
+          {
+            "field": "narrative.details",
+            "number": -8
+          },
+          {
+            "field": "narrative.details",
+            "number": 13
+          },
+          {
+            "field": "narrative.details",
+            "number": 2.4
+          }
+        ]
+      },
+      "languageLeaks": [],
+      "excluded": {
+        "deviceSpecNumbers": [
+          {
+            "field": "narrative.details",
+            "number": -8
+          },
+          {
+            "field": "narrative.details",
+            "number": 13
+          },
+          {
+            "field": "narrative.details",
+            "number": 2.4
+          }
+        ],
+        "languageTokens": [
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "STATE",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "FAIL",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "FLOOR",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GHz",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GOOD",
+            "category": "device_spec"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mAh",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mAh",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mA",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mV",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "x2280",
+            "category": "device_spec"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Hz",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Mbps",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GHz",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "dBm",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-01]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-01]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-02]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-02]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-03]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-03]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-03]",
+            "token": "NOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-03]",
+            "token": "TESTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-04]",
+            "token": "NOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-04]",
+            "token": "TESTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-05]",
+            "token": "NOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-05]",
+            "token": "TESTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-01]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-01]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-02]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-02]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-03]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-03]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-04]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-04]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-05]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-05]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-06]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-06]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-07]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-07]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-08]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-08]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-10]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-10]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-02]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-02]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-03]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-03]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[ISS-SEC-04]",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[ISS-SEC-05]",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[ISS-SEC-06]",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SEC-07]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SEC-07]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-07]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-07]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-08]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-08]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-09]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-09]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-03]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-03]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-04]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-04]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[2].description",
+            "token": "STATE",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "crossChecks[2].description",
+            "token": "MEASUREMENT",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[2].description",
+            "token": "MEASUREMENT",
+            "category": "gate_name"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "charge",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "counter",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "mAh",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "charge",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "counter",
+            "category": "findings_field_name"
+          }
+        ]
+      }
+    },
+    "display": {
+      "pipeline": "v7_findings_based",
+      "language": "ar",
+      "overall": {
+        "letter": "C",
+        "letterSource": "GATE:ROOT_DETECTED",
+        "coverage": 0.4503809523809524,
+        "coveragePct": 45,
+        "partialAssessment": true,
+        "partialAssessmentTag": {
+          "label": "تقييم جزئي",
+          "coveragePct": 45,
+          "text": "تقييم جزئي — تغطية 45%"
+        },
+        "governingGateReason": {
+          "name": "ROOT_DETECTED",
+          "ceilingLetter": "C",
+          "source": "SEC-04=fail"
+        },
+        "noDataAtAll": false,
+        "zeroMeasuredMessage": null,
+        "abstentionReasons": null,
+        "harnessError": false,
+        "harnessErrorReason": null
+      },
+      "categories": {
+        "battery": {
+          "state": "PARTIAL",
+          "letter": null,
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 1,
+          "reason": "NO_CALIBRATED_THRESHOLD (PLAN-03 لم يُنجَز — انظر batteryLayer.js)",
+          "letterCeilingReason": null,
+          "testIds": [],
+          "confidence": null,
+          "tag": "ESTIMATED",
+          "indicators": {
+            "BAT-THERMAL-EFF": {
+              "id": "BAT-THERMAL-EFF",
+              "status": "MEASURED",
+              "verdict": "THRESHOLD_NOT_CALIBRATED",
+              "value": 13.382747353140436,
+              "unit": "°C/Wh",
+              "deltaTC": 6.899999999999999,
+              "energyWh": 0.5155891998798605,
+              "gate": {
+                "cadenceWhole": 11,
+                "required": 5,
+                "passes": true
+              },
+              "comparedToModelBaseline": false,
+              "note": "مقارنة الطراز غير مفعّلة — modelBaselines فارغة (§٤-ج)",
+              "socAtWindowStart": 48,
+              "socAtWindowEnd": 43
+            },
+            "BAT-R-APPARENT": {
+              "id": "BAT-R-APPARENT",
+              "status": "MEASURED",
+              "verdict": "THRESHOLD_NOT_CALIBRATED",
+              "value": 132.7949507222513,
+              "unit": "mΩ",
+              "vFirst10sMv": 3760,
+              "vUnderLoadMv": 3535.355421686747,
+              "iUnderLoadUa": 1691665.060240964,
+              "gate": {
+                "nSamples": 830,
+                "sourceCadenceUpdates": 6,
+                "required": 5,
+                "passes": true
+              },
+              "unitCaveat": "وحدة التيار المُعلَنة تحمل غموض مضاعف موثَّق (A39) — الرقم المطلق غير موثوق بمعزل عن حسمه",
+              "socAtWindowStart": 48,
+              "socAtWindowEnd": 44
+            },
+            "BAT-FCC": {
+              "id": "BAT-FCC",
+              "status": "MEASURED",
+              "verdict": "THRESHOLD_NOT_CALIBRATED",
+              "value": 3778.2928472222225,
+              "unit": "mAh",
+              "intervalCount": 3,
+              "gate": {
+                "intervalCount": 3,
+                "required": 2,
+                "passes": true
+              },
+              "designCapacityMah": 4400,
+              "ratioToDesign": 0.8587029198232323,
+              "socAtWindowStart": 47,
+              "socAtWindowEnd": 44
+            },
+            "BAT-COULOMB": {
+              "id": "BAT-COULOMB",
+              "status": "MEASURED",
+              "verdict": "THRESHOLD_NOT_CALIBRATED",
+              "value": 143.84349777777777,
+              "unit": "mAh",
+              "gate": {
+                "qIntMah": 143.84349777777777,
+                "required": 80,
+                "passes": true
+              },
+              "consistencyGateNote": "بوّابة الاتّساق المنصوصة (k = ΔCC ÷ ∫I) تحتاج charge_counter (fv68) وغير قابلة للتقييم على fv67 — لم تُستبدَل بتخمين؛ الحقل consistencyK يبقى null.",
+              "consistencyK": null,
+              "socAtWindowStart": 48,
+              "socAtWindowEnd": 43
+            }
+          },
+          "socAtStart": 48,
+          "socAtEnd": 43
+        },
+        "thermal": {
+          "state": "UNMEASURED",
+          "letter": null,
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0,
+          "reason": "DECLARED_BUT_NONE_EXECUTED",
+          "letterCeilingReason": null,
+          "testIds": [
+            "T-01",
+            "T-02",
+            "T-03",
+            "T-04"
+          ]
+        },
+        "cpu": {
+          "state": "MEASURED",
+          "letter": "A",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 1,
+          "reason": null,
+          "letterCeilingReason": null,
+          "testIds": [
+            "C-01",
+            "C-02",
+            "C-03",
+            "C-04",
+            "C-05",
+            "C-06",
+            "C-07"
+          ]
+        },
+        "gpu": {
+          "state": "PARTIAL",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0.4,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "تغطية منخفضة — اختباران من خمسة، وكلاهما اختبار تعريف لا أداء"
+          },
+          "testIds": [
+            "G-01",
+            "G-02",
+            "G-03",
+            "G-04",
+            "G-05"
+          ]
+        },
+        "display": {
+          "state": "MEASURED",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 1,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "ثلاثة اختبارات من ثلاثة — كلّها اختبارات تعريف لا أداء"
+          },
+          "testIds": [
+            "D-01",
+            "D-02",
+            "D-03"
+          ]
+        },
+        "memory": {
+          "state": "MEASURED",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 1,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "ثلاثة اختبارات من ثلاثة — كلّها اختبارات تعريف لا أداء"
+          },
+          "testIds": [
+            "R-01",
+            "R-02",
+            "R-03"
+          ]
+        },
+        "storage": {
+          "state": "MEASURED",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 1,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "أربعة اختبارات من أربعة — كلّها اختبارات تعريف لا أداء"
+          },
+          "testIds": [
+            "S-01",
+            "S-02",
+            "S-03",
+            "S-04",
+            "S-05",
+            "S-06"
+          ]
+        },
+        "camera": {
+          "state": "UNMEASURED",
+          "letter": null,
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0,
+          "reason": "DECLARED_BUT_NONE_EXECUTED",
+          "letterCeilingReason": null,
+          "testIds": [
+            "CM-01",
+            "CM-02",
+            "CM-03",
+            "CM-04",
+            "CM-05",
+            "CM-06",
+            "CM-07",
+            "CM-08",
+            "CM-10",
+            "CM-11"
+          ]
+        },
+        "gps": {
+          "state": "PARTIAL",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0.3333333333333333,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "تغطية منخفضة — اختبار واحد من ثلاثة، وهو اختبار تعريف لا أداء"
+          },
+          "testIds": [
+            "L-01",
+            "L-02",
+            "L-03"
+          ]
+        },
+        "security": {
+          "state": "PARTIAL",
+          "letter": "D",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0.9,
+          "reason": null,
+          "letterCeilingReason": null,
+          "testIds": [
+            "SEC-01",
+            "SEC-02",
+            "SEC-03",
+            "SEC-04",
+            "SEC-05",
+            "SEC-06",
+            "SEC-07",
+            "SEC-08",
+            "SEC-09",
+            "SEC-10",
+            "SEC-11"
+          ]
+        },
+        "sensors": {
+          "state": "PARTIAL",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0.75,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "تسعة اختبارات من اثني عشر — كلّها اختبارات تعريف لا أداء"
+          },
+          "testIds": [
+            "SN-01",
+            "SN-02",
+            "SN-03",
+            "SN-04",
+            "SN-05",
+            "SN-06",
+            "SN-07",
+            "SN-08",
+            "SN-09",
+            "SN-10",
+            "SN-11",
+            "SN-12"
+          ]
+        },
+        "cellular": {
+          "state": "PARTIAL",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0.7142857142857143,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "خمسة اختبارات من سبعة — كلّها اختبارات تعريف لا أداء"
+          },
+          "testIds": [
+            "N-01",
+            "N-02",
+            "N-03",
+            "N-04",
+            "N-05",
+            "N-06",
+            "N-07"
+          ]
+        },
+        "wireless": {
+          "state": "MEASURED",
+          "letter": "B",
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 1,
+          "reason": null,
+          "letterCeilingReason": {
+            "name": "LOW_CATEGORY_COVERAGE",
+            "ceilingLetter": "B",
+            "text": "ستة اختبارات من ستة — كلّها اختبارات تعريف لا أداء"
+          },
+          "testIds": [
+            "N-08",
+            "N-09",
+            "N-10",
+            "N-11",
+            "N-12",
+            "N-13"
+          ]
+        },
+        "audio": {
+          "state": "UNMEASURED",
+          "letter": null,
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0,
+          "reason": "NO_HEALTH_BEARING_TESTS_DECLARED",
+          "letterCeilingReason": null,
+          "testIds": []
+        },
+        "input": {
+          "state": "UNMEASURED",
+          "letter": null,
+          "letterSource": "DETERMINISTIC",
+          "adjustmentReason": null,
+          "adjustmentEvidence": null,
+          "coverage": 0,
+          "reason": "NO_HEALTH_BEARING_TESTS_DECLARED",
+          "letterCeilingReason": null,
+          "testIds": []
+        }
+      },
+      "issues": [
+        {
+          "id": "DISC-T-01",
+          "category": "thermal",
+          "severity": "INFO",
+          "title": "غير مقيس: T-01 (CAPABILITY_BLOCKED)",
+          "description": "حرارة المعالج القصوى لم تُقَس: لا تتوفر قراءات حرارية على هذا الجهاز، لذا لم يُنفَّذ الاختبار T-01 (السبب: CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "DISC-T-02",
+          "category": "thermal",
+          "severity": "INFO",
+          "title": "غير مقيس: T-02 (CAPABILITY_BLOCKED)",
+          "description": "معدل ارتفاع الحرارة لم يُقَس: لا تتوفر قراءات حرارية على هذا الجهاز، لذا لم يُنفَّذ الاختبار T-02 (السبب: CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "DISC-T-03",
+          "category": "thermal",
+          "severity": "INFO",
+          "title": "غير مقيس: T-03 (CAPABILITY_BLOCKED)",
+          "description": "معدل التبريد لم يُقَس: لا تتوفر قراءات حرارية على هذا الجهاز، لذا لم يُنفَّذ الاختبار T-03 (السبب: CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "POS-cpu",
+          "category": "cpu",
+          "severity": "POSITIVE",
+          "title": "cpu: لا أعطاب على الاختبارات المنفَّذة",
+          "description": "المعالج: جميع الاختبارات المنفَّذة نجحت، لا توجد أعطاب مسجَّلة على هذه الفئة."
+        },
+        {
+          "id": "DISC-G-03",
+          "category": "gpu",
+          "severity": "INFO",
+          "title": "غير مقيس: G-03 (NOT_TESTED)",
+          "description": "انخفاض الإطارات في الرسوميات لم يُقَس (السبب: NOT_TESTED)."
+        },
+        {
+          "id": "DISC-G-04",
+          "category": "gpu",
+          "severity": "INFO",
+          "title": "غير مقيس: G-04 (NOT_TESTED)",
+          "description": "تقييد معالج الرسوميات لم يُقَس (السبب: NOT_TESTED)."
+        },
+        {
+          "id": "DISC-G-05",
+          "category": "gpu",
+          "severity": "INFO",
+          "title": "غير مقيس: G-05 (NOT_TESTED)",
+          "description": "أدنى عدد إطارات في الثانية لم يُقَس (السبب: NOT_TESTED)."
+        },
+        {
+          "id": "POS-display",
+          "category": "display",
+          "severity": "POSITIVE",
+          "title": "display: لا أعطاب على الاختبارات المنفَّذة",
+          "description": "الشاشة: جميع الاختبارات المنفَّذة نجحت، لا توجد أعطاب مسجَّلة."
+        },
+        {
+          "id": "POS-memory",
+          "category": "memory",
+          "severity": "POSITIVE",
+          "title": "memory: لا أعطاب على الاختبارات المنفَّذة",
+          "description": "الذاكرة العشوائية: جميع الاختبارات المنفَّذة نجحت، لا توجد أعطاب مسجَّلة."
+        },
+        {
+          "id": "POS-storage",
+          "category": "storage",
+          "severity": "POSITIVE",
+          "title": "storage: لا أعطاب على الاختبارات المنفَّذة",
+          "description": "التخزين الداخلي: جميع الاختبارات المنفَّذة نجحت، لا توجد أعطاب مسجَّلة."
+        },
+        {
+          "id": "DISC-CM-01",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-01 (PERMISSION_DENIED)",
+          "description": "الكاميرا الخلفية لم تُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-02",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-02 (PERMISSION_DENIED)",
+          "description": "الكاميرا الأمامية لم تُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-03",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-03 (PERMISSION_DENIED)",
+          "description": "التركيز التلقائي لم يُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-04",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-04 (PERMISSION_DENIED)",
+          "description": "الفلاش لم يُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-05",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-05 (PERMISSION_DENIED)",
+          "description": "تسجيل الفيديو لم يُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-06",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-06 (PERMISSION_DENIED)",
+          "description": "دقة الكاميرا الخلفية لم تُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-07",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-07 (PERMISSION_DENIED)",
+          "description": "دقة الكاميرا الأمامية لم تُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-08",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-08 (PERMISSION_DENIED)",
+          "description": "بصمة الإصبع لم تُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-CM-10",
+          "category": "camera",
+          "severity": "INFO",
+          "title": "غير مقيس: CM-10 (PERMISSION_DENIED)",
+          "description": "التعرّف على الوجه لم يُقَس: إذن الكاميرا مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-L-02",
+          "category": "gps",
+          "severity": "INFO",
+          "title": "غير مقيس: L-02 (PERMISSION_DENIED)",
+          "description": "عدد الأقمار في نظام تحديد المواقع لم يُقَس: إذن الموقع مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "DISC-L-03",
+          "category": "gps",
+          "severity": "INFO",
+          "title": "غير مقيس: L-03 (PERMISSION_DENIED)",
+          "description": "دقة تحديد الموقع لم تُقَس: إذن الموقع مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "ISS-SEC-04",
+          "category": "security",
+          "severity": "FAIL",
+          "title": "فشل في الاختبار SEC-04",
+          "evidence": "مكتشف",
+          "evidenceUnit": null,
+          "description": "فشل اختبار SEC-04: تم اكتشاف صلاحيات الروت على الجهاز. هذا عطب أمني خطير، وهو السبب المباشر للحرف العامّ C عبر بوّابة اكتشاف الروت."
+        },
+        {
+          "id": "ISS-SEC-05",
+          "category": "security",
+          "severity": "WARNING",
+          "title": "تنبيه في الاختبار SEC-05",
+          "evidence": "مفعّل",
+          "evidenceUnit": null,
+          "description": "تنبيه في الاختبار SEC-05: الوضع التطويري مفعّل. هذا ليس فشلاً لكنه يزيد سطح المخاطر الأمنية ويجب إيقافه قبل الاستخدام العادي."
+        },
+        {
+          "id": "ISS-SEC-06",
+          "category": "security",
+          "severity": "WARNING",
+          "title": "تنبيه في الاختبار SEC-06",
+          "evidence": "مفعّل",
+          "evidenceUnit": null,
+          "description": "تنبيه في الاختبار SEC-06: تصحيح الأخطاء السلكي مفعّل. يسمح بوصول أعمق للنظام ويُستحسن إيقافه."
+        },
+        {
+          "id": "DISC-SEC-07",
+          "category": "security",
+          "severity": "INFO",
+          "title": "غير مقيس: SEC-07 (CAPABILITY_BLOCKED)",
+          "description": "مصادر التثبيت غير المعروفة لم تُقَس: الواجهة محجوبة في هذا الإصدار (CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "DISC-SN-07",
+          "category": "sensors",
+          "severity": "INFO",
+          "title": "غير مقيس: SN-07 (CAPABILITY_BLOCKED)",
+          "description": "حرارة المحيط لم تُقَس: المستشعر غير متوفر على الجهاز (CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "DISC-SN-08",
+          "category": "sensors",
+          "severity": "INFO",
+          "title": "غير مقيس: SN-08 (CAPABILITY_BLOCKED)",
+          "description": "مستشعر اكتشاف الخطوات لم يُقَس: المستشعر غير متوفر على الجهاز (CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "DISC-SN-09",
+          "category": "sensors",
+          "severity": "INFO",
+          "title": "غير مقيس: SN-09 (CAPABILITY_BLOCKED)",
+          "description": "عداد الخطوات لم يُقَس: المستشعر غير متوفر على الجهاز (CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "DISC-N-03",
+          "category": "cellular",
+          "severity": "INFO",
+          "title": "غير مقيس: N-03 (CAPABILITY_BLOCKED)",
+          "description": "الشريحة الثانية لم تُقَس: الجهاز يحتوي على فتحة شريحة واحدة فقط (CAPABILITY_BLOCKED)."
+        },
+        {
+          "id": "DISC-N-04",
+          "category": "cellular",
+          "severity": "INFO",
+          "title": "غير مقيس: N-04 (PERMISSION_DENIED)",
+          "description": "نوع الشبكة لم يُقَس: إذن قراءة حالة الهاتف مرفوض (PERMISSION_DENIED)."
+        },
+        {
+          "id": "POS-wireless",
+          "category": "wireless",
+          "severity": "POSITIVE",
+          "title": "wireless: لا أعطاب على الاختبارات المنفَّذة",
+          "description": "الاتصال اللاسلكي: جميع الاختبارات المنفَّذة نجحت، لا توجد أعطاب مسجَّلة."
+        }
+      ],
+      "narrative": {
+        "summary": "جهاز Samsung Galaxy S10 5G يعمل بنظام أندرويد 11. التقييم جزئي بتغطية 45%، والحرف العامّ C بسبب اكتشاف صلاحيات الروت. اختبارات الأمان أظهرت روتاً مكتشفاً وتنبيهات لتصحيح الأخطاء والوضع التطويري، في حين نجحت اختبارات المعالج والتخزين والذاكرة والشاشة والاتصال اللاسلكي. كاميرا الجهاز والحرارة والصوت والإدخال لم تُقَس أو لم تُختبر.",
+        "details": "الجهاز Samsung Galaxy S10 5G بمستوى واجهة 30. التغطية الكلية 45%، والحرف العامّ C مصدره بوّابة اكتشاف الروت. في الأمان، الاختبار SEC-04 فشل بسبب اكتشاف روت، والاختباران SEC-05 و SEC-06 ظهرا كتنبيهين، وآخر رقعة أمنية بتاريخ 2021-08-01 (عمرها 61.7 شهراً بحسب البوّابة)، وحرف فئة الأمان D مع تطبيق حدّ STATE_FAIL_FLOOR. المعالج نجح في كل اختباراته (الحرف A)، لكن السقف المستدام يُظهر نسبة أقصى تردد في المرحلة الخامسة 0.69 من الذروة، والمرحلة الثالثة 0.85، ونسبة التعافي 0.71، مع ذروة تردد 2.73 GHz. معالج الرسوميات حرفه B مقيد ببوّابة التغطية المنخفضة (تغطية 40%)، ووسيط الإطارات انخفض من 2065.37 في المرحلة الرابعة إلى 1187.86 في المرحلة الخامسة (نسبة 0.575)، مع عدم قياس الاختبارات G-03 إلى G-05. الحرارة كفئة غير مقيسة، لكن قناة حرارة البطارية تُظهر أعلى قراءة 39.3°C في الاندفاع والتبريد، ومتوسط 37.99°C في المرحلة المشتركة، وارتفاعاً 6.9°C بمعدل 1.85°C/دقيقة. البطارية صحتها GOOD وسعة التصميم 4400 mAh، والسعة الكاملة المقاسة 3778.29 mAh (بنسبة 0.859 من التصميم)، دون حرف بسبب غياب عتبة معايَرة. التفريغ تحت الحمل 1691.67 mA، واستقرار الجهد 46.04 mV عند شحن 48%. التخزين 228.6 GB مع متاح 31.3% أي 71.5 GB، وسرعة كتابة 188 MB/s، وقراءة 1618 MB/s غير مستقرة، مع ركبة عند 3 GB وفارق بين 178.5 MB/s قبلها و71.47 MB/s بعدها. الذاكرة 7.1 GB مع متاح 2.7 GB. الشاشة 1080x2280 بكثافة 420 وتحديث 60 Hz. الاتصال اللاسلكي 13 Mbps على 2.4 GHz بإشارة -63 dBm. الشبكة الخلوية شريحة واحدة بإشارة 3/4. الكاميرا غير مقيسة بسبب رفض الإذن، وكذلك قياسات الأقمار والدقة في تحديد المواقع. الإدخال والصوت بلا اختبارات معلنة.",
+        "verdict": "الحرف العامّ C، مصدره بوّابة اكتشاف الروت، والتقييم جزئي بتغطية 45%.",
+        "buyerAdvice": {
+          "casual": "للاستخدام اليومي: الجهاز ينجز المهام الأساسية، لكنه يحمل صلاحيات روت مكتشفة مع الوضع التطويري وتصحيح الأخطاء السلكي مفعّلين، ورقعة أمنية قديمة. إن كنت تشتريه للاستخدام العادي، اطلب من البائع إزالة الروت وتحديث النظام، وتأكد من أن الكاميرا تعمل لأنها لم تُختبر هنا. التخزين المتاح 71.5 من أصل 228.6 غيغابايت.",
+          "gamer": "للألعاب: المعالج ينجح في الاختبارات القصيرة لكنه يخفض تردده إلى نحو 0.69 من الذروة تحت الحمل المستدام، وحرارة البطارية تصل إلى 39.3°C. أداء الرسوميات يُظهر انخفاض وسيط الإطارات من 2065.37 إلى 1187.86، واختبارات الاستقرار الرسومي نفسها لم تُقَس. لا تتوقع أداءً ثابتاً في الجلسات الطويلة.",
+          "photographer": "للتصوير: فئة الكاميرا كلها غير مقيسة بسبب رفض إذن الكاميرا، فلا يمكن تأكيد سلامة التركيز التلقائي أو الفلاش أو تسجيل الفيديو. التخزين الداخلي 228.6 غيغابايت مع 71.5 غيغابايت متاحة، وسرعة الكتابة 188 MB/s، لكن القراءة العشوائية القوية (110516 عملية إدخال/إخراج في الثانية) غير حاسمة للكاميرا. اختبر الكاميرا بنفسك قبل الشراء."
+        }
+      },
+      "narrativeIncomplete": false,
+      "narrativeIncompleteFields": []
+    },
+    "audit": {
+      "measuredCategoriesMean": 100,
+      "gatesApplied": [
+        {
+          "name": "ROOT_DETECTED",
+          "category": "security",
+          "ceilingLetter": "C",
+          "status": "FIRED",
+          "source": "SEC-04=fail",
+          "cappedOverall": true
+        },
+        {
+          "name": "PATCH_AGE",
+          "category": "security",
+          "ceilingLetter": "B",
+          "status": "FIRED",
+          "source": "SEC-03=2021-08-01 (61.7 شهراً)",
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "STORAGE_VERIFY_ERRORS",
+          "category": "storage",
+          "ceilingLetter": "D",
+          "status": "NOT_WIRED",
+          "source": "لا اسم حقل مؤكَّد في هذا المستودع",
+          "cappedOverall": false
+        },
+        {
+          "name": "GPU_HASH_MISMATCH",
+          "category": "gpu",
+          "ceilingLetter": "D",
+          "status": "NOT_WIRED",
+          "source": "لا اسم حقل مؤكَّد في هذا المستودع",
+          "cappedOverall": false
+        },
+        {
+          "name": "SUSTAINED_CEILING",
+          "category": "cpu",
+          "ceilingLetter": "C",
+          "status": "DISABLED",
+          "source": "ممنوعة قبل PLAN-03 بنصّ الخطّة",
+          "cappedOverall": false
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "thermal",
+          "ceilingLetter": "B",
+          "coveragePct": 0,
+          "status": "INPUT_ABSENT",
+          "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+          "belowThreshold": null,
+          "allNonMeasurement": null,
+          "cappedOverall": false
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "cpu",
+          "ceilingLetter": "B",
+          "coveragePct": 100,
+          "status": "NOT_FIRED",
+          "source": "coverage=100.0%، 5 اختبار منفَّذ يتضمّن MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": false,
+          "cappedOverall": false
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "gpu",
+          "ceilingLetter": "B",
+          "coveragePct": 40,
+          "status": "FIRED",
+          "source": "coverage=40.0% < 60.0%؛ 2/2 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": true,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "display",
+          "ceilingLetter": "B",
+          "coveragePct": 100,
+          "status": "FIRED",
+          "source": "3/3 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "memory",
+          "ceilingLetter": "B",
+          "coveragePct": 100,
+          "status": "FIRED",
+          "source": "3/3 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "storage",
+          "ceilingLetter": "B",
+          "coveragePct": 100,
+          "status": "FIRED",
+          "source": "4/4 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "camera",
+          "ceilingLetter": "B",
+          "coveragePct": 0,
+          "status": "INPUT_ABSENT",
+          "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+          "belowThreshold": null,
+          "allNonMeasurement": null,
+          "cappedOverall": false
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "gps",
+          "ceilingLetter": "B",
+          "coveragePct": 33.3,
+          "status": "FIRED",
+          "source": "coverage=33.3% < 60.0%؛ 1/1 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": true,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "security",
+          "ceilingLetter": "B",
+          "coveragePct": 90,
+          "status": "FIRED",
+          "source": "9/9 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "sensors",
+          "ceilingLetter": "B",
+          "coveragePct": 75,
+          "status": "FIRED",
+          "source": "9/9 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "cellular",
+          "ceilingLetter": "B",
+          "coveragePct": 71.4,
+          "status": "FIRED",
+          "source": "5/5 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "wireless",
+          "ceilingLetter": "B",
+          "coveragePct": 100,
+          "status": "FIRED",
+          "source": "6/6 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+          "belowThreshold": false,
+          "allNonMeasurement": true,
+          "cappedOverall": false,
+          "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "audio",
+          "ceilingLetter": "B",
+          "coveragePct": 0,
+          "status": "INPUT_ABSENT",
+          "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+          "belowThreshold": null,
+          "allNonMeasurement": null,
+          "cappedOverall": false
+        },
+        {
+          "name": "LOW_CATEGORY_COVERAGE",
+          "category": "input",
+          "ceilingLetter": "B",
+          "coveragePct": 0,
+          "status": "INPUT_ABSENT",
+          "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+          "belowThreshold": null,
+          "allNonMeasurement": null,
+          "cappedOverall": false
+        }
+      ],
+      "partialBadLetterUngated": [],
+      "adjustments": [],
+      "disputed": false,
+      "categoryLlmSuggestedLetters": {
+        "battery": null,
+        "thermal": null,
+        "cpu": null,
+        "gpu": null,
+        "display": null,
+        "memory": null,
+        "storage": null,
+        "camera": null,
+        "gps": null,
+        "security": null,
+        "sensors": null,
+        "cellular": null,
+        "wireless": null,
+        "audio": null,
+        "input": null
+      },
+      "crossChecks": [
+        {
+          "description": "فئة الأمان تجمع عدة مؤشرات خطر: فشل اختبار روت في SEC-04، وتنبيهان في SEC-05 و SEC-06، مع رقعة أمنية عمرها 61.7 شهراً. بوّابة اكتشاف الروت هي التي حدّدت الحرف العامّ C، بينما بوّابة عمر الرقعة أُطلقت أيضاً لكنها لم تخفض الحرف لأن حرف الأمان D أسوأ من سقفها أصلاً.",
+          "evidenceRefs": [
+            "categoryStates.overall.gatesApplied[0]",
+            "categoryStates.overall.gatesApplied[1]",
+            "categoryStates.categories.security.gatesApplied",
+            "categoryStates.categories.security.floorApplied"
+          ]
+        },
+        {
+          "description": "فئة الإدارة الحرارية غير مقيسة (صفر اختبار منفَّذ)، لكن قناة حرارة البطارية تحمل قيماً: أعلى قراءة 39.3°C في مرحلتي الاندفاع والتبريد، ومتوسط 37.99°C في المرحلة المشتركة، مع ارتفاع 6.9°C. هذا يعني أن الحكم على الحرارة يبقى جزئياً لأن مصدره البطارية لا حسّاس المعالج.",
+          "evidenceRefs": [
+            "categoryStates.categories.thermal.coverage",
+            "findings.channels.battery_temp_c.BURST.max",
+            "findings.channels.battery_temp_c.COMBINED.mean",
+            "findings.thermal.batteryTempRise.valueC"
+          ]
+        },
+        {
+          "description": "بوّابة التغطية المنخفضة لفئة التخزين تقول إن الاختبارات المنفَّذة من صنف STATE فقط (صفر MEASUREMENT)، لكن قائمة الاختبارات تضم اختبارين من صنف MEASUREMENT هما S-04 و S-05، وكلاهما موسوم غير مستقرّ فلا يدخل في الحرف. يفسّر ذلك التناقض الظاهري: وجود قياس لا يعني احتسابه.",
+          "evidenceRefs": [
+            "categoryStates.categories.storage.gatesApplied[1].source",
+            "findings.unstableMeasurements.S-04",
+            "findings.unstableMeasurements.S-05"
+          ]
+        },
+        {
+          "description": "فئة معالج الرسوميات جزئية بتغطية 40%، وحرفها B مقيد ببوّابة التغطية المنخفضة. في الوقت نفسه، قناة أداء الرسوميات تُظهر انخفاض وسيط الإطارات من 2065.37 في المرحلة الرابعة إلى 1187.86 في المرحلة الخامسة (نسبة 0.575)، لكن اختبارات G-03 إلى G-05 لم تُقَس. هذا يعني أن الحرف لا يعكس الأداء المستدام الفعلي للرسوميات.",
+          "evidenceRefs": [
+            "categoryStates.categories.gpu.gatesApplied[1]",
+            "findings.graphics.phase4.median",
+            "findings.graphics.phase5.median",
+            "findings.graphics.ratioPhase5OverPhase4"
+          ]
+        }
+      ],
+      "modelObservations": [
+        {
+          "text": "كشف الركبة في التخزين عند 3 GB مع فرق كبير: سرعة ما قبل الركبة 178.5 MB/s مقابل 71.47 MB/s بعدها. هذه خاصية معروفة لذاكرة التخزين، لكنها تعني أن الكتابة بعد استهلاك الذاكرة المؤقتة أبطأ بكثير مما قد يتوقعه المشتري من رقم السرعة الأولي.",
+          "evidenceRefs": [
+            "findings.storage.inCacheMbps",
+            "findings.storage.postCacheMbps",
+            "findings.storage.kneeGb",
+            "findings.storage.kneeState"
+          ]
+        },
+        {
+          "text": "لقطة charge_counter تحمل قيمة 1936000 لكن الوحدة غير معلنة، لذا قياس سعة البطارية الكاملة (3778.29 mAh) لا يمكن التحقق منه مستقلاً بسلسلة charge_counter. هذا ثغرة بيانات لا عطب في البطارية نفسها، لكنها تمنع تأكيد السعة المقاسة بمصدر ثانٍ.",
+          "evidenceRefs": [
+            "findings.battery.charge_counter.snapshot",
+            "findings.battery.charge_counter.series"
+          ]
+        }
+      ],
+      "issueSetHash": "f5823e2b3ed8c8138ecd3619e5416377a0da9ecca851bb2462abf618cad78a05",
+      "lettersHash": "5abb259b7ae6e2d52147ce84386aaca73fc9eb49fb85e870e8f169db23892fbf",
+      "numbersHash": "f8482559c4129ba827671d4b167bf6093d3ff16565a76167ccb4d45ecbbb7e20",
+      "regeneration": {
+        "attempts": 1,
+        "narrativeIncomplete": false,
+        "droppedFields": [],
+        "rounds": [
+          {
+            "attempt": 1,
+            "aiModel": "deepseek-flash",
+            "guardOk": true,
+            "durationMs": 73124,
+            "tokensUsed": null,
+            "rejectedReasons": []
+          }
+        ]
+      }
+    },
+    "narrativeIncomplete": false,
+    "narrativeIncompleteFields": []
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "generatedAt": "2026-09-22T21:36:01.187Z",
+  "commits": [
+    "9514421",
+    "30ef54a",
+    "efeebe7",
+    "4b52c8f",
+    "2cce881",
+    "HEAD"
+  ],
+  "results": [
+    {
+      "ref": "9514421",
+      "sha": "9514421189ca692d43b73a09516c297ed4888921",
+      "shortSha": "9514421",
+      "subject": "test(v7-payload): تحديث ثابت payloadBytes حقلاً حقلاً بعد استبعاد الأربعة (73daf7c)",
+      "scans": {
+        "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+          "payloadLength": 64782,
+          "gateObjCount": 10,
+          "lowCovGateCount": 0,
+          "notFiredCount": 0,
+          "gateLocations": {
+            "overall": 5,
+            "categories": {
+              "cpu": 1,
+              "gpu": 1,
+              "storage": 1,
+              "security": 2
+            }
+          },
+          "hasLowCategoryCoverageGate": false
+        },
+        "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+          "payloadLength": 64824,
+          "gateObjCount": 10,
+          "lowCovGateCount": 0,
+          "notFiredCount": 0,
+          "gateLocations": {
+            "overall": 5,
+            "categories": {
+              "cpu": 1,
+              "gpu": 1,
+              "storage": 1,
+              "security": 2
+            }
+          },
+          "hasLowCategoryCoverageGate": false
+        }
+      },
+      "error": null
+    },
+    {
+      "ref": "30ef54a",
+      "sha": "30ef54a339f7b8364c928d5165093178f21d7c6a",
+      "shortSha": "30ef54a",
+      "subject": "feat(v7): بوّابة LOW_CATEGORY_COVERAGE — حرف الفئة يُسقَف حين التغطية ضعيفة أو الدليل كلّه STATE",
+      "scans": {
+        "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+          "payloadLength": 70032,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        },
+        "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+          "payloadLength": 70127,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        }
+      },
+      "error": null
+    },
+    {
+      "ref": "efeebe7",
+      "sha": "efeebe71b77483bd4d73a5d24bf0422aa31ed4a7",
+      "shortSha": "efeebe7",
+      "subject": "feat(v7-guard): صنف استثناء سادس — معرّفات منصّة حرفية (platform_identifier)",
+      "scans": {
+        "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+          "payloadLength": 70032,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        },
+        "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+          "payloadLength": 70127,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        }
+      },
+      "error": null
+    },
+    {
+      "ref": "4b52c8f",
+      "sha": "4b52c8f1f9199a7ad0a6985d35a6f3e65e32ce4c",
+      "shortSha": "4b52c8f",
+      "subject": "fix(findings): تصدير سعة التخزين المُشتقّة (S-01/S-02) — يُغلق انجراف 71.5 المتكرّر",
+      "scans": {
+        "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+          "payloadLength": 70272,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        },
+        "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+          "payloadLength": 70367,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        }
+      },
+      "error": null
+    },
+    {
+      "ref": "2cce881",
+      "sha": "2cce88197b681e32c3b91e85bd839bb9804eebdd",
+      "shortSha": "2cce881",
+      "subject": "test(v7): حرس الحقول السبعة بالاسم + تحديث عدّاد gatesApplied بعد LOW_CATEGORY_COVERAGE",
+      "scans": {
+        "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+          "payloadLength": 70272,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        },
+        "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+          "payloadLength": 70367,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        }
+      },
+      "error": null
+    },
+    {
+      "ref": "HEAD",
+      "sha": "548f1f49af2ef38bec7070fb903965183d8c7a6a",
+      "shortSha": "548f1f4",
+      "subject": "feat(v7): letterCeilingReason على display.categories.<cat> + إقرار ceilingLetter=B",
+      "scans": {
+        "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+          "payloadLength": 71418,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        },
+        "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+          "payloadLength": 71513,
+          "gateObjCount": 34,
+          "lowCovGateCount": 24,
+          "notFiredCount": 6,
+          "gateLocations": {
+            "overall": 19,
+            "categories": {
+              "cpu": 2,
+              "gpu": 2,
+              "display": 1,
+              "memory": 1,
+              "storage": 2,
+              "gps": 1,
+              "security": 3,
+              "sensors": 1,
+              "cellular": 1,
+              "wireless": 1
+            }
+          },
+          "hasLowCategoryCoverageGate": true
+        }
+      },
+      "error": null
+    }
+  ]
+}

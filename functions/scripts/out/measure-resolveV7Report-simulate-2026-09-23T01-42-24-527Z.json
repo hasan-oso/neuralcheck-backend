@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-09-23T01:42:24.460Z",
+  "scenarios": {
+    "١. نجاح من المحاولة الأولى": {
+      "outcome": {
+        "threw": null,
+        "result": {
+          "aiModel": "deepseek-flash",
+          "narrativeIncomplete": false,
+          "narrativeIncompleteFields": [],
+          "guardFinalOk": true
+        }
+      },
+      "pass": true,
+      "networkCalls": 1
+    },
+    "٢. رفض ثم نجاح": {
+      "outcome": {
+        "threw": null,
+        "result": {
+          "aiModel": "deepseek-flash",
+          "narrativeIncomplete": false,
+          "narrativeIncompleteFields": [],
+          "guardFinalOk": true
+        }
+      },
+      "pass": true,
+      "networkCalls": 2
+    },
+    "٣. رفض مرّتين → عرض جزئي": {
+      "outcome": {
+        "threw": null,
+        "result": {
+          "aiModel": "deepseek-flash",
+          "narrativeIncomplete": true,
+          "narrativeIncompleteFields": [
+            "narrative.buyerAdvice.casual",
+            "narrative.details",
+            "narrative.issueDescriptions[ISS-SEC-04]",
+            "narrative.summary",
+            "narrative.verdict"
+          ],
+          "guardFinalOk": false
+        }
+      },
+      "pass": true,
+      "networkCalls": 2
+    },
+    "٤. فشل DeepSeek الصلب (500 مرّتين) + Gemini محجوب": {
+      "outcome": {
+        "threw": "V7: Both DeepSeek and Gemini failed: DeepSeek HTTP 500: {\"error\":{\"message\":\"Internal server error (simulated)\",\"type\":\"server_error\",\"code\":\"internal_error\"}} / Gemini call failed after 2ms: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: Gemini محجوب — لا إذن ولا مفتاح في هذا القياس",
+        "result": null
+      },
+      "pass": true,
+      "networkCalls": 2
+    }
+  },
+  "capTest": {
+    "results": [
+      {
+        "seq": 1,
+        "blocked": false
+      },
+      {
+        "seq": 2,
+        "blocked": false
+      },
+      {
+        "seq": 3,
+        "blocked": false
+      },
+      {
+        "seq": 4,
+        "blocked": false
+      },
+      {
+        "seq": 5,
+        "blocked": false
+      },
+      {
+        "seq": 6,
+        "blocked": true,
+        "reason": "CAP_REACHED: السقف 5 طلبات بلغ — رُفض الطلب رقم 6 قبل الإرسال"
+      }
+    ],
+    "pass": true
+  },
+  "sanitizeTest": {
+    "errorMessageSanitized": "Authentication Fails, Your api key: [KEY-REDACTED] is invalid",
+    "pass": true
+  }
+}

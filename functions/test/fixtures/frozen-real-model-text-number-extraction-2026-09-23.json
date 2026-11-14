@@ -1,0 +1,33 @@
+{
+  "_provenance": "أمر مستخدم 2026-09-23 +03 (بعد القياس العشاري)، البند ٣ — نصوص نموذج حقيقية فعلية من نداءات مأذونة، لا مُصطنَعة. كل مقطع أدناه حرفي، مُنسوخ بلا أي تعديل من rawResponseText المحفوظ في functions/scripts/out/ (غير المتتبَّع). هذا الملفّ لا يُقرأ إلا من test/ — لا اعتماد على scripts/out وقت التشغيل.",
+  "cases": [
+    {
+      "id": "phases_3_5_b45c8cf6",
+      "text": "قناة حرارة البطارية: 32.4 °C وارتفاع 6.9 °C خلال الفحص بمعدّل 1.8542 °C في الدقيقة في المراحل 3-5.",
+      "source": "functions/scripts/out/resolve-v7-live-b45c8cf6-e376-4765-8703-f68e9bc69844-2026-09-23T02-18-59-392Z.json، attempts[0] (المحاولة ١)، narrative.details",
+      "expectRangeEndpoints": [3, 5],
+      "expectNotContains": [-5]
+    },
+    {
+      "id": "phases_3_5_34dff2b8",
+      "text": "الحرارة الوحيدة المقيسة على هذا الجهاز تأتي من قناة حرارة البطارية (ارتفاع 7.4 °C بمعدّل 1.7345 °C/دقيقة خلال الأطوار 3-5)، بينما فئة الإدارة الحرارية نفسها غير مقيسة إطلاقاً (0 منفَّذة) لانعدام قراءات حرارية على مستوى الشرائح.",
+      "source": "functions/scripts/out/resolve-v7-live-34dff2b8-ce9e-4b40-86a9-1976c878e195-2026-09-23T02-27-21-133Z.json، attempts[0] (المحاولة ١)، crossChecks[0].description",
+      "expectRangeEndpoints": [3, 5],
+      "expectNotContains": [-5]
+    },
+    {
+      "id": "grouped_current_gamer_b45c8cf6",
+      "text": "تيار التفريغ في مرحلة الحمل المستمر على المعالج بلغ وسطه -1,929,913 µA مقابل -980,444 µA في مرحلة البداية، أي استنزاف أسرع بوضوح أثناء اللعب.",
+      "source": "functions/scripts/out/resolve-v7-live-b45c8cf6-e376-4765-8703-f68e9bc69844-2026-09-23T02-11-54-297Z.json، attempts[0] (المحاولة ١)، narrative.buyerAdvice.gamer",
+      "expectContains": [-1929913, -980444],
+      "expectNotContains": [-1, 929, 913, -980, 444, 1929913, 980444]
+    },
+    {
+      "id": "grouped_current_crosscheck_b45c8cf6",
+      "text": "وسيط تيار التفريغ في مرحلة الحمل المستمر على المعالج -1,929,913 µA مقابل -980,444 µA في مرحلة البداية، وحرارة البطارية في تلك المرحلة تصل إلى وسيط 34.5 °C مقابل 32.4 °C في البداية.",
+      "source": "functions/scripts/out/resolve-v7-live-b45c8cf6-e376-4765-8703-f68e9bc69844-2026-09-23T02-11-54-297Z.json، attempts[0] (المحاولة ١)، crossChecks[0].description",
+      "expectContains": [-1929913, -980444, 34.5, 32.4],
+      "expectNotContains": [-1, 929, 913, -980, 444]
+    }
+  ]
+}

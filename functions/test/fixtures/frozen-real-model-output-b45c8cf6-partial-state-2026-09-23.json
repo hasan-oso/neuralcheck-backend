@@ -1,0 +1,615 @@
+{
+  "_provenance": "أمر مستخدم 2026-09-23 +03 (بعد توضيح الالتباس في البند ٥)، اختبار انحداري: scripts/out/resolve-v7-live-b45c8cf6-e376-4765-8703-f68e9bc69844-2026-09-23T02-13-49-557Z.json، attempts[0] (المحاولة ١)، rawResponseText مُفكَّكاً كاملاً (JSON.parse بعد إزالة code fence). الحارس الحقيقي وقت النداء رفض هذه المحاولة فعلاً بسبب PARTIAL — راجع result.guard.languageLeaks المحفوظ في نفس الملف المصدر.",
+  "targetCategoryStatesFixture": "b45c8cf6",
+  "parsed": {
+    "narrative": {
+      "summary": "هذا Samsung Galaxy S10 5G خرج بتقييم جزئي: التغطية 45% والحرف العام C. السبب المباشر للحرف العام هو الكشف عن صلاحيات الجذر، إلى جانب وضع المطوّر وتصحيح USB مفعَّلين، ورقعة أمنية تعود إلى 2021-08-01. في المقابل، المعالج اجتاز كل اختباراته المندرجة وحصل على A، والتخزين والشاشة والذاكرة والاتصال اللاسلكي اجتازت اختباراتها لكن حروفها سُقّفت عند B لأنها اختبارات حالة بلا قياس أداء. أما الكاميرا والحرارة والصوت والإدخال فلم تُقَس إطلاقاً، فلا حكم عليها في هذا الفحص.",
+      "details": "الأمان هو الفئة الوحيدة التي أنتجت عطباً: التغطية 90% مع 9 اختبارات منفَّذة، منها 6 نجحت وواحد فشل (SEC-04) وتحذيران (SEC-05، SEC-06)، فحصلت على D مع تطبيق حدّ أدنى للفئة (STATE_FAIL_FLOOR). البوّابات الثلاث على هذه الفئة — كشف الجذر، وعمر الرقعة الأمنية (SEC-03 = 2021-08-01 أي 61.7 شهراً)، وتغطية منخفضة — كلها بحالة FIRED لكن cappedThisLetter = false لأن الحرف الأساسي أسوأ من سقوفها أصلاً. على مستوى الفحص، الكشف عن صلاحيات الجذر هو ما أنزل الحرف العام فعلياً (cappedOverall = true)، بينما بوّابتا عمر الرقعة والتغطية لم تغيّرا الحرف العام لأنه كان أسوأ منهما. المعالج: الحرف A، النتيجة 100، تغطية 100% مع 5 اختبارات منفَّذة؛ خفض الأداء الحراري سُجّل عند 9.1% وثبات الأداء عند 8.1، وبوّابة السقف المستدام معطَّلة بتصميم النظام (DISABLED) وبوّابة التغطية المنخفضة لم تُطلَق أصلاً. اختبار C-04 (قيمة أداء حسابي 3271) مصنَّف غير مستقرّ ولا يدخل الحرف. معالج الرسوميات: الحرف B بتغطية 40% من 5 اختبارات مُعلَنة نُفِّذ منها 2 فقط، وG-03 وG-04 وG-05 غير مقيسة، وبوّابة التغطية المنخفضة هي التي سقّفت الحرف فعلياً (cappedThisLetter = true). التخزين: تغطية 100% والحرف B لسبب السقف نفسه (اختبارات حالة بلا قياس)، مع سعة 228.6 GB ومتاح 31.3% أي 71.5 GB؛ وكشف موضع الركبة عند 3 GB يُعرض كحالة لا كحكم، مع 178.51425 MB/s في الكاش و71.47117 MB/s بعده و188 MB/s كتابة. الشاشة: 1080x2280 بكثافة 420 DPI وتحديث 60 Hz والثلاثة ناجحة، والحرف B من السقف لا من عطب. الذاكرة: 7.1 GB إجمالاً و2.7 GB متاحة، والحرف B كذلك من السقف. البطارية: الحالة PARTIAL بلا حرف، والسبب المُسمّى NO_CALIBRATED_THRESHOLD، وحكم التجميع \"غير كافية\"؛ كل مؤشراتها الأربعة بحالة أن العتبة غير معايَرة — السعة المقاسة 3778.29 mAh مقابل تصميم 4400 mAh بنسبة 0.8587، والمقاومة الظاهرة 132.79 mΩ مع تحفّظ صريح على وحدة التيار، والكفاءة الحرارية 13.38 °C/Wh، والشحنة 143.84 mAh. ارتفاع حرارة البطارية 6.9 °C بمعدل 1.854 °C/min، والتفريغ تحت الحمل 1691.665 mA، وثبات الجهد 46.04 mV عند مستوى شحن بدأ من 48% وانتهى عند 43%، وذروة حرارة البطارية في المراحل القصيرة بلغت وسيطاً 39.21 °C مقابل 33.79 °C في مرحلة المعالج المستدام. الإدارة الحرارية: غير مقيسة (تغطية 0) لأن T-01 وT-02 وT-03 محجوبة لغياب القدرة وT-04 إرشادي فقط، ولا يوجد حسّاس لحرارة المعالج أصلاً بحسب الحقول غير المقيسة. الكاميرا: غير مقيسة بالكامل (9 اختبارات مُعلَنة، صفر منفَّذ) بسبب رفض إذن الكاميرا. نظام تحديد المواقع: PARTIAL بتغطية 33.3% وناجح واحد فقط. المستشعرات: PARTIAL بتغطية 75% مع 9 ناجحة وثلاثة محجوبة لغياب القدرة. الشبكة الخلوية: PARTIAL بتغطية 71.4% مع 5 ناجحة، وفتحة SIM واحدة. الاتصال اللاسلكي: تغطية 100% و6 ناجحة والحرف B من السقف، مع 13 Mbps على 2.4 GHz وإشارة -63 dBm.",
+      "verdict": "الحرف العام C — تقييم جزئي بتغطية 45%، أنزلته بوّابة الكشف عن صلاحيات الجذر على جهاز رقعته الأمنية قديمة، لا الأداء.",
+      "buyerAdvice": {
+        "casual": "الجهاز ينجز الاستخدام اليومي من حيث المعالج والذاكرة والشاشة والتخزين، لكنه ليس جهازاً أنصح به للاستخدام البنكي أو للمعاملات الحساسة بصيغته الحالية: صلاحيات الجذر مكشوفة، ووضع المطوّر وتصحيح USB مفعَّلان، وآخر رقعة أمنية مثبَّتة تعود إلى 2021-08-01. أضف إلى ذلك أن التقييم جزئي بتغطية 45% فقط، أي أن الكاميرا والصوت والإدخال لم تُفحص أصلاً، فلا تبنِ قرارك على «اجتاز الفحص» في هذه الجوانب.",
+        "gamer": "ما يهمّك هنا مختلط: المعالج حصل على A مع خفض حراري مسجَّل عند 9.1% وثبات أداء عند 8.1، وهذا مؤشر جيد على استمرارية الأداء. لكن اختبارات الرسوميات G-03 وG-04 وG-05 غير مقيسة أصلاً، وحرف فئة معالج الرسوميات B جاء من تغطية 40% لا من نتيجة أداء، فلا يوجد رقم موثوق عن ثبات الإطارات تحت الحمل الطويل. كذلك لا يوجد أي حسّاس لحرارة المعالج على هذا الجهاز، والمؤشر الحراري الوحيد المتاح هو حرارة البطارية التي بلغ وسيطها 39.21 °C في المراحل القصيرة. اطلب قياساً إضافياً لأداء الرسوميات قبل الشراء للألعاب.",
+        "photographer": "لا يمكنك الحكم على الكاميرا من هذا التقرير إطلاقاً: تسعة اختبارات كاميرا مُعلَنة ولم يُنفَّذ منها أي اختبار بسبب رفض إذن الكاميرا، وكذلك لم تُقَس إمكانات الفيديو والتركيز والفلاش. الجانب الذي وصلك فعلاً هو التخزين: 228.6 GB بسعة متاحة 31.3% أي 71.5 GB، وهو أقل من ثلث السعة ومهم إن كنت تصوّر بجودة عالية، مع ملاحظة أن سرعة التخزين بعد الكاش 71.47117 MB/s مقابل 178.51425 MB/s داخله. اختبر الكاميرا بنفسك قبل الدفع."
+      },
+      "issueDescriptions": {
+        "DISC-T-01": "لم تُقَس الحرارة القصوى: الجهاز لا يوفّر قراءات حرارية، والاختبار T-01 محجوب لغياب القدرة لا لأنه رسب.",
+        "DISC-T-02": "لم يُقَس معدّل ارتفاع الحرارة: لا تتوفر قراءات حرارية على هذا الجهاز، والاختبار T-02 محجوب لغياب القدرة.",
+        "DISC-T-03": "لم يُقَس معدّل التبريد: لا تتوفر قراءات حرارية على هذا الجهاز، والاختبار T-03 محجوب لغياب القدرة.",
+        "POS-cpu": "لا أعطاب في فئة المعالج على الاختبارات المندرجة: كل اختباراتها الخمسة المحتسَبة نجحت، والحرف A سليم في حدوده.",
+        "DISC-G-03": "لم يُقَس فقدان الإطارات: تعذّر قياس أداء الرسوميات على هذا الجهاز، والاختبار G-03 غير منفَّذ.",
+        "DISC-G-04": "لم يُقَس مقدار خفض أداء معالج الرسوميات: تعذّر قياس أداء الرسوميات على هذا الجهاز، والاختبار G-04 غير منفَّذ.",
+        "DISC-G-05": "لم يُقَس أدنى معدّل إطارات: تعذّر قياس أداء الرسوميات على هذا الجهاز، والاختبار G-05 غير منفَّذ.",
+        "POS-display": "لا أعطاب على اختبارات الشاشة الثلاثة المنفَّذة؛ الحرف B جاء من سقف التغطية المنخفضة وليس من عطب مقيس.",
+        "POS-memory": "لا أعطاب على اختبارات الذاكرة الثلاثة المنفَّذة؛ الحرف B جاء من سقف التغطية المنخفضة وليس من عطب مقيس.",
+        "POS-storage": "لا أعطاب على اختبارات التخزين الأربعة المندرجة؛ الحرف B جاء من سقف التغطية المنخفضة وليس من عطب مقيس.",
+        "DISC-CM-01": "لم تُقَس الكاميرا الخلفية: إذن الكاميرا مرفوض، والاختبار CM-01 غير منفَّذ.",
+        "DISC-CM-02": "لم تُقَس الكاميرا الأمامية: إذن الكاميرا مرفوض، والاختبار CM-02 غير منفَّذ.",
+        "DISC-CM-03": "لم يُقَس التركيز التلقائي: إذن الكاميرا مرفوض، والاختبار CM-03 غير منفَّذ.",
+        "DISC-CM-04": "لم يُقَس الفلاش: إذن الكاميرا مرفوض، والاختبار CM-04 غير منفَّذ.",
+        "DISC-CM-05": "لم يُقَس تسجيل الفيديو: إذن الكاميرا مرفوض، والاختبار CM-05 غير منفَّذ.",
+        "DISC-CM-06": "لم تُقَس دقة الكاميرا الخلفية: إذن الكاميرا مرفوض، والاختبار CM-06 غير منفَّذ.",
+        "DISC-CM-07": "لم تُقَس دقة الكاميرا الأمامية: إذن الكاميرا مرفوض، والاختبار CM-07 غير منفَّذ.",
+        "DISC-CM-08": "لم يُقَس مستشعر بصمة الإصبع المرتبط بمسار الكاميرا: إذن الكاميرا مرفوض، والاختبار CM-08 غير منفَّذ.",
+        "DISC-CM-10": "لم يُقَس التعرّف على الوجه: إذن الكاميرا مرفوض، والاختبار CM-10 غير منفَّذ.",
+        "DISC-L-02": "لم يُقَس عدد الأقمار الصناعية: إذن الموقع مرفوض، والاختبار L-02 غير منفَّذ.",
+        "DISC-L-03": "لم تُقَس دقة تحديد الموقع: إذن الموقع مرفوض، والاختبار L-03 غير منفَّذ.",
+        "ISS-SEC-04": "عطب أمني مؤكَّد: تم الكشف عن صلاحيات الجذر على الجهاز (SEC-04)، وهذا يعطي من يحمل الجهاز قدرة على تجاوز حدود النظام والحماية. هذه هي البوّابة التي أنزلت الحرف العام إلى C.",
+        "ISS-SEC-05": "تنبيه أمني: وضع المطوّر مفعَّل (SEC-05)، وهو ما يوسّع خيارات التغيير على الجهاز ويُستحسن إغلاقه في الاستخدام العادي.",
+        "ISS-SEC-06": "تنبيه أمني: تصحيح USB مفعَّل (SEC-06)، وهو منفذ إضافي للوصول إلى الجهاز عبر الكابل ويُستحسن إغلاقه.",
+        "DISC-SEC-07": "لم يُقَس مصدر التثبيت من خارج المتجر: القدرة محجوبة على واجهة النظام، والاختبار SEC-07 غير منفَّذ.",
+        "DISC-SN-07": "لم تُقَس حرارة المحيط: المستشعر غير متوفر على هذا الجهاز، والاختبار SN-07 محجوب لغياب القدرة.",
+        "DISC-SN-08": "لم يُقَس كاشف الخطوات: المستشعر غير متوفر على هذا الجهاز، والاختبار SN-08 محجوب لغياب القدرة.",
+        "DISC-SN-09": "لم يُقَس عدّاد الخطوات: المستشعر غير متوفر على هذا الجهاز، والاختبار SN-09 محجوب لغياب القدرة.",
+        "DISC-N-03": "لم تُقَس شريحة SIM الثانية: الجهاز بفتحة واحدة فقط، والاختبار N-03 محجوب لغياب القدرة.",
+        "DISC-N-04": "لم يُقَس نوع الشبكة: إذن قراءة حالة الهاتف مرفوض، والاختبار N-04 غير منفَّذ.",
+        "POS-wireless": "لا أعطاب على اختبارات الاتصال اللاسلكي الستة المنفَّذة؛ الحرف B جاء من سقف التغطية المنخفضة وليس من عطب مقيس."
+      }
+    },
+    "crossChecks": [
+      {
+        "description": "ثلاث إشارات أمنية ظهرت معاً على الجهاز نفسه — كشف صلاحيات الجذر (SEC-04)، وتفعيل وضع المطوّر (SEC-05)، وتفعيل تصحيح USB (SEC-06) — إضافة إلى رقعة أمنية بتاريخ 2021-08-01. الحرف العام C جاء من بوّابة كشف الجذر تحديداً، لا من عمر الرقعة، لأن الحرف كان أسوأ من سقف عمر الرقعة أصلاً.",
+        "evidenceRefs": [
+          "categoryStates.overall.letter",
+          "categoryStates.overall.letterSource",
+          "categoryStates.overall.gatesApplied",
+          "categoryStates.categories.security.gatesApplied",
+          "categoryStates.categories.security.floorApplied"
+        ]
+      },
+      {
+        "description": "التغطية المنخفضة على مستوى الفحص (45%) سببها فئات لم تُقَس إطلاقاً: الكاميرا تغطية 0%، والإدارة الحرارية 0%، والصوت والإدخال بصفر اختبار مُعلَن. لذا فالفئات التي تحمل حروفاً هي مجموعة فرعية فقط من الجهاز.",
+        "evidenceRefs": [
+          "categoryStates.overall.coverage",
+          "categoryStates.categories.camera.coverage",
+          "categoryStates.categories.thermal.coverage",
+          "categoryStates.categories.audio.declaredCount",
+          "categoryStates.categories.input.declaredCount"
+        ]
+      },
+      {
+        "description": "لا يوجد على هذا الجهاز حسّاس لحرارة المعالج أو حرارة السطح (الحقول غير المقيسة تسمّي السبب NO_CPU_TEMP_SENSOR وNO_SENSOR_COVERAGE)، ومع ذلك سُجّلت قناة حرارة البطارية عبر كل المراحل: وسيط 33.79 °C في مرحلة المعالج المستدام و38.0 °C في المرحلة المركّبة و39.21 °C في المرحلة القصيرة. أي أن المؤشر الحراري الوحيد المتاح هنا يخصّ البطارية، لا المعالج.",
+        "evidenceRefs": [
+          "findings.notMeasuredFields",
+          "findings.channels.battery_temp_c.CPU_SUSTAINED.median",
+          "findings.channels.battery_temp_c.COMBINED.median",
+          "findings.channels.battery_temp_c.BURST.median"
+        ]
+      },
+      {
+        "description": "التخزين يقيس سرعة عالية داخل الكاش وينخفض بعد موضع الركبة المكتشف عند 3 GB: 178.51425 MB/s داخل الكاش مقابل 71.47117 MB/s بعده، و188 MB/s لاختبار الكتابة. هذه حالة معروضة بلا حكم في طبقة التخزين نفسها، ولا تُترجم إلى عطب في هذا التقرير.",
+        "evidenceRefs": [
+          "findings.storage.inCacheMbps",
+          "findings.storage.postCacheMbps",
+          "findings.storage.kneeGb",
+          "findings.storage.kneeState"
+        ]
+      },
+      {
+        "description": "بطارية الجهاز قيست تحت حمل ثقيل فعلاً — تفريغ تحت الحمل 1691.665 mA مع هبوط مستوى الشحن من 48% إلى 43% — لكن كل مؤشرات البطارية الأربعة خرجت بحالة أن العتبة غير معايَرة، فلم تُنتج الفئة حرفاً ولا حكماً على الصحة.",
+        "evidenceRefs": [
+          "findings.battery.info.dischargeRateUnderLoadMa",
+          "findings.battery.socAtStart",
+          "findings.battery.socAtEnd",
+          "categoryStates.categories.battery.noLetterReason",
+          "categoryStates.categories.battery.batteryAggregate"
+        ]
+      }
+    ],
+    "adjustments": [],
+    "modelObservations": [
+      {
+        "text": "طبقة الرسوميات في القياسات تعرض وسائط إطارات مقيسة في المرحلتين (2065.37425 في المرحلة الرابعة و1187.86395 في المرحلة الخامسة بنسبة 0.5751325455907084 بينهما، مع صفر إطارات مقفولة على التزامن)، بينما فئة معالج الرسوميات تُعلن اختباراتها G-03 وG-04 وG-05 غير مقيسة. القياس موجود على مستوى القناة لكنه لا يدخل حرف الفئة — فرق يستحق مراجعة الربط لا إعادة تقييم.",
+        "evidenceRefs": [
+          "findings.graphics.phase4.median",
+          "findings.graphics.phase5.median",
+          "findings.graphics.ratioPhase5OverPhase4",
+          "findings.graphics.vsyncLockFraction60",
+          "categoryStates.categories.gpu.testIds"
+        ]
+      },
+      {
+        "text": "السعة الكاملة المقاسة للبطارية تظهر عند 3778.29 mAh مقابل سعة تصميم 4400 mAh بنسبة 0.8587، وكل ذلك بحالة عتبة غير معايَرة، وشحنة مقيسة 143.84 mAh. هذا مرشّح للمراجعة بعد معايرة العتبات، وليس عطباً في هذا الفحص ولا يستبعد صلاحية البطارية.",
+        "evidenceRefs": [
+          "categoryStates.categories.battery.batteryIndicators.BAT-FCC.value",
+          "categoryStates.categories.battery.batteryIndicators.BAT-FCC.designCapacityMah",
+          "categoryStates.categories.battery.batteryIndicators.BAT-FCC.ratioToDesign",
+          "categoryStates.categories.battery.batteryIndicators.BAT-COULOMB.value"
+        ]
+      }
+    ]
+  },
+  "realGuardVerdictAtCaptureTime": {
+    "ok": false,
+    "shape": {
+      "ok": true,
+      "errors": []
+    },
+    "issueKeys": {
+      "ok": true,
+      "inventedIds": []
+    },
+    "numbers": {
+      "ok": true,
+      "unmatchedFields": [],
+      "excludedDevice": [
+        {
+          "field": "narrative.summary",
+          "number": -8
+        },
+        {
+          "field": "narrative.details",
+          "number": -8
+        },
+        {
+          "field": "narrative.details",
+          "number": 13
+        },
+        {
+          "field": "narrative.details",
+          "number": 2.4
+        },
+        {
+          "field": "narrative.buyerAdvice.casual",
+          "number": -8
+        },
+        {
+          "field": "crossChecks[0].description",
+          "number": -8
+        }
+      ]
+    },
+    "languageLeaks": [
+      {
+        "path": "narrative.details",
+        "tokens": [
+          "PARTIAL"
+        ]
+      }
+    ],
+    "excluded": {
+      "deviceSpecNumbers": [
+        {
+          "field": "narrative.summary",
+          "number": -8
+        },
+        {
+          "field": "narrative.details",
+          "number": -8
+        },
+        {
+          "field": "narrative.details",
+          "number": 13
+        },
+        {
+          "field": "narrative.details",
+          "number": 2.4
+        },
+        {
+          "field": "narrative.buyerAdvice.casual",
+          "number": -8
+        },
+        {
+          "field": "crossChecks[0].description",
+          "number": -8
+        }
+      ],
+      "languageTokens": [
+        {
+          "path": "narrative.summary",
+          "token": "USB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "STATE",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "FAIL",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "FLOOR",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "FIRED",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "cappedThisLetter",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "false",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "cappedOverall",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "true",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "DISABLED",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "cappedThisLetter",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "true",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "x2280",
+          "category": "device_spec"
+        },
+        {
+          "path": "narrative.details",
+          "token": "DPI",
+          "category": "measurement_unit"
+        },
+        {
+          "path": "narrative.details",
+          "token": "Hz",
+          "category": "measurement_unit"
+        },
+        {
+          "path": "narrative.details",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "NO",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "CALIBRATED",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "THRESHOLD",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "mAh",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "mAh",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "Wh",
+          "category": "measurement_unit"
+        },
+        {
+          "path": "narrative.details",
+          "token": "mAh",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "min",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "mA",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "mV",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "SIM",
+          "category": "platform_identifier"
+        },
+        {
+          "path": "narrative.details",
+          "token": "Mbps",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "narrative.details",
+          "token": "GHz",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.details",
+          "token": "dBm",
+          "category": "measurement_unit"
+        },
+        {
+          "path": "narrative.buyerAdvice.casual",
+          "token": "USB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.buyerAdvice.photographer",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.buyerAdvice.photographer",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.buyerAdvice.photographer",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.buyerAdvice.photographer",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-01]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-02]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-03]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-04]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-05]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-06]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-07]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-08]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-CM-10]",
+          "token": "CM",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[ISS-SEC-04]",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[ISS-SEC-05]",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[ISS-SEC-06]",
+          "token": "USB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "narrative.issueDescriptions[ISS-SEC-06]",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-SEC-07]",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-SN-07]",
+          "token": "SN",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-SN-08]",
+          "token": "SN",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-SN-09]",
+          "token": "SN",
+          "category": "gate_name"
+        },
+        {
+          "path": "narrative.issueDescriptions[DISC-N-03]",
+          "token": "SIM",
+          "category": "platform_identifier"
+        },
+        {
+          "path": "crossChecks[0].description",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "crossChecks[0].description",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "crossChecks[0].description",
+          "token": "USB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "crossChecks[0].description",
+          "token": "SEC",
+          "category": "gate_name"
+        },
+        {
+          "path": "crossChecks[2].description",
+          "token": "NO",
+          "category": "gate_name"
+        },
+        {
+          "path": "crossChecks[2].description",
+          "token": "CPU",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "crossChecks[2].description",
+          "token": "TEMP",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "crossChecks[2].description",
+          "token": "SENSOR",
+          "category": "gate_name"
+        },
+        {
+          "path": "crossChecks[2].description",
+          "token": "NO",
+          "category": "gate_name"
+        },
+        {
+          "path": "crossChecks[2].description",
+          "token": "SENSOR",
+          "category": "gate_name"
+        },
+        {
+          "path": "crossChecks[2].description",
+          "token": "COVERAGE",
+          "category": "findings_field_name"
+        },
+        {
+          "path": "crossChecks[3].description",
+          "token": "GB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "crossChecks[3].description",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "crossChecks[3].description",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "crossChecks[3].description",
+          "token": "MB",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "crossChecks[4].description",
+          "token": "mA",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "modelObservations[1].text",
+          "token": "mAh",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "modelObservations[1].text",
+          "token": "mAh",
+          "category": "unit_symbol"
+        },
+        {
+          "path": "modelObservations[1].text",
+          "token": "mAh",
+          "category": "unit_symbol"
+        }
+      ]
+    }
+  }
+}

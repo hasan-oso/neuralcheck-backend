@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-09-22T23:10:45.241Z",
+  "scans": {
+    "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+      "exclusionLength": 70266,
+      "whitelistLength": 70266,
+      "identicalStrictEquality": true,
+      "firstDiffAt": null,
+      "contextAroundFirstDiff": null
+    },
+    "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+      "exclusionLength": 70361,
+      "whitelistLength": 70361,
+      "identicalStrictEquality": true,
+      "firstDiffAt": null,
+      "contextAroundFirstDiff": null
+    }
+  },
+  "allIdentical": true
+}

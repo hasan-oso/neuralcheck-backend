@@ -1,0 +1,22 @@
+file: docs/FV68_CONTRACT.md  (a byte-for-byte copy; never edit it here - the owner is the NeuralChek repo)
+source: NeuralChek repository, docs/FV68_CONTRACT.md, copy at NeuralChek 450d9ed (fieldsVersion 70: D fix 64719a9..dc5e5ce, 1.0.12 UI batches; section 7-z server classification of a zero cycle count)
+copied by: the coordinator with git show (bytes as committed in NeuralChek, LF) into
+  <home>\neuralcheck-workspace\evidence\build-1.0.12\fv70-for-backend\FV68_CONTRACT-NeuralChek-450d9ed.md
+  (that folder's SHA256SUMS.txt and SOURCE.txt carry the same sha256), then copied here by the backend engineer with cp, 2026-10-13 +03 (part 5 order)
+sha256: f1bf6b1f7fb94f9e2fa7afd45bfed00e0f611f1bd9170e5101524b174d6c99b7
+lines: 1901
+bytes: 388048
+line endings: LF (0 CR bytes). .gitattributes marks docs/FV68_CONTRACT.md -text so core.autocrlf=true cannot rewrite it on checkout.
+rule: CLAUDE.md rule 29 - a transfer is a copy that drifts. On any new NeuralChek commit to docs/FV68_CONTRACT.md, re-copy and update this file; compare sha256 first.
+
+history of this copy (replaces the previous record, which said: source a04b4f0, sha256 1c6e4e5ff421837d21517bcfd8c162263bce56e320ac076e224910985a1cfd49, 1686 lines, 347671 bytes - git show 886574e:docs/FV68_CONTRACT.SOURCE.txt):
+  - a04b4f0 -> 450d9ed: git diff --no-index --numstat (a04b4f0 copy vs this copy) = 218 insertions, 3 deletions. Hunks (a04b4f0 line -> 450d9ed line): one line added after :6 (the fv70 row of the version table, now :7); :443 changed (now :444); one line added after :1399 (now :1401); :1423 changed (now :1425); :1510 replaced by three lines (now :1512-1514); and a block of 211 lines added after :1582 (now :1587-1797: section 7-t (fv70, D) starts at :1588; the D vocabulary row is :1616, the overall-state table :1658-1662, and (d) sieveLimit :1666-1670).
+  - LINE SHIFT versus the a04b4f0 copy (checked by tool over every unchanged line, text equal at the mapped line): N <= 6 unchanged; 7 <= N <= 1399 -> N+1; 1400 <= N <= 1509 -> N+2 (so :1423 is :1425); 1511 <= N <= 1582 -> N+4; N >= 1583 -> N+215. Versus the 738da89 copy (earlier record below) add the earlier shift as well: 738da89 :N (6 <= N <= 1426) -> a04b4f0 :N+1 -> 450d9ed :N+2 (for N up to 1398).
+  - code comments in functions/src, functions/scripts and functions/test that cite contract lines as ":N" were NOT rewritten (they name a section as well; re-find by the section text, not by the bare number). The citations of docs/FV68_READERS_INVENTORY.md were verified against this copy by tool (section 6.6 of that file).
+
+earlier record of this copy (the a04b4f0 record, kept verbatim):
+history of this copy (replaces the previous record, which said: source 738da89, sha256 cd94e9b34a9b7509f4b85091b43f9c2d59fefac804fc0b9989f86f752fd89a1e, 1530 lines, 317876 bytes - git show 522fbbf:docs/FV68_CONTRACT.SOURCE.txt):
+  - 738da89 -> a04b4f0 adds section 7-h (fv69, batch 10) at :1429-1582 and edits three existing lines (:6 added row, :592 N-19 row, :1362). The section 7-h table "fv68 -> fv69" is at :1440-1448; M-02 raw at :1458-1476; SN-04 raw at :1478-1501.
+  - LINE SHIFT: code comments in functions/src and functions/test cite contract lines as "contract :N" - those numbers were taken from the 738da89 copy. In the a04b4f0 copy, a line that was at :N (6 <= N <= 1426) is now at :N+1, and the former tail (A-appendix, was :1427 on) starts 156 lines later. Citations were NOT rewritten (they name a section as well); re-find by the section text, not by the bare number.
+
+companion (2026-10-18 +03): section 7-ya of NeuralChek 0af0b5c (fv71) is copied separately as docs/FV71_CONTRACT_SECTION.md (see docs/FV71_CONTRACT_SECTION.SOURCE.txt). This whole-file copy is unchanged (still 450d9ed, sha256 above).

@@ -1,0 +1,93 @@
+file: docs/FV71_CONTRACT_SECTION.md  (a byte-for-byte copy of ONE section; never edit it here - the owner is the NeuralChek repo)
+source: NeuralChek repository, docs/FV68_CONTRACT.md, lines 1800-2095 at NeuralChek a0c4346 (section 7-ya "fv71 ...", with the dated notes through 2026-10-21: app order 6, app order 8 with the wire contract items 1-8, and the second paragraph of 2026-10-21 (M-02 in the shape of the system's touch test, items 1-10); a0c4346 adds to it two bracketed marks: wire item 6 and the 6 mm numbers table are each marked as superseded by paragraph 2 item 4 / item 8)
+copied by: the backend engineer, directly and in one step, with
+  git -C <home>/NeuralChek show a0c4346:docs/FV68_CONTRACT.md | sed -n '1800,2095p' > docs/FV71_CONTRACT_SECTION.md
+  (the range is the same as at 3810146: the a0c4346 change is two modified lines, none added, so the heading is still at 1800 and "## <appendix A>" still at 2096), 2026-10-22 +03 (coordinator order after 2deeff7: third copy, because the app writer corrected at a0c4346 the contradiction the backend engineer reported in the 2deeff7 record).
+sha256 of this file: 5a5bd071566688cbb2dc403b8ededd72138fc88ac4901f9a6bf06621250fa7d9
+lines: 296   bytes: 100549   line endings: LF (0 CR bytes). .gitattributes marks docs/FV71_CONTRACT_SECTION.md -text.
+the same sha256 was computed twice, independently: (1) sha256sum of this file, (2) node crypto over the stream `git show a0c4346:docs/FV68_CONTRACT.md | sed -n '1800,2095p'` (segment taken from the source, not from the file): both 5a5bd071... and 100549 bytes.
+REPLACES the previous copy (NeuralChek 3810146, 296 lines, 100159 bytes, sha256 61658e5e2e41ea969e7b9ba8d128b0dcd9b8c91adee78d20bb5250b1b601ff63; committed in 2deeff7; its record is kept below).
+nothing that preceded was deleted: `diff old new` (old = the 3810146 copy as committed in 2deeff7, new = this file) = exactly two changed lines, 246c246 and 264c264, and nothing else (diff output, 8 lines: 2 hunk headers, 2 old lines, 2 separators, 2 new lines; git diff --stat: 2 insertions(+), 2 deletions(-)). In each of the two the old text is contained in the new line whole, with one bold bracket inserted in it:
+  246c246  wire contract item 6 (the definition of FRAME_AND_DIAGONALS) - added after "... from one corner to the opposite corner)": **[حلّ محلّه البند 4 من «الفقرة 2 المؤرَّخة 2026-10-21» أدناه: القطران من الزاوية الداخلية للإطار إلى المقابلة، لا بين زوايا الشبكة الأربع]** (the two diagonals run from the inner corner of the frame to the opposite one, not between the four corners of the grid)
+  264c264  the 6 mm numbers table of app order 8 ("the numbers, from the calculation, TouchGridPatternTest; no camera") - added after the colon: **[جدول الخلية 6 مم هذا حلّ محلّه جدول البند 8 من «الفقرة 2 المؤرَّخة 2026-10-21» أدناه]** (this 6 mm cell table was replaced by the table of item 8 of paragraph 2)
+  the comparison is saved as diff output in the engineer's scratchpad: scratchpad/backend-contract-sync2/section-old-vs-new.diff.
+this copy resolves what the 2deeff7 record listed under GOVERNING (wire item 6 and paragraph 2 item 4 disagreeing on the diagonals): the source now says which one wins. The server does not copy the geometry (rule 24); no reader code is affected.
+the whole-file copy docs/FV68_CONTRACT.md is NOT replaced (still NeuralChek 450d9ed, see docs/FV68_CONTRACT.SOURCE.txt); only the section was copied.
+rule: CLAUDE.md rule 29 - a transfer is a copy that drifts. On any new NeuralChek commit to that section, re-copy and update this file; compare sha256 first.
+GOVERNING for the M-02 reader: paragraph 2 dated 2026-10-21 (items 1-10), on top of the dated note "2026-10-21 (app order 8)" - the wire contract of the coordinator, items 1-8; where a0c4346 marks a passage of the older note as superseded by paragraph 2, paragraph 2 governs. The reader that implements it: functions/src/analysis/fv68Reader.js (readGridPatternKeys, readTouchPath) and touchPath.js; the names (one source, rule 24): functions/src/analysis/fv68Names.js (TOUCH_GRID_PATTERN_KEYS, TOUCH_GRID_PATTERN, TOUCH_GRID_PATTERN_STATE, TOUCH_GRID_REQUIRED_CELLS_BASIS, TOUCH_GRID_PATTERN_ANOMALY). Where the section and the code disagree, the section wins and the disagreement is reported.
+Tags in the section: [م] proposed name (approved by N71-01..08 / E22 where the section says so), [ق] a technical decision of the app NOT in the approved names text (to be reviewed, not treated as approved), [ك] code, [ن] moved and not verified, "معلّق" = no specification in the sources and nothing guessed.
+
+================ PREVIOUS RECORD (kept verbatim, rule 8): the 3810146 copy, 2026-10-22 +03 ================
+file: docs/FV71_CONTRACT_SECTION.md  (a byte-for-byte copy of ONE section; never edit it here - the owner is the NeuralChek repo)
+source: NeuralChek repository, docs/FV68_CONTRACT.md, lines 1800-2095 at NeuralChek 3810146 (section 7-ya "fv71 ...", with the dated notes through 2026-10-21: app order 6 (full-screen host, M-09/M-10 tap), app order 8 (M-02 "frame + X", the wire contract items 1-8 copied verbatim in it) and, new in this copy, the SECOND PARAGRAPH dated 2026-10-21 (M-02 takes the shape of the system's touch test: square 4 mm cells, empty top strip above the grid, the touch surface = the grid area, new diagonal algorithm, no text over the cells; items 1-10))
+copied by: the backend engineer, directly and in one step, with
+  git -C <home>/NeuralChek show 3810146:docs/FV68_CONTRACT.md | sed -n '1800,2095p' > docs/FV71_CONTRACT_SECTION.md
+  (no coordinator intermediate copy and no header lines this time), 2026-10-22 +03 (user decision 2026-10-22: copy paragraph 2 of 2026-10-21 into the section, check the server reader for items 6 and 9, run the changed e2e under the emulator, no deploy).
+sha256 of this file: 61658e5e2e41ea969e7b9ba8d128b0dcd9b8c91adee78d20bb5250b1b601ff63
+lines: 296   bytes: 100159   line endings: LF (0 CR bytes). .gitattributes marks docs/FV71_CONTRACT_SECTION.md -text.
+the same sha256 was computed twice, independently: (1) sha256sum of this file, (2) node crypto over the stream `git show 3810146:docs/FV68_CONTRACT.md | sed -n '1800,2095p'` (segment taken from the source, not from the file): both 61658e5e... and 100159 bytes.
+REPLACES the previous copy (NeuralChek 4c0102c, 275 lines, 89584 bytes, sha256 0e234b4d30fa9ecafffd631538c5cbf10d52dd68f568a3404a3383957b703d08; committed in cea7262; its record is kept below).
+nothing that preceded was deleted: `diff old new` (old = the 4c0102c copy as committed in cea7262, which is cmp-identical to `git show 4c0102c:docs/FV68_CONTRACT.md | sed -n 1800,2074p`; new = this file) = `275a276,296`: 21 lines appended after the old last line (the blank line that ended the 4c0102c section) and NOTHING else changed (0 changed lines, 0 deleted lines; git diff --stat: 21 insertions(+)).
+  appended: one bullet "M-02 - paragraph 2 dated 2026-10-21 (the shape of the touch test in the Samsung menu)" with its numbered items 1-10 (1 square 4 mm cell; 2 empty top strip and the touch surface = the grid area; 3 the frame; 4 the diagonals algorithm; 5 the text and the two buttons; 6 the camera cells computed on the grid; 7 what reaches the server; 8 the numbers table of five surfaces; 9 what the shape does not cover; 10 the proposed, unapproved hint text).
+  at the source the appended paragraph runs straight into the heading "## <appendix A>" (no blank line between its last line 2095 and the heading at 2096), so the last line of this copy is item 10, not a blank line.
+  the comparison is saved as diff output in the engineer's scratchpad: scratchpad/backend-contract-sync/section-old-vs-new.diff (the single hunk header `275a276,296` and the 21 added lines).
+the whole-file copy docs/FV68_CONTRACT.md is NOT replaced (still NeuralChek 450d9ed, see docs/FV68_CONTRACT.SOURCE.txt); only the section was copied.
+this copy closes the note at functions/test/fixtures/golden/fv71-producer-goldens-3810146.SOURCE.txt line 13 ("docs/FV71_CONTRACT_SECTION.md is NOT updated by this copy ... gained 21 lines at 3810146"); that line is a record of the earlier copy and is left as it was.
+rule: CLAUDE.md rule 29 - a transfer is a copy that drifts. On any new NeuralChek commit to that section, re-copy and update this file; compare sha256 first.
+GOVERNING for the M-02 reader: paragraph 2 dated 2026-10-21 (items 1-10: item 2 states that the touch surface is the grid area - the condition of the server reader in touchPath.js - and that a touch in the strip is outside the surface; item 6 the camera cells on the grid; item 7 what reaches the server), on top of the dated note "2026-10-21 (app order 8)" - the wire contract of the coordinator, items 1-8 (paragraph 2 states by itself what it replaces: the line "M-02 - what reaches the server" of the app-order-8 note (item 2: the surface), the app decision 2 "the diagonal algorithm" (item 4), and the 6 mm cell of decision 1 (item 1: "was 6"); the wire-contract item 6 text on the diagonals is NOT mentioned as replaced by paragraph 2 and still stands in the copy, reported to the coordinator, not edited). The reader that implements it: functions/src/analysis/fv68Reader.js (readGridPatternKeys, readTouchPath) and touchPath.js; the names (one source, rule 24): functions/src/analysis/fv68Names.js (TOUCH_GRID_PATTERN_KEYS, TOUCH_GRID_PATTERN, TOUCH_GRID_PATTERN_STATE, TOUCH_GRID_REQUIRED_CELLS_BASIS, TOUCH_GRID_PATTERN_ANOMALY). Where the section and the code disagree, the section wins and the disagreement is reported.
+Tags in the section: [م] proposed name (approved by N71-01..08 / E22 where the section says so), [ق] a technical decision of the app NOT in the approved names text (to be reviewed, not treated as approved), [ك] code, [ن] moved and not verified, "معلّق" = no specification in the sources and nothing guessed.
+
+================ PREVIOUS RECORD (kept verbatim, rule 8): the 4c0102c copy, backend order 4 item 5, 2026-10-21 +03 ================
+file: docs/FV71_CONTRACT_SECTION.md  (a byte-for-byte copy of ONE section; never edit it here - the owner is the NeuralChek repo)
+source: NeuralChek repository, docs/FV68_CONTRACT.md, lines 1800-2074 at NeuralChek 4c0102c (section 7-ya "fv71 ...", with the dated notes through 2026-10-21: app order 6 (full-screen host, M-09/M-10 tap) and app order 8 (M-02 "frame + X", the wire contract items 1-8 copied verbatim in it))
+copied by: the coordinator with `git show | sed -n` into
+  <home>\neuralcheck-workspace\evidence\run-2026-10-18\fv71-contract-section-NeuralChek-4c0102c.md  (3 header lines added by the coordinator: title, source line, blank; then the 275 section lines; sha256 of THAT file 6b8fefb120c374366b011f04883c532347e5d223973c9cd42f0adcc49e7d62e8),
+  then copied here by the backend engineer with `sed -n '4,$p'` (the 3 header lines dropped), 2026-10-21 +03 (order backend-engineer-4, item 5: contract sync).
+sha256 of this file: 0e234b4d30fa9ecafffd631538c5cbf10d52dd68f568a3404a3383957b703d08
+lines: 275   bytes: 89584   line endings: LF (0 CR bytes). .gitattributes marks docs/FV71_CONTRACT_SECTION.md -text.
+REPLACES the previous copy (NeuralChek f9e0571, 215 lines, 65640 bytes, sha256 e8330a5f61d1dbdcfd6b2183ffe5f48f8819b5cfd7a15be682b3888f1921c913; committed in 123fbd3; its record is kept below).
+nothing that preceded was deleted: `diff old new` (old = the f9e0571 copy as committed, new = this file) = 5 changed lines + 60 lines appended at the end; in every changed line the old text is contained in the new line
+  (4 lines contain the old line whole with a dated bracket added; line 133, a table row, has the same bracket inserted before the closing "|"):
+  111c111  E22 decision (ف-04): "2026-10-21 update: the open question is settled - \"works\" on M-09/M-10 does not open the dialog"
+  131c131  table row TouchGridTestDialog: "[2026-10-21: the buttons and the counter are no longer outside the surface - full-screen host]"
+  133c133  table row PASS_OPENS_DIALOG: "[2026-10-21: the set and the action were deleted; TAP_KEEPS_STORED_RAW = M-02, M-09, M-10]"
+  154c154  E22 in "open questions": "2026-10-21 update: the PASS_OPENS_DIALOG part was cancelled by the user"
+  209c209  M-09/M-10 execution notes: "2026-10-21: the question was settled - PASS_OPENS_DIALOG deleted"
+  214a215,274  appended: "update 2026-10-21 (app order 6)" and "update 2026-10-21 (app order 8 - M-02 frame + X, ف-02/ف-03)" - the wire contract items 1-8 verbatim, the decisions of the app (6 mm cell, diagonal algorithm,
+               placement of the buttons, camera cutoutCells), the not-covered triangles, the numbers table and the note for the server reader.
+  the comparison is saved as diff output in the engineer's scratchpad: scratchpad/run-2026-10-18/backend-engineer-4/section-old-vs-new.diff (81 lines).
+the whole-file copy docs/FV68_CONTRACT.md is NOT replaced (still NeuralChek 450d9ed, see docs/FV68_CONTRACT.SOURCE.txt); only the section was copied.
+rule: CLAUDE.md rule 29 - a transfer is a copy that drifts. On any new NeuralChek commit to that section, re-copy and update this file; compare sha256 first.
+GOVERNING for the M-02 reader: the dated note "2026-10-21 (app order 8)" - the wire contract of the coordinator, items 1-8. The reader that implements it: functions/src/analysis/fv68Reader.js (readGridPatternKeys, readTouchPath) and touchPath.js;
+  the names (one source, rule 24): functions/src/analysis/fv68Names.js (TOUCH_GRID_PATTERN_KEYS, TOUCH_GRID_PATTERN, TOUCH_GRID_PATTERN_STATE, TOUCH_GRID_REQUIRED_CELLS_BASIS, TOUCH_GRID_PATTERN_ANOMALY). Where the section and the code disagree, the section wins and the disagreement is reported.
+Tags in the section: [م] proposed name (approved by N71-01..08 / E22 where the section says so), [ق] a technical decision of the app NOT in the approved names text (to be reviewed, not treated as approved), [ك] code, [ن] moved and not verified, "معلّق" = no specification in the sources and nothing guessed.
+
+================ PREVIOUS RECORD (kept verbatim, rule 8): the f9e0571 copy, backend order 2 item 0, 2026-10-18 +03 ================
+file: docs/FV71_CONTRACT_SECTION.md  (a byte-for-byte copy of ONE section; never edit it here - the owner is the NeuralChek repo)
+source: NeuralChek repository, docs/FV68_CONTRACT.md, lines 1800-2014 at NeuralChek f9e0571 (section 7-ya: "fv71: M-02 new grid with raw / volume buttons M-09 M-10 / P6-13 condition unification", plus the 2026-10-18 approval tags and the producer execution notes appended by the app side)
+copied by: the coordinator with `git show | sed -n 1800,2014p` into
+  <home>\neuralcheck-workspace\evidence\run-2026-10-18\fv71-contract-section-NeuralChek-f9e0571.md  (3 header lines added by the coordinator: title, source line, blank; then the 215 section lines),
+  then copied here by the backend engineer with `sed -n '4,218p'` (the header lines dropped), 2026-10-18 +03 (order backend-engineer-2, item 0: contract sync).
+sha256 of this file: e8330a5f61d1dbdcfd6b2183ffe5f48f8819b5cfd7a15be682b3888f1921c913
+lines: 215   bytes: 65640   line endings: LF (0 CR bytes). .gitattributes marks docs/FV71_CONTRACT_SECTION.md -text.
+REPLACES the previous copy (NeuralChek 0af0b5c, 187 lines, 50926 bytes, sha256 7130b5442f3ef3fdef1bb4aeabfba8913bfc2ded479e7ca741cbd081d26d1a5f; committed in 94aa56f).
+diff old -> new (`diff old new`, hunks by line; "old" = the 0af0b5c copy, "new" = this file): 13 hunks
+  4a5,6        added: 2026-10-18 note on what the user approved (E18-E22, N71-01..08) and what stays proposed (the six E21 texts)
+  17c19        P6-01 fields: tagged approved (E20)
+  22c24        M-09/M-10 today: adds the 5f90ce1 note (PASS_OPENS_DIALOG is empty today, ManualChipActions.kt:40)
+  93c95        names VK:193-202: "were proposed" -> approval via E22
+  109c111      E22 decision: approved; open question whether "does not open" applies to M-09/M-10 (not executed)
+  131,132c133,134  table rows PASS_OPENS_DIALOG / setResult: notes at 5f90ce1
+  137c139      test row: E21-3 approved
+  141c143      heading: open questions approved except the six E21 texts
+  143,146c145,148  E18, E19, E20, E21 tagged approved
+  151,152c153,154  E21 item 5 (the six texts) NOT approved; E22 tagged approved
+  164c166      heading: names N71-01..08 approved
+  176c178      names table row: status 2026-10-18
+  186a189,214  ADDED 26 lines: 2026-10-18 update for the server reader (M-02 pass without measurements / pass with stored raw possible at stamp 70) and "execution status 2026-10-18" (what the producer decided: M-02 enumerations, grid, frames, strokes, displayedSuspects, pathCap 15,000 = 443,706 bytes, absentFieldReasons; M-09/M-10; P6-13)
+  The comparison is saved as diff output in the engineer's scratchpad: scratchpad/run-2026-10-18/backend-engineer-2/section-old-vs-new.diff (84 lines).
+the whole-file copy docs/FV68_CONTRACT.md is NOT replaced: it is still NeuralChek 450d9ed (1901 lines, see docs/FV68_CONTRACT.SOURCE.txt) and does not contain section 7-ya.
+  Only the section was available to the backend engineer (the NeuralChek repo is outside its boundary); a whole-file refresh is a coordinator action.
+rule: CLAUDE.md rule 29 - a transfer is a copy that drifts. On any new NeuralChek commit to that section, re-copy and update this file; compare sha256 first.
+The section is the GOVERNING text for the fv71 readers (S-M02, S-VOL, S-P6-13); where docs/ or the M-02 design disagree with it, the section wins and the disagreement is reported.
+Tags in the section: [م] proposed name (approved by N71-01..08 / E22 where the section says so), [ق] a technical decision of the app NOT in the approved names text (to be reviewed, not treated as approved), "معلّق" = no specification in the sources and nothing guessed.

@@ -1,0 +1,222 @@
+{
+  "_meta": {
+    "derivedFrom": "v7-report-export-NC-TM7PDN.json (تصدير حقيقي، شغّله المستخدم 2026-09-30 21:40 +03 عبر export-v7-report-readonly.js — النصّ الحقيقي لجهاز حقيقي، shortId=NC-TM7PDN)",
+    "sourceLocation": "C:\\Users\\Efendi.Tec\\neuralcheck-workspace\\evidence\\pre-deploy-reads-20260930T2138\\v7-report-export-NC-TM7PDN.json — خارج هذا المستودع، لا يُنسخ كما هو (نصّ المنسّق: \"الملفّ في مجلّد القيادة، فلا يُنسخ إلى المستودع كما هو\")",
+    "note": "الملفّ المصدر (2396 سطراً) نفسه غير مُعدَّل ولا مُلتزَم في أيّ مستودع — هذا الملفّ وحده يدخل neuralcheck-backend، وهو مشتقّ منه لا نسخة عنه (القاعدة 12 — الردود الحقيقية المسجَّلة لا تُعدَّل، وما يُشتقّ منها يُكتب في ملفّ جديد باسم يقول إنه مشتقّ)",
+    "extractedAt": "2026-09-30 +03",
+    "modifications": [
+      "١. اقتُطِع من document (2396 سطراً في المصدر) حقلان فقط: aiResponse.overall.letterSource وaiResponse.overall.letter (للسرد فقط، غير مُختبَر) وaiAudit.gatesApplied (19 عنصراً) — كل ما يلزم اختبار buildGoverningGateReason، لا المستند كاملاً.",
+      "٢. لا حذف ولا تعديل قيمة واحدة داخل الحقول المُقتطَعة — نسخة حرفية برمجية (JSON.stringify(JSON.parse(...))، لا نسخ يدوي) من doc.aiResponse.overall.{letter,letterSource} وdoc.aiAudit.gatesApplied كما وصلت من السكربت.",
+      "٣. أُضيف هذا الكائن (_meta) فقط — لا وجود له في المصدر."
+    ],
+    "usedBy": "functions/test/buildDisplayShapeV7.test.js — قسم «NC-TM7PDN حقيقي (مشتقّ)»"
+  },
+  "overallLetterSource": "GATE:LOW_CATEGORY_COVERAGE",
+  "overallLetter": "B",
+  "gatesApplied": [
+    {
+      "name": "ROOT_DETECTED",
+      "category": "security",
+      "ceilingLetter": "C",
+      "status": "NOT_FIRED",
+      "source": "SEC-04=pass",
+      "cappedOverall": false
+    },
+    {
+      "name": "PATCH_AGE",
+      "category": "security",
+      "ceilingLetter": "B",
+      "status": "NOT_FIRED",
+      "source": "SEC-03=2025-01-01 (20.9 شهراً)",
+      "cappedOverall": false
+    },
+    {
+      "name": "STORAGE_VERIFY_ERRORS",
+      "category": "storage",
+      "ceilingLetter": "D",
+      "status": "NOT_WIRED",
+      "source": "لا اسم حقل مؤكَّد في هذا المستودع",
+      "cappedOverall": false
+    },
+    {
+      "name": "GPU_HASH_MISMATCH",
+      "category": "gpu",
+      "ceilingLetter": "D",
+      "status": "NOT_WIRED",
+      "source": "لا اسم حقل مؤكَّد في هذا المستودع",
+      "cappedOverall": false
+    },
+    {
+      "name": "SUSTAINED_CEILING",
+      "category": "cpu",
+      "ceilingLetter": "C",
+      "status": "DISABLED",
+      "source": "ممنوعة قبل PLAN-03 بنصّ الخطّة",
+      "cappedOverall": false
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "thermal",
+      "ceilingLetter": "B",
+      "coveragePct": 0,
+      "status": "INPUT_ABSENT",
+      "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+      "belowThreshold": null,
+      "allNonMeasurement": null,
+      "cappedOverall": false
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "cpu",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "NOT_FIRED",
+      "source": "coverage=100.0%، 5 اختبار منفَّذ يتضمّن MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": false,
+      "cappedOverall": false
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "gpu",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "2/2 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": true
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "display",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "6/6 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "memory",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "1/1 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "storage",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "4/4 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "camera",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "11/11 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "gps",
+      "ceilingLetter": "B",
+      "coveragePct": 0,
+      "status": "INPUT_ABSENT",
+      "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+      "belowThreshold": null,
+      "allNonMeasurement": null,
+      "cappedOverall": false
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "security",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "8/8 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "sensors",
+      "ceilingLetter": "B",
+      "coveragePct": 76.9,
+      "status": "FIRED",
+      "source": "10/10 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "cellular",
+      "ceilingLetter": "B",
+      "coveragePct": 28.6,
+      "status": "FIRED",
+      "source": "coverage=28.6% < 60.0%؛ 2/2 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": true,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "wireless",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "6/6 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "audio",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "4/4 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    },
+    {
+      "name": "LOW_CATEGORY_COVERAGE",
+      "category": "input",
+      "ceilingLetter": "B",
+      "coveragePct": 100,
+      "status": "FIRED",
+      "source": "3/3 اختبار منفَّذ من صنف STATE — صفر MEASUREMENT",
+      "belowThreshold": false,
+      "allNonMeasurement": true,
+      "cappedOverall": false,
+      "note": "الحرف العامّ أسوأ من السقف أصلاً — لا أثر"
+    }
+  ]
+}

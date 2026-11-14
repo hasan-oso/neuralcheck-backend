@@ -1,0 +1,3472 @@
+{
+  "readerVersion": 1,
+  "fieldsVersion": 69,
+  "appVersion": "1.0.11",
+  "applicable": true,
+  "anomalies": [],
+  "absences": {
+    "ABSENT": [],
+    "ABSENT_DECLARED": [
+      "batteryHealth.energyCounter.valueStatus",
+      "verification.gpuGemm.correctStatus",
+      "verification.criticalDefect.valueStatus",
+      "measurements.items[2].touchGrid.elapsedMsStatus",
+      "measurements.items[2].touchGrid.timeToFirstTouchMsStatus"
+    ],
+    "NOT_IN_FILE": [],
+    "notInFieldsVersionCount": 4,
+    "removedInFv68Count": 6
+  },
+  "timeSeriesState": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "file",
+      "kind": "file",
+      "detail": null,
+      "recognized": true
+    }
+  },
+  "lists": {
+    "fieldsNotInFile": {
+      "status": "PRESENT",
+      "names": []
+    },
+    "unmeasuredDefaults": {
+      "status": "PRESENT",
+      "names": [
+        "deviceTierMeasured",
+        "intensityFactor",
+        "dataQuality.cpuTempCoveragePct",
+        "dataQuality.gpuTempCoveragePct",
+        "dataQuality.skinTempCoveragePct",
+        "dataQuality.cpuTempPrimarySource"
+      ]
+    },
+    "transitionalAggregates": {
+      "status": "PRESENT",
+      "names": [
+        "thermalHeadroomAvg",
+        "thermalHeadroomPeak",
+        "thermalStatusMax",
+        "maxBatteryTemp",
+        "stressEffectiveness",
+        "dataQuality",
+        "batteryHealth.dischargeRateUnderLoadMa",
+        "batteryHealth.voltageStabilityMv",
+        "batteryHealth.batteryTempMaxC",
+        "batteryHealth.batteryTempRiseC",
+        "batteryHealth.levelDropPct",
+        "batteryHealth.dischargeVsDesignRatioMah",
+        "verificationResults.criticalDefectDetected",
+        "verificationResults.cpuKnownAnswerTotalMsByPhase"
+      ]
+    }
+  },
+  "footerDiagnostics": {
+    "status": "PRESENT",
+    "entries": {
+      "batteryHealth": {
+        "kind": "ok",
+        "detail": null
+      },
+      "batteryHealthSnap": {
+        "kind": "ok",
+        "detail": null
+      },
+      "batteryPairs": {
+        "kind": "ok",
+        "detail": null
+      },
+      "channelReadFailures": {
+        "kind": "ok",
+        "detail": null
+      },
+      "dataQuality": {
+        "kind": "ok",
+        "detail": null
+      },
+      "knownCapacityClassification": {
+        "kind": "ok",
+        "detail": null
+      },
+      "samplesSnapshot": {
+        "kind": "ok",
+        "detail": "size=1606"
+      },
+      "scanStillness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "stressEffectiveness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "thermalLists": {
+        "kind": "ok",
+        "detail": null
+      },
+      "thermalSensorAvailability": {
+        "kind": "ok",
+        "detail": null
+      }
+    }
+  },
+  "layout": {
+    "columnCount": 16,
+    "sampleVectorLength": 16,
+    "sampleWidthConsistent": true,
+    "indexFrom": "position",
+    "columns": [
+      {
+        "index": 0,
+        "name": "timestamp_ms",
+        "unit": "ms",
+        "indexFrom": "position"
+      },
+      {
+        "index": 1,
+        "name": "battery_temp_c",
+        "unit": "°C",
+        "indexFrom": "position"
+      },
+      {
+        "index": 2,
+        "name": "battery_voltage_mv",
+        "unit": "mV",
+        "indexFrom": "position"
+      },
+      {
+        "index": 3,
+        "name": "battery_current_ua",
+        "unit": "µA",
+        "indexFrom": "position"
+      },
+      {
+        "index": 4,
+        "name": "battery_level_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 5,
+        "name": "cpu_freq_max_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      },
+      {
+        "index": 6,
+        "name": "cpu_usage_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 7,
+        "name": "package_power_mw",
+        "unit": "mW",
+        "indexFrom": "position"
+      },
+      {
+        "index": 8,
+        "name": "storage_throughput_mbps",
+        "unit": "MiB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 9,
+        "name": "memory_bandwidth_mbps",
+        "unit": "MiB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 10,
+        "name": "gpu_fps",
+        "unit": "fps",
+        "indexFrom": "position"
+      },
+      {
+        "index": 11,
+        "name": "charge_counter_raw",
+        "unit": "as_declared_by_device",
+        "indexFrom": "position"
+      },
+      {
+        "index": 12,
+        "name": "cpu_freq_policy0_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      },
+      {
+        "index": 13,
+        "name": "cpu_freq_policy2_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      },
+      {
+        "index": 14,
+        "name": "cpu_freq_policy4_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      },
+      {
+        "index": 15,
+        "name": "cpu_freq_policy6_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      }
+    ],
+    "byName": {
+      "timestamp_ms": 0,
+      "battery_temp_c": 1,
+      "battery_voltage_mv": 2,
+      "battery_current_ua": 3,
+      "battery_level_pct": 4,
+      "cpu_freq_max_khz": 5,
+      "cpu_usage_pct": 6,
+      "package_power_mw": 7,
+      "storage_throughput_mbps": 8,
+      "memory_bandwidth_mbps": 9,
+      "gpu_fps": 10,
+      "charge_counter_raw": 11,
+      "cpu_freq_policy0_khz": 12,
+      "cpu_freq_policy2_khz": 13,
+      "cpu_freq_policy4_khz": 14,
+      "cpu_freq_policy6_khz": 15
+    },
+    "duplicateNames": [],
+    "unresolvedIndices": [],
+    "columnsBeyondSamples": [],
+    "baseLayout": "MATCHES",
+    "baseMissing": [],
+    "baseMismatches": [],
+    "extraChannels": [
+      {
+        "name": "charge_counter_raw",
+        "index": 11
+      },
+      {
+        "name": "cpu_freq_policy0_khz",
+        "index": 12
+      },
+      {
+        "name": "cpu_freq_policy2_khz",
+        "index": 13
+      },
+      {
+        "name": "cpu_freq_policy4_khz",
+        "index": 14
+      },
+      {
+        "name": "cpu_freq_policy6_khz",
+        "index": 15
+      }
+    ],
+    "policyChannels": [
+      {
+        "name": "cpu_freq_policy0_khz",
+        "index": 12,
+        "policy": 0
+      },
+      {
+        "name": "cpu_freq_policy2_khz",
+        "index": 13,
+        "policy": 2
+      },
+      {
+        "name": "cpu_freq_policy4_khz",
+        "index": 14,
+        "policy": 4
+      },
+      {
+        "name": "cpu_freq_policy6_khz",
+        "index": 15,
+        "policy": 6
+      }
+    ],
+    "chargeCounter": {
+      "index": 11,
+      "unit": "as_declared_by_device"
+    }
+  },
+  "throughputUnit": {
+    "appVersion": "1.0.11",
+    "fieldsVersion": 69,
+    "declared": {
+      "storage_throughput_mbps": "MiB/s",
+      "memory_bandwidth_mbps": "MiB/s",
+      "segments": "MiB/s"
+    },
+    "unit": "MiB/s",
+    "basis": "DECLARED_IN_PAYLOAD"
+  },
+  "channelReadFailures": {
+    "map": {
+      "status": "PRESENT"
+    },
+    "counts": {
+      "status": "PRESENT"
+    },
+    "channels": {
+      "timestamp_ms": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_temp_c": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_voltage_mv": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_current_ua": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_level_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_freq_max_khz": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_usage_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "package_power_mw": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "storage_throughput_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "memory_bandwidth_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "gpu_fps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "charge_counter_raw": {
+        "tracking": "COMPLETE",
+        "failedIndices": [],
+        "listedCount": 0,
+        "count": 0,
+        "invalidIndexCount": 0,
+        "outOfRangeCount": 0,
+        "duplicateIndexCount": 0
+      },
+      "cpu_freq_policy0_khz": {
+        "tracking": "COMPLETE",
+        "failedIndices": [],
+        "listedCount": 0,
+        "count": 0,
+        "invalidIndexCount": 0,
+        "outOfRangeCount": 0,
+        "duplicateIndexCount": 0
+      },
+      "cpu_freq_policy2_khz": {
+        "tracking": "TRUNCATED",
+        "failedIndices": [
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324,
+          325,
+          326,
+          327,
+          328,
+          329,
+          330,
+          331,
+          332,
+          333,
+          334,
+          335,
+          336,
+          337,
+          338,
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352,
+          353,
+          354,
+          355,
+          356,
+          357,
+          358,
+          359,
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367,
+          368,
+          369,
+          370,
+          371,
+          372,
+          373,
+          374,
+          375,
+          376,
+          377,
+          378,
+          379,
+          380,
+          381,
+          382,
+          383,
+          384,
+          385,
+          386,
+          387,
+          388,
+          389,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397,
+          398,
+          399,
+          400,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408,
+          409,
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499
+        ],
+        "listedCount": 200,
+        "count": 230,
+        "invalidIndexCount": 0,
+        "outOfRangeCount": 0,
+        "duplicateIndexCount": 0
+      },
+      "cpu_freq_policy4_khz": {
+        "tracking": "COMPLETE",
+        "failedIndices": [],
+        "listedCount": 0,
+        "count": 0,
+        "invalidIndexCount": 0,
+        "outOfRangeCount": 0,
+        "duplicateIndexCount": 0
+      },
+      "cpu_freq_policy6_khz": {
+        "tracking": "COMPLETE",
+        "failedIndices": [
+          5,
+          800
+        ],
+        "listedCount": 2,
+        "count": 2,
+        "invalidIndexCount": 0,
+        "outOfRangeCount": 0,
+        "duplicateIndexCount": 0
+      }
+    },
+    "unknownChannels": []
+  },
+  "channelDiscovery": {
+    "status": "PRESENT",
+    "lists": {
+      "attempted": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status",
+        "charge_counter_raw",
+        "energy_counter",
+        "cpu_freq_policy0_khz",
+        "cpu_freq_policy2_khz",
+        "cpu_freq_policy4_khz",
+        "cpu_freq_policy6_khz"
+      ],
+      "available": [
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status",
+        "charge_counter_raw",
+        "cpu_freq_policy0_khz",
+        "cpu_freq_policy2_khz",
+        "cpu_freq_policy4_khz",
+        "cpu_freq_policy6_khz"
+      ],
+      "blockedBySelinux": [],
+      "missing": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "energy_counter"
+      ]
+    },
+    "reasonsStatus": "PRESENT",
+    "reasons": {
+      "cpu_temp_c": {
+        "text": "readCpuTemp returned -1.0 (not > 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "energy_counter": {
+        "text": "snapshotHealth().energyCounterNwh returned null (null or 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "gpu_temp_c": {
+        "text": "readGpuTemp returned -1.0 (not > 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "skin_temp_c_real": {
+        "text": "no native skin sensor: ThermalFallback reading=32.8, fromSysfs=false (a battery proxy is not a skin sensor)",
+        "kind": "OTHER"
+      }
+    },
+    "unavailableWithoutReason": []
+  },
+  "cpuPolicies": {
+    "status": "PRESENT",
+    "policies": [
+      {
+        "policy": 0,
+        "relatedCpus": "0 1",
+        "maxFreq": {
+          "state": "READ",
+          "valueKhz": 1785600,
+          "reason": null
+        }
+      },
+      {
+        "policy": 2,
+        "relatedCpus": "2 3",
+        "maxFreq": {
+          "state": "READ",
+          "valueKhz": 2054400,
+          "reason": null
+        }
+      },
+      {
+        "policy": 4,
+        "relatedCpus": "4 5",
+        "maxFreq": {
+          "state": "UNREADABLE",
+          "valueKhz": null,
+          "reason": "/sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq: open failed: EACCES (Permission denied)"
+        }
+      },
+      {
+        "policy": 6,
+        "relatedCpus": "6 7",
+        "maxFreq": {
+          "state": "READ",
+          "valueKhz": 2730000,
+          "reason": null
+        }
+      }
+    ],
+    "channelsWithoutPolicyEntry": [],
+    "policiesWithoutChannel": []
+  },
+  "thermal": {
+    "headroom": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ok",
+          "kind": "ok",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "readings": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "t": 0,
+            "headroom": 0.6,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 10000,
+            "headroom": 0.6118519,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 20000,
+            "headroom": 0.6237037,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 30000,
+            "headroom": 0.63555557,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 40000,
+            "headroom": null,
+            "kind": "exception",
+            "detail": "getThermalHeadroom: PowerManager unavailable"
+          },
+          {
+            "t": 50000,
+            "headroom": 0.65925926,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 60000,
+            "headroom": 0.6711111,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 70000,
+            "headroom": 0.68296295,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 80000,
+            "headroom": 0.6948148,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 90000,
+            "headroom": 0.7066667,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 100000,
+            "headroom": 0.71851856,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 110000,
+            "headroom": 0.7303704,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 120000,
+            "headroom": 0.74222225,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 130000,
+            "headroom": null,
+            "kind": "exception",
+            "detail": "getThermalHeadroom: PowerManager unavailable"
+          },
+          {
+            "t": 140000,
+            "headroom": 0.76592594,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 150000,
+            "headroom": 0.7777778,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 160000,
+            "headroom": 0.78962964,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 170000,
+            "headroom": 0.8014815,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 180000,
+            "headroom": 0.81333333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 190000,
+            "headroom": 0.8251852,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 200000,
+            "headroom": 0.837037,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 210000,
+            "headroom": 0.8488889,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 220000,
+            "headroom": null,
+            "kind": "exception",
+            "detail": "getThermalHeadroom: PowerManager unavailable"
+          },
+          {
+            "t": 230000,
+            "headroom": 0.87259257,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 240000,
+            "headroom": 0.8844445,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 250000,
+            "headroom": 0.89629626,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 260000,
+            "headroom": 0.90814817,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 270000,
+            "headroom": 0.91999996,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 280000,
+            "headroom": 0.93185186,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 290000,
+            "headroom": 0.94370365,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 300000,
+            "headroom": 0.95555556,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 310000,
+            "headroom": null,
+            "kind": "exception",
+            "detail": "getThermalHeadroom: PowerManager unavailable"
+          },
+          {
+            "t": 320000,
+            "headroom": 0.97925925,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 330000,
+            "headroom": 0.99111104,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 340000,
+            "headroom": 1.002963,
+            "kind": "ok",
+            "detail": null
+          }
+        ],
+        "byKind": {
+          "ok": 31,
+          "exception": 4
+        },
+        "okCount": 31,
+        "okMin": 0.6,
+        "okMax": 1.002963
+      }
+    },
+    "status": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "listener_registration_failed:no thermal listener for this uid",
+          "kind": "listener_registration_failed",
+          "detail": "no thermal listener for this uid",
+          "recognized": true
+        }
+      },
+      "events": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "t": 0,
+            "status": 1
+          }
+        ],
+        "maxStatus": 1
+      }
+    }
+  },
+  "batteryPairs": {
+    "state": {
+      "status": "PRESENT",
+      "kind": "BROADCASTS_RECEIVED",
+      "receiverRegistered": true,
+      "broadcastCount": 354,
+      "droppedByCap": 154,
+      "invalidReads": 1
+    },
+    "pairs": {
+      "status": "PRESENT",
+      "items": [
+        {
+          "t": 2000,
+          "voltageRaw": 3748,
+          "currentRaw": -435,
+          "chargeCounterRaw": 1710915,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 3000,
+          "voltageRaw": 3748,
+          "currentRaw": -639,
+          "chargeCounterRaw": 1710641,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 4000,
+          "voltageRaw": 3748,
+          "currentRaw": -290,
+          "chargeCounterRaw": 1710367,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 5000,
+          "voltageRaw": 3748,
+          "currentRaw": -365,
+          "chargeCounterRaw": 1710093,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 6000,
+          "voltageRaw": 3748,
+          "currentRaw": -463,
+          "chargeCounterRaw": 1709819,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 7000,
+          "voltageRaw": 3748,
+          "currentRaw": -316,
+          "chargeCounterRaw": 1709544,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 8000,
+          "voltageRaw": 3748,
+          "currentRaw": null,
+          "chargeCounterRaw": 1709270,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 9000,
+          "voltageRaw": 3748,
+          "currentRaw": -446,
+          "chargeCounterRaw": 1708996,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 10000,
+          "voltageRaw": 3748,
+          "currentRaw": -349,
+          "chargeCounterRaw": 1708722,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 11000,
+          "voltageRaw": 3748,
+          "currentRaw": -581,
+          "chargeCounterRaw": 1708448,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 12000,
+          "voltageRaw": 3748,
+          "currentRaw": -386,
+          "chargeCounterRaw": 1708174,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 13000,
+          "voltageRaw": 3748,
+          "currentRaw": -548,
+          "chargeCounterRaw": 1707900,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 14000,
+          "voltageRaw": 3748,
+          "currentRaw": -324,
+          "chargeCounterRaw": 1707625,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 15000,
+          "voltageRaw": 3748,
+          "currentRaw": -356,
+          "chargeCounterRaw": 1707351,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 16000,
+          "voltageRaw": 3748,
+          "currentRaw": -418,
+          "chargeCounterRaw": 1707077,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 17000,
+          "voltageRaw": 3748,
+          "currentRaw": -357,
+          "chargeCounterRaw": 1706803,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 18000,
+          "voltageRaw": 3748,
+          "currentRaw": -317,
+          "chargeCounterRaw": 1706529,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 19000,
+          "voltageRaw": 3748,
+          "currentRaw": -317,
+          "chargeCounterRaw": 1706255,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 20000,
+          "voltageRaw": 3748,
+          "currentRaw": -295,
+          "chargeCounterRaw": 1705981,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 21000,
+          "voltageRaw": 3748,
+          "currentRaw": -348,
+          "chargeCounterRaw": 1705706,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 22000,
+          "voltageRaw": 3748,
+          "currentRaw": -367,
+          "chargeCounterRaw": 1705432,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 23000,
+          "voltageRaw": 3748,
+          "currentRaw": -2545,
+          "chargeCounterRaw": 1705158,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 24000,
+          "voltageRaw": 3748,
+          "currentRaw": -2386,
+          "chargeCounterRaw": 1704884,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 25000,
+          "voltageRaw": 3748,
+          "currentRaw": -2335,
+          "chargeCounterRaw": 1704610,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 26000,
+          "voltageRaw": 3748,
+          "currentRaw": -2040,
+          "chargeCounterRaw": 1704336,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 27000,
+          "voltageRaw": 3748,
+          "currentRaw": -2112,
+          "chargeCounterRaw": 1704062,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 28000,
+          "voltageRaw": 3748,
+          "currentRaw": -2147,
+          "chargeCounterRaw": 1703787,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 29000,
+          "voltageRaw": 3748,
+          "currentRaw": -1808,
+          "chargeCounterRaw": 1703513,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 30000,
+          "voltageRaw": 3748,
+          "currentRaw": -2041,
+          "chargeCounterRaw": 1703239,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 31000,
+          "voltageRaw": 3748,
+          "currentRaw": -764,
+          "chargeCounterRaw": 1702828,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 32000,
+          "voltageRaw": 3748,
+          "currentRaw": -792,
+          "chargeCounterRaw": 1702691,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 33000,
+          "voltageRaw": 3748,
+          "currentRaw": -1192,
+          "chargeCounterRaw": 1702554,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 34000,
+          "voltageRaw": 3748,
+          "currentRaw": -1473,
+          "chargeCounterRaw": 1702417,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 35000,
+          "voltageRaw": 3748,
+          "currentRaw": -2182,
+          "chargeCounterRaw": 1702280,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 36000,
+          "voltageRaw": 3748,
+          "currentRaw": -708,
+          "chargeCounterRaw": 1702143,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 37000,
+          "voltageRaw": 3748,
+          "currentRaw": -685,
+          "chargeCounterRaw": 1702005,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 38000,
+          "voltageRaw": 3748,
+          "currentRaw": -772,
+          "chargeCounterRaw": 1701868,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 39000,
+          "voltageRaw": 3748,
+          "currentRaw": -833,
+          "chargeCounterRaw": 1701731,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 40000,
+          "voltageRaw": 3748,
+          "currentRaw": -726,
+          "chargeCounterRaw": 1701594,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 41000,
+          "voltageRaw": 3748,
+          "currentRaw": -1075,
+          "chargeCounterRaw": 1701457,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 42000,
+          "voltageRaw": 3748,
+          "currentRaw": -1085,
+          "chargeCounterRaw": 1701320,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 43000,
+          "voltageRaw": 3748,
+          "currentRaw": -838,
+          "chargeCounterRaw": 1701183,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 44000,
+          "voltageRaw": 3748,
+          "currentRaw": -880,
+          "chargeCounterRaw": 1701046,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 45000,
+          "voltageRaw": 3748,
+          "currentRaw": -907,
+          "chargeCounterRaw": 1700909,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 46000,
+          "voltageRaw": 3748,
+          "currentRaw": -792,
+          "chargeCounterRaw": 1700772,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 47000,
+          "voltageRaw": 3748,
+          "currentRaw": -812,
+          "chargeCounterRaw": 1700635,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 48000,
+          "voltageRaw": 3748,
+          "currentRaw": -620,
+          "chargeCounterRaw": 1700498,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 49000,
+          "voltageRaw": 3748,
+          "currentRaw": -670,
+          "chargeCounterRaw": 1700361,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 50000,
+          "voltageRaw": 3748,
+          "currentRaw": -693,
+          "chargeCounterRaw": 1700224,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 51000,
+          "voltageRaw": 3637,
+          "currentRaw": -735,
+          "chargeCounterRaw": 1700086,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 52000,
+          "voltageRaw": 3637,
+          "currentRaw": -709,
+          "chargeCounterRaw": 1699949,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 53000,
+          "voltageRaw": 3637,
+          "currentRaw": -1342,
+          "chargeCounterRaw": 1699812,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 54000,
+          "voltageRaw": 3637,
+          "currentRaw": -658,
+          "chargeCounterRaw": 1699675,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 55000,
+          "voltageRaw": 3637,
+          "currentRaw": -740,
+          "chargeCounterRaw": 1699538,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 56000,
+          "voltageRaw": 3637,
+          "currentRaw": -529,
+          "chargeCounterRaw": 1699401,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 57000,
+          "voltageRaw": 3637,
+          "currentRaw": -624,
+          "chargeCounterRaw": 1699264,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 58000,
+          "voltageRaw": 3637,
+          "currentRaw": -539,
+          "chargeCounterRaw": 1699127,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 59000,
+          "voltageRaw": 3637,
+          "currentRaw": -390,
+          "chargeCounterRaw": 1698990,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 60000,
+          "voltageRaw": 3637,
+          "currentRaw": -315,
+          "chargeCounterRaw": 1698853,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 61000,
+          "voltageRaw": 3637,
+          "currentRaw": -591,
+          "chargeCounterRaw": 1698716,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 62000,
+          "voltageRaw": 3637,
+          "currentRaw": -655,
+          "chargeCounterRaw": 1698579,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 63000,
+          "voltageRaw": 3637,
+          "currentRaw": -383,
+          "chargeCounterRaw": 1698442,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 64000,
+          "voltageRaw": 3637,
+          "currentRaw": -302,
+          "chargeCounterRaw": 1698305,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 65000,
+          "voltageRaw": 3637,
+          "currentRaw": -353,
+          "chargeCounterRaw": 1698167,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 66000,
+          "voltageRaw": 3637,
+          "currentRaw": -408,
+          "chargeCounterRaw": 1698030,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 67000,
+          "voltageRaw": 3637,
+          "currentRaw": -1060,
+          "chargeCounterRaw": 1697893,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 68000,
+          "voltageRaw": 3637,
+          "currentRaw": -331,
+          "chargeCounterRaw": 1697756,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 69000,
+          "voltageRaw": 3637,
+          "currentRaw": -644,
+          "chargeCounterRaw": 1697619,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 70000,
+          "voltageRaw": 3637,
+          "currentRaw": -392,
+          "chargeCounterRaw": 1697482,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 71000,
+          "voltageRaw": 3637,
+          "currentRaw": -360,
+          "chargeCounterRaw": 1697345,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 72000,
+          "voltageRaw": 3637,
+          "currentRaw": -421,
+          "chargeCounterRaw": 1697208,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 73000,
+          "voltageRaw": 3637,
+          "currentRaw": -382,
+          "chargeCounterRaw": 1697071,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 74000,
+          "voltageRaw": 3637,
+          "currentRaw": -646,
+          "chargeCounterRaw": 1696934,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 75000,
+          "voltageRaw": 3637,
+          "currentRaw": -353,
+          "chargeCounterRaw": 1696797,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 76000,
+          "voltageRaw": 3637,
+          "currentRaw": -329,
+          "chargeCounterRaw": 1696660,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 77000,
+          "voltageRaw": 3637,
+          "currentRaw": -295,
+          "chargeCounterRaw": 1696523,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 78000,
+          "voltageRaw": 3637,
+          "currentRaw": -341,
+          "chargeCounterRaw": 1696386,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 79000,
+          "voltageRaw": 3637,
+          "currentRaw": -592,
+          "chargeCounterRaw": 1696248,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 80000,
+          "voltageRaw": 3637,
+          "currentRaw": -370,
+          "chargeCounterRaw": 1696111,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 81000,
+          "voltageRaw": 3707,
+          "currentRaw": -433,
+          "chargeCounterRaw": 1695974,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 82000,
+          "voltageRaw": 3707,
+          "currentRaw": -339,
+          "chargeCounterRaw": 1695837,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 83000,
+          "voltageRaw": 3707,
+          "currentRaw": -354,
+          "chargeCounterRaw": 1695700,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 84000,
+          "voltageRaw": 3707,
+          "currentRaw": -379,
+          "chargeCounterRaw": 1695563,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 85000,
+          "voltageRaw": 3707,
+          "currentRaw": -298,
+          "chargeCounterRaw": 1695426,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 86000,
+          "voltageRaw": 3707,
+          "currentRaw": -387,
+          "chargeCounterRaw": 1695289,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 87000,
+          "voltageRaw": 3707,
+          "currentRaw": -242,
+          "chargeCounterRaw": 1695152,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 88000,
+          "voltageRaw": 3707,
+          "currentRaw": -339,
+          "chargeCounterRaw": 1695015,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 89000,
+          "voltageRaw": 3707,
+          "currentRaw": -401,
+          "chargeCounterRaw": 1694878,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 90000,
+          "voltageRaw": 3707,
+          "currentRaw": -408,
+          "chargeCounterRaw": 1694741,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 91000,
+          "voltageRaw": 3707,
+          "currentRaw": -425,
+          "chargeCounterRaw": 1694604,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 92000,
+          "voltageRaw": 3707,
+          "currentRaw": -470,
+          "chargeCounterRaw": 1694467,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 93000,
+          "voltageRaw": 3707,
+          "currentRaw": -483,
+          "chargeCounterRaw": 1694329,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 94000,
+          "voltageRaw": 3707,
+          "currentRaw": -405,
+          "chargeCounterRaw": 1694192,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 95000,
+          "voltageRaw": 3707,
+          "currentRaw": -346,
+          "chargeCounterRaw": 1694055,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 96000,
+          "voltageRaw": 3707,
+          "currentRaw": -667,
+          "chargeCounterRaw": 1693918,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 97000,
+          "voltageRaw": 3707,
+          "currentRaw": -476,
+          "chargeCounterRaw": 1693781,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 98000,
+          "voltageRaw": 3707,
+          "currentRaw": -468,
+          "chargeCounterRaw": 1693644,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 99000,
+          "voltageRaw": 3707,
+          "currentRaw": -366,
+          "chargeCounterRaw": 1693507,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 100000,
+          "voltageRaw": 3707,
+          "currentRaw": -471,
+          "chargeCounterRaw": 1693370,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 101000,
+          "voltageRaw": 3707,
+          "currentRaw": -414,
+          "chargeCounterRaw": 1693233,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 102000,
+          "voltageRaw": 3707,
+          "currentRaw": -349,
+          "chargeCounterRaw": 1693096,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 103000,
+          "voltageRaw": 3707,
+          "currentRaw": -331,
+          "chargeCounterRaw": 1692959,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 104000,
+          "voltageRaw": 3707,
+          "currentRaw": -389,
+          "chargeCounterRaw": 1692822,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 105000,
+          "voltageRaw": 3707,
+          "currentRaw": -335,
+          "chargeCounterRaw": 1692685,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 106000,
+          "voltageRaw": 3707,
+          "currentRaw": -417,
+          "chargeCounterRaw": 1692548,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 107000,
+          "voltageRaw": 3707,
+          "currentRaw": -573,
+          "chargeCounterRaw": 1692410,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 108000,
+          "voltageRaw": 3707,
+          "currentRaw": -359,
+          "chargeCounterRaw": 1692273,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 109000,
+          "voltageRaw": 3707,
+          "currentRaw": -650,
+          "chargeCounterRaw": 1692136,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 110000,
+          "voltageRaw": 3707,
+          "currentRaw": -545,
+          "chargeCounterRaw": 1691999,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 111000,
+          "voltageRaw": 3707,
+          "currentRaw": -468,
+          "chargeCounterRaw": 1691862,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 112000,
+          "voltageRaw": 3707,
+          "currentRaw": -476,
+          "chargeCounterRaw": 1691725,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 113000,
+          "voltageRaw": 3707,
+          "currentRaw": -542,
+          "chargeCounterRaw": 1691588,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 114000,
+          "voltageRaw": 3707,
+          "currentRaw": -652,
+          "chargeCounterRaw": 1691451,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 115000,
+          "voltageRaw": 3707,
+          "currentRaw": -492,
+          "chargeCounterRaw": 1691314,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 116000,
+          "voltageRaw": 3707,
+          "currentRaw": -503,
+          "chargeCounterRaw": 1691177,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 117000,
+          "voltageRaw": 3707,
+          "currentRaw": -435,
+          "chargeCounterRaw": 1691040,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 118000,
+          "voltageRaw": 3707,
+          "currentRaw": -698,
+          "chargeCounterRaw": 1690903,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 119000,
+          "voltageRaw": 3707,
+          "currentRaw": -471,
+          "chargeCounterRaw": 1690766,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 120000,
+          "voltageRaw": 3707,
+          "currentRaw": -362,
+          "chargeCounterRaw": 1690629,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 121000,
+          "voltageRaw": 3707,
+          "currentRaw": -438,
+          "chargeCounterRaw": 1690491,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 122000,
+          "voltageRaw": 3707,
+          "currentRaw": -439,
+          "chargeCounterRaw": 1690354,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 123000,
+          "voltageRaw": 3707,
+          "currentRaw": -504,
+          "chargeCounterRaw": 1690217,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 124000,
+          "voltageRaw": 3707,
+          "currentRaw": -406,
+          "chargeCounterRaw": 1690080,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 125000,
+          "voltageRaw": 3707,
+          "currentRaw": -563,
+          "chargeCounterRaw": 1689943,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 126000,
+          "voltageRaw": 3707,
+          "currentRaw": -1651,
+          "chargeCounterRaw": 1689806,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 127000,
+          "voltageRaw": 3707,
+          "currentRaw": -558,
+          "chargeCounterRaw": 1689669,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 128000,
+          "voltageRaw": 3707,
+          "currentRaw": -462,
+          "chargeCounterRaw": 1689532,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 129000,
+          "voltageRaw": 3707,
+          "currentRaw": -473,
+          "chargeCounterRaw": 1689395,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 130000,
+          "voltageRaw": 3707,
+          "currentRaw": -389,
+          "chargeCounterRaw": 1689258,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 131000,
+          "voltageRaw": 3707,
+          "currentRaw": -579,
+          "chargeCounterRaw": 1689121,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 132000,
+          "voltageRaw": 3707,
+          "currentRaw": -551,
+          "chargeCounterRaw": 1688984,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 133000,
+          "voltageRaw": 3707,
+          "currentRaw": -553,
+          "chargeCounterRaw": 1688847,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 134000,
+          "voltageRaw": 3707,
+          "currentRaw": -456,
+          "chargeCounterRaw": 1688710,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 135000,
+          "voltageRaw": 3707,
+          "currentRaw": -535,
+          "chargeCounterRaw": 1688572,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 136000,
+          "voltageRaw": 3707,
+          "currentRaw": -638,
+          "chargeCounterRaw": 1688435,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 137000,
+          "voltageRaw": 3707,
+          "currentRaw": -643,
+          "chargeCounterRaw": 1688298,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 138000,
+          "voltageRaw": 3707,
+          "currentRaw": -483,
+          "chargeCounterRaw": 1688161,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 139000,
+          "voltageRaw": 3707,
+          "currentRaw": -606,
+          "chargeCounterRaw": 1688024,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 140000,
+          "voltageRaw": 3707,
+          "currentRaw": -581,
+          "chargeCounterRaw": 1687887,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 141000,
+          "voltageRaw": 3707,
+          "currentRaw": -610,
+          "chargeCounterRaw": 1687750,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 142000,
+          "voltageRaw": 3707,
+          "currentRaw": -419,
+          "chargeCounterRaw": 1687613,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 143000,
+          "voltageRaw": 3707,
+          "currentRaw": -565,
+          "chargeCounterRaw": 1687476,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 144000,
+          "voltageRaw": 3707,
+          "currentRaw": -839,
+          "chargeCounterRaw": 1687339,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 145000,
+          "voltageRaw": 3707,
+          "currentRaw": -1256,
+          "chargeCounterRaw": 1687202,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 146000,
+          "voltageRaw": 3707,
+          "currentRaw": -646,
+          "chargeCounterRaw": 1687065,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 147000,
+          "voltageRaw": 3707,
+          "currentRaw": -561,
+          "chargeCounterRaw": 1686928,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 148000,
+          "voltageRaw": 3707,
+          "currentRaw": -788,
+          "chargeCounterRaw": 1686791,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 149000,
+          "voltageRaw": 3707,
+          "currentRaw": -550,
+          "chargeCounterRaw": 1686653,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 150000,
+          "voltageRaw": 3707,
+          "currentRaw": -665,
+          "chargeCounterRaw": 1686516,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 151000,
+          "voltageRaw": 3707,
+          "currentRaw": -791,
+          "chargeCounterRaw": 1686379,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 152000,
+          "voltageRaw": 3707,
+          "currentRaw": -475,
+          "chargeCounterRaw": 1686242,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 153000,
+          "voltageRaw": 3707,
+          "currentRaw": -360,
+          "chargeCounterRaw": 1686105,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 154000,
+          "voltageRaw": 3707,
+          "currentRaw": -1191,
+          "chargeCounterRaw": 1685968,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 155000,
+          "voltageRaw": 3707,
+          "currentRaw": -581,
+          "chargeCounterRaw": 1685831,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 156000,
+          "voltageRaw": 3707,
+          "currentRaw": -535,
+          "chargeCounterRaw": 1685694,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 157000,
+          "voltageRaw": 3707,
+          "currentRaw": -474,
+          "chargeCounterRaw": 1685557,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 158000,
+          "voltageRaw": 3707,
+          "currentRaw": -537,
+          "chargeCounterRaw": 1685420,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 159000,
+          "voltageRaw": 3707,
+          "currentRaw": -2025,
+          "chargeCounterRaw": 1685283,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 160000,
+          "voltageRaw": 3707,
+          "currentRaw": -604,
+          "chargeCounterRaw": 1685146,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 161000,
+          "voltageRaw": 3707,
+          "currentRaw": -513,
+          "chargeCounterRaw": 1685009,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 162000,
+          "voltageRaw": 3707,
+          "currentRaw": -566,
+          "chargeCounterRaw": 1684872,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 163000,
+          "voltageRaw": 3707,
+          "currentRaw": -528,
+          "chargeCounterRaw": 1684734,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 164000,
+          "voltageRaw": 3707,
+          "currentRaw": -548,
+          "chargeCounterRaw": 1684597,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 165000,
+          "voltageRaw": 3707,
+          "currentRaw": -473,
+          "chargeCounterRaw": 1684460,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 166000,
+          "voltageRaw": 3707,
+          "currentRaw": -2743,
+          "chargeCounterRaw": 1684186,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 167000,
+          "voltageRaw": 3707,
+          "currentRaw": -2457,
+          "chargeCounterRaw": 1683638,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 168000,
+          "voltageRaw": 3707,
+          "currentRaw": -2324,
+          "chargeCounterRaw": 1683090,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 169000,
+          "voltageRaw": 3707,
+          "currentRaw": -2213,
+          "chargeCounterRaw": 1682541,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 170000,
+          "voltageRaw": 3707,
+          "currentRaw": -2800,
+          "chargeCounterRaw": 1681993,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 171000,
+          "voltageRaw": 3707,
+          "currentRaw": -2431,
+          "chargeCounterRaw": 1681445,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 172000,
+          "voltageRaw": 3707,
+          "currentRaw": -2763,
+          "chargeCounterRaw": 1680896,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 173000,
+          "voltageRaw": 3470,
+          "currentRaw": -2218,
+          "chargeCounterRaw": 1680348,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 174000,
+          "voltageRaw": 3470,
+          "currentRaw": -2525,
+          "chargeCounterRaw": 1679800,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 175000,
+          "voltageRaw": 3470,
+          "currentRaw": -2016,
+          "chargeCounterRaw": 1679252,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 176000,
+          "voltageRaw": 3470,
+          "currentRaw": -1840,
+          "chargeCounterRaw": 1678703,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 177000,
+          "voltageRaw": 3470,
+          "currentRaw": -1987,
+          "chargeCounterRaw": 1678155,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 178000,
+          "voltageRaw": 3470,
+          "currentRaw": -1923,
+          "chargeCounterRaw": 1677607,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 179000,
+          "voltageRaw": 3470,
+          "currentRaw": -2347,
+          "chargeCounterRaw": 1677058,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 180000,
+          "voltageRaw": 3470,
+          "currentRaw": -2390,
+          "chargeCounterRaw": 1676510,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 181000,
+          "voltageRaw": 3470,
+          "currentRaw": -1487,
+          "chargeCounterRaw": 1675962,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 182000,
+          "voltageRaw": 3470,
+          "currentRaw": -2148,
+          "chargeCounterRaw": 1675414,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 183000,
+          "voltageRaw": 3470,
+          "currentRaw": -2381,
+          "chargeCounterRaw": 1674865,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 184000,
+          "voltageRaw": 3470,
+          "currentRaw": -2313,
+          "chargeCounterRaw": 1674317,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 185000,
+          "voltageRaw": 3470,
+          "currentRaw": -1858,
+          "chargeCounterRaw": 1673769,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 186000,
+          "voltageRaw": 3470,
+          "currentRaw": -1643,
+          "chargeCounterRaw": 1673220,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 187000,
+          "voltageRaw": 3470,
+          "currentRaw": -2211,
+          "chargeCounterRaw": 1672672,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 188000,
+          "voltageRaw": 3470,
+          "currentRaw": -1952,
+          "chargeCounterRaw": 1672124,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 189000,
+          "voltageRaw": 3470,
+          "currentRaw": -1985,
+          "chargeCounterRaw": 1671576,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 190000,
+          "voltageRaw": 3470,
+          "currentRaw": -1715,
+          "chargeCounterRaw": 1671027,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 191000,
+          "voltageRaw": 3470,
+          "currentRaw": -2033,
+          "chargeCounterRaw": 1670479,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 192000,
+          "voltageRaw": 3470,
+          "currentRaw": -1735,
+          "chargeCounterRaw": 1669931,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 193000,
+          "voltageRaw": 3470,
+          "currentRaw": -2205,
+          "chargeCounterRaw": 1669382,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 194000,
+          "voltageRaw": 3470,
+          "currentRaw": -1765,
+          "chargeCounterRaw": 1668834,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 195000,
+          "voltageRaw": 3470,
+          "currentRaw": -1903,
+          "chargeCounterRaw": 1668286,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 196000,
+          "voltageRaw": 3470,
+          "currentRaw": -1665,
+          "chargeCounterRaw": 1667738,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 197000,
+          "voltageRaw": 3470,
+          "currentRaw": -2320,
+          "chargeCounterRaw": 1667189,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 198000,
+          "voltageRaw": 3470,
+          "currentRaw": -1703,
+          "chargeCounterRaw": 1666641,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 199000,
+          "voltageRaw": 3470,
+          "currentRaw": -1698,
+          "chargeCounterRaw": 1666093,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 200000,
+          "voltageRaw": 3470,
+          "currentRaw": -2041,
+          "chargeCounterRaw": 1665544,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 201000,
+          "voltageRaw": 3470,
+          "currentRaw": -2113,
+          "chargeCounterRaw": 1664996,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        }
+      ]
+    }
+  },
+  "batteryHealth": {
+    "status": "PRESENT",
+    "indicators": {
+      "dischargeRateUnderLoadMa": {
+        "value": 1655.775,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "voltageStabilityMv": {
+        "value": 48.54948641931187,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "dischargeVsDesignRatioMah": {
+        "value": 176,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "batteryTempRiseC": {
+        "value": 6.900001525878906,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "levelDropPct": {
+        "value": 4,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      }
+    },
+    "cycleCount": {
+      "value": 212,
+      "valueStatus": "PRESENT",
+      "state": {
+        "raw": "read",
+        "kind": "read",
+        "detail": null,
+        "recognized": true
+      },
+      "stateStatus": "PRESENT",
+      "source": {
+        "raw": "sysfs:/sys/class/power_supply/battery/cycle_count",
+        "kind": "sysfs",
+        "detail": "/sys/class/power_supply/battery/cycle_count",
+        "recognized": true
+      },
+      "sourceStatus": "PRESENT"
+    },
+    "chargeCounter": {
+      "value": 1711600,
+      "valueStatus": "PRESENT",
+      "state": {
+        "raw": "read",
+        "kind": "read",
+        "detail": null,
+        "recognized": true
+      },
+      "stateStatus": "PRESENT"
+    },
+    "energyCounter": {
+      "value": null,
+      "valueStatus": "ABSENT_DECLARED",
+      "state": {
+        "raw": "not_read:unsupported_by_device",
+        "kind": "not_read",
+        "detail": "unsupported_by_device",
+        "recognized": true
+      },
+      "stateStatus": "PRESENT"
+    },
+    "designCapacityMah": {
+      "value": 4400,
+      "status": "PRESENT"
+    }
+  },
+  "cpuTemp": {
+    "state": "SAMPLER_MAX_CPU",
+    "valueC": 58.5,
+    "valueStatus": "PRESENT",
+    "source": {
+      "raw": "sampler_max_cpu",
+      "kind": "sampler_max_cpu",
+      "detail": null,
+      "recognized": true
+    },
+    "sourceStatus": "PRESENT",
+    "legacyMaxCpuTemp": {
+      "status": "REMOVED_IN_FV68",
+      "value": null
+    }
+  },
+  "verification": {
+    "status": "PRESENT",
+    "gpuGemm": {
+      "correct": null,
+      "correctStatus": "ABSENT_DECLARED",
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "not_run:no_attempt_completed",
+          "kind": "not_run",
+          "detail": "no_attempt_completed",
+          "recognized": true
+        }
+      }
+    },
+    "gpuFragmentHash": {
+      "matches": 14,
+      "total": 14,
+      "matchesStatus": "PRESENT",
+      "totalStatus": "PRESENT"
+    },
+    "gpuFenceTimeout": {
+      "count": 0,
+      "status": "PRESENT"
+    },
+    "criticalDefect": {
+      "value": null,
+      "valueStatus": "ABSENT_DECLARED",
+      "inputsNotRun": [
+        "gpuComputeGemm"
+      ],
+      "inputsNotRunStatus": "PRESENT"
+    },
+    "workersPin": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "attempted",
+          "kind": "attempted",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "pinned": {
+        "workersPinnedBig": 2,
+        "workersPinnedMid": 3,
+        "workersPinnedLittle": 2
+      },
+      "failed": {
+        "workersPinFailedBig": 0,
+        "workersPinFailedMid": 0,
+        "workersPinFailedLittle": 1
+      }
+    },
+    "memory": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "not_run:insufficient_free_memory",
+          "kind": "not_run",
+          "detail": "insufficient_free_memory",
+          "recognized": true
+        }
+      },
+      "errors": {
+        "march": null,
+        "walkingOnes": null,
+        "randomVerify": null
+      },
+      "derived": {
+        "marchPassed": null,
+        "walkingOnesPassed": null
+      },
+      "bytes": {
+        "verified": null,
+        "buffer": null,
+        "freeBytes": 461373440,
+        "testedByWorkload": 23522918400
+      },
+      "timeCapMs": 30000,
+      "durationMs": 3,
+      "phaseWindows": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "name": "memory_kernel",
+            "startMs": 105780,
+            "endMs": 105783
+          },
+          {
+            "name": "memory_workload",
+            "startMs": 105783,
+            "endMs": 165784
+          }
+        ]
+      }
+    },
+    "storage": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "partial:time_cap_reached",
+          "kind": "partial",
+          "detail": "time_cap_reached",
+          "recognized": true
+        }
+      },
+      "method": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "o_direct_sequential",
+          "kind": "o_direct_sequential",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "errors": {
+        "write": 0,
+        "read": 0
+      },
+      "writeErrorsStatus": "PRESENT",
+      "readErrorsStatus": "PRESENT",
+      "bytes": {
+        "compared": 104857600,
+        "planned": 268435456
+      },
+      "durationMs": 3000
+    },
+    "cpuKnownAnswer": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ran",
+          "kind": "ran",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "runs": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "phase": 3,
+            "plannedAtPct": 25,
+            "t": 184695,
+            "tEnd": 184815,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 3,
+            "plannedAtPct": 60,
+            "t": 210945,
+            "tEnd": 210975,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "native_call_failed:sieve kernel aborted: out of memory",
+                "kind": "native_call_failed",
+                "detail": "sieve kernel aborted: out of memory",
+                "recognized": true
+              },
+              "primeCount": null,
+              "durationMs": null,
+              "limit": {
+                "value": null,
+                "basis": "NOT_SHIPPED_BY_DESIGN"
+              },
+              "referencePrimeCount": null,
+              "primeCountVsReference": "NOT_COMPARABLE:NO_PRIME_COUNT"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 3,
+            "plannedAtPct": 92,
+            "t": 234945,
+            "tEnd": 235065,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 25,
+            "t": 328743,
+            "tEnd": 328863,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 60,
+            "t": 349743,
+            "tEnd": 349863,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 92,
+            "t": null,
+            "tEnd": null,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "not_reached",
+                "kind": "not_reached",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": null,
+              "durationMs": null,
+              "limit": {
+                "value": null,
+                "basis": "NOT_SHIPPED_BY_DESIGN"
+              },
+              "referencePrimeCount": null,
+              "primeCountVsReference": "NOT_COMPARABLE:NO_PRIME_COUNT"
+            },
+            "sha256": {
+              "status": {
+                "raw": "not_reached",
+                "kind": "not_reached",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": null
+            }
+          }
+        ]
+      },
+      "totalMsByPhase": {
+        "status": "PRESENT",
+        "byPhase": {
+          "3": 270,
+          "5": 240
+        }
+      },
+      "counts": {
+        "runs": 6,
+        "sieveMatch": 4,
+        "sieveMismatch": 0,
+        "sieveNotReached": 1,
+        "sieveSkipped": 0,
+        "sieveCancelled": 0,
+        "sieveError": 1,
+        "shaMatch": 5,
+        "shaMismatch": 0,
+        "shaNotReached": 1,
+        "shaSkipped": 0,
+        "shaCancelled": 0,
+        "shaError": 0,
+        "unrecognized": 0
+      },
+      "mismatches": 0
+    },
+    "aiDelegate": {
+      "delegate": "STUB",
+      "delegateStatus": "PRESENT",
+      "initErrorText": "UnsatisfiedLinkError: dlopen failed: library \"libtensorflowlite_jni.so\" not found",
+      "initErrorStatus": "PRESENT",
+      "noInitErrorDeclared": false
+    },
+    "legacy": {
+      "cpuFmaErrors": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "cpuPrimeSieveCorrect": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "memoryMarchPassed": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "memoryWalkingOnesPassed": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      }
+    },
+    "storageSlcCacheSizeMbStatus": "REMOVED_IN_FV68",
+    "storageThroughputSegmentsUnit": {
+      "status": "PRESENT",
+      "value": "MiB/s"
+    }
+  },
+  "stillness": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "measured",
+      "kind": "measured",
+      "detail": null,
+      "recognized": true
+    },
+    "stateStatus": "PRESENT",
+    "isStill": true,
+    "accelStdDev": 0.29157373,
+    "sampleCount": 1606
+  },
+  "preScanWarnings": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "read_failed:the pre-scan holder was already drained",
+      "kind": "read_failed",
+      "detail": "the pre-scan holder was already drained",
+      "recognized": true
+    }
+  },
+  "measurements": {
+    "items": [
+      {
+        "source": "functionalResults",
+        "testId": "L-02",
+        "status": "PRESENT",
+        "keys": [
+          "satelliteStatusCallbacks",
+          "timeToFirstFixMs",
+          "usedSatellites",
+          "visibleSatellites"
+        ],
+        "unencodable": null,
+        "unreadable": null,
+        "l02": {
+          "satelliteStatusCallbacks": 31,
+          "visibleSatellites": 9,
+          "usedSatellites": 4,
+          "timeToFirstFixMs": 8123,
+          "locationUpdateCount": null,
+          "gpsProviderEnabled": null,
+          "gnssCallbackState": null,
+          "locationUpdatesState": null,
+          "timeToFirstFixState": null,
+          "engineState": "SATELLITES_MEASURED"
+        }
+      },
+      {
+        "source": "functionalResults",
+        "testId": "SN-04",
+        "status": "PRESENT",
+        "keys": [
+          "coverPromptAtMs",
+          "readingsBeforeCover",
+          "readingsDuringCover",
+          "windowMs"
+        ],
+        "unencodable": null,
+        "unreadable": null
+      },
+      {
+        "source": "manualResults",
+        "testId": "M-02",
+        "status": "PRESENT",
+        "keys": [
+          "endReason",
+          "gridCols",
+          "gridRows",
+          "maxSimultaneousPointers",
+          "totalCells",
+          "touchedCells"
+        ],
+        "unencodable": null,
+        "unreadable": null,
+        "touchGrid": {
+          "gridCols": 8,
+          "gridColsStatus": "PRESENT",
+          "gridRows": 15,
+          "gridRowsStatus": "PRESENT",
+          "totalCells": 120,
+          "totalCellsStatus": "PRESENT",
+          "touchedCells": 0,
+          "touchedCellsStatus": "PRESENT",
+          "maxSimultaneousPointers": 0,
+          "maxSimultaneousPointersStatus": "PRESENT",
+          "touchState": "NO_TOUCH",
+          "elapsedMs": null,
+          "elapsedMsStatus": "ABSENT_DECLARED",
+          "elapsedMsBasis": "FROM_FIRST_TOUCH",
+          "timeToFirstTouchMs": null,
+          "timeToFirstTouchMsStatus": "ABSENT_DECLARED",
+          "endReason": "user_marked_not_tested",
+          "endReasonStatus": "PRESENT",
+          "endReasonState": {
+            "raw": "user_marked_not_tested",
+            "kind": "user_marked_not_tested",
+            "detail": null,
+            "recognized": true
+          },
+          "gridBasis": "FIXED_8X15",
+          "path": {
+            "state": "NOT_IN_FIELDS_VERSION",
+            "unexpectedKeys": []
+          }
+        }
+      }
+    ],
+    "expectedButAbsent": []
+  },
+  "touchGridAnswer": {
+    "state": "RAW_PRESENT",
+    "manualStatus": "not_tested",
+    "passRawRelation": "NOT_APPLICABLE_STATUS_NOT_PASS",
+    "rawEndReason": "user_marked_not_tested"
+  },
+  "volumeButtonAnswers": {
+    "M-09": {
+      "state": "WITHOUT_RAW",
+      "manualStatus": "warning"
+    },
+    "M-10": {
+      "state": "NOT_IN_MANUAL_RESULTS",
+      "manualStatus": null
+    }
+  },
+  "scanConditions": {
+    "state": "NOT_IN_FIELDS_VERSION",
+    "unexpectedKeys": [],
+    "header": {
+      "isPowerSaveMode": false,
+      "isPowerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "root": {
+      "powerSaveMode": false,
+      "powerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "powerSaveBasis": "LEGACY_BOOLEAN_ONLY",
+    "brightnessLock": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindow": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindowBasis": "LEGACY_FIXED_MIN_NO_MAX",
+    "batteryLevelStart": 43,
+    "batteryLevelStartStatus": "PRESENT",
+    "startLevelVsWindow": "WITHIN"
+  }
+}

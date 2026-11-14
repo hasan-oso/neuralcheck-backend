@@ -1,0 +1,30 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "firestore-debug.log",
+        "*.local",
+        ".env",
+        ".env.*",
+        "scripts/out",
+        "test/output"
+      ],
+      "predeploy": [
+        "node \"$RESOURCE_DIR/scripts/predeploy-commit-log.js\""
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

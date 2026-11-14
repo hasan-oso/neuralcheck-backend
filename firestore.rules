@@ -1,0 +1,174 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ⚠️ لا يُضاف بريد مشرف قبل أن يسجّل صاحبه ويُؤكَّد. (قرار المستخدم
+    // 2026-10-09، بنصّه.) السبب: الشرط يقرأ بريد الرمز، وحساب بريد/كلمة
+    // مرور بلا تأكيد لعنوان لم يسجّل صاحبه بعدُ كان يحمل ذلك البريد نفسه
+    // فيصير مشرفاً. فيُشترط email_verified == true، والغياب = غير مؤكَّد
+    // (القاعدة 22). الحسابات الثلاثة اليوم مؤكَّدة بمزوّد google.com وحده
+    // (قراءة 2026-10-09: evidence/v8-phase0/read-auth-config/auth-config-2026-10-09.json
+    // في مساحة العمل — منقول، غير متحقَّق من هذا المستودع).
+    function isAdmin() {
+      return request.auth != null &&
+        request.auth.token.email_verified == true &&
+        request.auth.token.email in [
+          'admin1@example.com',
+          'admin2@example.com',
+          'admin3@example.com'
+        ];
+    }
+
+    // ===== Admin: وصول كامل لكل شيء =====
+    // ⚠️ استثناء صريح (القرار ١، أمر مستخدم 2026-10-01 +03 "قواعد قراءة
+    // الجلسات"، بنصّه): "قاعدة المشرف الشاملة (firestore.rules:15-17) تبقى،
+    // وتُوثَّق استثناءً في رأس كتلة الجلسات. فالعناوين الثلاثة حساباتي، ولا
+    // عميل مشرف يقرأ الجلسات، وإعادة بنائها [القاعدة الشاملة] قبل [أن
+    // تصير محدودة لكل مجموعة] تمسّ كل المجموعات [لا /scanSessions وحدها]."
+    // أي: القاعدة أدناه تتجاوز عمداً قيد القراءة الجديد على /scanSessions
+    // (owner/joinedBy وحدهما) — مقبول لأن isAdmin() محصور بثلاثة عناوين
+    // بريد المستخدم نفسه (أعلاه)، ولا عميل إداري حقيقي يقرأ /scanSessions
+    // اليوم، وتضييق هذه القاعدة الشاملة لتُستثنى /scanSessions تحديداً عمل
+    // يمسّ كل مجموعة أخرى تعتمد عليها (users/reports/evaluations/...) —
+    // خارج نطاق مهمّة قواعد الجلسات، بقرار صريح لا سهواً.
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    // ===== المستخدمون =====
+    // كتابة المستخدم لوثيقته مقيّدة بحقول غير حسّاسة فقط (توكن الإشعارات +
+    // ملف المحل). الحقول الحسّاسة (scansRemaining/scansTotal/plan/expiresAt/
+    // isActive وأعلام الاشتراك/التذكير) تُكتب حصراً من الخادم (Admin SDK
+    // يتجاوز القواعد) أو من الأدمن عبر قاعدة isAdmin أعلاه — هذا يمنع المستخدم
+    // من منح نفسه رصيداً.
+    //
+    // create + update يستخدمان نفس قائمة الحقول غير الحسّاسة. عادةً registerUser
+    // (Admin SDK) يُنشئ الوثيقة عند تسجيل الدخول؛ لكن إصلاح self-write السابق
+    // أزال صلاحية الإنشاء كلياً، فصار حفظ بيانات المتجر (set-merge) يفشل بـ
+    // permission_denied متى كانت الوثيقة غائبة (مسار CREATE). نعيد السماح
+    // بالإنشاء بنفس القائمة فقط — لا يمكن للمستخدم زرع scansRemaining/plan إلخ.
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null && request.auth.uid == uid &&
+        request.resource.data.keys().hasOnly([
+          'fcmToken',
+          'shopName', 'shopDescription', 'shopCity',
+          'shopPhone', 'shopAddress', 'shopLogoUrl', 'shopSlug'
+        ]);
+      allow update: if request.auth != null && request.auth.uid == uid &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'fcmToken',
+          'shopName', 'shopDescription', 'shopCity',
+          'shopPhone', 'shopAddress', 'shopLogoUrl', 'shopSlug'
+        ]);
+    }
+
+    // ===== التقارير =====
+    match /reports/{scanId} {
+      // المالك يقرأ تقاريره
+      allow read: if request.auth != null &&
+        resource.data.userId == request.auth.uid;
+
+      // حُذفت هنا (قرار المستخدم 2026-10-08/09) قاعدة «أي مستخدم مسجّل يقرأ
+      // التقارير المعروضة للبيع أو المباعة»: كانت تكشف المستند كلّه (userId
+      // والخامّ…) لأي مصادَق ومنه الحساب المجهول، ولا قارئ معروف يحتاجها لغير
+      // المالك (docs/RAW_FINGERPRINT_PLACEMENT_DESIGN.md §٥). القراءة الآن
+      // للمالك أعلاه وللمشرف المؤكَّد بالقاعدة الشاملة وللخادم (Admin SDK).
+
+      // المالك يعدّل حقول محددة فقط
+      allow update: if request.auth != null &&
+        resource.data.userId == request.auth.uid &&
+        request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['price', 'currency', 'sellerNote', 'listingStatus']);
+    }
+
+    // ===== تقييمات الفنّيين (Evaluations) =====
+    // مجموعة منفصلة عن reports عمداً: قاعدة reports تسمح للمالك بتعديل
+    // ['price','currency','sellerNote','listingStatus'] فقط عبر hasOnly،
+    // فأي حقل تقييم جديد هناك يُرفض صامتاً.
+    //
+    // المستند evaluations/{scanId} يحمل مُعرّف الفحص نفسه، فيستعلم الموقع
+    // عن تقييمات الحساب بـ where('ownerId','==',uid) ويربطها بالفحوص
+    // بالمُعرّف مباشرةً (يمنع تكرار الفنّي عمله على فحص مُقيَّم سابقاً).
+    // قيد الاستعلام يطابق شرط القاعدة، فاستعلام القائمة (list) مسموح.
+    //
+    // الكتابة والحذف مغلقان بالكامل: الكتابة عبر submitEvaluation
+    // (Admin SDK يتجاوز القواعد) حصراً — التسمية أصل تدريبي لا يجوز
+    // للعميل تزويره أو محوه. الأدمن يقرأ الكل عبر القاعدة الشاملة أعلاه.
+    match /evaluations/{scanId} {
+      allow read: if request.auth != null &&
+        resource.data.ownerId == request.auth.uid;
+      allow create, update, delete: if false;
+    }
+
+    // ===== الدفعات =====
+    match /payments/{paymentId} {
+      allow read: if request.auth != null &&
+        resource.data.userId == request.auth.uid;
+      allow create: if request.auth != null;
+    }
+
+    // ===== الجلسات =====
+    // القاعدة الأصل (أمر مستخدم 2026-10-01 +03 "قواعد قراءة الجلسات"، بنصّه):
+    // "قراءة مستند الجلسة لصاحبها وللجهاز المنضمّ إليها وحدهما. ولا سرد
+    // (list) لغيرهما." كانت القاعدة القديمة `allow read: if request.auth
+    // != null` — أيّ حساب مسجَّل يقرأ/يسرد /scanSessions كاملة، وفيها
+    // ownerEmail وcode كل جلسة pending (الكود وحده يكفي للانضمام،
+    // joinScanSession.js:18-19) — ثغرة حقيقية مُدقَّقة، لا نظرية.
+    //
+    // القرار ٢ (بنصّه): "سطر الجهاز المنضمّ آمن للغياب: يُسمح حين يوجد
+    // joinedBy ويساوي uid المستدعي." `resource.data.get('joinedBy', null)`
+    // يُعيد null صراحةً حين الحقل غائب (جلسة لم ينضمّ إليها أحد بعد) بدل
+    // رمي خطأ — و`null == request.auth.uid` لا تتحقّق أبداً لمستخدم مُصادَق
+    // فعلياً (uid ليس null قطّ)، فتسقط الجلسات المعلّقة بأمان إلى "المالك
+    // وحده يقرأ".
+    //
+    // ⚠️ **فجوة مُسجَّلة بلا إصلاح، بنصّ القرار ٢**: مسار "لدي كود فحص" من
+    // شاشة الدخول في التطبيق ينضمّ بلا تسجيل دخول حقيقي —
+    // joinScanSession.js:31 يكتب `joinedBy=null` لهذا المسار تحديداً
+    // (`joinerUid = request.auth?.uid || null`). فجهاز انضمّ بهذا المسار،
+    // لو قرأ مستند الجلسة مباشرة من Firestore بجلسة مصادقة مجهولة خاصّة به
+    // (uid عشوائي لا علاقة له بـ`joinedBy=null` المخزون)، **تُرفَض قراءته**
+    // — لا يساوي uid أيّ مستخدم مُصادَق شيئاً غير null أبداً. موثَّق بنصّ
+    // القرار، لا يُصلَح في هذه الجولة.
+    //
+    // السرد (list): الشرط نفسه أعلاه يكفي — Firestore يرفض تلقائياً أيّ
+    // استعلام list لا يقيّد نفسه بـ`where('ownerId','==',uid)` أو
+    // `where('joinedBy','==',uid)` (لا يمكن لمحرّك القواعد إثبات أن كل
+    // نتيجة محتملة للاستعلام تحقّق الشرط بلا ذلك القيد) — سلوك Firestore
+    // نفسه (بنصّ أمر التنفيذ)، لا منطق إضافي مطلوب هنا.
+    match /scanSessions/{sessionId} {
+      allow read: if request.auth != null && (
+        resource.data.ownerId == request.auth.uid ||
+        resource.data.get('joinedBy', null) == request.auth.uid
+      );
+      allow create, update, delete: if false;
+    }
+
+    // ===== العروض =====
+    // Non-admins: read only ACTIVE codes (prevents enumeration of draft /
+    //   retired codes). Admin catch-all above still grants full read/write.
+    // Writes for everyone: only via Cloud Functions (Admin SDK bypasses rules)
+    //   or admins via the catch-all.
+    match /promoCodes/{code} {
+      allow read: if request.auth != null && resource.data.isActive == true;
+      allow write: if false;
+    }
+
+    // ===== الإعدادات =====
+    match /settings/{doc} {
+      allow read: if request.auth != null;
+      allow write: if isAdmin();
+    }
+
+    // ===== اختبارات الثبات (Admin only) =====
+    match /consistencyTests/{testId} {
+      allow read, write: if isAdmin(); // explicit for documentation
+    }
+
+    // ===== ملفات الأجهزة (Device Profiles) — Cloud Function only =====
+    match /deviceProfiles/{profileId} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+'use strict';
+
+const CH = Object.freeze({
+  TS_MS: 0,
+  BATT_TEMP: 1,
+  BATT_VOLT: 2,
+  BATT_CURRENT: 3,
+  BATT_LEVEL: 4,
+  CPU_TEMP: 5,
+  CPU_FREQ_BIG: 6,
+  CPU_FREQ_LITTLE: 7,
+  CPU_FREQ_MID: 8,
+  CPU_USAGE: 9,
+  GPU_FPS: 10,
+  GPU_TEMP: 11,
+  THERMAL_HEADROOM: 12,
+  THERMAL_STATUS: 13,
+  MEM_AVAILABLE_MB: 14,
+  STORAGE_AVAILABLE_GB: 15,
+  CELLULAR_DBM: 16,
+  WIFI_DBM: 17,
+  SKIN_TEMP: 18,
+  PACKAGE_POWER_MW: 19,
+  STORAGE_THROUGHPUT_MBPS: 20,
+  MEMORY_BANDWIDTH_MBPS: 21,
+});
+
+const PHASE = Object.freeze({
+  INIT: 0,
+  STORAGE: 1,
+  MEMORY: 2,
+  CPU: 3,
+  GPU: 4,
+  COMBINED: 5,
+  BURST: 6,
+  COOLDOWN: 7,
+});
+
+module.exports = { CH, PHASE };

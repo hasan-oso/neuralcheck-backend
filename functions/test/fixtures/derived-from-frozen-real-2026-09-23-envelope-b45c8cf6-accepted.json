@@ -1,0 +1,781 @@
+{
+  "_provenance": "أمر مستخدم 2026-09-23 +03، البند ٧: \"ومصدر الأجسام ملفّات متتبَّعة، لا scripts/out غير المتتبَّع\" — نسخة مجمَّدة من scripts/out/v7-live-b45c8cf6-e376-4765-8703-f68e9bc69844.json (rawEnvelope فقط، بلا أي حقل مُضاف)، وهو نفس المصدر الذي يستهلكه measure-resolveV7Report-live.js عبر LIVE_FILES/loadRealEnvelope (سطر ~441-448) لسيناريوهات --simulate. commit d5069bd (منقول من تعليق LIVE_FILES.b45Accepted في السكربت). guard.ok المحفوظ وقت الالتقاط false (نسخة حارس قديمة) — يُستهلَك هنا كمحاولة٢ الناجحة لسيناريو \"رفض ثم نجاح\"؛ النتيجة الفعلية تُقاس بإعادة التشغيل عبر الحارس الحالي في الاختبار، لا بالحقل المحفوظ.",
+  "_derived": {
+    "label": "مشتقّ، ليس ردّاً حقيقياً",
+    "source": "functions/test/fixtures/frozen-real-envelope-b45c8cf6-accepted-2026-09-23.json",
+    "sourceBlob": "0160ee99a97cf16e551611bf6ea18172c18d856d",
+    "reason": "الأصل صار مرفوضاً من الحارس (issueKeys) بعد أمر «الإعدادات لا تُنزل الحرف» (2026-09-27 +03) — يستهلكه resolveV7ReportSimulateScenarios.test.js سيناريو ٢ (يحتاج ردّاً مقبولاً لاختبار آلية \"رفض ثم نجاح\").",
+    "generatedBy": "functions/scripts/generate-derived-from-frozen-real-2026-09-23-envelope-b45c8cf6-accepted.js",
+    "generatedAt": "2026-10-01T00:00:00.000Z",
+    "edits": [
+      {
+        "path": "narrative.issueDescriptions",
+        "change": "DELETE_KEYS",
+        "keys": [
+          "DISC-T-01",
+          "DISC-T-02",
+          "DISC-CM-08",
+          "ISS-SEC-05",
+          "ISS-SEC-06",
+          "DISC-SEC-07"
+        ],
+        "reason": "صارت \"مخترَعة\" — categoryStates.issues لم يعد يُنتج عناصر لها بعد استبعاد SEC-05/SEC-06/CM-08/T-01/T-02 من healthBearing."
+      },
+      {
+        "path": "narrative.issueDescriptions[DISC-CM-01,02,03,04,05,06,07,10 / DISC-SN-07,08,09]",
+        "change": "TEXT_REPLACE",
+        "replacements": [
+          {
+            "path": "DISC-CM-01",
+            "from": " (CM-01)",
+            "to": ""
+          },
+          {
+            "path": "DISC-CM-02",
+            "from": " (CM-02)",
+            "to": ""
+          },
+          {
+            "path": "DISC-CM-03",
+            "from": " (CM-03)",
+            "to": ""
+          },
+          {
+            "path": "DISC-CM-04",
+            "from": " (CM-04)",
+            "to": ""
+          },
+          {
+            "path": "DISC-CM-05",
+            "from": " (CM-05)",
+            "to": ""
+          },
+          {
+            "path": "DISC-CM-06",
+            "from": " (CM-06)",
+            "to": ""
+          },
+          {
+            "path": "DISC-CM-07",
+            "from": " (CM-07)",
+            "to": ""
+          },
+          {
+            "path": "DISC-CM-10",
+            "from": " (CM-10)",
+            "to": ""
+          },
+          {
+            "path": "DISC-SN-07",
+            "from": " (SN-07)",
+            "to": ""
+          },
+          {
+            "path": "DISC-SN-08",
+            "from": " (SN-08)",
+            "to": ""
+          },
+          {
+            "path": "DISC-SN-09",
+            "from": " (SN-09)",
+            "to": ""
+          },
+          {
+            "path": "buyerAdvice.photographer",
+            "from": "كل اختبارات الكاميرا من CM-01 إلى CM-08 وCM-10 غير مقيسة",
+            "to": "كل اختبارات الكاميرا غير مقيسة"
+          }
+        ],
+        "reason": "S5 (أمر مستخدم 2026-10-01 +03) يمنع ذكر أي معرّف اختبار في نثر بشري — إزالة الرمز بين قوسين وحده (\" (CM-01)\" إلخ)، بلا تغيير في بقيّة الجملة. أثر جانبي غير مباشر: هذا استعاد أيضاً تطابق النصّ مع collectGateNameTokens (reportShapeV7.js) بعد أن توقّف عن استخراج \"cm\"/\"sn\" من title (S2 غيّر title، لم يعد يحمل testId) — راجع تقرير المهمّة."
+      },
+      {
+        "path": "modelObservations[0].text",
+        "change": "TEXT_REPLACE",
+        "replacements": [
+          {
+            "path": "modelObservations[0].text",
+            "from": "والمقاومة الظاهرة 132.79 mΩ",
+            "to": "والمقاومة الظاهرة مقيسة بلا عتبة معايَرة"
+          }
+        ],
+        "reason": "مهمّة إخفاء القيم غير المعايَرة عن حمولة النموذج (2026-10-01 +03، البند ٢) — \"132.79\" (المقاومة الظاهرة BAT-R-APPARENT) صار بلا مصدر في الحمولة المحجوبة فعلاً، فرفضه حارس الأرقام (خارج narrative.details، لا يُعفى بالبند ٤). نفس الرقم في narrative.details لم يُمَسّ (مُعفًى هناك — راجع knownStaleButGuardPassing)."
+      }
+    ],
+    "knownStaleButGuardPassing": [
+      "narrative.details: \"نقاط 66.67 وتغطية 90%\" لفئة الأمان — الرقمان الحقيقيان الجديدان 83.33/100 بعد استبعاد SEC-01/05/06/07، لكن 66.67/90 يطابقان مرجعَين حقيقيَّين آخرَين بالمصادفة فيمرّان من الحارس دون تصحيح.",
+      "narrative.details: \"نظام تحديد المواقع جزئي بتغطية 33.3%\" — gps.state=UNMEASURED فعلياً الآن (L-01 لم تعد healthBearing)، لكن \"33.3\" يطابق مرجعاً آخر بالمصادفة فيمرّ من الحارس دون تصحيح.",
+      "narrative.details (مهمّة 2026-10-01، البند ٤): \"مقاومة ظاهرة 132.79 mΩ، وتيار تفريغ تحت الحمل 1691.67 mA\" — كلاهما مؤشّر بطارية محجوب الآن عن الحمولة (BAT-R-APPARENT/BAT-COULOMB أو ما يصنَّف تحته)؛ details حقل مُعفًى من الرفض (لا يصل المشتري، القرار المرافق) فلا تعديل نصّي عليه — يُسجَّل في aiAudit.detailsGuardWaived عند التشغيل الحقيقي بدل تصحيحه هنا."
+    ],
+    "guardVerifiedAtGenerationTime": true,
+    "guardResultAtGenerationTime": {
+      "ok": true,
+      "shape": {
+        "ok": true,
+        "errors": []
+      },
+      "issueKeys": {
+        "ok": true,
+        "inventedIds": []
+      },
+      "numbers": {
+        "ok": false,
+        "unmatchedFields": [
+          {
+            "field": "narrative.details",
+            "numbers": [
+              132.79,
+              1691.67
+            ]
+          }
+        ],
+        "excludedDevice": [
+          {
+            "field": "narrative.details",
+            "number": 13
+          },
+          {
+            "field": "narrative.details",
+            "number": 2.4
+          },
+          {
+            "field": "narrative.issueDescriptions[POS-wireless]",
+            "number": 13
+          }
+        ]
+      },
+      "languageLeaks": [],
+      "detailsWaived": {
+        "numbers": [
+          132.79,
+          1691.67
+        ],
+        "languageTokens": []
+      },
+      "excluded": {
+        "deviceSpecNumbers": [
+          {
+            "field": "narrative.details",
+            "number": 13
+          },
+          {
+            "field": "narrative.details",
+            "number": 2.4
+          },
+          {
+            "field": "narrative.issueDescriptions[POS-wireless]",
+            "number": 13
+          }
+        ],
+        "languageTokens": [
+          {
+            "path": "narrative.summary",
+            "token": "USB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GHz",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "IOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "IOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "DPI",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Hz",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Wi",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Fi",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Mbps",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GHz",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "dBm",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "USB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "ROOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "DETECTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "PATCH",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "AGE",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "min",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "NO",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "CALIBRATED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "THRESHOLD",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mAh",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mAh",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mA",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mV",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "gpu",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.verdict",
+            "token": "ROOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.verdict",
+            "token": "DETECTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.buyerAdvice.casual",
+            "token": "USB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.gamer",
+            "token": "SUSTAINED",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.buyerAdvice.gamer",
+            "token": "CEILING",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-03]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-T-03]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-03]",
+            "token": "NOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-03]",
+            "token": "TESTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-04]",
+            "token": "NOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-04]",
+            "token": "TESTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-05]",
+            "token": "NOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-G-05]",
+            "token": "TESTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-display]",
+            "token": "DPI",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-display]",
+            "token": "Hz",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-memory]",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-memory]",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-storage]",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-storage]",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-storage]",
+            "token": "IOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-storage]",
+            "token": "IOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-01]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-01]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-02]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-02]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-03]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-03]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-04]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-04]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-05]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-05]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-06]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-06]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-07]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-07]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-10]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-CM-10]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-02]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-02]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-03]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-L-03]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[ISS-SEC-04]",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[ISS-SEC-04]",
+            "token": "ROOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[ISS-SEC-04]",
+            "token": "DETECTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-07]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-07]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-08]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-08]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-09]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-SN-09]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-03]",
+            "token": "CAPABILITY",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-03]",
+            "token": "BLOCKED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-04]",
+            "token": "READ",
+            "category": "platform_identifier"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-04]",
+            "token": "PHONE",
+            "category": "platform_identifier"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-04]",
+            "token": "STATE",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-04]",
+            "token": "PERMISSION",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[DISC-N-04]",
+            "token": "DENIED",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-wireless]",
+            "token": "Wi",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-wireless]",
+            "token": "Fi",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-wireless]",
+            "token": "Mbps",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-wireless]",
+            "token": "dBm",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-wireless]",
+            "token": "Bluetooth",
+            "category": "platform_identifier"
+          },
+          {
+            "path": "narrative.issueDescriptions[POS-wireless]",
+            "token": "NFC",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "SUSTAINED",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "CEILING",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[1].description",
+            "token": "ROOT",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[1].description",
+            "token": "DETECTED",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[2].description",
+            "token": "min",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "adjustments[0].reason",
+            "token": "gpu",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "token": "NO",
+            "category": "gate_name"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "token": "CALIBRATED",
+            "category": "gate_name"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "token": "THRESHOLD",
+            "category": "gate_name"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "UNSTABLE",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "MFLOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "IOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "GHz",
+            "category": "unit_symbol"
+          }
+        ]
+      }
+    }
+  },
+  "rawEnvelope": {
+    "id": "344261b6-18e5-4de4-8887-6aef9e1ee79d",
+    "object": "chat.completion",
+    "created": 1790086425,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"narrative\":{\"summary\":\"الجهاز Samsung Galaxy S10 5G خرج بتقييم جزئي: الحرف العامّ C بتغطية 45% من الفئات. الأداء المقيس نفسه — المعالج والذاكرة العشوائية والتخزين والشاشة والاتصال اللاسلكي — ظهر بحرف A في الاختبارات المنفَّذة، لكن ما خفّض الحرف هو فئة الأمان: صلاحيات الجذر مكتشفة ورقعة أمنية قديمة، مع تفعيل وضع المطوّر وتصحيح USB. عدة فئات (الكاميرا والإدارة الحرارية والصوت والإدخال) لم تُقس أصلاً، ونظام تحديد المواقع لم يُقس جزئياً بسبب رفض إذن الموقع.\",\"details\":\"القوّة الأساسية في هذا الجهاز هي الأداء المقيس: المعالج بحرف A وتغطية كاملة (5 اختبارات دخلت التقييم، كلها ناجحة، النقاط 100)، بثمانية أنوية وتردد أقصى معلن 2.73 GHz. الذاكرة العشوائية بحرف A بذاكرة إجمالية 7.1 GB ومنها 2.7 GB متاحة. التخزين بحرف A بمساحة إجمالية 228.6 GB، والمتاح 31.3% أي 71.5 GB، مع سرعة كتابة 188 MB/s وقراءة 1618 MB/s وقراءة عشوائية 110516 IOPS وكتابة عشوائية 3265 IOPS. الشاشة بحرف A بدقة 1080×2280 وكثافة 420 DPI وتحديث 60 Hz. الاتصال اللاسلكي بحرف A عبر شبكة Wi-Fi بسرعة 13 Mbps على 2.4 GHz وإشارة -63 dBm. الشبكة الخلوية بحرف A بتغطية 71.4%، والمستشعرات بحرف A بتغطية 75%. كل هذه الفئات لا تحمل أي عطب منفَّذ.\\n\\nما يخفض التقييم العامّ هو فئة الأمان: بحرف D ونقاط 66.67 وتغطية 90%. فيها اختبار فاشل واحد (SEC-04، صلاحيات الجذر مكتشفة) وتنبيهان (SEC-05 وضع المطوّر مفعّل، SEC-06 تصحيح USB مفعّل)، ورقعة الأمان بتاريخ 2021-08-01 أي 61.7 شهراً. البوابة ROOT_DETECTED أُطلقت وحدّدت الحرف العامّ C، وبوابة PATCH_AGE (سقفها B) أُطلقت أيضاً لكن بلا أثر لأن الحرف الأساسي أسوأ منها أصلاً.\\n\\nفئة الإدارة الحرارية غير مقيسة (تغطية 0) لغياب قراءات حرارية على هذا الجهاز، لكن قناة حرارة البطارية قاست ارتفاعاً 6.9°C خلال الفحص بمعدّل 1.854°C/min، مع بلوغ حالة الحرارة القصوى 3. البطارية نفسها تقييم جزئي بلا حرف (NO_CALIBRATED_THRESHOLD) رغم أربعة مؤشرات مقيسة: السعة المقيسة 3778.29 mAh مقابل سعة تصميم 4400 mAh بنسبة 0.8587، ومقاومة ظاهرة 132.79 mΩ، وتيار تفريغ تحت الحمل 1691.67 mA، وثبات جهد 46.04 mV.\\n\\nالرسوميات: قياس الأداء أظهر هبوطاً من وسيط 2065.37 في المرحلة الرابعة إلى 1187.86 في المرحلة الخامسة بنسبة 0.575، مع أن اختبارات الأداء G-03 وG-04 وG-05 لم تُنفَّذ أصلاً، وحرف gpu هو A مبنيّ على اختبارَي تعريف فقط (G-01 وG-02). التغطية العامة 45% لأن الكاميرا (تغطية 0 بسبب رفض الإذن) والحرارة والصوت والإدخال غير مقيسة، ونظام تحديد المواقع جزئي بتغطية 33.3%.\",\"verdict\":\"حرف C — تقييم جزئي بتغطية 45%، والحرف العامّ محدَّد ببوابة ROOT_DETECTED في فئة الأمان لا بالأداء المقيس.\",\"buyerAdvice\":{\"casual\":\"للاستخدام اليومي العادي الجهاز كفؤ: المعالج والذاكرة العشوائية والتخزين والشاشة والاتصال اللاسلكي كلها بحرف A في الاختبارات المنفَّذة. المشكلة الأهم ليست السرعة بل الأمان: صلاحيات الجذر مكتشفة، ووضع المطوّر وتصحيح USB مفعّلان، ورقعة الأمان قديمة بتاريخ 2021-08-01. إن أردت الجهاز للاستخدام العادي، فاطلب إلغاء صلاحيات الجذر وإغلاق وضع المطوّر وتحديث النظام. وانتبه أن الكاميرا لم تُختبر إطلاقاً في هذا الفحص.\",\"gamer\":\"المعالج بحرف A، لكن الثبات تحت الحمل الطويل غير مضمون على هذا الفحص: اختبارات الرسوميات G-03 وG-04 وG-05 لم تُنفَّذ، ومع ذلك يُظهر القياس هبوطاً في أداء الرسوميات من 2065.37 إلى 1187.86 بنسبة 0.575، مع ارتفاع حرارة البطارية 6.9°C وبلوغ حالة الحرارة القصوى 3. بوابة السقف المستدام للمعالج (SUSTAINED_CEILING) معطّلة، أي أن أرقام الحرف لا تغطّي الأداء عند اللعب المطوّل، فجرّب جلسة لعب طويلة بنفسك قبل الشراء.\",\"photographer\":\"أهم شيء للتصوير لم يُقس أصلاً: كل اختبارات الكاميرا غير مقيسة لأن إذن الكاميرا مرفوض، فلا دليل على جودة التركيز البؤري أو الفلاش أو تسجيل الفيديو. من ناحية التخزين فالجهاز جيد: 228.6 GB إجمالي، والمستخدم 31.3% فقط أي 71.5 GB متاحة، بسرعة كتابة 188 MB/s وقراءة 1618 MB/s. لكن إن كانت الكاميرا تهمّك، لا تعتمد على هذا التقرير وحده واطلب فحصاً للكاميرا بإذن ممنوح.\"},\"issueDescriptions\":{\"DISC-T-03\":\"قياس معدّل التبريد (T-03) غير مقيس — لا تتوفر قراءات حرارية على هذا الجهاز (CAPABILITY_BLOCKED).\",\"POS-cpu\":\"كل اختبارات المعالج التي دخلت التقييم نجحت — لا أعطاب على الاختبارات المنفَّذة.\",\"DISC-G-03\":\"قياس انخفاض معدّل الإطارات (G-03) غير مقيس — لم يُنفَّذ (NOT_TESTED)، فلم يُتحقّق من أداء الرسوميات.\",\"DISC-G-04\":\"قياس كبح معالج الرسوميات (G-04) غير مقيس — لم يُنفَّذ (NOT_TESTED).\",\"DISC-G-05\":\"قياس أدنى معدّل إطارات (G-05) غير مقيس — لم يُنفَّذ (NOT_TESTED).\",\"POS-display\":\"اختبارات الشاشة نجحت (1080×2280، 420 DPI، 60 Hz) — لا أعطاب على الاختبارات المنفَّذة.\",\"POS-memory\":\"اختبارات الذاكرة العشوائية نجحت (7.1 GB إجمالي، 2.7 GB متاح) — لا أعطاب.\",\"POS-storage\":\"اختبارات التخزين نجحت (كتابة 188 MB/s، قراءة 1618 MB/s، قراءة عشوائية 110516 IOPS، كتابة عشوائية 3265 IOPS) — لا أعطاب.\",\"DISC-CM-01\":\"الكاميرا الخلفية غير مقيسة — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-CM-02\":\"الكاميرا الأمامية غير مقيسة — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-CM-03\":\"التركيز التلقائي غير مقيس — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-CM-04\":\"الفلاش غير مقيس — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-CM-05\":\"تسجيل الفيديو غير مقيس — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-CM-06\":\"دقة الكاميرا الخلفية غير مقيسة — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-CM-07\":\"دقة الكاميرا الأمامية غير مقيسة — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-CM-10\":\"التعرّف على الوجه غير مقيس — إذن الكاميرا مرفوض (PERMISSION_DENIED).\",\"DISC-L-02\":\"عدد الأقمار (L-02) غير مقيس — إذن الموقع مرفوض (PERMISSION_DENIED).\",\"DISC-L-03\":\"دقة الموقع (L-03) غير مقيسة — إذن الموقع مرفوض (PERMISSION_DENIED).\",\"ISS-SEC-04\":\"فشل اختبار SEC-04: صلاحيات الجذر مكتشفة على الجهاز. هذه هي البوابة ROOT_DETECTED التي حدّدت الحرف العامّ C.\",\"DISC-SN-07\":\"مستشعر الحرارة المحيطة غير متوفر على هذا الجهاز (CAPABILITY_BLOCKED).\",\"DISC-SN-08\":\"كاشف الخطوات غير متوفر على هذا الجهاز (CAPABILITY_BLOCKED).\",\"DISC-SN-09\":\"عدّاد الخطوات غير متوفر على هذا الجهاز (CAPABILITY_BLOCKED).\",\"DISC-N-03\":\"حالة الشريحة الثانية (N-03) غير مقيسة — الجهاز بفتحة واحدة فقط (CAPABILITY_BLOCKED).\",\"DISC-N-04\":\"نوع الشبكة (N-04) غير مقيس — إذن READ_PHONE_STATE مرفوض (PERMISSION_DENIED).\",\"POS-wireless\":\"كل اختبارات الاتصال اللاسلكي نجحت (Wi-Fi متصل 13 Mbps، إشارة -63 dBm، بلوتوث، Bluetooth منخفض الطاقة، NFC) — لا أعطاب.\"}},\"crossChecks\":[{\"description\":\"المعالج حصل على A، لكن بوابة السقف المستدام SUSTAINED_CEILING معطّلة بنصّ الخطّة، وفي المقابل يُظهر قياس الرسوميات هبوطاً من وسيط 2065.37 إلى 1187.86 بنسبة 0.575 بين المرحلتين — أي أن الأداء تحت الحمل الطويل لا تغطّيه أي بوابة مطبَّقة فعلياً.\",\"evidenceRefs\":[\"categoryStates.categories.cpu.gatesApplied\",\"findings.graphics.phase4.median\",\"findings.graphics.phase5.median\",\"findings.graphics.ratioPhase5OverPhase4\"]},{\"description\":\"الحرف العامّ C مصدره بوابة ROOT_DETECTED في فئة الأمان، بينما كل الفئات الأخرى المقيسة (المعالج، الذاكرة، التخزين، الشاشة، الاتصال اللاسلكي، المستشعرات، الشبكة الخلوية) بحرف A — أي أن ترتيب الجهاز العامّ يعكس حالة الأمان وليس الأداء المقيس.\",\"evidenceRefs\":[\"categoryStates.overall.letterSource\",\"categoryStates.overall.gatesApplied\",\"categoryStates.categories.security.deterministicLetter\"]},{\"description\":\"فئة الإدارة الحرارية غير مقيسة بتغطية 0 بسبب غياب قراءات حرارية على الجهاز، لكن قناة حرارة البطارية قاست ارتفاعاً 6.9°C بمعدّل 1.854°C/min مع بلوغ حالة الحرارة القصوى 3 — فمؤشر الحرارة موجود جزئياً في فئة البطارية لا في فئة الإدارة الحرارية.\",\"evidenceRefs\":[\"categoryStates.categories.thermal\",\"findings.thermal.batteryTempRise.valueC\",\"findings.thermal.batteryTempRise.ratePerMinPhases345\",\"findings.thermal.thermalStatusMax\"]}],\"adjustments\":[{\"category\":\"gpu\",\"direction\":\"DOWN\",\"maxOneBand\":true,\"evidenceRefs\":[\"categoryStates.categories.gpu\",\"findings.graphics.phase4.median\",\"findings.graphics.phase5.median\",\"findings.graphics.ratioPhase5OverPhase4\"],\"reason\":\"حرف gpu هو A لكنه مبنيّ على اختبارَي تعريف فقط (G-01 وG-02) من أصل خمسة، بينما اختبارات الأداء G-03 وG-04 وG-05 غير منفَّذة، وفي المقابل يقيس القياس هبوط أداء الرسوميات من وسيط 2065.37 إلى 1187.86 بنسبة 0.575 بين المرحلتين — أي أن الحرف لا يعكس الأداء الفعلي تحت الحمل.\"}],\"modelObservations\":[{\"text\":\"فئة البطارية لها أربعة مؤشرات مقيسة لكن بلا حرف (NO_CALIBRATED_THRESHOLD): نسبة السعة المقيسة إلى سعة التصميم 0.8587، والمقاومة الظاهرة مقيسة بلا عتبة معايَرة، وحرارة البطارية 32.4°C — بيانات موجودة لكن غير مُدرجة في أي حرف.\",\"evidenceRefs\":[\"categoryStates.categories.battery.batteryIndicators\",\"categoryStates.categories.battery.noLetterReason\"]},{\"text\":\"أربعة قياسات وُسمت UNSTABLE ولم تدخل الحرف ولا قائمة الأعطاب (C-04 عند 3271 MFLOPS، S-04 عند 1618 MB/s، S-05 عند 110516 IOPS، C-03 عند 2.14 GHz) — أرقام حقيقية لكن مصنّفة غير حاسمة وفق معيار الاتساق.\",\"evidenceRefs\":[\"findings.unstableMeasurements\"]}]}",
+          "reasoning_content": "Let me carefully analyze this payload and produce the required JSON.\n\nThe payload language is Arabic (\"ar\"). All narrative must be in Arabic, except category keys, severities, letters, test IDs, brand names, and units.\n\nLet me review key data:\n\n**Device**: Samsung Galaxy S10 5G, API 30 (Android 11), Exynos 9820, Mali-G76.\n\n**Overall**: letter C, letterSource GATE:ROOT_DETECTED, coverage 45%, partialAssessment true.\n\n**Category states**:\n- battery: PARTIAL, coverage 1, no letter (NO_CALIBRATED_THRESHOLD), batteryIndicators all \"THRESHOLD_NOT_CALIBRATED\"\n- thermal: UNMEASURED, coverage 0\n- cpu: MEASURED, coverage 1, letter A, score 100, gate SUSTAINED_CEILING DISABLED\n- gpu: PARTIAL, coverage 0.4, letter A, score 100, gate GPU_HASH_MISMATCH NOT_WIRED\n- display: MEASURED, coverage 1, letter A, score 100\n- memory: MEASURED, coverage 1, letter A, score 100\n- storage: MEASURED, coverage 1, letter A, score 100, gate STORAGE_VERIFY_ERRORS NOT_WIRED\n- camera: UNMEASURED, coverage 0\n- gps: PARTIAL, coverage 0.333, letter A, score 100\n- security: PARTIAL, coverage 0.9, letter D, score 66.67, gates ROOT_DETECTED (FIRED, ceiling C, no effect since base worse), PATCH_AGE (FIRED, ceiling B, no effect), floorApplied STATE_FAIL_FLOOR\n- sensors: PARTIAL, coverage 0.75, letter A, score 100\n- cellular: PARTIAL, coverage 0.714, letter A, score 100\n- wireless: MEASURED, coverage 1, letter A, score 100\n- audio: UNMEASURED, coverage 0\n- input: UNMEASURED, coverage 0\n\n**Issues list** (must describe each in issueDescriptions):\n- DISC-T-01, DISC-T-02, DISC-T-03 (thermal not measured CAPABILITY_BLOCKED)\n- POS-cpu (positive)\n- DISC-G-03, DISC-G-04, DISC-G-05 (gpu NOT_TESTED)\n- POS-display, POS-memory, POS-storage\n- DISC-CM-01..CM-08, CM-10 (camera PERMISSION_DENIED)\n- DISC-L-02, DISC-L-03 (gps PERMISSION_DENIED)\n- ISS-SEC-04 (FAIL), ISS-SEC-05 (WARNING), ISS-SEC-06 (WARNING)\n- DISC-SEC-07 (CAPABILITY_BLOCKED)\n- DISC-SN-07, DISC-SN-08, DISC-SN-09 (CAPABILITY_BLOCKED)\n- DISC-N-03 (CAPABILITY_BLOCKED), DISC-N-04 (PERMISSION_DENIED)\n- POS-wireless\n\nThat's a lot of issue IDs. I need to describe each one in issueDescriptions. Let me list them all:\nDISC-T-01, DISC-T-02, DISC-T-03, POS-cpu, DISC-G-03, DISC-G-04, DISC-G-05, POS-display, POS-memory, POS-storage, DISC-CM-01, DISC-CM-02, DISC-CM-03, DISC-CM-04, DISC-CM-05, DISC-CM-06, DISC-CM-07, DISC-CM-08, DISC-CM-10, DISC-L-02, DISC-L-03, ISS-SEC-04, ISS-SEC-05, ISS-SEC-06, DISC-SEC-07, DISC-SN-07, DISC-SN-08, DISC-SN-09, DISC-N-03, DISC-N-04, POS-wireless.\n\nNow let me write the narrative with real numbers from findings.\n\n**Summary**: A simple paragraph. Short, no invented numbers.\n\n**Details**: technical explanation, all numbers from findings/categoryStates.\n\nKey numbers I can reference:\n- 1604 samples of expected 1605.\n- battery field version 67.\n- CPU: letter A, coverage 1, 5/5 pass, score 100.\n- cpu freq max measured 2730000 kHz peak (2730000 peakFreqKhz). Actually mean 2133652 kHz during CPU_SUSTAINED.\n- sustainedCeiling: phase3 mean window max ratio 0.848, phase5 0.689, combined 0.774, recoveryPhase7Ratio 0.714.\n- graphics: phase4 median 2065.37 fps? (measured in FPS). phase5 median 1187.86, ratio phase5/phase4 0.575, vsyncLockFraction all 0.\n- thermal battery temp rise 6.9°C, rate 1.854°C/min, thermalStatusMax 3, thermalHeadroomPeak 1.0067.\n- battery: socAtStart 48, socAtEnd 43, designCapacity 4400, qInt 143.84 mAh.\n- BAT-FCC: 3778.29 mAh, ratioToDesign 0.8587.\n- BAT-R-APPARENT 132.79 mΩ, vFirst10 3760, vUnderLoad 3535.36, iUnderLoad 1691665 µA.\n- discharge rate under load 1691.67 mA.\n- voltage stability 46.04 mV.\n- rho 1.5294.\n- storage: inCache 178.51 Mbps, postCache 71.47, kneeGb 3, KNEE_DETECTED.\n- storage S-01 228.6 GB, available 31.3% (71.5 GB), write 188 MB/s, read 1618 MB/s, random read 110516 IOPS, random write 3265 IOPS.\n- memory: total 7.1 GB, available 2.7 GB.\n- display: 1080x2280, 420 DPI, 60 Hz.\n- cpu freq max 2.73 GHz.\n- unstable measurements: C-04 3271 MFLOPS (unstable), S-04 1618 MB/s, S-05 110516 IOPS, C-03 2.14 GHz.\n- GPS: L-01 pass, availability.\n- wireless: Wi-Fi 13 Mbps 2.4 GHz, signal -63 dBm.\n\nLet me write the details.\n\n**Verdict**: one line reflecting overall letter C.\n\n**buyerAdvice**: three distinct.\n\nNow crossChecks: intersection notes across categories. Let me think of legit ones:\n- CPU letter A but SUSTAINED_CEILING gate DISABLED, so the sustained performance letter is capped-out not applied. Combined with gpu partial where G-03/04/05 not tested — sustained gaming performance not fully assessed even though cpu=A.\n- thermal UNMEASURED (coverage 0, T-01..03 CAPABILITY_BLOCKED, no CPU temp sensor) yet battery temp rise measured 6.9°C, thermalStatusMax 3, thermalHeadroomPeak 1.0067 — thermal stress signal exists in battery channel but no thermal category letter.\n- Security letter D driven by ROOT_DETECTED and old patch (2021-08-01) while all other measured categories are A — the overall C is a gate from security.\n- Overall coverage 45% with camera/gps partial/thermal audio input unmeasured.\n\nLet me use evidence refs as paths into findings or categoryStates.\n\n**adjustments**: DOWN only. Hmm. Should I propose any? The rules: direction DOWN applies. But is there a case for downgrading a category? Let me think. The categories with letters: cpu A, gpu A (partial), display A, memory A, storage A, security D, sensors A, cellular A, wireless A, gps A.\n\nFor a DOWN adjustment, I'd need evidence of a problem that the server didn't already factor. Hmm.\n\nConsider cpu: letter A, but SUSTAINED_CEILING gate DISABLED means the sustained ceiling cap isn't applied. sustainedCeiling combined meanWindowMaxRatio 0.774, phase5 0.689. Actually if the gate were wired, the ceiling letter C might apply. But gate is DISABLED \"ممنوعة قبل PLAN-03 بنصّ الخطّة\". Should I downgrade cpu? The evidence: sustainedCeiling phase5 meanWindowMaxRatio 0.6889, combined 0.7738. Hmm, but is that evidence of a defect? The gate is disabled by plan, meaning we shouldn't be applying it. Downgrading cpu to B based on sustained degradation... Actually the phase5 ratio ~0.69 means during phase5 the max ratio dropped to 69% of peak. That's a sustained ceiling. But hmm.\n\nActually, careful: adjustments should be based on evidence and the server caps to one band. Let me consider whether to propose a DOWN for cpu. The sustainedCeiling data shows phase5 windows reaching only ~0.689 of peak freq ratio and recoveryPhase7Ratio 0.714. That indicates sustained performance drops under load. But combat: the SUSTAINED_CEILING gate is DISABLED explicitly. Hmm.\n\nActually let me reconsider — is proposing a DOWN appropriate here? The task says adjustments are optional-ish. Let me think whether there's a genuine evidence-based case.\n\nGaming-relevant: phase5/phase4 graphics ratio 0.575 — GPU graphics performance drops about 42% from phase4 to phase5. And gpu letter A is based only on 2/5 executed tests (G-01, G-02 which are STATE tests, while G-03/04/05 measurement not tested). So gpu letter A is based only on identification tests, not performance. Does that justify DOWN? Hmm, possibly, but the state is PARTIAL with coverage 0.4 — the rules say don't propose adjustments on PARTIAL without executed test... Actually the rule: \"لا تقترح تعديلاً على فئة حالتها UNMEASURED أو ATTESTED_ONLY أو HARNESS_ERROR أو PARTIAL بلا اختبار منفَّذ فعلياً\". GPU is PARTIAL but has 2 tests executed. So technically allowed. But downgrading based on... hmm.\n\nActually the graphics ratio phase5/phase4 = 0.575 is a measured sustained degradation. That's evidence. But is it a \"defect\"? It's sustained throttling. Could justify DOWN for gpu. But hmm — the gate GPU_HASH_MISMATCH is NOT_WIRED. \n\nLet me be conservative but produce at least maybe one adjustment. Actually, the safest evidence-based DOWN would be... hmm.\n\nLet me think about thermal. Thermal is UNMEASURED so can't adjust.\n\nBattery is PARTIAL with no letter, can't adjust.\n\nHmm, let me think about whether to include cpu DOWN. Evidence: sustainedCeiling phase5 0.689 vs phase3 0.848, and the SUSTAINED_CEILING gate disabled. The CPU letter A was computed excluding sustained ceiling since gate disabled. That's a defensible reason for DOWN. Direction DOWN, maxOneBand down from A to B.\n\nActually wait — I should double check the reason rules: downgrade should be based on evidence not impression. The sustained ceiling numbers are real evidence. Actually the phase5 meanWindowMaxRatio 0.6889 means during sustained load windows, max freq ratio averaged 69% of peak. This is sustained throttling. Combined with the fact the gate that would cap this is disabled. Hmm.\n\nBut actually — is this within the CPU category's measured scope? The gate SUSTAINED_CEILING belongs to cpu category and is DISABLED. So the server itself acknowledges this should cap it but plan says not yet. So proposing DOWN for cpu seems reasonable and evidence-backed.\n\nHmm, but I worry about over-reaching. Let me reconsider. The instructions say the category letters are final and I shouldn't re-derive. Adjustments are for when I have extra evidence. Actually the directions allow DOWN. Let me include one or two cautiously.\n\nActually, let me reconsider. The gpu graphics ratio 0.575 is a strong gaming signal. And gpu letter A rests only on 2 STATE tests (identification), with performance tests NOT_TESTED. Downgrading gpu because the performance measurement is missing... hmm, but PARTIAL coverage already reflects that. The rule says don't propose on PARTIAL without executed test — gpu has executed tests, so allowed. But at least one of the executed tests should bear on the downgrade. The executed tests G-01/G-02 are identification only, no performance. Hmm.\n\nActually I think the cleaner one: gpu DOWN because graphics.ratioPhase5OverPhase4 = 0.575 shows significant sustained FPS degradation, which the A letter (from STATE tests only) doesn't capture. Hmm but is that category gpu's issue? The graphics findings are separate (findings.graphics). It's arguably gpu performance.\n\nHmm. Let me be careful. Maybe I'll include cpu DOWN based on sustained ceiling, since the gate is explicitly about cpu.\n\nActually, let me reconsider whether to include any adjustments at all. The task doesn't require adjustments. But it's typical to include at least one if evidence supports. Let me include one for cpu — well within evidence.\n\nHmm, but I'm worried: is the SUSTAINED_CEILING ratio of 0.69 really a \"defect\"? For a phone under sustained stress test, hitting 69% of peak freq is normal throttling. But I shoudn't use general knowledge about \"normal\". Without a calibrated threshold I can't say 0.69 is bad. The instruction: no general knowledge about normal rates. Hmm. So claiming cpu throttling is a defect would require a threshold that isn't provided. So maybe I shouldn't downgrade cpu.\n\nHmm. That's a strong argument against adjusting. The whole point is thresholds aren't calibrated (PLAN-03 not done). So proposing DOWN based on sustained ratio 0.69 would be \"impression\" not evidence, since no threshold says 0.69 is bad.\n\nOK so maybe no adjustments at all. Actually, wait — let me reconsider. The point of DOWN adjustments is to catch things the deterministic letter missed. But given the anti-hallucination rules and no calibrated thresholds, it's hard to justify. Let me think if there's a clear-cut evidence-based DOWN.\n\nHmm, actually — nothing clearly qualifies. I'll include possibly zero adjustments, or maybe one that's very defensible. Let me reconsider each category:\n\n- cpu: A. No calibrated threshold for throttling.\n- gpu: A partial. Performance not tested.\n- security: D already lowest.\n- others: A.\n\nGiven no threshold data, I think no adjustments is defensible. But hmm, is it expected? The prompt allows adjustments to be empty? It says \"adjustments[]\" with strict rules. It doesn't require non-empty. Empty array is fine.\n\nActually, let me reconsider the cpu one more time. The gate SUSTAINED_CEILING has ceilingLetter C, DISABLED. If I propose DOWN for cpu from A to B, the reason would be \"the sustained ceiling gate that would cap cpu is disabled, and the underlying data (phase5 meanWindowMaxRatio 0.689, phase3 0.848) shows measurable sustained frequency reduction under long load.\" This is evidence-based (numbers real), even if no threshold. Hmm, but \"no general knowledge about normal\" — the ratio is a self-relative measure (phase5 vs peak), not a comparison to an external threshold. Actually meanWindowMaxRatio is ratio to peak freq (2730000). So phase5 sustained max is 69% of peak. That's self-referential to the device's own peak. This is measurable degradation, evidence.\n\nHmm, this is a judgment call. I think it's reasonable to include it. The server caps to one band anyway. Let me include it as DOWN for cpu. Actually... let me think about the risk. If it's viewed as impression, it might be rejected. But the reason cites real numbers. I think it's fine and actually demonstrates the cross-check intent.\n\nHmm, but the note \"الحرف الأساسي أسوأ من السقف أصلاً — لا أثر\" for security gates. For cpu, the gate is DISABLED with ceilingLetter C — meaning if it were applied it would cap cpu at C. But it's disabled. Hmm.\n\nLet me reconsider. Actually I'll include the cpu DOWN. It's a defensible, evidence-backed proposal and directions are the intended mechanism.\n\nWait, actually, re-reading: \"لا تقترح تعديلاً على فئة حالتها UNMEASURED أو ATTESTED_ONLY أو HARNESS_ERROR أو PARTIAL بلا اختبار منفَّذ فعلياً — لا حرف بدون قياس.\" cpu is MEASURED with 5 executed. Fine.\n\nOK. Let me also consider gpu DOWN. gpu state PARTIAL, coverage 0.4, 2 executed. The 2 executed are identification. Hmm. I'll maybe include gpu DOWN too? Let me think of the reason: graphics.ratioPhase5OverPhase4 = 0.575 shows sustained FPS degradation, and gpu performance tests G-03/04/05 were NOT_TESTED, so the A letter rests on 2 identification tests. Downgrading gpu... hmm, the reason should be about the gpu category. Actually downgrading because of performance degradation is reasonable.\n\nHmm, but I don't want to overdo. Let me include maybe one or two. I'll include cpu and gpu. Actually, let me reconsider gpu: the graphics phase4/phase5 are separate from gpu category. The gpu category letter A comes from G-01, G-02 (pass). The FPS degradation is in findings.graphics. Cross-category. Could reference. Hmm.\n\nActually, I'll include just the cpu one to be safe and clean. Or maybe include both. Let me decide: I'll include cpu DOWN (well-supported, gate explicitly about cpu) and skip gpu. Actually, hmm — let me include gpu too because gaming matters and there's a real measured ~0.575 ratio. But the rule \"no general knowledge about normal\" — again self-relative. 0.575 means phase5 is 57.5% of phase4. That's about a 42.5% drop. That's a self-relative measurement. I could state it as such.\n\nHmm, I'll be moderate: include cpu DOWN, and one gpu note in modelObservations or crossChecks instead.\n\nActually, let me reconsider once more. The safest and most correct may be zero or one adjustment. I'll go with one (cpu) — no wait. Let me reconsider whether cpu downgrade is really warranted given the plan explicitly disables the gate. If the plan says \"don't apply before PLAN-03,\" then applying it myself would contradict the plan. Hmm! The gate is DISABLED \"ممنوعة قبل PLAN-03 بنصّ الخطّة\" — forbidden before PLAN-03 by the plan's text. So the server deliberately does NOT apply this cap. Me proposing a DOWN for cpu would be re-introducing the disabled gate via the adjustment mechanism. That might be against the spirit.\n\nHmm. So maybe skip cpu.\n\nThen what about gpu? The GPU_HASH_MISMATCH gate is NOT_WIRED (no confirmed field name), separate from the performance degradation.\n\nHmm. So maybe gpu DOWN because of measured performance degradation (graphics ratio 0.575), which no gate covers.\n\nI think gpu DOWN is more defensible than cpu because there's no disabled gate for it, and there is a measured degradation. Actually the FPS degradation... is it a gpu defect though? Graphics = rendering performance. Yes, relates to gpu.\n\nHmm, but \"state PARTIAL... لا حرف بدون قياس\" — gpu has executed tests (2), so it has measured letter A. So allowed.\n\nLet me go with gpu DOWN. Reason: graphics.phase4 median 2065.37, phase5 median 1187.86, ratioPhase5OverPhase4 0.575 — sustained graphics performance drops; and G-03/G-04/G-05 (FPS drop, throttling, min FPS) were not tested, so the gpu A letter rests solely on 2 identification tests and doesn't reflect rendering under sustained load.\n\nHmm, OK. Actually, wait. Let me reconsider: is a downgrade from A to B for gpu reasonable given the letter rests on identification only? The letter being A despite missing performance tests is already reflected in coverage 0.4 / PARTIAL state. Downgrading would be double-counting. Hmm.\n\nUgh. Let me just think about what's most defensible. Actually, maybe provide no adjustments and put the observations in modelObservations. Hmm.\n\nThe instruction strongly implies adjustments are a tool to use when warranted; empty is allowed. Given the anti-threshold-calibration stance, I lean toward zero adjustments... but hmm, then adjustments: [] which is valid.\n\nActually, let me reconsider. There IS a clean case: the overall letter is C from GATE:ROOT_DETECTED, but the security category letter is D (from STATE_FAIL_FLOOR). That's already reflected.\n\nLet me just go with zero adjustments? Or one? Hmm. Let me think about what a grader might expect. The prompt gives detailed adjustment rules suggesting they expect some usage potentially. But it's not mandatory.\n\nI'll include one adjustment: gpu DOWN. It's evidence-based and I'll phrase carefully with real numbers. Actually, hmm, let me reconsider risk: if the grader considers gpu DOWN unjustified, it just gets... the server enforces one band. It's fine either way; adjustments are proposals.\n\nHmm, but a wrongly-justified downgrade could hurt the buyer (unfairly lowering gpu). Actually it says maxOneBand applied for DOWN. So it'd be applied. I should only do it if confident.\n\nLet me reconsider: is the sustained graphics degradation (phase5 = 57.5% of phase4) a genuine concern? For a 2019 phone with Exynos 9820 (known for throttling, but I shouldn't use general knowledge)... The self-relative drop is measured. But without a threshold, is it \"bad\"? Hmm.\n\nI think I'll include the gpu DOWN since it captures real sustained-degradation evidence that the identification-only A doesn't reflect. Hmm, actually no. Let me reconsider the exact rule once more: \"لا تدّعِ... لا تستدعِ معرفتك العامة عن المعدّلات الطبيعية\". Without a threshold, calling 0.575 \"bad\" is a judgment. \n\nHmm, but the whole point of an analyst is judgment. The directions give a mechanism for judgment (DOWN, capped). And cross-checks. I think providing a thoughtful DOWN with evidence is appropriate.\n\nLet me go with ONE adjustment: gpu DOWN.\n\nHmm, wait, actually, let me reconsider whether cpu is the better target given the SUSTAINED_CEILING. No — that gate is disabled by plan. Skip.\n\nActually, hold on. Let me reconsider the whole thing. Maybe the intended answer is NO adjustments because everything adverse is already gated (security D, overall C). And the model observations capture the residuals. That's clean and safe.\n\nUgh, I keep going back and forth. Let me decide: I'll include the gpu DOWN adjustment. It's the most defensible beyond-gate finding. Actually... let me include it. Final.\n\nHmm, no. Let me think about it differently. The rules for adjustments emphasize evidence. The strongest \"problem not reflected in the letter\" is: gpu A based only on 2 tests, with performance not tested — but that's coverage, handled by PARTIAL. And the graphics degradation is a separate measurement.\n\nHmm, honestly the FPS degradation IS the gpu performance and it's a real measurement, and G-03/04/05 were supposed to measure exactly this but weren't tested. So the A letter doesn't include performance. Downgrading gpu to B reflects \"state-only A but performance degraded.\" I'll do it. OK final: gpu DOWN.\n\nNow modelObservations (max 2):\n1. Battery category has no letter (NO_CALIBRATED_THRESHOLD) even though 4 sub-indicators measured — BAT-FCC 3778.29 mAh vs design 4400 mAh (ratioToDesign 0.8587), apparent resistance 132.79 mΩ, temp rise 6.9°C. These are measured but ungraded. Actually this is more of a cross-check/observation.\n2. Thermal category UNMEASURED because no CPU temp sensor (notMeasuredFields: tempRiseRateInProbe NO_CPU_TEMP_SENSOR, cpuTempCoveragePct 0), yet battery_temp_c rise 6.9°C and thermalStatusMax 3 exist — thermal stress only partially characterized.\n\nHmm, but modelObservations are for things not corresponding to a deterministic defect. These qualify.\n\nNow crossChecks (intersections):\n1. CPU letter A with SUSTAINED_CEILING gate DISABLED, while graphics phase5/phase4 ratio 0.575 shows sustained degradation — sustained performance under long load isn't captured by any applied letter. Evidence refs: categoryStates.categories.cpu.gatesApplied, findings.graphics.ratioPhase5OverPhase4.\n2. Security D (ROOT_DETECTED + patch 2021-08-01, 61.7 months) drives overall C while every other measured category is A → overall letter reflects security gate not measured performance. Evidence: categoryStates.overall.gatesApplied, categoryStates.categories.security.\n3. Thermal UNMEASURED (coverage 0) yet battery thermal indicators present (battery temp rise 6.9°C, rate 1.854°C/min), so heat behavior is only inferable from battery channel. Evidence: categoryStates.categories.thermal, findings.thermal.\n\nLet me include 2-3 crossChecks.\n\nNow, the language: all Arabic. Categories in narrative rendered Arabic. Test IDs as-is.\n\nLet me now carefully write everything, keeping numbers accurate.\n\nLet me compile the numbers I'll use and their exact values:\n- coverage 45% (overall 0.4503809523809524 → 45%). partialAssessmentTag.coveragePct = 45.\n- Sample count 1604 (expected 1605).\n- overall letter C.\n- security coverage 0.9 → 90%.\n- security score 66.66666666666667 → 66.67.\n- patch 2021-08-01, 61.7 months.\n- cpu score 100, letter A, coverage 1.\n- gpu coverage 0.4 → 40%.\n- gps coverage 0.333 → 33.3%.\n- sensors coverage 0.75 → 75%.\n- cellular coverage 0.714 → 71.4%.\n- storage total 228.6 GB, available 31.3% = 71.5 GB.\n- storage write 188 MB/s, read 1618 MB/s, random read 110516 IOPS, random write 3265 IOPS.\n- storage inCache 178.51425 Mbps, postCache 71.47117, kneeGb 3, KNEE_DETECTED.\n- memory total 7.1 GB, available 2.7 GB.\n- display 1080x2280, 420 DPI, 60 Hz.\n- cpu 8 cores, 2.73 GHz max, idle 2.14 GHz.\n- cpu sustained mean freq 2133652.1739 kHz — I might mention 2.73 GHz peak.\n- sustainedCeiling phase3 meanWindowMaxRatio 0.848, phase5 0.6889, combined 0.7738, recovery 0.7143.\n- graphics phase4 median 2065.37425, phase5 median 1187.86395, ratioPhase5OverPhase4 0.575.\n- battery temp rise 6.9°C, rate 1.854°C/min, thermalStatusMax 3, thermalHeadroomPeak 1.0067.\n- battery socStart 48 socEnd 43.\n- BAT-FCC 3778.2928 mAh, ratioToDesign 0.8587.\n- BAT-R-APPARENT 132.79 mΩ.\n- design capacity 4400 mAh.\n- dischargeRateUnderLoadMa 1691.67.\n- voltageStabilityMv 46.04.\n- wi-fi 13 Mbps 2.4 GHz, signal -63 dBm.\n- gps L-01 pass.\n- media: 8 cores etc.\n\nNote about not multiplying/dividing. I'll avoid computing new numbers. E.g., ratioToDesign 0.8587 is already a provided value. Good. Don't compute 3778/4400 myself (it's given as ratioToDesign 0.8587029198232323). I can cite the given ratio.\n\nLet me write summary (simple, no invented numbers):\n\"الجهاز سامسونج Galaxy S10 5G حصل على حرف C عامّ في تقييم جزئي بتغطية 45%. المعالج والذاكرة والتخزين والشاشة والاتصال اللاسلكي قيّمت بحرف A، لكن فئة الأمان عندها مشكلتان — اكتشاف صلاحيات جذر وتاريخ رقعة أمنية قديم — هي التي خفّضت الحرف العامّ. الكاميرا ونظام تحديد المواقع والحرارة والأمان لم تُقس كلها لأن بعض الأذونات رُفضت وبعض الحساسات غير متوفرة.\"\n\nHmm, \"الأمان لم تُقس كلها\" — security was partial. Let me rephrase.\n\nDetails (technical, all numbers from findings).\n\nVerdict: \"حرف C — تقييم جزئي (تغطية 45%)، والسبب الأساسي في الحرف هو بوابة ROOT_DETECTED في فئة الأمان.\"\n\nbuyerAdvice three distinct.\n\ncasual: general daily use — device fine for daily use, graded A on CPU/memory/storage/display/wireless; but root detected + dev mode + USB debugging enabled + old security patch mean less secure; camera & GPS not verified. Recommend checking.\n\ngamer: sustained performance — graphics phase5/phase4 ratio 0.575, thermalStatusMax 3, battery temp rise 6.9°C, gpu performance tests not tested. Hmm — I should note sustained rendering drop.\n\nphotographer: camera unmeasured (permission denied), storage 228.6 GB with 31.3% (71.5 GB) free, storage write 188 MB/s. So camera can't be assessed; storage health is good.\n\nLet me be careful all numbers cited are real.\n\nNow issueDescriptions — need to write each. Let me write concise human descriptions.\n\nPOS-* ones: \"لا أعطاب على الاختبارات المنفَّذة\".\n\nFor DISC-* non-measured: describe why not measured (permission denied / capability blocked / not tested).\n\nLet me draft each:\n\n- DISC-T-01: \"قياس أقصى حرارة (T-01) غير مقيس: الجهاز لا يوفّر قراءات حرارية للفئة (CAPABILITY_BLOCKED).\"\nActually the notMeasuredReason for T-01..03 is CAPABILITY_BLOCKED. I'll state that.\n\n- DISC-T-02: \"قياس معدّل الارتفاع الحراري (T-02) غير مقيس — لا تتوفر قراءات حرارية على هذا الجهاز.\"\n- DISC-T-03: \"قياس معدّل التبريد (T-03) غير مقيس لنفس السبب.\"\n\n- POS-cpu: \"كل اختبارات المعالج المنفَّذة (C-01..C-07، خمسة اختبارات) نجحت — لا أعطاب.\"\nHmm careful: 5 executed out of 5 declared? declaredCount 5, executedCount 5. But testIds list 7. Hmm. categoryStates cpu declaredCount 5, executedCount 5, but testIds has C-01..C-07 (7). The raw testResults include C-03, C-04 which are MEASUREMENT, unstable, don't enter grade. So declared/executed count 5 refers to grade-entering. I'll just say \"الاختبارات المنفَّذة\".\n\n- DISC-G-03: \"قياس انخفاض معدّل الإطارات (G-03) غير مقيس — لم يُنفَّذ (NOT_TESTED)، فلم يُتحقّق من أداء الرسوميات.\"\n- DISC-G-04: \"قياس كبح معالج الرسوميات (G-04) غير مقيس — لم يُنفَّذ.\"\n- DISC-G-05: \"قياس أدنى معدّل إطارات (G-05) غير مقيس — لم يُنفَّذ.\"\n\n- POS-display: \"اختبارات الشاشة الثلاثة (1080×2280، 420 DPI، 60 Hz) نجحت — لا أعطاب.\"\n- POS-memory: \"اختبارات الذاكرة نجحت (7.1 GB إجمالي، 2.7 GB متاح).\"\n- POS-storage: \"اختبارات التخزين نجحت (كتابة 188 MB/s، قراءة 1618 MB/s، قراءة عشوائية 110516 IOPS، كتابة عشوائية 3265 IOPS).\"\n\n- DISC-CM-01: \"الكاميرا الخلفية (CM-01) غير مقيسة — إذن الكاميرا مرفوض (PERMISSION_DENIED).\"\n- ... similarly for CM-02 front, CM-03 autofocus, CM-04 flash, CM-05 video, CM-06 rear resolution, CM-07 front resolution, CM-08 fingerprint, CM-10 face recognition.\n\nWait CM-08 is \"Parmak İzi\" (fingerprint) — categorized under camera? Odd but it's there. I'll describe as received.\n\n- DISC-L-02: \"عدد الأقمار (L-02) غير مقيس — إذن الموقع مرفوض.\"\n- DISC-L-03: \"دقة الموقع (L-03) غير مقيسة — إذن الموقع مرفوض.\"\n\n- ISS-SEC-04: \"فشل اختبار SEC-04: اكتُشفت صلاحيات جذر (root) على الجهاز — وهذا ما فتح بوابة ROOT_DETECTED وحدّد الحرف العامّ.\"\n- ISS-SEC-05: \"تنبيه SEC-05: وضع المطوّر مفعّل.\"\n- ISS-SEC-06: \"تنبيه SEC-06: تصحيح USB (USB debugging) مفعّل.\"\n- DISC-SEC-07: \"تثبيت من مصادر غير معروفة (SEC-07) غير مقيس — القدرة محجوبة (CAPABILITY_BLOCKED): يتطلب التطبيق إعلان إذن REQUEST_INSTALL_PACKAGES.\"\n- DISC-SN-07: \"مستشعر الحرارة المحيطة (SN-07) غير متوفر (CAPABILITY_BLOCKED).\"\n- DISC-SN-08: \"كاشف الخطوات (SN-08) غير متوفر.\"\n- DISC-SN-09: \"عدّاد الخطوات (SN-09) غير متوفر.\"\n- DISC-N-03: \"حالة الشريحة الثانية (N-03) غير مقيسة — الجهاز بفتحة واحدة فقط (CAPABILITY_BLOCKED).\"\n- DISC-N-04: \"نوع الشبكة (N-04) غير مقيس — إذن READ_PHONE_STATE مرفوض.\"\n- POS-wireless: \"كل اختبارات الاتصال اللاسلكي الستة نجحت (Wi-Fi متصل 13 Mbps، إشارة -63 dBm، بلوتوث، NFC).\"\n\nOK.\n\nNow crossChecks with evidenceRefs (paths). Let me use paths like \"categoryStates.categories.cpu.gatesApplied[0]\", \"findings.graphics.ratioPhase5OverPhase4\", etc.\n\ncrossChecks:\n1. description: \"المعالج حصل على A لكن بوابة السقف المستدام (SUSTAINED_CEILING بسقف C) معطّلة بنصّ الخطّة، وفي الوقت نفسه يُظهر قياس الرسوميات هبوطاً من 2065.37 إلى 1187.86 (النسبة 0.575) بين المرحلتين — أي أن الأداء تحت الحمل الطويل لا تغطّيه أي بوابة مطبَّقة.\"\nevidenceRefs: [\"categoryStates.categories.cpu.gatesApplied\", \"findings.graphics.phase4.median\", \"findings.graphics.phase5.median\", \"findings.graphics.ratioPhase5OverPhase4\"]\n\n2. description: \"الحرف العامّ C مصدره GATE:ROOT_DETECTED في فئة الأمان، بينما كل الفئات المقيسة الأخرى بحرف A — أي أن ترتيب الجهاز العامّ يعكس حالة الأمان لا الأداء العامّ.\"\nevidenceRefs: [\"categoryStates.overall.letterSource\",\"categoryStates.categories.security.deterministicLetter\",\"categoryStates.overall.gatesApplied\"]\n\n3. description: \"فئة الإدارة الحرارية غير مقيسة (تغطية 0، لا حسّاس حرارة معالج)، لكن قناة حرارة البطارية قاست ارتفاعاً 6.9°C بمعدّل 1.854°C/min مع thermalStatusMax = 3 — فمؤشر الحرارة موجود جزئياً في فئة البطارية لا في فئة الحرارة.\"\nevidenceRefs: [\"categoryStates.categories.thermal\",\"findings.thermal.batteryTempRise.valueC\",\"findings.thermal.thermalStatusMax\",\"findings.notMeasuredFields\"]\n\nHmm — careful: is citing findings.thermal.batteryTempRise.valueC ok? Yes.\n\nNow adjustments: gpu DOWN.\n- category: \"gpu\"\n- direction: \"DOWN\"\n- maxOneBand: true\n- evidenceRefs: [\"findings.graphics.ratioPhase5OverPhase4\",\"findings.graphics.phase4.median\",\"findings.graphics.phase5.median\",\"categoryStates.categories.gpu\"]\n- reason: \"حرف gpu هو A لكنه مبنيّ على اختبارَي تعريف فقط (G-01، G-02) من أصل خمسة، بينما اختبارات الأداء (G-03، G-04، G-05) غير منفَّذة، ويقابل ذلك في القياس هبوط أداء الرسوميات من وسيط 2065.37 إلى 1187.86 (النسبة 0.575) بين المرحلتين.\"\n\nHmm wait — the \"reason\" must contain numbers from findings, that's fine.\n\nActually, hmm, is this really justifying a downgrade of gpu letter from A to B? The letter A reflects identification passes. Coverage 0.4/PARTIAL already. Hmm, downgrading seems reasonable to reflect performance degradation. I'll keep it.\n\nHmm, actually, let me reconsider whether to include. The rule says: \"لا تقترح تعديلاً على فئة حالتها ... PARTIAL بلا اختبار منفَّذ فعلياً\". gpu has 2 executed → allowed. And the reason cites measured degradation. OK include.\n\nActually, wait — there's a subtlety: the downgrade applies to gpu's letter, but the graphics degradation occurs in findings.graphics (not gpu category directly). Is that a valid cross-reference? I think yes, graphics = GPU performance. OK.\n\nHmm, but I'm still uneasy. Let me also consider not including and putting it in crossChecks instead. But I already have it partially in crossCheck 1. Let me include the adjustment as well — it's the \"actionable\" version.\n\nActually — I'll keep the adjustment. Final.\n\nmodelObservations (max 2):\n1. \"البطارية قِيست لها أربعة مؤشرات لكن دون حرف (NO_CALIBRATED_THRESHOLD): نسبة السعة المقيسة إلى التصميم 0.8587، والمقاومة الظاهرة 132.79 mΩ، وحرارة البطارية 32.4°C — بيانات موجودة لكن غير مُدرجة في أي حرف.\"\nevidenceRefs: [\"categoryStates.categories.battery.batteryIndicators\",\"categoryStates.categories.battery.noLetterReason\"]\n\nHmm, careful with numbers: ratioToDesign 0.8587029198232323 → 0.8587. BAT-R-APPARENT value 132.7949507222513 → 132.79. battery temp 32.4 (from B-03 evidence \"32.4\"). OK.\n\n2. \"قياسات غير مستقرة وُسمت UNSTABLE ولم تدخل الحرف أو العطب (C-04 عند 3271 MFLOPS، S-04 عند 1618 MB/s، S-05 عند 110516 IOPS، C-03 عند 2.14 GHz) — أرقام حقيقية لكن مصنّفة غير حاسمة.\"\nevidenceRefs: [\"findings.unstableMeasurements\"]\n\nHmm, is that a valid \"observation\"? It's noting that unstable measurements exist. That's fine as a model observation.\n\nActually, maybe better second observation: sampleCount 1604 of expected 1605 — nearly complete. Hmm, minor. Or the memory bandwidth... no, memory_bandwidth only in MEMORY phase 360.62 Mbps. Hmm.\n\nLet me pick two solid observations. I'll go with battery-no-letter and unstable-measurements. Actually the unstable one might be more of a cross-check. Let me instead use:\n2. \"قناة تدفّق التخزين تظهر KNEE_DETECTED مع inCache 178.51 Mbps بعد الكاش وpostCache 71.47 Mbps، وعمر الركبة عند 3 GB — سلوك كاش يتغيّر على الجهاز نفسه بين الفحوص (حسب ملاحظة الحالة).\"\nevidenceRefs: [\"findings.storage\"]\n\nHmm, that's an observation about storage knee. Fine.\n\nActually, I think the two best: (1) battery ungraded despite indicators, (2) unstable measurements excluded from letter/fault. Let me use those.\n\nHmm, or the thermal one. But I put thermal in crossChecks. Let me avoid duplication. Use battery + unstable.\n\nActually, the unstable one — let me reconsider. It says these are real measurements flagged UNSTABLE, not in grade/fault. This is a legit observation the reader/analyst should know. OK.\n\nNow let me make sure the whole output is valid JSON with only the four fields.\n\nLet me also double check: no English technical words leaked except allowed. Test IDs like \"C-01\", \"SEC-04\" — allowed (keep as-is). Brand names: \"Samsung Galaxy S10 5G\", \"Exynos 9820\", \"Mali-G76\" — allowed. Units: MB/s, GHz, °C, %, GB, IOPS, Mbps, mΩ, mAh, dBm, DPI. The prompt says units allowed: MB/s, GHz, °C, %. It says \"ورموز الوحدات الدولية: MB/s، GHz، °C، %\" — these are examples; \"ورموز الوحدات الدولية\" (international unit symbols) generally. I'll use GB, IOPS, Mbps, mΩ, mAh, dBm, DPI as they are international unit symbols. Should be fine.\n\nBut careful about English words like \"root\" — is that allowed? \"Root\" is a technical term. Hmm. I could write \"صلاحيات الجذر (root)\". The word \"root\" — risky. Let me avoid and write \"صلاحيات الجذر (روت)\"? Hmm. Actually the issue title has \"Root Yetkileri\" but that's Turkish from the raw. I'll write \"صلاحيات الجذر (root)\". Hmm, \"root\" is English. Better to write just \"صلاحيات الجذر\" in Arabic. Let me use \"صلاحيات الجذر\".\n\nAlso \"ROOT_DETECTED\" — that's a gate name, allowed? Gate names are identifiers read by server. In narrative I should reference gates. Hmm, the prompt says keys category/severity/letters stay English where server reads. Gate names in narrative... risky. But I need to reference the gate. The prompt example uses \"ROOT_DETECTED\" and \"PATCH_AGE\" explicitly: 'مثل ROOT_DETECTED أو PATCH_AGE'. So gate names are allowed in narrative! Good (\"إن رأيت بوّابة باسم (مثل ROOT_DETECTED أو PATCH_AGE)\").\n\nAlso \"SUSTAINED_CEILING\", \"GPU_HASH_MISMATCH\", \"STORAGE_VERIFY_ERRORS\" — gate names, allowed.\n\nAlso \"STATE_FAIL_FLOOR\" — gate name. OK.\n\nAlso \"UNSTABLE\", \"NOT_TESTED\", \"PERMISSION_DENIED\", \"CAPABILITY_BLOCKED\", \"NO_CALIBRATED_THRESHOLD\", \"HARNESS_VERSION\" — these are reason/enum codes. Hmm, should I use them in Arabic narrative? They're identifiers. The prompt says notMeasuredReason should be used literally (\"استعمل السبب المُسمّى الذي وصلك (notMeasuredReason) حرفياً\"). So NOT_TESTED, PERMISSION_DENIED etc. are allowed literally. Good.\n\n\"USB debugging\" — hmm English. Better \"تصحيح USB\". USB is a standard acronym. Hmm, I'll write \"تصحيح USB\". \"USB\" is fine-ish. Actually maybe \"وضع تصحيح USB\" — common in Arabic. OK.\n\n\"Wi-Fi\" — brand-ish/standard. Allowed probably. \"NFC\", \"Bluetooth\" → \"بلوتوث\". \"GPS\" → العربية \"نظام تحديد المواقع\". Test \"eSIM\" not needed.\n\n\"Mali-G76\", \"Exynos 9820\" — brand/chip, allowed.\n\n\"Android 11\" — \"أندرويد 11\". OK.\n\n\"DPI\" — unit. OK.\n\n\"IOPS\", \"Mbps\", \"dBm\", \"mΩ\", \"mAh\", \"GB\" — units. OK.\n\nNow, careful: \"phase4\"/\"phase5\" — English. Should translate as \"المرحلة الرابعة\" / \"المرحلة الخامسة\". Hmm but evidenceRefs are paths (allowed English). In narrative I'll say \"المرحلة الرابعة/الخامسة\". OK.\n\n\"vsync\" — English. Avoid; I don't need it. Actually graphics.vsyncLockFraction60 = 0 for all — I could mention \"كاشف قفل vsync\" but avoid. Skip.\n\nNow let me write it all out.\n\nLet me draft narrative.summary (simple, no numbers? \"بلا أرقام مخترَعة\" — no invented numbers; real numbers ok but summary should be simple. I'll keep minimal numbers, maybe just the letter and coverage). Actually summary: \"بلا أرقام مخترَعة\" means don't invent; can include real. I'll include coverage 45% and letter C (from payload). Fine.\n\nSummary:\n\"الجهاز Samsung Galaxy S10 5G خرج بتقييم جزئي: الحرف العامّ C بتغطية 45% من الفئات. الأداء نفسه (المعالج، الذاكرة العشوائية، التخزين، الشاشة، الاتصال اللاسلكي) ظهر بحرف A في الاختبارات المنفَّذة، لكن ما خفّض الحرف هو فئة الأمان: صلاحيات الجذر مكتشفة ورقعة أمنية قديمة، مع تفعيل وضع المطوّر وتصحيح USB. عدة فئات (الكاميرا، الحرارة، الصوت، الإدخال) لم تُقس أصلاً، ونظام تحديد المواقع لم يُقس جزئياً بسبب رفض إذن الموقع.\"\n\nHmm that's more than \"فقرة قصيرة\" but okay. Let me shorten a bit.\n\nDetails:\n\"القوّة الأساسية في هذا الجهاز هي الأداء المقيس: المعالج بحرف A وتغطية كاملة (5 اختبارات منفَّذة، كلها ناجحة، والنقاط 100)، بثمانية أنوية وتردد أقصى معلن 2.73 GHz. الذاكرة العشوائية بحرف A (7.1 GB إجمالي، 2.7 GB متاح)، والتخزين بحرف A بمساحة إجمالية 228.6 GB ومتاح 31.3% (71.5 GB)، وسرعات كتابة 188 MB/s وقراءة 1618 MB/s وقراءة عشوائية 110516 IOPS وكتابة عشوائية 3265 IOPS. الشاشة بحرف A (1080×2280، 420 DPI، 60 Hz)، والاتصال اللاسلكي بحرف A (Wi-Fi 13 Mbps على 2.4 GHz، إشارة -63 dBm).\nما يخفض التقييم العامّ هو فئة الأمان: بحرف D ونقاط 66.67 وتغطية 90%. فيه اختبار فاشل واحد (SEC-04: صلاحيات الجذر مكتشفة) وتنبيهان (SEC-05 وضع المطوّر مفعّل، SEC-06 تصحيح USB مفعّل)، ورقعة الأمان بتاريخ 2021-08-01 أي 61.7 شهراً. البوابة ROOT_DETECTED أُطلقت في فئة الأمان فعّلت الحرف العامّ C، بينما بوابة PATCH_AGE (سقفها B) أُطلقت أيضاً لكن بلا أثر لأن الحرف الأساسي أسوأ منها.\nالحرارة عندنا غير مقيسة كفئة (تغطية 0)، لكن قناة حرارة البطارية قاست ارتفاعاً 6.9°C بمعدّل 1.854°C/min، مع thermalStatusMax = 3. البطارية نفسها PARTIAL بلا حرف (NO_CALIBRATED_THRESHOLD) رغم أربعة مؤشرات مقيسة: السعة المقيسة 3778.29 mAh مقابل سعة تصميم 4400 mAh (النسبة 0.8587)، ومقاومة ظاهرة 132.79 mΩ، وتيار تفريغ تحت الحمل 1691.67 mA، وثبات جهد 46.04 mV.\nالرسوميات: قياس الأداء أظهر هبوطاً من وسيط 2065.37 في المرحلة الرابعة إلى 1187.86 في المرحلة الخامسة (النسبة 0.575)، مع أن اختبارات الأداء G-03/G-04/G-05 لم تُنفَّذ أصلاً، وحرف gpu هو A مبنيّ على اختبارَي تعريف فقط.\nالتغطية العامة 45% لأن الكاميرا (تغطية 0، إذن مرفوض)، والحرارة، والصوت، والإدخال غير مقيسة، ونظام تحديد المواقع جزئي (33.3%)، والمستشعرات 75%، والشبكة الخلوية 71.4%.\"\n\nHmm careful: \"5 اختبارات منفَّذة\" — cpu declaredCount 5, executedCount 5. But testIds list 7. I'll say \"خمسة اختبارات دخلت التقييم\". Fine. Actually the payload cpu.executedCount = 5. I'll say \"5/5\". OK.\n\nWait, memory: R-01 total 7.1 GB. Hmm \"7.1 GB\" total memory for an 8 GB phone. OK, as received.\n\nNow the peak freq 2.73 GHz — from C-02 evidence \"2.73\", unit GHz. And sustainedCeiling peakFreqKhz 2730000 → 2.73 GHz. Consistent. Good.\n\nNow, \"61.7 شهراً\" — from gate source \"SEC-03=2021-08-01 (61.7 شهراً)\". Good, real.\n\nthermalStatusMax = 3 — real.\n\nNow buyerAdvice:\n\ncasual: \"للاستخدام اليومي العادي الجهاز كفؤ: المعالج والذاكرة والتخزين والشاشة والاتصال اللاسلكي كلها بحرف A في الاختبارات المنفَّذة. المشكلة الأهم ليست في السرعة بل في الأمان: الجهاز مفتوح بصلاحيات الجذر، ووضع المطوّر وتصحيح USB مفعّلان، ورقعة الأمان قديمة (2021-08-01). إن كنت تشتريه للاستخدام العادي، اطلب من البائع إلغاء صلاحيات الجذر وإغلاق وضع المطوّر وتحديث النظام. وتذكّر أن الكاميرا لم تُختبر إطلاقاً على هذا الفحص.\"\n\ngamer: \"المعالج بحرف A، لكن الأداء تحت الحمل الطويل غير مضمون: اختبارات الرسوميات G-03 وG-04 وG-05 لم تُنفَّذ، ومع ذلك يُظهر القياس هبوطاً في أداء الرسوميات من 2065.37 إلى 1187.86 (النسبة 0.575)، مع ارتفاع حرارة البطارية 6.9°C خلال الفحص وthermalStatusMax = 3. بوابة السقف المستدام للمعالج (SUSTAINED_CEILING) معطّلة، فالأرقام لا تغطّي الثبات عند اللعب الطويل. افحص الجهاز بنفسك في جلسة لعب طويلة قبل الشراء.\"\n\nHmm \"C-06 Termal Kısıtlama 9.1%\" — thermal throttling 9.1%. That's a real number: C-06 raw value 9.1, unit %. It's \"Termal Kısıtlama\" = thermal throttling. Interesting — cpu C-06 evidence 9.1%, status pass. I could mention in gamer advice: \"اختبار كبح المعالج الحراري أعطى 9.1%\". Hmm, that's under CPU. Let me include it maybe. Actually careful, C-06 \"Termal Kısıtlama\" 9.1% — pass. OK could mention. Hmm, avoid confusion. I'll mention it in details maybe.\n\nphotographer: \"أهم شيء للتصوير على هذا الفحص لم يُقس أصلاً: كل اختبارات الكاميرا (CM-01 إلى CM-08 وCM-10) غير مقيسة لأن إذن الكاميرا مرفوض، فلا يوجد أي دليل على جودة التركيز البؤري أو الفلاش أو تسجيل الفيديو. من ناحية التخزين، الجهاز جيد: 228.6 GB إجمالي و31.3% فقط مستخدمة (71.5 GB متاحة)، وسرعات كتابة 188 MB/s وقراءة 1618 MB/s. لكن إن كانت الكاميرا تهمّك فعلياً، لا تشترِ بناءً على هذا التقرير وحده — اطلب فحصاً للكاميرا بإذن ممنوح.\"\n\nGood, distinct.\n\nNow let me finalize JSON.\n\nLet me double-check evidenceRefs format — \"مسارات داخل findings أو categoryStates\". I'll use dotted paths.\n\nLet me also verify no invented numbers.\n\nLet me write the final JSON.\n\nOne more: the details mention \"5 اختبارات منفَّذة\" for cpu — executedCount 5. Fine.\n\nAlso I should double check severity/state strings I might use. In narrative I say \"بحرف A\", \"حرف D\", \"PARTIAL\", \"UNMEASURED\" — hmm PARTIAL/UNMEASURED are English state codes. Should I translate? The prompt: \"مفاتيح البيانات (category، severity، الحروف A-D) تبقى بالإنجليزية دائماً في أي مكان يقرؤه الخادم آلياً\". States like PARTIAL — hmm not listed. To be safe, I'll avoid writing PARTIAL/UNMEASURED and instead describe in Arabic: \"تقييم جزئي\", \"غير مقيسة\". Better.\n\nLet me rewrite details avoiding English state codes.\n\nAlso \"gatesApplied\" — I won't use the field name in narrative.\n\nLet me finalize.\n\nFor the details, let me re-verify each number appears in payload:\n- 5 tests, score 100, letter A — yes (cpu).\n- 8 cores — C-01 evidence \"8\". yes.\n- 2.73 GHz — C-02. yes.\n- 7.1 GB, 2.7 GB — R-01, R-02.\n- 228.6 GB — S-01.\n- 31.3% (71.5 GB) — S-02.\n- 188 MB/s — S-03.\n- 1618 MB/s — S-04.\n- 110516 IOPS — S-05.\n- 3265 IOPS — S-06.\n- 1080×2280, 420 DPI, 60 Hz — D-01..D-03.\n- 13 Mbps, 2.4 GHz — N-09.\n- -63 dBm — N-10.\n- 66.67 score — security score 66.666... → 66.67. yes.\n- 90% coverage — security 0.9. yes.\n- SEC-04 fail, SEC-05/06 warning — yes.\n- 2021-08-01 — SEC-03.\n- 61.7 months — gate source.\n- ROOT_DETECTED FIRED cappedOverall true — yes.\n- PATCH_AGE ceiling B — yes.\n- 6.9°C, 1.854°C/min — thermal.batteryTempRise.\n- thermalStatusMax 3 — yes.\n- BAT-FCC 3778.29 mAh, 4400 design, ratio 0.8587 — yes.\n- BAT-R-APPARENT 132.79 mΩ — yes.\n- 1691.67 mA — dischargeRateUnderLoadMa 1691.665...\n- 46.04 mV — voltageStabilityMv 46.043...\n- 2065.37, 1187.86, 0.575 — graphics.\n- 45% coverage — overall 0.45.\n- 33.3% gps, 75% sensors, 71.4% cellular — yes.\n- camera coverage 0 — yes.\n\nGood.\n\nNote: I must not compute new numbers. E.g. I shouldn't write \"فرق 877.5 FPS\" or \"42.5%\". Avoid. I'll cite the given 0.575 ratio and both medians.\n\nAlso avoid \"1.0066667\" thermalHeadroomPeak — I could mention but it's odd. Skip.\n\nNow writing final JSON. Keep descriptions concise.\n\nLet me write issueDescriptions carefully for all 31 issue IDs.\n\nList again:\n1. DISC-T-01\n2. DISC-T-02\n3. DISC-T-03\n4. POS-cpu\n5. DISC-G-03\n6. DISC-G-04\n7. DISC-G-05\n8. POS-display\n9. POS-memory\n10. POS-storage\n11. DISC-CM-01\n12. DISC-CM-02\n13. DISC-CM-03\n14. DISC-CM-04\n15. DISC-CM-05\n16. DISC-CM-06\n17. DISC-CM-07\n18. DISC-CM-08\n19. DISC-CM-10\n20. DISC-L-02\n21. DISC-L-03\n22. ISS-SEC-04\n23. ISS-SEC-05\n24. ISS-SEC-06\n25. DISC-SEC-07\n26. DISC-SN-07\n27. DISC-SN-08\n28. DISC-SN-09\n29. DISC-N-03\n30. DISC-N-04\n31. POS-wireless\n\nOK writing.\n\nLet me make sure the JSON is valid (Arabic strings, escaped properly - no special chars needing escape except quotes; I'll avoid internal quotes).\n\nFinal answer below."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 25905,
+      "completion_tokens": 17138,
+      "total_tokens": 43043,
+      "prompt_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 13284
+      },
+      "prompt_cache_hit_tokens": 1024,
+      "prompt_cache_miss_tokens": 24881
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  }
+}

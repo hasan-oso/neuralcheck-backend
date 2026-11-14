@@ -1,0 +1,1611 @@
+{
+  "readerVersion": 1,
+  "fieldsVersion": 69,
+  "appVersion": "1.0.11",
+  "applicable": true,
+  "anomalies": [],
+  "absences": {
+    "ABSENT": [],
+    "ABSENT_DECLARED": [
+      "batteryHealth.cycleCount.valueStatus",
+      "batteryHealth.chargeCounter.valueStatus",
+      "batteryHealth.energyCounter.valueStatus",
+      "cpuTemp.valueStatus",
+      "verification.aiDelegate.initErrorStatus"
+    ],
+    "NOT_IN_FILE": [],
+    "notInFieldsVersionCount": 4,
+    "removedInFv68Count": 6
+  },
+  "timeSeriesState": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "file",
+      "kind": "file",
+      "detail": null,
+      "recognized": true
+    }
+  },
+  "lists": {
+    "fieldsNotInFile": {
+      "status": "PRESENT",
+      "names": []
+    },
+    "unmeasuredDefaults": {
+      "status": "PRESENT",
+      "names": [
+        "deviceTierMeasured",
+        "intensityFactor",
+        "dataQuality.cpuTempCoveragePct",
+        "dataQuality.gpuTempCoveragePct",
+        "dataQuality.skinTempCoveragePct",
+        "dataQuality.cpuTempPrimarySource"
+      ]
+    },
+    "transitionalAggregates": {
+      "status": "PRESENT",
+      "names": [
+        "thermalHeadroomAvg",
+        "thermalHeadroomPeak",
+        "thermalStatusMax",
+        "maxBatteryTemp",
+        "stressEffectiveness",
+        "dataQuality",
+        "batteryHealth.dischargeRateUnderLoadMa",
+        "batteryHealth.voltageStabilityMv",
+        "batteryHealth.batteryTempMaxC",
+        "batteryHealth.batteryTempRiseC",
+        "batteryHealth.levelDropPct",
+        "batteryHealth.dischargeVsDesignRatioMah",
+        "verificationResults.criticalDefectDetected",
+        "verificationResults.cpuKnownAnswerTotalMsByPhase"
+      ]
+    }
+  },
+  "footerDiagnostics": {
+    "status": "PRESENT",
+    "entries": {
+      "batteryHealth": {
+        "kind": "ok",
+        "detail": null
+      },
+      "batteryHealthSnap": {
+        "kind": "ok",
+        "detail": null
+      },
+      "batteryPairs": {
+        "kind": "ok",
+        "detail": null
+      },
+      "channelReadFailures": {
+        "kind": "ok",
+        "detail": null
+      },
+      "dataQuality": {
+        "kind": "ok",
+        "detail": null
+      },
+      "knownCapacityClassification": {
+        "kind": "ok",
+        "detail": null
+      },
+      "samplesSnapshot": {
+        "kind": "ok",
+        "detail": "size=1606"
+      },
+      "scanStillness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "stressEffectiveness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "thermalLists": {
+        "kind": "ok",
+        "detail": null
+      },
+      "thermalSensorAvailability": {
+        "kind": "ok",
+        "detail": null
+      }
+    }
+  },
+  "layout": {
+    "columnCount": 11,
+    "sampleVectorLength": 11,
+    "sampleWidthConsistent": true,
+    "indexFrom": "position",
+    "columns": [
+      {
+        "index": 0,
+        "name": "timestamp_ms",
+        "unit": "ms",
+        "indexFrom": "position"
+      },
+      {
+        "index": 1,
+        "name": "battery_temp_c",
+        "unit": "°C",
+        "indexFrom": "position"
+      },
+      {
+        "index": 2,
+        "name": "battery_voltage_mv",
+        "unit": "mV",
+        "indexFrom": "position"
+      },
+      {
+        "index": 3,
+        "name": "battery_current_ua",
+        "unit": "µA",
+        "indexFrom": "position"
+      },
+      {
+        "index": 4,
+        "name": "battery_level_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 5,
+        "name": "cpu_freq_max_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      },
+      {
+        "index": 6,
+        "name": "cpu_usage_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 7,
+        "name": "package_power_mw",
+        "unit": "mW",
+        "indexFrom": "position"
+      },
+      {
+        "index": 8,
+        "name": "storage_throughput_mbps",
+        "unit": "MiB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 9,
+        "name": "memory_bandwidth_mbps",
+        "unit": "MiB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 10,
+        "name": "gpu_fps",
+        "unit": "fps",
+        "indexFrom": "position"
+      }
+    ],
+    "byName": {
+      "timestamp_ms": 0,
+      "battery_temp_c": 1,
+      "battery_voltage_mv": 2,
+      "battery_current_ua": 3,
+      "battery_level_pct": 4,
+      "cpu_freq_max_khz": 5,
+      "cpu_usage_pct": 6,
+      "package_power_mw": 7,
+      "storage_throughput_mbps": 8,
+      "memory_bandwidth_mbps": 9,
+      "gpu_fps": 10
+    },
+    "duplicateNames": [],
+    "unresolvedIndices": [],
+    "columnsBeyondSamples": [],
+    "baseLayout": "MATCHES",
+    "baseMissing": [],
+    "baseMismatches": [],
+    "extraChannels": [],
+    "policyChannels": [],
+    "chargeCounter": null
+  },
+  "throughputUnit": {
+    "appVersion": "1.0.11",
+    "fieldsVersion": 69,
+    "declared": {
+      "storage_throughput_mbps": "MiB/s",
+      "memory_bandwidth_mbps": "MiB/s",
+      "segments": "MiB/s"
+    },
+    "unit": "MiB/s",
+    "basis": "DECLARED_IN_PAYLOAD"
+  },
+  "channelReadFailures": {
+    "map": {
+      "status": "PRESENT"
+    },
+    "counts": {
+      "status": "PRESENT"
+    },
+    "channels": {
+      "timestamp_ms": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_temp_c": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_voltage_mv": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_current_ua": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_level_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_freq_max_khz": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_usage_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "package_power_mw": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "storage_throughput_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "memory_bandwidth_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "gpu_fps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      }
+    },
+    "unknownChannels": []
+  },
+  "channelDiscovery": {
+    "status": "PRESENT",
+    "lists": {
+      "attempted": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status",
+        "charge_counter_raw",
+        "energy_counter"
+      ],
+      "available": [
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status"
+      ],
+      "blockedBySelinux": [],
+      "missing": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "charge_counter_raw",
+        "energy_counter"
+      ]
+    },
+    "reasonsStatus": "PRESENT",
+    "reasons": {
+      "charge_counter_raw": {
+        "text": "getLongProperty(BATTERY_PROPERTY_CHARGE_COUNTER) returned Long.MIN_VALUE (the platform's unsupported marker)",
+        "kind": "UNSUPPORTED_BY_PLATFORM"
+      },
+      "cpu_temp_c": {
+        "text": "readCpuTemp returned -1.0 (not > 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "energy_counter": {
+        "text": "snapshotHealth().energyCounterNwh returned null (null or 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "gpu_temp_c": {
+        "text": "readGpuTemp returned -1.0 (not > 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "skin_temp_c_real": {
+        "text": "no native skin sensor: ThermalFallback reading=32.8, fromSysfs=false (a battery proxy is not a skin sensor)",
+        "kind": "OTHER"
+      }
+    },
+    "unavailableWithoutReason": []
+  },
+  "cpuPolicies": {
+    "status": "PRESENT",
+    "policies": [],
+    "channelsWithoutPolicyEntry": [],
+    "policiesWithoutChannel": []
+  },
+  "thermal": {
+    "headroom": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ok",
+          "kind": "ok",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "readings": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "t": 0,
+            "headroom": 0.6,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 10000,
+            "headroom": 0.6118519,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 20000,
+            "headroom": 0.6237037,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 30000,
+            "headroom": 0.63555557,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 40000,
+            "headroom": 0.6474074,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 50000,
+            "headroom": 0.65925926,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 60000,
+            "headroom": 0.6711111,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 70000,
+            "headroom": 0.68296295,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 80000,
+            "headroom": 0.6948148,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 90000,
+            "headroom": 0.7066667,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 100000,
+            "headroom": 0.71851856,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 110000,
+            "headroom": 0.7303704,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 120000,
+            "headroom": 0.74222225,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 130000,
+            "headroom": 0.7540741,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 140000,
+            "headroom": 0.76592594,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 150000,
+            "headroom": 0.7777778,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 160000,
+            "headroom": 0.78962964,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 170000,
+            "headroom": 0.8014815,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 180000,
+            "headroom": 0.81333333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 190000,
+            "headroom": 0.8251852,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 200000,
+            "headroom": 0.837037,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 210000,
+            "headroom": 0.8488889,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 220000,
+            "headroom": 0.8607407,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 230000,
+            "headroom": 0.87259257,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 240000,
+            "headroom": 0.8844445,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 250000,
+            "headroom": 0.89629626,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 260000,
+            "headroom": 0.90814817,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 270000,
+            "headroom": 0.91999996,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 280000,
+            "headroom": 0.93185186,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 290000,
+            "headroom": 0.94370365,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 300000,
+            "headroom": 0.95555556,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 310000,
+            "headroom": 0.9674074,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 320000,
+            "headroom": 0.97925925,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 330000,
+            "headroom": 0.99111104,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 340000,
+            "headroom": 1.002963,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 350000,
+            "headroom": 1.0148149,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 360000,
+            "headroom": 1.0266666,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 370000,
+            "headroom": 0.9975,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 380000,
+            "headroom": 0.9683333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 390000,
+            "headroom": 0.93916667,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 400000,
+            "headroom": 0.90999997,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 410000,
+            "headroom": 0.8808333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 420000,
+            "headroom": 0.8516666,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 430000,
+            "headroom": 0.8225,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 440000,
+            "headroom": 0.7933333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 450000,
+            "headroom": 0.76416665,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 460000,
+            "headroom": 0.735,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 470000,
+            "headroom": 0.7058333,
+            "kind": "ok",
+            "detail": null
+          }
+        ],
+        "byKind": {
+          "ok": 48
+        },
+        "okCount": 48,
+        "okMin": 0.6,
+        "okMax": 1.0266666
+      }
+    },
+    "status": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ok",
+          "kind": "ok",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "events": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "t": 0,
+            "status": 0
+          },
+          {
+            "t": 95000,
+            "status": 1
+          },
+          {
+            "t": 190000,
+            "status": 2
+          },
+          {
+            "t": 285000,
+            "status": 3
+          },
+          {
+            "t": 400000,
+            "status": 2
+          }
+        ],
+        "maxStatus": 3
+      }
+    }
+  },
+  "batteryPairs": {
+    "state": {
+      "status": "PRESENT",
+      "kind": "BROADCASTS_RECEIVED",
+      "receiverRegistered": true,
+      "broadcastCount": 24,
+      "droppedByCap": 0,
+      "invalidReads": 24
+    },
+    "pairs": {
+      "status": "PRESENT",
+      "items": [
+        {
+          "t": 2000,
+          "voltageRaw": 3748,
+          "currentRaw": -435,
+          "chargeCounterRaw": null,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 22000,
+          "voltageRaw": 3748,
+          "currentRaw": -367,
+          "chargeCounterRaw": null,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 42000,
+          "voltageRaw": 3748,
+          "currentRaw": -1085,
+          "chargeCounterRaw": null,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 62000,
+          "voltageRaw": 3637,
+          "currentRaw": -655,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 82000,
+          "voltageRaw": 3707,
+          "currentRaw": -339,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 102000,
+          "voltageRaw": 3707,
+          "currentRaw": -349,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 122000,
+          "voltageRaw": 3707,
+          "currentRaw": -439,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 142000,
+          "voltageRaw": 3707,
+          "currentRaw": -419,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 162000,
+          "voltageRaw": 3707,
+          "currentRaw": -566,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 182000,
+          "voltageRaw": 3470,
+          "currentRaw": -2148,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 202000,
+          "voltageRaw": 3470,
+          "currentRaw": -1980,
+          "chargeCounterRaw": null,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 222000,
+          "voltageRaw": 3489,
+          "currentRaw": -1828,
+          "chargeCounterRaw": null,
+          "levelRaw": 41,
+          "levelScale": 100,
+          "tempRaw": 356
+        },
+        {
+          "t": 242000,
+          "voltageRaw": 3518,
+          "currentRaw": -1728,
+          "chargeCounterRaw": null,
+          "levelRaw": 41,
+          "levelScale": 100,
+          "tempRaw": 370
+        },
+        {
+          "t": 262000,
+          "voltageRaw": 3518,
+          "currentRaw": -1174,
+          "chargeCounterRaw": null,
+          "levelRaw": 41,
+          "levelScale": 100,
+          "tempRaw": 370
+        },
+        {
+          "t": 282000,
+          "voltageRaw": 3553,
+          "currentRaw": -1147,
+          "chargeCounterRaw": null,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 378
+        },
+        {
+          "t": 302000,
+          "voltageRaw": 3553,
+          "currentRaw": -1069,
+          "chargeCounterRaw": null,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 378
+        },
+        {
+          "t": 322000,
+          "voltageRaw": 3553,
+          "currentRaw": -1584,
+          "chargeCounterRaw": null,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 378
+        },
+        {
+          "t": 342000,
+          "voltageRaw": 3483,
+          "currentRaw": -1758,
+          "chargeCounterRaw": null,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 387
+        },
+        {
+          "t": 362000,
+          "voltageRaw": 3510,
+          "currentRaw": -1566,
+          "chargeCounterRaw": null,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 397
+        },
+        {
+          "t": 382000,
+          "voltageRaw": 3510,
+          "currentRaw": -529,
+          "chargeCounterRaw": null,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 397
+        },
+        {
+          "t": 402000,
+          "voltageRaw": 3635,
+          "currentRaw": -693,
+          "chargeCounterRaw": null,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 402
+        },
+        {
+          "t": 422000,
+          "voltageRaw": 3635,
+          "currentRaw": -342,
+          "chargeCounterRaw": null,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 402
+        },
+        {
+          "t": 442000,
+          "voltageRaw": 3635,
+          "currentRaw": -298,
+          "chargeCounterRaw": null,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 402
+        },
+        {
+          "t": 462000,
+          "voltageRaw": 3692,
+          "currentRaw": -555,
+          "chargeCounterRaw": null,
+          "levelRaw": 38,
+          "levelScale": 100,
+          "tempRaw": 393
+        }
+      ]
+    }
+  },
+  "batteryHealth": {
+    "status": "PRESENT",
+    "indicators": {
+      "dischargeRateUnderLoadMa": {
+        "value": 1647.8497596153845,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "voltageStabilityMv": {
+        "value": 46.45574339814751,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "dischargeVsDesignRatioMah": {
+        "value": 220,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "batteryTempRiseC": {
+        "value": 7.400001525878906,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "levelDropPct": {
+        "value": 5,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      }
+    },
+    "cycleCount": {
+      "value": null,
+      "valueStatus": "ABSENT_DECLARED",
+      "state": {
+        "raw": "not_read:sysfs_not_readable_or_absent_and_api_below_34",
+        "kind": "not_read",
+        "detail": "sysfs_not_readable_or_absent_and_api_below_34",
+        "recognized": true
+      },
+      "stateStatus": "PRESENT",
+      "source": {
+        "raw": "unavailable",
+        "kind": "unavailable",
+        "detail": null,
+        "recognized": true
+      },
+      "sourceStatus": "PRESENT"
+    },
+    "chargeCounter": {
+      "value": null,
+      "valueStatus": "ABSENT_DECLARED",
+      "state": {
+        "raw": "not_read:unsupported_by_device",
+        "kind": "not_read",
+        "detail": "unsupported_by_device",
+        "recognized": true
+      },
+      "stateStatus": "PRESENT"
+    },
+    "energyCounter": {
+      "value": null,
+      "valueStatus": "ABSENT_DECLARED",
+      "state": {
+        "raw": "not_read:unsupported_by_device",
+        "kind": "not_read",
+        "detail": "unsupported_by_device",
+        "recognized": true
+      },
+      "stateStatus": "PRESENT"
+    },
+    "designCapacityMah": {
+      "value": 4400,
+      "status": "PRESENT"
+    }
+  },
+  "cpuTemp": {
+    "state": "ABSENT_DECLARED",
+    "valueC": null,
+    "valueStatus": "ABSENT_DECLARED",
+    "source": {
+      "raw": "absent:no live CPU read (readCpuTemp returned -1.0, not > 0) and the sampler's temperature source was 'headroom', not 'cpu'",
+      "kind": "absent",
+      "detail": "no live CPU read (readCpuTemp returned -1.0, not > 0) and the sampler's temperature source was 'headroom', not 'cpu'",
+      "recognized": true
+    },
+    "sourceStatus": "PRESENT",
+    "legacyMaxCpuTemp": {
+      "status": "REMOVED_IN_FV68",
+      "value": null
+    }
+  },
+  "verification": {
+    "status": "PRESENT",
+    "gpuGemm": {
+      "correct": true,
+      "correctStatus": "PRESENT",
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "passed",
+          "kind": "passed",
+          "detail": null,
+          "recognized": true
+        }
+      }
+    },
+    "gpuFragmentHash": {
+      "matches": 14,
+      "total": 14,
+      "matchesStatus": "PRESENT",
+      "totalStatus": "PRESENT"
+    },
+    "gpuFenceTimeout": {
+      "count": 0,
+      "status": "PRESENT"
+    },
+    "criticalDefect": {
+      "value": false,
+      "valueStatus": "PRESENT",
+      "inputsNotRun": [],
+      "inputsNotRunStatus": "PRESENT"
+    },
+    "workersPin": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "not_attempted:ai_workload_path",
+          "kind": "not_attempted",
+          "detail": "ai_workload_path",
+          "recognized": true
+        }
+      },
+      "pinned": {
+        "workersPinnedBig": null,
+        "workersPinnedMid": null,
+        "workersPinnedLittle": null
+      },
+      "failed": {
+        "workersPinFailedBig": null,
+        "workersPinFailedMid": null,
+        "workersPinFailedLittle": null
+      }
+    },
+    "memory": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ran",
+          "kind": "ran",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "errors": {
+        "march": 0,
+        "walkingOnes": 0,
+        "randomVerify": 0
+      },
+      "derived": {
+        "marchPassed": true,
+        "walkingOnesPassed": true
+      },
+      "bytes": {
+        "verified": 3221225472,
+        "buffer": 3221225472,
+        "freeBytes": 5900000000,
+        "testedByWorkload": 23522918400
+      },
+      "timeCapMs": 30000,
+      "durationMs": 9800,
+      "phaseWindows": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "name": "memory_kernel",
+            "startMs": 105780,
+            "endMs": 115580
+          },
+          {
+            "name": "memory_workload",
+            "startMs": 115580,
+            "endMs": 165784
+          }
+        ]
+      }
+    },
+    "storage": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ran",
+          "kind": "ran",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "method": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "o_direct_sequential",
+          "kind": "o_direct_sequential",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "errors": {
+        "write": 0,
+        "read": 0
+      },
+      "writeErrorsStatus": "PRESENT",
+      "readErrorsStatus": "PRESENT",
+      "bytes": {
+        "compared": 268435456,
+        "planned": 268435456
+      },
+      "durationMs": 900
+    },
+    "cpuKnownAnswer": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ran",
+          "kind": "ran",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "runs": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "phase": 3,
+            "plannedAtPct": 25,
+            "t": 184695,
+            "tEnd": 184815,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 3,
+            "plannedAtPct": 60,
+            "t": 210945,
+            "tEnd": 211065,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 3,
+            "plannedAtPct": 92,
+            "t": 234945,
+            "tEnd": 235065,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 25,
+            "t": 328743,
+            "tEnd": 328863,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 60,
+            "t": 349743,
+            "tEnd": 349863,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 92,
+            "t": 368943,
+            "tEnd": 369063,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          }
+        ]
+      },
+      "totalMsByPhase": {
+        "status": "PRESENT",
+        "byPhase": {
+          "3": 360,
+          "5": 360
+        }
+      },
+      "counts": {
+        "runs": 6,
+        "sieveMatch": 6,
+        "sieveMismatch": 0,
+        "sieveNotReached": 0,
+        "sieveSkipped": 0,
+        "sieveCancelled": 0,
+        "sieveError": 0,
+        "shaMatch": 6,
+        "shaMismatch": 0,
+        "shaNotReached": 0,
+        "shaSkipped": 0,
+        "shaCancelled": 0,
+        "shaError": 0,
+        "unrecognized": 0
+      },
+      "mismatches": 0
+    },
+    "aiDelegate": {
+      "delegate": "CPU",
+      "delegateStatus": "PRESENT",
+      "initErrorText": null,
+      "initErrorStatus": "ABSENT_DECLARED",
+      "noInitErrorDeclared": true
+    },
+    "legacy": {
+      "cpuFmaErrors": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "cpuPrimeSieveCorrect": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "memoryMarchPassed": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "memoryWalkingOnesPassed": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      }
+    },
+    "storageSlcCacheSizeMbStatus": "REMOVED_IN_FV68",
+    "storageThroughputSegmentsUnit": {
+      "status": "PRESENT",
+      "value": "MiB/s"
+    }
+  },
+  "stillness": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "measured",
+      "kind": "measured",
+      "detail": null,
+      "recognized": true
+    },
+    "stateStatus": "PRESENT",
+    "isStill": true,
+    "accelStdDev": 0.29157373,
+    "sampleCount": 1606
+  },
+  "preScanWarnings": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "read",
+      "kind": "read",
+      "detail": null,
+      "recognized": true
+    }
+  },
+  "measurements": {
+    "items": [
+      {
+        "source": "functionalResults",
+        "testId": "L-02",
+        "status": "PRESENT",
+        "keys": [
+          "satelliteStatusCallbacks",
+          "timeToFirstFixMs",
+          "usedSatellites",
+          "visibleSatellites"
+        ],
+        "unencodable": null,
+        "unreadable": null,
+        "l02": {
+          "satelliteStatusCallbacks": 31,
+          "visibleSatellites": 9,
+          "usedSatellites": 4,
+          "timeToFirstFixMs": 8123,
+          "locationUpdateCount": null,
+          "gpsProviderEnabled": null,
+          "gnssCallbackState": null,
+          "locationUpdatesState": null,
+          "timeToFirstFixState": null,
+          "engineState": "SATELLITES_MEASURED"
+        }
+      },
+      {
+        "source": "functionalResults",
+        "testId": "SN-04",
+        "status": "PRESENT",
+        "keys": [
+          "coverPromptAtMs",
+          "readingsBeforeCover",
+          "readingsDuringCover",
+          "windowMs"
+        ],
+        "unencodable": null,
+        "unreadable": null
+      },
+      {
+        "source": "manualResults",
+        "testId": "M-02",
+        "status": "PRESENT",
+        "keys": [
+          "elapsedMs",
+          "endReason",
+          "gridCols",
+          "gridRows",
+          "maxSimultaneousPointers",
+          "timeToFirstTouchMs",
+          "totalCells",
+          "touchedCells"
+        ],
+        "unencodable": null,
+        "unreadable": null,
+        "touchGrid": {
+          "gridCols": 8,
+          "gridColsStatus": "PRESENT",
+          "gridRows": 15,
+          "gridRowsStatus": "PRESENT",
+          "totalCells": 120,
+          "totalCellsStatus": "PRESENT",
+          "touchedCells": 120,
+          "touchedCellsStatus": "PRESENT",
+          "maxSimultaneousPointers": 3,
+          "maxSimultaneousPointersStatus": "PRESENT",
+          "touchState": "TOUCHED",
+          "elapsedMs": 4165,
+          "elapsedMsStatus": "PRESENT",
+          "elapsedMsBasis": "FROM_FIRST_TOUCH",
+          "timeToFirstTouchMs": 1730,
+          "timeToFirstTouchMsStatus": "PRESENT",
+          "endReason": "auto_complete",
+          "endReasonStatus": "PRESENT",
+          "endReasonState": {
+            "raw": "auto_complete",
+            "kind": "auto_complete",
+            "detail": null,
+            "recognized": true
+          },
+          "gridBasis": "FIXED_8X15",
+          "path": {
+            "state": "NOT_IN_FIELDS_VERSION",
+            "unexpectedKeys": []
+          }
+        }
+      }
+    ],
+    "expectedButAbsent": []
+  },
+  "touchGridAnswer": {
+    "state": "RAW_PRESENT",
+    "manualStatus": "pass",
+    "passRawRelation": "BACKS_PASS",
+    "rawEndReason": "auto_complete"
+  },
+  "volumeButtonAnswers": {
+    "M-09": {
+      "state": "WITHOUT_RAW",
+      "manualStatus": "warning"
+    },
+    "M-10": {
+      "state": "NOT_IN_MANUAL_RESULTS",
+      "manualStatus": null
+    }
+  },
+  "scanConditions": {
+    "state": "NOT_IN_FIELDS_VERSION",
+    "unexpectedKeys": [],
+    "header": {
+      "isPowerSaveMode": false,
+      "isPowerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "root": {
+      "powerSaveMode": false,
+      "powerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "powerSaveBasis": "LEGACY_BOOLEAN_ONLY",
+    "brightnessLock": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindow": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindowBasis": "LEGACY_FIXED_MIN_NO_MAX",
+    "batteryLevelStart": 43,
+    "batteryLevelStartStatus": "PRESENT",
+    "startLevelVsWindow": "WITHIN"
+  }
+}

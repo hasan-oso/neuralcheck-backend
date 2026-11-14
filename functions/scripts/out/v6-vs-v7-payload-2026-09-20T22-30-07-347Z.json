@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-09-20T22:30:07.347Z",
+  "results": [
+    {
+      "scanId": "b45c8cf6-e376-4765-8703-f68e9bc69844",
+      "v6Bytes": 143681,
+      "v7Bytes": 64593,
+      "v7Error": null,
+      "sampleCount": 1604
+    },
+    {
+      "scanId": "34dff2b8-ce9e-4b40-86a9-1976c878e195",
+      "v6Bytes": 143442,
+      "v7Bytes": 64635,
+      "v7Error": null,
+      "sampleCount": 1606
+    }
+  ]
+}

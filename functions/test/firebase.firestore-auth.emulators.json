@@ -1,0 +1,7 @@
+{
+  "_comment": "Emulator ports for functions/test/verifyS10PostdeployReadonly.e2e.test.js: Firestore plus the Auth emulator (the repo firebase.json has no emulators section). Used only with: firebase emulators:exec --config functions/test/firebase.firestore-auth.emulators.json --only firestore,auth --project demo-nc <command>",
+  "emulators": {
+    "auth": {"port": 9099},
+    "firestore": {"port": 8080}
+  }
+}

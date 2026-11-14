@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-09-22T21:41:06.928Z",
+  "scans": {
+    "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+      "counts": {
+        "total": 34,
+        "overall": {
+          "total": 19,
+          "lowCategoryCoverage": 14,
+          "notFired": 5
+        },
+        "perCategory": {
+          "total": 15,
+          "lowCategoryCoverage": 10,
+          "notFired": 1
+        },
+        "perCategoryBreakdown": {
+          "cpu": [
+            {
+              "name": "SUSTAINED_CEILING",
+              "status": "DISABLED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "NOT_FIRED"
+            }
+          ],
+          "gpu": [
+            {
+              "name": "GPU_HASH_MISMATCH",
+              "status": "NOT_WIRED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "display": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "memory": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "storage": [
+            {
+              "name": "STORAGE_VERIFY_ERRORS",
+              "status": "NOT_WIRED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "gps": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "security": [
+            {
+              "name": "ROOT_DETECTED",
+              "status": "FIRED"
+            },
+            {
+              "name": "PATCH_AGE",
+              "status": "FIRED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "sensors": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "cellular": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "wireless": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ]
+        },
+        "duplicatedBetweenCategoryAndOverall": 15,
+        "duplicatedList": [
+          "cellular::LOW_CATEGORY_COVERAGE",
+          "cpu::LOW_CATEGORY_COVERAGE",
+          "cpu::SUSTAINED_CEILING",
+          "display::LOW_CATEGORY_COVERAGE",
+          "gps::LOW_CATEGORY_COVERAGE",
+          "gpu::GPU_HASH_MISMATCH",
+          "gpu::LOW_CATEGORY_COVERAGE",
+          "memory::LOW_CATEGORY_COVERAGE",
+          "security::LOW_CATEGORY_COVERAGE",
+          "security::PATCH_AGE",
+          "security::ROOT_DETECTED",
+          "sensors::LOW_CATEGORY_COVERAGE",
+          "storage::LOW_CATEGORY_COVERAGE",
+          "storage::STORAGE_VERIFY_ERRORS",
+          "wireless::LOW_CATEGORY_COVERAGE"
+        ]
+      },
+      "byteOptions": {
+        "baseline_current": {
+          "payloadLength": 71418,
+          "deltaFromBaseline": 0
+        },
+        "fix_belowThreshold_allNonMeasurement_only": {
+          "payloadLength": 70272,
+          "deltaFromBaseline": -1146
+        },
+        "also_drop_coveragePct": {
+          "payloadLength": 69850,
+          "deltaFromBaseline": -1568
+        },
+        "also_drop_source_technical": {
+          "payloadLength": 67866,
+          "deltaFromBaseline": -3552
+        },
+        "also_drop_all_NOT_FIRED_gates": {
+          "payloadLength": 67174,
+          "deltaFromBaseline": -4244
+        },
+        "minimal_five_fields_name_category_ceilingLetter_status_source": {
+          "payloadLength": 68400,
+          "deltaFromBaseline": -3018
+        },
+        "remove_category_level_duplication_keep_overall_only": {
+          "payloadLength": 68063,
+          "deltaFromBaseline": -3355
+        }
+      }
+    },
+    "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+      "counts": {
+        "total": 34,
+        "overall": {
+          "total": 19,
+          "lowCategoryCoverage": 14,
+          "notFired": 5
+        },
+        "perCategory": {
+          "total": 15,
+          "lowCategoryCoverage": 10,
+          "notFired": 1
+        },
+        "perCategoryBreakdown": {
+          "cpu": [
+            {
+              "name": "SUSTAINED_CEILING",
+              "status": "DISABLED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "NOT_FIRED"
+            }
+          ],
+          "gpu": [
+            {
+              "name": "GPU_HASH_MISMATCH",
+              "status": "NOT_WIRED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "display": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "memory": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "storage": [
+            {
+              "name": "STORAGE_VERIFY_ERRORS",
+              "status": "NOT_WIRED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "gps": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "security": [
+            {
+              "name": "ROOT_DETECTED",
+              "status": "FIRED"
+            },
+            {
+              "name": "PATCH_AGE",
+              "status": "FIRED"
+            },
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "sensors": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "cellular": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ],
+          "wireless": [
+            {
+              "name": "LOW_CATEGORY_COVERAGE",
+              "status": "FIRED"
+            }
+          ]
+        },
+        "duplicatedBetweenCategoryAndOverall": 15,
+        "duplicatedList": [
+          "cellular::LOW_CATEGORY_COVERAGE",
+          "cpu::LOW_CATEGORY_COVERAGE",
+          "cpu::SUSTAINED_CEILING",
+          "display::LOW_CATEGORY_COVERAGE",
+          "gps::LOW_CATEGORY_COVERAGE",
+          "gpu::GPU_HASH_MISMATCH",
+          "gpu::LOW_CATEGORY_COVERAGE",
+          "memory::LOW_CATEGORY_COVERAGE",
+          "security::LOW_CATEGORY_COVERAGE",
+          "security::PATCH_AGE",
+          "security::ROOT_DETECTED",
+          "sensors::LOW_CATEGORY_COVERAGE",
+          "storage::LOW_CATEGORY_COVERAGE",
+          "storage::STORAGE_VERIFY_ERRORS",
+          "wireless::LOW_CATEGORY_COVERAGE"
+        ]
+      },
+      "byteOptions": {
+        "baseline_current": {
+          "payloadLength": 71513,
+          "deltaFromBaseline": 0
+        },
+        "fix_belowThreshold_allNonMeasurement_only": {
+          "payloadLength": 70367,
+          "deltaFromBaseline": -1146
+        },
+        "also_drop_coveragePct": {
+          "payloadLength": 69945,
+          "deltaFromBaseline": -1568
+        },
+        "also_drop_source_technical": {
+          "payloadLength": 67961,
+          "deltaFromBaseline": -3552
+        },
+        "also_drop_all_NOT_FIRED_gates": {
+          "payloadLength": 67269,
+          "deltaFromBaseline": -4244
+        },
+        "minimal_five_fields_name_category_ceilingLetter_status_source": {
+          "payloadLength": 68442,
+          "deltaFromBaseline": -3071
+        },
+        "remove_category_level_duplication_keep_overall_only": {
+          "payloadLength": 68105,
+          "deltaFromBaseline": -3408
+        }
+      }
+    }
+  }
+}

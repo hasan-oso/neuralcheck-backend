@@ -1,0 +1,1067 @@
+{
+  "_provenance": {
+    "generator": "functions/scripts/generate-refusal-wire-samples.js",
+    "decision": "القرار ١٤ (A-SUB الموجة الأولى، 2026-10-17): منقول عن أمر المنسّق، غير متحقَّق من هذا المستودع",
+    "kind": "refusal bodies",
+    "whatIsReal": "غلاف onCall الحقيقي (firebase-functions wrapOnCallHandler) يكتب الحالة والجسم؛ الدالّة المُصدَّرة الحقيقية؛ الحرّاس الحقيقيون؛ فئة Timestamp من firebase-admin.",
+    "whatIsStubbed": "utils/admin ⟵ db في الذاكرة بمستندات اصطناعية (users/scanSessions/reports). بلا Firestore ولا محاكٍ ولا إنتاج ولا شبكة ولا نموذج. التوكن غير موقَّع بميزة skipTokenVerification.",
+    "notVerified": "أشكال expiresAt الموجودة فعلاً في الإنتاج؛ وسلوك التطبيق (1.0.12-1.0.14) عند هذه الأجسام. لم تُولَّد عيّنة من محاكي Firestore (غير مأذون).",
+    "followsContract": "docs/PROTOCOL_CONTRACT.md §٦-د-١ و§١٠-ج و§١٠-و (القاعدة 39: من يغيّر العقد يُعيد التوليد في الالتزام نفسه)."
+  },
+  "samples": [
+    {
+      "id": "createScanSession.SHOP_NO_CREDIT",
+      "function": "createScanSession",
+      "note": "المالك بلا رصيد. النصّ هو النصّ الخاصّ القائم بلا الجملة الثانية (لا يُوحَّد مع نصّ البوّابة بقرار المستخدم ٤).",
+      "request": {
+        "data": {},
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "owner-nocredit"
+        }
+      },
+      "seed": {
+        "users/owner-nocredit": {
+          "scansRemaining": 0,
+          "plan": "shop_basic",
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SHOP_NO_CREDIT"
+          },
+          "message": "لا يوجد رصيد فحوصات",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "createScanSession.SHOP_SUBSCRIPTION_EXPIRED",
+      "function": "createScanSession",
+      "note": "المالك منتهٍ اشتراكه (برصيد). النصّ من scanRefusalWire.",
+      "request": {
+        "data": {},
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "owner-expired"
+        }
+      },
+      "seed": {
+        "users/owner-expired": {
+          "scansRemaining": 5,
+          "plan": "shop_basic",
+          "expiresAt": {
+            "$firestoreTimestamp": "2025-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SHOP_SUBSCRIPTION_EXPIRED"
+          },
+          "message": "انتهى اشتراكك، يرجى التجديد",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "createScanSession.SHOP_PLAN_REQUIRED.free",
+      "function": "createScanSession",
+      "note": "المالك باقته free برصيد وغير منتهٍ: يُرفض بـSHOP_PLAN_REQUIRED (كان ينشئ جلسة ويُفوتَر فحصها على رصيده). النصّ جديد محايد (CREATE_SESSION_PLAN_REQUIRED_TEXT).",
+      "request": {
+        "data": {},
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "owner-free"
+        }
+      },
+      "seed": {
+        "users/owner-free": {
+          "scansRemaining": 3,
+          "plan": "free",
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SHOP_PLAN_REQUIRED"
+          },
+          "message": "هذه الميزة غير متاحة في باقتك الحالية",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "createScanSession.SHOP_PLAN_REQUIRED.plan-absent",
+      "function": "createScanSession",
+      "note": "المستند بلا حقل plan: الغياب لا يُقرأ إذناً (القاعدة 22) فيُرفض بالرمز نفسه والجسم نفسه.",
+      "request": {
+        "data": {},
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "owner-noplan"
+        }
+      },
+      "seed": {
+        "users/owner-noplan": {
+          "scansRemaining": 3,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SHOP_PLAN_REQUIRED"
+          },
+          "message": "هذه الميزة غير متاحة في باقتك الحالية",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.NOT_PARTICIPANT.stranger",
+      "function": "analyzeDevice",
+      "note": "مستدعٍ ليس مالكاً ولا منضمّاً: لا تُكشَف حالة الجلسة (cancelled هنا) — الرمز نفسه لغياب الجلسة.",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-1",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "stranger-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-1": {
+          "ownerId": "owner-s",
+          "status": "cancelled",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_NOT_PARTICIPANT"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.NOT_PARTICIPANT.missing",
+      "function": "analyzeDevice",
+      "note": "جلسة غير موجودة: الرمز نفسه لغير الطرف (لا وسيط وجود).",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-missing",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {},
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_NOT_PARTICIPANT"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.NOT_STARTED",
+      "function": "analyzeDevice",
+      "note": "الجلسة pending: لم ينضمّ جهاز (الرمز الجديد الوحيد). المالك طرف فيراه.",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-2",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "owner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-2": {
+          "ownerId": "owner-s",
+          "status": "pending",
+          "joinedBy": null,
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_NOT_STARTED"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.COMPLETED.no-stored-report",
+      "function": "analyzeDevice",
+      "note": "completed بلا تقرير مخزَّن: لا ردّ يُقدَّم فيُرفض بالرمز المسمّى.",
+      "request": {
+        "data": {
+          "scanId": "scan-A",
+          "sessionId": "sess-3",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-3": {
+          "ownerId": "owner-s",
+          "status": "completed",
+          "joinedBy": "joiner-s",
+          "scanId": "scan-A",
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_COMPLETED"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.COMPLETED.report-not-owners",
+      "function": "analyzeDevice",
+      "note": "completed وتقرير مخزَّن ملكيته لغير مالك الجلسة: يُرفض ولا يُسرَّب (جسم الخطأ بلا أيّ شيء من التقرير).",
+      "request": {
+        "data": {
+          "scanId": "scan-A",
+          "sessionId": "sess-4",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-4": {
+          "ownerId": "owner-s",
+          "status": "completed",
+          "joinedBy": "joiner-s",
+          "scanId": "scan-A",
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        },
+        "reports/scan-A": {
+          "userId": "someone-else",
+          "pipeline": "sample",
+          "aiResponse": {
+            "marker": "MUST-NOT-LEAK"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_COMPLETED"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.COMPLETED.other-scan",
+      "function": "analyzeDevice",
+      "note": "طرف مشروع يطلب scanId غير scanId جلسته: يُرفض بالرمز نفسه.",
+      "request": {
+        "data": {
+          "scanId": "scan-OTHER",
+          "sessionId": "sess-5",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-5": {
+          "ownerId": "owner-s",
+          "status": "completed",
+          "joinedBy": "joiner-s",
+          "scanId": "scan-A",
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_COMPLETED"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.CANCELLED",
+      "function": "analyzeDevice",
+      "note": "الجلسة ملغاة (المنضمّ طرف فيراها).",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-6",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-6": {
+          "ownerId": "owner-s",
+          "status": "cancelled",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_CANCELLED"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.EXPIRED.recorded",
+      "function": "analyzeDevice",
+      "note": "مسجَّلة «منتهية» من قبل: permission-denied «جلسة الفحص غير صالحة» + SESSION_EXPIRED (لأن الحالة لا الانقضاء).",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-7",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-7": {
+          "ownerId": "owner-s",
+          "status": "expired",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_EXPIRED"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.EXPIRED.by-time",
+      "function": "analyzeDevice",
+      "note": "scanning وانقضى expiresAt: failed-precondition «الجلسة منتهية» + SESSION_EXPIRED، وتُكتب «منتهية» (transactionWrites).",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-8",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-8": {
+          "ownerId": "owner-s",
+          "status": "scanning",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2025-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 400,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_EXPIRED"
+          },
+          "message": "الجلسة منتهية",
+          "status": "FAILED_PRECONDITION"
+        }
+      },
+      "transactionWrites": [
+        "scanSessions/sess-8"
+      ]
+    },
+    {
+      "id": "analyzeDevice.session.EXPIRES_AT_INVALID",
+      "function": "analyzeDevice",
+      "note": "scanning بلا expiresAt: permission-denied + SESSION_EXPIRES_AT_INVALID (بلا كتابة).",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-9",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-9": {
+          "ownerId": "owner-s",
+          "status": "scanning",
+          "joinedBy": "joiner-s",
+          "scanId": null
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_EXPIRES_AT_INVALID"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.EXPIRED.by-time.stranger",
+      "function": "analyzeDevice",
+      "note": "انقضاء الوقت لغير الطرف: failed-precondition «الجلسة منتهية» لكن السبب NOT_PARTICIPANT.",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-10",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "stranger-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-10": {
+          "ownerId": "owner-s",
+          "status": "scanning",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2025-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 400,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_NOT_PARTICIPANT"
+          },
+          "message": "الجلسة منتهية",
+          "status": "FAILED_PRECONDITION"
+        }
+      },
+      "transactionWrites": [
+        "scanSessions/sess-10"
+      ]
+    },
+    {
+      "id": "analyzeDevice.session.STATUS_UNKNOWN",
+      "function": "analyzeDevice",
+      "note": "حالة لا تعرفها الشيفرة (القاعدة 22: تُعلَن لا تُقرأ صالحة).",
+      "request": {
+        "data": {
+          "scanId": "scan-1",
+          "sessionId": "sess-11",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-11": {
+          "ownerId": "owner-s",
+          "status": "done",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_STATUS_UNKNOWN"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.REPORT_NOT_AVAILABLE.not-owners",
+      "function": "analyzeDevice",
+      "note": "جلسة scanning صالحة والتقرير المخزَّن لـscanId الطلب ملكيته لغير مالك الجلسة: يُرفض بالرمز SESSION_REPORT_NOT_AVAILABLE ولا يُسرَّب (الحالة MISMATCH في السجلّ وحده)، والجلسة تبقى scanning بلا كتابة.",
+      "request": {
+        "data": {
+          "scanId": "scan-B",
+          "sessionId": "sess-12",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-12": {
+          "ownerId": "owner-s",
+          "status": "scanning",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        },
+        "reports/scan-B": {
+          "userId": "someone-else",
+          "pipeline": "sample",
+          "aiResponse": {
+            "marker": "MUST-NOT-LEAK"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_REPORT_NOT_AVAILABLE"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.session.REPORT_NOT_AVAILABLE.report-user-absent",
+      "function": "analyzeDevice",
+      "note": "التقرير المخزَّن بلا userId: الغياب حالة صريحة تُرفض بالرمز نفسه (الجسم لا يفرّق بينها وبين «ملكية غيرك»؛ REPORT_USER_ABSENT في السجلّ وحده).",
+      "request": {
+        "data": {
+          "scanId": "scan-B",
+          "sessionId": "sess-13",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-13": {
+          "ownerId": "owner-s",
+          "status": "scanning",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        },
+        "reports/scan-B": {
+          "pipeline": "sample",
+          "aiResponse": {
+            "marker": "MUST-NOT-LEAK"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SESSION_REPORT_NOT_AVAILABLE"
+          },
+          "message": "جلسة الفحص غير صالحة",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.storedReport.personal.NOT_AVAILABLE.not-owner",
+      "function": "analyzeDevice",
+      "note": "مسار شخصي (بلا sessionId): uid آخر يعرف scanId يُرفض permission-denied بنصّ محايد والرمز SCAN_REPORT_NOT_AVAILABLE، ولا شيء من التقرير.",
+      "request": {
+        "data": {
+          "scanId": "scan-P",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "stranger-p"
+        }
+      },
+      "seed": {
+        "reports/scan-P": {
+          "userId": "personal-owner",
+          "pipeline": "sample",
+          "aiResponse": {
+            "marker": "MUST-NOT-LEAK"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SCAN_REPORT_NOT_AVAILABLE"
+          },
+          "message": "تعذّر إتمام الطلب",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.storedReport.personal.NOT_AVAILABLE.report-user-absent",
+      "function": "analyzeDevice",
+      "note": "مسار شخصي، التقرير بلا userId: يُرفض بالرمز نفسه (القاعدة 22).",
+      "request": {
+        "data": {
+          "scanId": "scan-P",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "personal-owner"
+        }
+      },
+      "seed": {
+        "reports/scan-P": {
+          "pipeline": "sample",
+          "aiResponse": {
+            "marker": "MUST-NOT-LEAK"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SCAN_REPORT_NOT_AVAILABLE"
+          },
+          "message": "تعذّر إتمام الطلب",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.gate.NO_CREDIT",
+      "function": "analyzeDevice",
+      "note": "فحص شخصي بلا رصيد (S-SUB، قائم).",
+      "request": {
+        "data": {
+          "scanId": "scan-P",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "personal-nocredit"
+        }
+      },
+      "seed": {
+        "users/personal-nocredit": {
+          "scansRemaining": 0,
+          "plan": "shop_basic"
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "NO_CREDIT"
+          },
+          "message": "لا يوجد رصيد فحوصات. يرجى شراء اشتراك.",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.gate.SUBSCRIPTION_EXPIRED",
+      "function": "analyzeDevice",
+      "note": "فحص شخصي منتهٍ اشتراكه (S-SUB، قائم).",
+      "request": {
+        "data": {
+          "scanId": "scan-P",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "personal-expired"
+        }
+      },
+      "seed": {
+        "users/personal-expired": {
+          "scansRemaining": 4,
+          "plan": "shop_basic",
+          "expiresAt": {
+            "$firestoreTimestamp": "2025-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SUBSCRIPTION_EXPIRED"
+          },
+          "message": "انتهى اشتراكك، يرجى التجديد",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.gate.FREE_DEVICE_USED",
+      "function": "analyzeDevice",
+      "note": "باقة free والجهاز مسجَّل مستعمَلاً (S-SUB، قائم).",
+      "request": {
+        "data": {
+          "scanId": "scan-P",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "google.com",
+          "uid": "personal-free"
+        }
+      },
+      "seed": {
+        "users/personal-free": {
+          "scansRemaining": 3,
+          "plan": "free",
+          "freeTrialUsedDevices": [
+            "M-SAMPLE_14_8"
+          ]
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "FREE_DEVICE_USED"
+          },
+          "message": "تم استخدام الفحص المجاني لهذا الجهاز سابقاً",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.gate.SHOP_NO_CREDIT",
+      "function": "analyzeDevice",
+      "note": "فحص جلسة، رصيد المالك 0 (S-SUB، قائم).",
+      "request": {
+        "data": {
+          "scanId": "scan-G1",
+          "sessionId": "sess-g1",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-g1": {
+          "ownerId": "owner-s",
+          "status": "scanning",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        },
+        "users/owner-s": {
+          "scansRemaining": 0,
+          "plan": "shop_pro"
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SHOP_NO_CREDIT"
+          },
+          "message": "لا يوجد رصيد فحوصات. يرجى شراء اشتراك.",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "analyzeDevice.gate.SHOP_SUBSCRIPTION_EXPIRED",
+      "function": "analyzeDevice",
+      "note": "فحص جلسة، المالك منتهٍ اشتراكه (S-SUB، قائم).",
+      "request": {
+        "data": {
+          "scanId": "scan-G2",
+          "sessionId": "sess-g2",
+          "fingerprint": {
+            "device": {
+              "model": "M-SAMPLE",
+              "androidVersion": "14",
+              "totalRamGb": 8
+            }
+          }
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "joiner-s"
+        }
+      },
+      "seed": {
+        "scanSessions/sess-g2": {
+          "ownerId": "owner-s",
+          "status": "scanning",
+          "joinedBy": "joiner-s",
+          "scanId": null,
+          "expiresAt": {
+            "$firestoreTimestamp": "2099-01-01T00:00:00.000Z"
+          }
+        },
+        "users/owner-s": {
+          "scansRemaining": 5,
+          "plan": "shop_pro",
+          "expiresAt": {
+            "$firestoreTimestamp": "2025-01-01T00:00:00.000Z"
+          }
+        }
+      },
+      "httpStatus": 403,
+      "body": {
+        "error": {
+          "details": {
+            "reasonCode": "SHOP_SUBSCRIPTION_EXPIRED"
+          },
+          "message": "انتهى اشتراكك، يرجى التجديد",
+          "status": "PERMISSION_DENIED"
+        }
+      }
+    },
+    {
+      "id": "requestPayment.anonymous",
+      "function": "requestPayment",
+      "note": "الدافع المجهول يُرفض قبل أيّ كتابة، بنصّ الدالّة القائم «غير مصادق».",
+      "request": {
+        "data": {
+          "plan": "single",
+          "reference": "ref-sample"
+        },
+        "authenticatedAs": {
+          "sign_in_provider": "anonymous",
+          "uid": "anon-payer"
+        }
+      },
+      "seed": {},
+      "httpStatus": 401,
+      "body": {
+        "error": {
+          "message": "غير مصادق",
+          "status": "UNAUTHENTICATED"
+        }
+      }
+    }
+  ]
+}

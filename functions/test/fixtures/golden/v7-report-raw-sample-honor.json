@@ -1,0 +1,407 @@
+{
+  "scanId": "8fa88e6c-8a7b-43f4-9664-5c4a86c5fa29",
+  "rawFingerprint": {
+    "device": {},
+    "timeSeries": {
+      "footer": {
+        "batteryCurrentScalingApplied": "x1000_no_flip",
+        "batteryHealth": {
+          "designCapacityMah": 8300,
+          "designCapacitySource": "powerprofile_reflection",
+          "cycleCount": null,
+          "cycleCountSource": "unavailable",
+          "dischargeRateUnderLoadMa": 1032.2610778443113,
+          "batteryTempStartC": 31,
+          "batteryTempMaxC": 34,
+          "batteryTempRiseC": 3,
+          "voltageStabilityMv": 8.826853957297708,
+          "levelDropPct": 3,
+          "dischargeVsDesignRatioMah": 249,
+          "chargeCounterUah": 5596,
+          "energyCounterNwh": null
+        },
+        "batteryLevelEnd": 72,
+        "calibration": {
+          "applied": false
+        },
+        "channelDiscovery": {
+          "attempted": [
+            "cpu_temp_c",
+            "gpu_temp_c",
+            "skin_temp_c_real",
+            "battery_temp_c",
+            "battery_voltage_mv",
+            "battery_current_ua",
+            "cpu_freq_max_khz",
+            "cpu_usage_pct",
+            "thermal_headroom",
+            "thermal_status",
+            "charge_counter",
+            "energy_counter"
+          ],
+          "available": [
+            "battery_temp_c",
+            "battery_voltage_mv",
+            "battery_current_ua",
+            "cpu_freq_max_khz",
+            "cpu_usage_pct",
+            "thermal_headroom",
+            "thermal_status",
+            "charge_counter"
+          ],
+          "blockedBySelinux": [],
+          "missing": [
+            "cpu_temp_c",
+            "gpu_temp_c",
+            "skin_temp_c_real",
+            "energy_counter"
+          ],
+          "summary": "discovery: 8/12 available, 0 blocked, 4 missing"
+        },
+        "dataQuality": {
+          "batteryInvalidCurrentReadings": 0,
+          "batteryReaderRegistered": false,
+          "batteryScalingDetailedSource": "data_ma_format_evidence_3",
+          "batteryScalingLockAtSample": 3,
+          "batteryScalingLocked": true,
+          "batteryScalingMultiplier": 1000,
+          "batteryScalingSignFlip": 1,
+          "batteryVoltageUvScaledCount": 0,
+          "cpuFreqBigCoveragePct": 100,
+          "cpuTempCoveragePct": 0,
+          "cpuTempPrimarySource": "moved_to_footer_v5",
+          "cpuUsageFallbackFromSample": 0,
+          "cpuUsageSource": "process_fallback",
+          "gpuTempCoveragePct": 0,
+          "procStatAvailable": false,
+          "skinTempCoveragePct": 0,
+          "skinTempSourceBreakdown": {
+            "battery_proxy": 1833
+          }
+        },
+        "deviceTierMeasured": "flagship_cooling",
+        "earlyStopReason": null,
+        "endTimestamp": 1789855835620,
+        "expectedSamples": 1605,
+        "fieldsVersion": 67,
+        "flushFailureCount": 0,
+        "footerDiagnostics": {
+          "samplesSnapshot": "ok:size=1606",
+          "stressEffectiveness": "ok",
+          "batteryHealthSnap": "ok",
+          "batteryHealth": "ok",
+          "knownCapacityClassification": "ok",
+          "dataQuality": "ok",
+          "thermalSensorAvailability": "ok",
+          "scanStillness": "ok"
+        },
+        "intensityFactor": 1,
+        "isComplete": true,
+        "knownCapacityClassification": "unknown",
+        "maxBatteryTemp": 34,
+        "maxCpuTemp": -1,
+        "phaseCompletionStatus": {
+          "0": "completed",
+          "1": "completed",
+          "2": "completed",
+          "3": "completed",
+          "4": "completed",
+          "5": "completed",
+          "6": "completed",
+          "7": "completed"
+        },
+        "preScanWarnings": [],
+        "samplesSha256": "3ffca2d65beed956c242567f1a1beed29a479be3773bb4dd015e56a4a5a24ef9",
+        "scanStillness": {
+          "accelStdDev": 0.41440207,
+          "isStill": true,
+          "sampleCount": 1606
+        },
+        "stressEffectiveness": {
+          "c4RatioStressWindow": 1,
+          "freqDropFromBurstToSustainedPct": 0.84810877,
+          "governorCappingDetected": false,
+          "passedSaturationThreshold": true,
+          "peakBigFreqKhzAnywhere": 2304000,
+          "peakBigFreqKhzInStressPhases": 2304000,
+          "peakPackagePowerMwPhase3": 5492,
+          "peakPackagePowerMwPhase5": 6776,
+          "perCpuUsageAvailable": false,
+          "phase3CpuFreqRatio": 0.9915564,
+          "phase3CpuFreqRatioBig": 0.9915564,
+          "phase3CpuFreqRatioLittle": null,
+          "phase3CpuFreqRatioMid": null,
+          "phase3CpuUsageAvg": 53.55425,
+          "phase3CpuUsageAvgBig": null,
+          "phase3CpuUsageAvgLittle": null,
+          "phase3CpuUsageAvgMid": null,
+          "phase5PowerPeakMw": 6776,
+          "satC1Passed": true,
+          "satC2Passed": true,
+          "satC3Passed": true,
+          "satC4Passed": true,
+          "satCaveat": null,
+          "satConditionsMet": 4,
+          "satGrade": "fully_saturated",
+          "saturationFailureReason": null
+        },
+        "tempRiseRateInProbe": 0,
+        "tempSource": "headroom",
+        "thermalHeadroomAvg": 0.66820824,
+        "thermalHeadroomPeak": 0.7262666,
+        "thermalSensorAvailability": {
+          "cpuTemp": "missing",
+          "gpuTemp": "missing",
+          "skinTemp": "missing",
+          "source": "discovery"
+        },
+        "thermalStatusMax": 0,
+        "throttlingEvents": [],
+        "totalSamples": 1606,
+        "unmeasuredDefaults": [
+          "deviceTierMeasured",
+          "intensityFactor"
+        ],
+        "verificationResults": {
+          "aiActiveDelegate": "CPU",
+          "aiDelegateInitError": null,
+          "aiInferenceAvgMs": 29.522232,
+          "aiInferenceIterationsTotal": 13784,
+          "aiInferenceWorkers": 7,
+          "cpuStressFallbackUsed": false,
+          "criticalDefectDetected": false,
+          "gpuComputeGemmCorrect": true,
+          "gpuFenceTimeoutCount": 0,
+          "gpuFragmentHashMatches": 13,
+          "gpuFragmentHashTotal": 13,
+          "gpuRenderCompletionMsCold": 16,
+          "gpuRenderCompletionMsWarm": 15,
+          "memoryTestedBytes": 24717312000,
+          "storageBytesWritten": 4294967296,
+          "storageReadVerifyErrors": 0,
+          "storageSlcCacheSizeMb": 0,
+          "storageThroughputSegments": [
+            {
+              "cumulativeBytes": 268435456,
+              "mbps": 657.78467
+            },
+            {
+              "cumulativeBytes": 536870912,
+              "mbps": 695.993
+            },
+            {
+              "cumulativeBytes": 805306368,
+              "mbps": 649.2472
+            },
+            {
+              "cumulativeBytes": 1073741824,
+              "mbps": 686.78033
+            },
+            {
+              "cumulativeBytes": 1342177280,
+              "mbps": 720.81757
+            },
+            {
+              "cumulativeBytes": 1610612736,
+              "mbps": 728.8374
+            },
+            {
+              "cumulativeBytes": 1879048192,
+              "mbps": 739.94653
+            },
+            {
+              "cumulativeBytes": 2147483648,
+              "mbps": 735.2383
+            },
+            {
+              "cumulativeBytes": 2415919104,
+              "mbps": 766.37646
+            },
+            {
+              "cumulativeBytes": 2684354560,
+              "mbps": 752.3634
+            },
+            {
+              "cumulativeBytes": 2952790016,
+              "mbps": 720.872
+            },
+            {
+              "cumulativeBytes": 3221225472,
+              "mbps": 749.5953
+            },
+            {
+              "cumulativeBytes": 3489660928,
+              "mbps": 779.32275
+            },
+            {
+              "cumulativeBytes": 3758096384,
+              "mbps": 756.538
+            },
+            {
+              "cumulativeBytes": 4026531840,
+              "mbps": 762.0852
+            },
+            {
+              "cumulativeBytes": 4294967296,
+              "mbps": 756.93427
+            }
+          ],
+          "storageWriteDurationMs": 6324,
+          "storageWriteVerifyErrors": 0,
+          "workersPinFailedBig": 0,
+          "workersPinFailedLittle": 0,
+          "workersPinFailedMid": 0,
+          "workersPinnedBig": 0,
+          "workersPinnedLittle": 0,
+          "workersPinnedMid": 0
+        }
+      },
+      "header": {
+        "androidApiLevel": 36,
+        "appVersion": "1.0.8-v6beta",
+        "batteryLevelStart": 75,
+        "batteryTempStart": 31,
+        "cpuCores": 8,
+        "deviceFingerprint": "32a4066802d22935917f2bca00f5c9afaa1d8e21e0fd0cd1c210401469ed9fe7",
+        "deviceModel": "Honor MTN-NX1",
+        "isPowerSaveMode": false,
+        "scanId": "8fa88e6c-8a7b-43f4-9664-5c4a86c5fa29",
+        "scanType": "general",
+        "startTimestamp": 1789855356569,
+        "totalRamMb": 11445
+      },
+      "variables": [
+        {
+          "index": 0,
+          "name": "timestamp_ms",
+          "source": "SystemClock.elapsedRealtime()",
+          "unit": "ms"
+        },
+        {
+          "index": 1,
+          "name": "battery_temp_c",
+          "source": "BatteryManager EXTRA_TEMPERATURE / 10",
+          "unit": "°C"
+        },
+        {
+          "index": 2,
+          "name": "battery_voltage_mv",
+          "source": "EXTRA_VOLTAGE",
+          "unit": "mV"
+        },
+        {
+          "index": 3,
+          "name": "battery_current_ua",
+          "source": "BATTERY_PROPERTY_CURRENT_NOW (vendor-cadence variation)",
+          "unit": "µA"
+        },
+        {
+          "index": 4,
+          "name": "battery_level_pct",
+          "source": "EXTRA_LEVEL / EXTRA_SCALE × 100",
+          "unit": "%"
+        },
+        {
+          "index": 5,
+          "name": "cpu_freq_max_khz",
+          "source": "max(scaling_cur_freq) across clusters",
+          "unit": "kHz"
+        },
+        {
+          "index": 6,
+          "name": "cpu_usage_pct",
+          "source": "/proc/stat (with process-fallback when blocked)",
+          "unit": "%"
+        },
+        {
+          "index": 7,
+          "name": "package_power_mw",
+          "source": "|voltage_mv × current_µA| / 1e6",
+          "unit": "mW"
+        },
+        {
+          "index": 8,
+          "name": "storage_throughput_mbps",
+          "source": "instant I/O rate during STORAGE_STRESS",
+          "unit": "MB/s"
+        },
+        {
+          "index": 9,
+          "name": "memory_bandwidth_mbps",
+          "source": "live rolling MB/s (~1 Hz) during MEMORY_STRESS; 0 outside",
+          "unit": "MB/s"
+        },
+        {
+          "index": 10,
+          "name": "gpu_fps",
+          "source": "OpenGL offscreen frame counter, 1 s sliding window (phases 4 + 5 only)",
+          "unit": "fps"
+        }
+      ],
+      "samplesCount": 1606
+    },
+    "functionalResults": null,
+    "manualResults": []
+  },
+  "sessionId": null,
+  "deviceFingerprintSha": "32a4066802d22935917f2bca00f5c9afaa1d8e21e0fd0cd1c210401469ed9fe7",
+  "timeSeriesStoragePath": "scans/32a4066802d22935917f2bca00f5c9afaa1d8e21e0fd0cd1c210401469ed9fe7/8fa88e6c-8a7b-43f4-9664-5c4a86c5fa29.ts.json.gz",
+  "aiAudit": {
+    "measuredCategoriesMean": null,
+    "gatesApplied": [],
+    "partialBadLetterUngated": [],
+    "adjustments": [],
+    "disputed": false,
+    "categoryLlmSuggestedLetters": {
+      "battery": null,
+      "thermal": null,
+      "cpu": null,
+      "gpu": null,
+      "display": null,
+      "memory": null,
+      "storage": null,
+      "camera": null,
+      "gps": null,
+      "security": null,
+      "sensors": null,
+      "cellular": null,
+      "wireless": null,
+      "audio": null,
+      "input": null
+    },
+    "crossChecks": [],
+    "modelObservations": [],
+    "issueSetHash": "bc4b1d6d7921153767dd89a9d5efb189f7ccfcc61b42fb2ca1696c61d6326ca0",
+    "lettersHash": "1257061de578604c540ef5217495a50b491c535ab95c29207d1b15a3130a414b",
+    "numbersHash": "a780a5d1cb053c9af44f0d27a29b0ad577bcd32d907c0734cb587d3cf8b5339d",
+    "regeneration": {
+      "attempts": 1,
+      "narrativeIncomplete": true,
+      "droppedFields": [
+        "narrative.summary",
+        "narrative.details",
+        "narrative.verdict",
+        "narrative.buyerAdvice.casual",
+        "narrative.buyerAdvice.gamer",
+        "narrative.buyerAdvice.photographer",
+        "narrative.issueDescriptions"
+      ],
+      "rounds": [
+        {
+          "attempt": 1,
+          "aiModel": null,
+          "guardOk": false,
+          "durationMs": 0,
+          "tokensUsed": null,
+          "rejectedReasons": [
+            "PROVIDER_FAILED_NO_FALLBACK: لا نداء نموذج — عيّنة Honor، القيد الصريح (القرار ٧٩ أ)"
+          ]
+        }
+      ]
+    }
+  },
+  "source": "analyzeDevice",
+  "createdAt": {
+    "__marker": "FIRESTORE_SERVER_TIMESTAMP"
+  }
+}

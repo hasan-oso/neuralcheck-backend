@@ -1,0 +1,218 @@
+{
+  "_provenance": {
+    "generator": "functions/scripts/generate-refusal-wire-samples.js",
+    "decision": "القرار ١٤ (A-SUB الموجة الأولى، 2026-10-17): منقول عن أمر المنسّق، غير متحقَّق من هذا المستودع",
+    "kind": "checkSubscription reply, current shape (before decision 8)",
+    "whatIsReal": "غلاف onCall الحقيقي (firebase-functions wrapOnCallHandler) يكتب الحالة والجسم؛ الدالّة المُصدَّرة الحقيقية؛ الحرّاس الحقيقيون؛ فئة Timestamp من firebase-admin.",
+    "whatIsStubbed": "utils/admin ⟵ db في الذاكرة بمستندات اصطناعية (users/scanSessions/reports). بلا Firestore ولا محاكٍ ولا إنتاج ولا شبكة ولا نموذج. التوكن غير موقَّع بميزة skipTokenVerification.",
+    "notVerified": "أشكال expiresAt الموجودة فعلاً في الإنتاج؛ وسلوك التطبيق (1.0.12-1.0.14) عند هذه الأجسام. لم تُولَّد عيّنة من محاكي Firestore (غير مأذون).",
+    "followsContract": "docs/PROTOCOL_CONTRACT.md §٦-د-١ و§١٠-ج و§١٠-و (القاعدة 39: من يغيّر العقد يُعيد التوليد في الالتزام نفسه)."
+  },
+  "samples": [
+    {
+      "id": "active",
+      "note": "اشتراك ساري برصيد: scanVerdict=ALLOWED. expiresAt Timestamp حقيقية الفئة (على السلك: _seconds و_nanoseconds).",
+      "seedExpiresAtKind": "firestore-timestamp",
+      "httpStatus": 200,
+      "body": {
+        "result": {
+          "plan": "shop_basic",
+          "scansRemaining": 4,
+          "scansTotal": 10,
+          "expiresAt": {
+            "_seconds": 4070908800,
+            "_nanoseconds": 0
+          },
+          "isActive": true,
+          "isFreeTrial": false,
+          "features": {
+            "pdf": true,
+            "qr": true,
+            "history": true,
+            "shopPage": true,
+            "remoteCode": true,
+            "deviceManagement": false,
+            "shopLogo": false,
+            "stats": false,
+            "prioritySupport": false
+          },
+          "scanVerdict": "ALLOWED"
+        }
+      }
+    },
+    {
+      "id": "expired.timestamp",
+      "note": "منتهٍ، expiresAt Timestamp: SUBSCRIPTION_EXPIRED.",
+      "seedExpiresAtKind": "firestore-timestamp",
+      "httpStatus": 200,
+      "body": {
+        "result": {
+          "plan": "shop_basic",
+          "scansRemaining": 4,
+          "scansTotal": 10,
+          "expiresAt": {
+            "_seconds": 1735689600,
+            "_nanoseconds": 0
+          },
+          "isActive": true,
+          "isFreeTrial": false,
+          "features": {
+            "pdf": true,
+            "qr": true,
+            "history": true,
+            "shopPage": true,
+            "remoteCode": true,
+            "deviceManagement": false,
+            "shopLogo": false,
+            "stats": false,
+            "prioritySupport": false
+          },
+          "scanVerdict": "SUBSCRIPTION_EXPIRED"
+        }
+      }
+    },
+    {
+      "id": "no-credit",
+      "note": "رصيد 0: NO_CREDIT (الرصيد قبل التاريخ).",
+      "seedExpiresAtKind": "firestore-timestamp",
+      "httpStatus": 200,
+      "body": {
+        "result": {
+          "plan": "shop_basic",
+          "scansRemaining": 0,
+          "scansTotal": 10,
+          "expiresAt": {
+            "_seconds": 4070908800,
+            "_nanoseconds": 0
+          },
+          "isActive": true,
+          "isFreeTrial": false,
+          "features": {
+            "pdf": true,
+            "qr": true,
+            "history": true,
+            "shopPage": true,
+            "remoteCode": true,
+            "deviceManagement": false,
+            "shopLogo": false,
+            "stats": false,
+            "prioritySupport": false
+          },
+          "scanVerdict": "NO_CREDIT"
+        }
+      }
+    },
+    {
+      "id": "expired.iso-string",
+      "note": "expiresAt نصّ ISO قديم: SUBSCRIPTION_EXPIRED، ويخرج النصّ كما خُزِّن. شكل الإنتاج الفعلي غير متحقَّق.",
+      "seedExpiresAtKind": "iso-string",
+      "httpStatus": 200,
+      "body": {
+        "result": {
+          "plan": "shop_basic",
+          "scansRemaining": 4,
+          "scansTotal": 10,
+          "expiresAt": "2025-01-01T00:00:00.000Z",
+          "isActive": true,
+          "isFreeTrial": false,
+          "features": {
+            "pdf": true,
+            "qr": true,
+            "history": true,
+            "shopPage": true,
+            "remoteCode": true,
+            "deviceManagement": false,
+            "shopLogo": false,
+            "stats": false,
+            "prioritySupport": false
+          },
+          "scanVerdict": "SUBSCRIPTION_EXPIRED"
+        }
+      }
+    },
+    {
+      "id": "expired.ms-number",
+      "note": "expiresAt رقم ms قديم: SUBSCRIPTION_EXPIRED، ويخرج الرقم كما خُزِّن. شكل الإنتاج الفعلي غير متحقَّق.",
+      "seedExpiresAtKind": "number",
+      "httpStatus": 200,
+      "body": {
+        "result": {
+          "plan": "shop_basic",
+          "scansRemaining": 4,
+          "scansTotal": 10,
+          "expiresAt": 1735689600000,
+          "isActive": true,
+          "isFreeTrial": false,
+          "features": {
+            "pdf": true,
+            "qr": true,
+            "history": true,
+            "shopPage": true,
+            "remoteCode": true,
+            "deviceManagement": false,
+            "shopLogo": false,
+            "stats": false,
+            "prioritySupport": false
+          },
+          "scanVerdict": "SUBSCRIPTION_EXPIRED"
+        }
+      }
+    },
+    {
+      "id": "free.no-expiresAt",
+      "note": "باقة free بلا expiresAt: ALLOWED وفيه \"expiresAt\": null (غياب لا انتهاء، utils/subscription.js).",
+      "seedExpiresAtKind": "absent",
+      "httpStatus": 200,
+      "body": {
+        "result": {
+          "plan": "free",
+          "scansRemaining": 3,
+          "scansTotal": 3,
+          "expiresAt": null,
+          "isActive": true,
+          "isFreeTrial": true,
+          "features": {
+            "pdf": false,
+            "qr": false,
+            "history": false,
+            "shopPage": false,
+            "remoteCode": false,
+            "deviceManagement": false,
+            "shopLogo": false,
+            "stats": false,
+            "prioritySupport": false
+          },
+          "scanVerdict": "ALLOWED"
+        }
+      }
+    },
+    {
+      "id": "no-users-document",
+      "note": "مستخدم بلا مستند users: scanVerdict=NO_CREDIT (لا حالة «غير مسجَّل»، القاعدة 22 — القرار ٨ المؤجَّل يتناولها).",
+      "seedExpiresAtKind": "no-users-document",
+      "httpStatus": 200,
+      "body": {
+        "result": {
+          "plan": "free",
+          "scansRemaining": 0,
+          "scansTotal": 0,
+          "expiresAt": null,
+          "isActive": false,
+          "isFreeTrial": true,
+          "features": {
+            "pdf": false,
+            "qr": false,
+            "history": false,
+            "shopPage": false,
+            "remoteCode": false,
+            "deviceManagement": false,
+            "shopLogo": false,
+            "stats": false,
+            "prioritySupport": false
+          },
+          "scanVerdict": "NO_CREDIT"
+        }
+      }
+    }
+  ]
+}

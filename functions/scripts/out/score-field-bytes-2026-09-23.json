@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-09-22T22:51:03.540Z",
+  "scans": {
+    "b45c8cf6-e376-4765-8703-f68e9bc69844": {
+      "withScoreLength": 70254,
+      "withoutScoreLength": 70055,
+      "scoreFieldBytes": 199,
+      "matchesCurrentConstant": true
+    },
+    "34dff2b8-ce9e-4b40-86a9-1976c878e195": {
+      "withScoreLength": 70349,
+      "withoutScoreLength": 70151,
+      "scoreFieldBytes": 198,
+      "matchesCurrentConstant": true
+    }
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "readerVersion": 1,
+  "fieldsVersion": 67,
+  "appVersion": "1.0.8-v6beta",
+  "applicable": false,
+  "anomalies": [],
+  "absences": {
+    "ABSENT": [
+      "verification.legacy.cpuFmaErrors.status",
+      "verification.legacy.cpuPrimeSieveCorrect.status",
+      "verification.legacy.memoryMarchPassed.status",
+      "verification.legacy.memoryWalkingOnesPassed.status"
+    ],
+    "ABSENT_DECLARED": [],
+    "NOT_IN_FILE": [],
+    "notInFieldsVersionCount": 43,
+    "removedInFv68Count": 0
+  },
+  "timeSeriesState": {
+    "status": "NOT_IN_FIELDS_VERSION",
+    "state": null
+  },
+  "lists": {
+    "fieldsNotInFile": {
+      "status": "NOT_IN_FIELDS_VERSION",
+      "names": null
+    },
+    "unmeasuredDefaults": {
+      "status": "PRESENT",
+      "names": [
+        "deviceTierMeasured",
+        "intensityFactor"
+      ]
+    },
+    "transitionalAggregates": {
+      "status": "NOT_IN_FIELDS_VERSION",
+      "names": null
+    }
+  },
+  "footerDiagnostics": {
+    "status": "PRESENT",
+    "entries": {
+      "batteryHealth": {
+        "kind": "ok",
+        "detail": null
+      },
+      "batteryHealthSnap": {
+        "kind": "ok",
+        "detail": null
+      },
+      "dataQuality": {
+        "kind": "ok",
+        "detail": null
+      },
+      "knownCapacityClassification": {
+        "kind": "ok",
+        "detail": null
+      },
+      "samplesSnapshot": {
+        "kind": "ok",
+        "detail": "size=1606"
+      },
+      "scanStillness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "stressEffectiveness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "thermalSensorAvailability": {
+        "kind": "ok",
+        "detail": null
+      }
+    }
+  },
+  "layout": {
+    "columnCount": 11,
+    "sampleVectorLength": 11,
+    "sampleWidthConsistent": true,
+    "indexFrom": "position",
+    "columns": [
+      {
+        "index": 0,
+        "name": "timestamp_ms",
+        "unit": "ms",
+        "indexFrom": "position"
+      },
+      {
+        "index": 1,
+        "name": "battery_temp_c",
+        "unit": "°C",
+        "indexFrom": "position"
+      },
+      {
+        "index": 2,
+        "name": "battery_voltage_mv",
+        "unit": "mV",
+        "indexFrom": "position"
+      },
+      {
+        "index": 3,
+        "name": "battery_current_ua",
+        "unit": "µA",
+        "indexFrom": "position"
+      },
+      {
+        "index": 4,
+        "name": "battery_level_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 5,
+        "name": "cpu_freq_max_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      },
+      {
+        "index": 6,
+        "name": "cpu_usage_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 7,
+        "name": "package_power_mw",
+        "unit": "mW",
+        "indexFrom": "position"
+      },
+      {
+        "index": 8,
+        "name": "storage_throughput_mbps",
+        "unit": "MB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 9,
+        "name": "memory_bandwidth_mbps",
+        "unit": "MB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 10,
+        "name": "gpu_fps",
+        "unit": "fps",
+        "indexFrom": "position"
+      }
+    ],
+    "byName": {
+      "timestamp_ms": 0,
+      "battery_temp_c": 1,
+      "battery_voltage_mv": 2,
+      "battery_current_ua": 3,
+      "battery_level_pct": 4,
+      "cpu_freq_max_khz": 5,
+      "cpu_usage_pct": 6,
+      "package_power_mw": 7,
+      "storage_throughput_mbps": 8,
+      "memory_bandwidth_mbps": 9,
+      "gpu_fps": 10
+    },
+    "duplicateNames": [],
+    "unresolvedIndices": [],
+    "columnsBeyondSamples": [],
+    "baseLayout": "MATCHES",
+    "baseMissing": [],
+    "baseMismatches": [],
+    "extraChannels": [],
+    "policyChannels": [],
+    "chargeCounter": null
+  },
+  "throughputUnit": {
+    "appVersion": "1.0.8-v6beta",
+    "fieldsVersion": 67,
+    "declared": {
+      "storage_throughput_mbps": "MB/s",
+      "memory_bandwidth_mbps": "MB/s",
+      "segments": null
+    },
+    "unit": null,
+    "basis": "UNDETERMINED_APP_VERSION_V6BETA"
+  },
+  "channelReadFailures": {
+    "map": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "counts": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "channels": {
+      "timestamp_ms": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_temp_c": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_voltage_mv": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_current_ua": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_level_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_freq_max_khz": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_usage_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "package_power_mw": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "storage_throughput_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "memory_bandwidth_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "gpu_fps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      }
+    },
+    "unknownChannels": []
+  },
+  "channelDiscovery": {
+    "status": "PRESENT",
+    "lists": {
+      "attempted": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status",
+        "charge_counter",
+        "energy_counter"
+      ],
+      "available": [
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status",
+        "charge_counter"
+      ],
+      "blockedBySelinux": [],
+      "missing": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "energy_counter"
+      ]
+    },
+    "reasonsStatus": "NOT_IN_FIELDS_VERSION",
+    "reasons": {},
+    "unavailableWithoutReason": null
+  },
+  "cpuPolicies": {
+    "status": "NOT_IN_FIELDS_VERSION",
+    "policies": [],
+    "channelsWithoutPolicyEntry": [],
+    "policiesWithoutChannel": []
+  },
+  "thermal": {
+    "headroom": {
+      "state": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      },
+      "readings": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "items": [],
+        "byKind": {},
+        "okCount": 0,
+        "okMin": null,
+        "okMax": null
+      }
+    },
+    "status": {
+      "state": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      },
+      "events": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "items": [],
+        "maxStatus": null
+      }
+    }
+  },
+  "batteryPairs": {
+    "state": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "pairs": {
+      "status": "NOT_IN_FIELDS_VERSION",
+      "items": []
+    }
+  },
+  "batteryHealth": {
+    "status": "PRESENT",
+    "indicators": {
+      "dischargeRateUnderLoadMa": {
+        "value": 1647.8497596153845,
+        "valueStatus": "PRESENT",
+        "state": null,
+        "stateStatus": "NOT_IN_FIELDS_VERSION"
+      },
+      "voltageStabilityMv": {
+        "value": 46.45574339814751,
+        "valueStatus": "PRESENT",
+        "state": null,
+        "stateStatus": "NOT_IN_FIELDS_VERSION"
+      },
+      "dischargeVsDesignRatioMah": {
+        "value": 220,
+        "valueStatus": "PRESENT",
+        "state": null,
+        "stateStatus": "NOT_IN_FIELDS_VERSION"
+      },
+      "batteryTempRiseC": {
+        "value": 7.400001525878906,
+        "valueStatus": "PRESENT",
+        "state": null,
+        "stateStatus": "NOT_IN_FIELDS_VERSION"
+      },
+      "levelDropPct": {
+        "value": 5,
+        "valueStatus": "PRESENT",
+        "state": null,
+        "stateStatus": "NOT_IN_FIELDS_VERSION"
+      }
+    },
+    "cycleCount": {
+      "value": null,
+      "valueStatus": "NOT_IN_FIELDS_VERSION",
+      "state": null,
+      "stateStatus": "NOT_IN_FIELDS_VERSION",
+      "source": {
+        "raw": "unavailable",
+        "kind": "unavailable",
+        "detail": null,
+        "recognized": true
+      },
+      "sourceStatus": "PRESENT"
+    },
+    "chargeCounter": {
+      "value": 1711600,
+      "valueStatus": "PRESENT",
+      "state": null,
+      "stateStatus": "NOT_IN_FIELDS_VERSION"
+    },
+    "energyCounter": {
+      "value": null,
+      "valueStatus": "NOT_IN_FIELDS_VERSION",
+      "state": null,
+      "stateStatus": "NOT_IN_FIELDS_VERSION"
+    },
+    "designCapacityMah": {
+      "value": 4400,
+      "status": "PRESENT"
+    }
+  },
+  "cpuTemp": {
+    "state": "ABSENT",
+    "valueC": null,
+    "valueStatus": "NOT_IN_FIELDS_VERSION",
+    "source": null,
+    "sourceStatus": "NOT_IN_FIELDS_VERSION",
+    "legacyMaxCpuTemp": {
+      "status": "PRESENT",
+      "value": -1
+    }
+  },
+  "verification": {
+    "status": "PRESENT",
+    "gpuGemm": {
+      "correct": true,
+      "correctStatus": "PRESENT",
+      "state": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      }
+    },
+    "gpuFragmentHash": {
+      "matches": 14,
+      "total": 14,
+      "matchesStatus": "PRESENT",
+      "totalStatus": "PRESENT"
+    },
+    "gpuFenceTimeout": {
+      "count": 0,
+      "status": "PRESENT"
+    },
+    "criticalDefect": {
+      "value": false,
+      "valueStatus": "PRESENT",
+      "inputsNotRun": null,
+      "inputsNotRunStatus": "NOT_IN_FIELDS_VERSION"
+    },
+    "workersPin": {
+      "state": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      },
+      "pinned": {
+        "workersPinnedBig": 0,
+        "workersPinnedMid": 0,
+        "workersPinnedLittle": 0
+      },
+      "failed": {
+        "workersPinFailedBig": 0,
+        "workersPinFailedMid": 0,
+        "workersPinFailedLittle": 0
+      }
+    },
+    "memory": {
+      "state": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      },
+      "errors": {
+        "march": null,
+        "walkingOnes": null,
+        "randomVerify": null
+      },
+      "derived": {
+        "marchPassed": null,
+        "walkingOnesPassed": null
+      },
+      "bytes": {
+        "verified": null,
+        "buffer": null,
+        "freeBytes": null,
+        "testedByWorkload": 23522918400
+      },
+      "timeCapMs": null,
+      "durationMs": null,
+      "phaseWindows": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "items": []
+      }
+    },
+    "storage": {
+      "state": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      },
+      "method": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      },
+      "errors": {
+        "write": 0,
+        "read": 0
+      },
+      "writeErrorsStatus": "PRESENT",
+      "readErrorsStatus": "PRESENT",
+      "bytes": {
+        "compared": null,
+        "planned": null
+      },
+      "durationMs": null
+    },
+    "cpuKnownAnswer": {
+      "state": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "state": null
+      },
+      "runs": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "items": []
+      },
+      "totalMsByPhase": {
+        "status": "NOT_IN_FIELDS_VERSION",
+        "byPhase": {}
+      },
+      "counts": {
+        "runs": 0,
+        "sieveMatch": 0,
+        "sieveMismatch": 0,
+        "sieveNotReached": 0,
+        "sieveSkipped": 0,
+        "sieveCancelled": 0,
+        "sieveError": 0,
+        "shaMatch": 0,
+        "shaMismatch": 0,
+        "shaNotReached": 0,
+        "shaSkipped": 0,
+        "shaCancelled": 0,
+        "shaError": 0,
+        "unrecognized": 0
+      },
+      "mismatches": null
+    },
+    "aiDelegate": {
+      "delegate": "CPU",
+      "delegateStatus": "PRESENT",
+      "initErrorText": "",
+      "initErrorStatus": "PRESENT",
+      "noInitErrorDeclared": false
+    },
+    "legacy": {
+      "cpuFmaErrors": {
+        "status": "ABSENT",
+        "value": null
+      },
+      "cpuPrimeSieveCorrect": {
+        "status": "ABSENT",
+        "value": null
+      },
+      "memoryMarchPassed": {
+        "status": "ABSENT",
+        "value": null
+      },
+      "memoryWalkingOnesPassed": {
+        "status": "ABSENT",
+        "value": null
+      }
+    },
+    "storageSlcCacheSizeMbStatus": "PRESENT",
+    "storageThroughputSegmentsUnit": {
+      "status": "NOT_IN_FIELDS_VERSION",
+      "value": null
+    }
+  },
+  "stillness": {
+    "status": "PRESENT",
+    "state": null,
+    "stateStatus": "NOT_IN_FIELDS_VERSION",
+    "isStill": null,
+    "accelStdDev": null,
+    "sampleCount": 1606
+  },
+  "preScanWarnings": {
+    "status": "NOT_IN_FIELDS_VERSION",
+    "state": null
+  },
+  "measurements": {
+    "items": [],
+    "expectedButAbsent": [
+      {
+        "source": "functionalResults",
+        "testId": "L-02",
+        "status": "NOT_IN_FIELDS_VERSION"
+      }
+    ]
+  },
+  "touchGridAnswer": {
+    "state": "PASS_WITHOUT_RAW",
+    "manualStatus": "pass",
+    "passRawRelation": "NOT_APPLICABLE_NO_RAW",
+    "rawEndReason": null
+  },
+  "volumeButtonAnswers": {
+    "M-09": {
+      "state": "WITHOUT_RAW",
+      "manualStatus": "warning"
+    },
+    "M-10": {
+      "state": "NOT_IN_MANUAL_RESULTS",
+      "manualStatus": null
+    }
+  },
+  "scanConditions": {
+    "state": "NOT_IN_FIELDS_VERSION",
+    "unexpectedKeys": [],
+    "header": {
+      "isPowerSaveMode": false,
+      "isPowerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "root": {
+      "powerSaveMode": false,
+      "powerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "powerSaveBasis": "LEGACY_BOOLEAN_ONLY",
+    "brightnessLock": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindow": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindowBasis": "LEGACY_FIXED_MIN_NO_MAX",
+    "batteryLevelStart": 43,
+    "batteryLevelStartStatus": "PRESENT",
+    "startLevelVsWindow": "WITHIN"
+  }
+}

@@ -1,0 +1,1303 @@
+{
+  "scanId": "aba0afae-192b-4121-baf9-f2e004def8a1",
+  "rawFingerprint": {
+    "device": {},
+    "timeSeries": {
+      "footer": {
+        "batteryCurrentScalingApplied": "x1000_no_flip",
+        "batteryHealth": {
+          "designCapacityMah": 4400,
+          "designCapacitySource": "powerprofile_reflection",
+          "cycleCount": null,
+          "cycleCountSource": "unavailable",
+          "dischargeRateUnderLoadMa": 1647.8497596153845,
+          "batteryTempStartC": 32.79999923706055,
+          "batteryTempMaxC": 40.20000076293945,
+          "batteryTempRiseC": 7.400001525878906,
+          "voltageStabilityMv": 46.45574339814751,
+          "levelDropPct": 5,
+          "dischargeVsDesignRatioMah": 220,
+          "chargeCounterUah": 1711600,
+          "energyCounterNwh": null
+        },
+        "batteryLevelEnd": 38,
+        "calibration": {
+          "applied": false
+        },
+        "channelDiscovery": {
+          "attempted": [
+            "cpu_temp_c",
+            "gpu_temp_c",
+            "skin_temp_c_real",
+            "battery_temp_c",
+            "battery_voltage_mv",
+            "battery_current_ua",
+            "cpu_freq_max_khz",
+            "cpu_usage_pct",
+            "thermal_headroom",
+            "thermal_status",
+            "charge_counter",
+            "energy_counter"
+          ],
+          "available": [
+            "battery_temp_c",
+            "battery_voltage_mv",
+            "battery_current_ua",
+            "cpu_freq_max_khz",
+            "cpu_usage_pct",
+            "thermal_headroom",
+            "thermal_status",
+            "charge_counter"
+          ],
+          "blockedBySelinux": [],
+          "missing": [
+            "cpu_temp_c",
+            "gpu_temp_c",
+            "skin_temp_c_real",
+            "energy_counter"
+          ],
+          "summary": "discovery: 8/12 available, 0 blocked, 4 missing"
+        },
+        "dataQuality": {
+          "batteryInvalidCurrentReadings": 0,
+          "batteryReaderRegistered": false,
+          "batteryScalingDetailedSource": "data_ma_format_evidence_3",
+          "batteryScalingLockAtSample": 3,
+          "batteryScalingLocked": true,
+          "batteryScalingMultiplier": 1000,
+          "batteryScalingSignFlip": 1,
+          "batteryVoltageUvScaledCount": 0,
+          "cpuFreqBigCoveragePct": 100,
+          "cpuTempCoveragePct": 0,
+          "cpuTempPrimarySource": "moved_to_footer_v5",
+          "cpuUsageFallbackFromSample": 0,
+          "cpuUsageSource": "process_fallback",
+          "gpuTempCoveragePct": 0,
+          "procStatAvailable": false,
+          "skinTempCoveragePct": 0,
+          "skinTempSourceBreakdown": {
+            "battery_proxy": 1833
+          }
+        },
+        "deviceTierMeasured": "flagship_cooling",
+        "earlyStopReason": null,
+        "endTimestamp": 1789885179106,
+        "expectedSamples": 1605,
+        "fieldsVersion": 67,
+        "flushFailureCount": 0,
+        "footerDiagnostics": {
+          "samplesSnapshot": "ok:size=1606",
+          "stressEffectiveness": "ok",
+          "batteryHealthSnap": "ok",
+          "batteryHealth": "ok",
+          "knownCapacityClassification": "ok",
+          "dataQuality": "ok",
+          "thermalSensorAvailability": "ok",
+          "scanStillness": "ok"
+        },
+        "intensityFactor": 1,
+        "isComplete": true,
+        "knownCapacityClassification": "full_capacity",
+        "maxBatteryTemp": 40.2,
+        "maxCpuTemp": -1,
+        "phaseCompletionStatus": {
+          "0": "completed",
+          "1": "completed",
+          "2": "completed",
+          "3": "completed",
+          "4": "completed",
+          "5": "completed",
+          "6": "completed",
+          "7": "completed"
+        },
+        "preScanWarnings": [],
+        "samplesSha256": "63fed12e6faa07956d528f64b874f26931fa2751cd37d3901e1d6cc48b354499",
+        "scanStillness": {
+          "accelStdDev": 0.29157373,
+          "isStill": true,
+          "sampleCount": 1606
+        },
+        "stressEffectiveness": {
+          "c4RatioStressWindow": 0.85714287,
+          "freqDropFromBurstToSustainedPct": 10.599206,
+          "governorCappingDetected": false,
+          "passedSaturationThreshold": true,
+          "peakBigFreqKhzAnywhere": 2730000,
+          "peakBigFreqKhzInStressPhases": 2340000,
+          "peakPackagePowerMwPhase3": 10602,
+          "peakPackagePowerMwPhase5": 12819,
+          "perCpuUsageAvailable": false,
+          "phase3CpuFreqRatio": 0.76987803,
+          "phase3CpuFreqRatioBig": 0.76987803,
+          "phase3CpuFreqRatioLittle": null,
+          "phase3CpuFreqRatioMid": null,
+          "phase3CpuUsageAvg": 52.032333,
+          "phase3CpuUsageAvgBig": null,
+          "phase3CpuUsageAvgLittle": null,
+          "phase3CpuUsageAvgMid": null,
+          "phase5PowerPeakMw": 12819,
+          "satC1Passed": true,
+          "satC2Passed": true,
+          "satC3Passed": true,
+          "satC4Passed": true,
+          "satCaveat": null,
+          "satConditionsMet": 4,
+          "satGrade": "fully_saturated",
+          "saturationFailureReason": null
+        },
+        "tempRiseRateInProbe": 0,
+        "tempSource": "headroom",
+        "thermalHeadroomAvg": 0.9198376,
+        "thermalHeadroomPeak": 1.0266666,
+        "thermalSensorAvailability": {
+          "cpuTemp": "missing",
+          "gpuTemp": "missing",
+          "skinTemp": "missing",
+          "source": "discovery"
+        },
+        "thermalStatusMax": 3,
+        "throttlingEvents": [],
+        "totalSamples": 1606,
+        "unmeasuredDefaults": [
+          "deviceTierMeasured",
+          "intensityFactor"
+        ],
+        "verificationResults": {
+          "aiActiveDelegate": "CPU",
+          "aiDelegateInitError": null,
+          "aiInferenceAvgMs": 41.625813,
+          "aiInferenceIterationsTotal": 12001,
+          "aiInferenceWorkers": 7,
+          "cpuStressFallbackUsed": false,
+          "criticalDefectDetected": false,
+          "gpuComputeGemmCorrect": true,
+          "gpuFenceTimeoutCount": 0,
+          "gpuFragmentHashMatches": 14,
+          "gpuFragmentHashTotal": 14,
+          "gpuRenderCompletionMsCold": 40,
+          "gpuRenderCompletionMsWarm": 17,
+          "memoryTestedBytes": 23522918400,
+          "storageBytesWritten": 4294967296,
+          "storageReadVerifyErrors": 0,
+          "storageSlcCacheSizeMb": 0,
+          "storageThroughputSegments": [
+            {
+              "cumulativeBytes": 268435456,
+              "mbps": 185.23787
+            },
+            {
+              "cumulativeBytes": 536870912,
+              "mbps": 200.0278
+            },
+            {
+              "cumulativeBytes": 805306368,
+              "mbps": 199.39523
+            },
+            {
+              "cumulativeBytes": 1073741824,
+              "mbps": 200.03815
+            },
+            {
+              "cumulativeBytes": 1342177280,
+              "mbps": 201.49821
+            },
+            {
+              "cumulativeBytes": 1610612736,
+              "mbps": 194.39384
+            },
+            {
+              "cumulativeBytes": 1879048192,
+              "mbps": 195.96445
+            },
+            {
+              "cumulativeBytes": 2147483648,
+              "mbps": 195.76779
+            },
+            {
+              "cumulativeBytes": 2415919104,
+              "mbps": 199.99875
+            },
+            {
+              "cumulativeBytes": 2684354560,
+              "mbps": 190.47353
+            },
+            {
+              "cumulativeBytes": 2952790016,
+              "mbps": 188.19604
+            },
+            {
+              "cumulativeBytes": 3221225472,
+              "mbps": 181.68434
+            },
+            {
+              "cumulativeBytes": 3489660928,
+              "mbps": 183.3154
+            },
+            {
+              "cumulativeBytes": 3758096384,
+              "mbps": 180.70032
+            },
+            {
+              "cumulativeBytes": 4026531840,
+              "mbps": 160.70808
+            },
+            {
+              "cumulativeBytes": 4294967296,
+              "mbps": 139.85947
+            }
+          ],
+          "storageWriteDurationMs": 23543,
+          "storageWriteVerifyErrors": 0,
+          "workersPinFailedBig": 0,
+          "workersPinFailedLittle": 0,
+          "workersPinFailedMid": 0,
+          "workersPinnedBig": 0,
+          "workersPinnedLittle": 0,
+          "workersPinnedMid": 0
+        }
+      },
+      "header": {
+        "androidApiLevel": 30,
+        "appVersion": "1.0.8-v6beta",
+        "batteryLevelStart": 43,
+        "batteryTempStart": 32.8,
+        "cpuCores": 8,
+        "deviceFingerprint": "4a69ad9ee14a7c9d282f8792838d038b2b78632f42c0ec6570af485d822c92fd",
+        "deviceModel": "Samsung Galaxy S10 5G",
+        "isPowerSaveMode": false,
+        "scanId": "aba0afae-192b-4121-baf9-f2e004def8a1",
+        "scanType": "general",
+        "startTimestamp": 1789884700282,
+        "totalRamMb": 7288
+      },
+      "variables": [
+        {
+          "index": 0,
+          "name": "timestamp_ms",
+          "source": "SystemClock.elapsedRealtime()",
+          "unit": "ms"
+        },
+        {
+          "index": 1,
+          "name": "battery_temp_c",
+          "source": "BatteryManager EXTRA_TEMPERATURE / 10",
+          "unit": "°C"
+        },
+        {
+          "index": 2,
+          "name": "battery_voltage_mv",
+          "source": "EXTRA_VOLTAGE",
+          "unit": "mV"
+        },
+        {
+          "index": 3,
+          "name": "battery_current_ua",
+          "source": "BATTERY_PROPERTY_CURRENT_NOW (vendor-cadence variation)",
+          "unit": "µA"
+        },
+        {
+          "index": 4,
+          "name": "battery_level_pct",
+          "source": "EXTRA_LEVEL / EXTRA_SCALE × 100",
+          "unit": "%"
+        },
+        {
+          "index": 5,
+          "name": "cpu_freq_max_khz",
+          "source": "max(scaling_cur_freq) across clusters",
+          "unit": "kHz"
+        },
+        {
+          "index": 6,
+          "name": "cpu_usage_pct",
+          "source": "/proc/stat (with process-fallback when blocked)",
+          "unit": "%"
+        },
+        {
+          "index": 7,
+          "name": "package_power_mw",
+          "source": "|voltage_mv × current_µA| / 1e6",
+          "unit": "mW"
+        },
+        {
+          "index": 8,
+          "name": "storage_throughput_mbps",
+          "source": "instant I/O rate during STORAGE_STRESS",
+          "unit": "MB/s"
+        },
+        {
+          "index": 9,
+          "name": "memory_bandwidth_mbps",
+          "source": "live rolling MB/s (~1 Hz) during MEMORY_STRESS; 0 outside",
+          "unit": "MB/s"
+        },
+        {
+          "index": 10,
+          "name": "gpu_fps",
+          "source": "OpenGL offscreen frame counter, 1 s sliding window (phases 4 + 5 only)",
+          "unit": "fps"
+        }
+      ],
+      "samplesCount": 1606
+    },
+    "functionalResults": [
+      {
+        "categoryName": "battery",
+        "componentName": "Pil Sağlığı (BatteryManager)",
+        "rawValue": "GOOD",
+        "rawValueUnit": "",
+        "status": "pass",
+        "testId": "B-01"
+      },
+      {
+        "categoryName": "battery",
+        "componentName": "Tasarım Kapasitesi",
+        "notes": "source=powerprofile_reflection, known=4500 mAh, classify=full_capacity",
+        "rawValue": "4400",
+        "rawValueUnit": "mAh",
+        "status": "pass",
+        "testId": "B-02"
+      },
+      {
+        "categoryName": "battery",
+        "componentName": "Pil Sıcaklığı",
+        "rawValue": "32.8",
+        "rawValueUnit": "°C",
+        "status": "pass",
+        "testId": "B-03"
+      },
+      {
+        "categoryName": "battery",
+        "componentName": "Pil Voltajı",
+        "rawValue": "3748",
+        "rawValueUnit": "mV",
+        "status": "pass",
+        "testId": "B-04"
+      },
+      {
+        "categoryName": "battery",
+        "componentName": "Şarj/Deşarj Akımı",
+        "rawValue": "-1843",
+        "rawValueUnit": "µA",
+        "status": "pass",
+        "testId": "B-05"
+      },
+      {
+        "categoryName": "battery",
+        "componentName": "Tahliye Oranı",
+        "rawValue": "0.63",
+        "rawValueUnit": "%/min",
+        "status": "pass",
+        "testId": "B-06"
+      },
+      {
+        "categoryName": "battery",
+        "componentName": "Şarj Teknolojisi",
+        "rawValue": "Li-ion",
+        "rawValueUnit": "",
+        "status": "pass",
+        "testId": "B-07"
+      },
+      {
+        "categoryName": "battery",
+        "componentName": "Şarj Döngüsü",
+        "rawValue": "N/A",
+        "rawValueUnit": "",
+        "status": "unavailable",
+        "testId": "B-08"
+      },
+      {
+        "categoryName": "cpu",
+        "componentName": "Çekirdek Sayısı",
+        "rawValue": "8",
+        "rawValueUnit": "cores",
+        "status": "not_tested",
+        "testId": "C-01"
+      },
+      {
+        "categoryName": "cpu",
+        "componentName": "Maksimum Frekans",
+        "rawValue": "2.73",
+        "rawValueUnit": "GHz",
+        "status": "not_tested",
+        "testId": "C-02"
+      },
+      {
+        "categoryName": "cpu",
+        "componentName": "Boşta CPU Frekansı",
+        "rawValue": "1.96",
+        "rawValueUnit": "GHz",
+        "status": "not_tested",
+        "testId": "C-03"
+      },
+      {
+        "categoryName": "cpu",
+        "componentName": "CPU Performansı",
+        "rawValue": "5864",
+        "rawValueUnit": "MFLOPS",
+        "status": "not_tested",
+        "testId": "C-04"
+      },
+      {
+        "categoryName": "cpu",
+        "componentName": "İşlemci Modeli",
+        "rawValue": "exynos9820 / exynos9820",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "C-05"
+      },
+      {
+        "categoryName": "cpu",
+        "componentName": "Termal Kısıtlama",
+        "rawValue": "7.4",
+        "rawValueUnit": "%",
+        "status": "not_tested",
+        "testId": "C-06"
+      },
+      {
+        "categoryName": "cpu",
+        "componentName": "Performans İstikrarı",
+        "rawValue": "7.9",
+        "rawValueUnit": "%RSD",
+        "status": "not_tested",
+        "testId": "C-07"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Arka Kamera",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-01"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Ön Kamera",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-02"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Otomatik Odakla",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-03"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Flaş",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-04"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Video Kaydı",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-05"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Arka Kamera Çözünürlüğü",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-06"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Ön Kamera Çözünürlüğü",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-07"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Parmak İzi",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-08"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Yüz Tanıma",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-10"
+      },
+      {
+        "categoryName": "camera",
+        "componentName": "Titreşim",
+        "rawValue": "غير متوفرة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "CM-11"
+      },
+      {
+        "categoryName": "display",
+        "componentName": "Ekran Çözünürlüğü",
+        "rawValue": "1080x2280",
+        "rawValueUnit": "px",
+        "status": "not_tested",
+        "testId": "D-01"
+      },
+      {
+        "categoryName": "display",
+        "componentName": "Piksel Yoğunluğu",
+        "rawValue": "420",
+        "rawValueUnit": "DPI",
+        "status": "not_tested",
+        "testId": "D-02"
+      },
+      {
+        "categoryName": "display",
+        "componentName": "Tazeleme Hızı",
+        "rawValue": "60",
+        "rawValueUnit": "Hz",
+        "status": "not_tested",
+        "testId": "D-03"
+      },
+      {
+        "categoryName": "gpu",
+        "componentName": "GPU",
+        "rawValue": "ARM — Mali-G76 (OpenGL ES 3.2 v1.r26p0-01eac0.###other-sha0123456789ABCDEF0###)",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "G-01"
+      },
+      {
+        "categoryName": "gpu",
+        "componentName": "Vulkan Desteği",
+        "rawValue": "مدعوم",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "G-02"
+      },
+      {
+        "categoryName": "gpu",
+        "componentName": "FPS Düşüşü",
+        "notes": "تعذّر قياس أداء الرسوميات على هذا الجهاز",
+        "rawValue": "N/A",
+        "rawValueUnit": "%",
+        "status": "not_tested",
+        "testId": "G-03"
+      },
+      {
+        "categoryName": "gpu",
+        "componentName": "GPU Kısıtlaması",
+        "notes": "تعذّر قياس أداء الرسوميات على هذا الجهاز",
+        "rawValue": "N/A",
+        "rawValueUnit": "%",
+        "status": "not_tested",
+        "testId": "G-04"
+      },
+      {
+        "categoryName": "gpu",
+        "componentName": "En düşük FPS",
+        "notes": "تعذّر قياس أداء الرسوميات على هذا الجهاز",
+        "rawValue": "N/A",
+        "rawValueUnit": "FPS",
+        "status": "not_tested",
+        "testId": "G-05"
+      },
+      {
+        "categoryName": "gps",
+        "componentName": "GPS Kullanılabilirliği",
+        "rawValue": "متوفر",
+        "rawValueUnit": "",
+        "status": "pass",
+        "testId": "L-01"
+      },
+      {
+        "categoryName": "gps",
+        "componentName": "Uydu Sayısı",
+        "notes": "إذن الموقع مرفوض",
+        "rawValue": "N/A",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "L-02"
+      },
+      {
+        "categoryName": "gps",
+        "componentName": "Konum Doğruluğu",
+        "notes": "إذن الموقع مرفوض",
+        "rawValue": "N/A",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "L-03"
+      },
+      {
+        "categoryName": "cellular",
+        "componentName": "Modem Sürümü",
+        "rawValue": "G977NKOU6FUH3",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-01"
+      },
+      {
+        "categoryName": "cellular",
+        "componentName": "SIM 1 Durumu",
+        "rawValue": "جاهزة",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-02"
+      },
+      {
+        "categoryName": "cellular",
+        "componentName": "SIM 2 Durumu",
+        "rawValue": "فتحة واحدة فقط",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-03"
+      },
+      {
+        "categoryName": "cellular",
+        "componentName": "Ağ Türü",
+        "rawValue": "N/A",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-04"
+      },
+      {
+        "categoryName": "cellular",
+        "componentName": "İşaret Gücü",
+        "rawValue": "3/4",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-05"
+      },
+      {
+        "categoryName": "cellular",
+        "componentName": "Operatör",
+        "rawValue": "Turkcell",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-06"
+      },
+      {
+        "categoryName": "cellular",
+        "componentName": "eSIM",
+        "rawValue": "غير مدعوم",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-07"
+      },
+      {
+        "categoryName": "wireless",
+        "componentName": "Wi-Fi",
+        "rawValue": "متصل",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-08"
+      },
+      {
+        "categoryName": "wireless",
+        "componentName": "Wi-Fi Bağlantı Hızı",
+        "rawValue": "43 Mbps, 2.4 GHz",
+        "rawValueUnit": "Mbps",
+        "status": "not_tested",
+        "testId": "N-09"
+      },
+      {
+        "categoryName": "wireless",
+        "componentName": "Wi-Fi İşaret Gücü",
+        "rawValue": "-64",
+        "rawValueUnit": "dBm",
+        "status": "not_tested",
+        "testId": "N-10"
+      },
+      {
+        "categoryName": "wireless",
+        "componentName": "Bluetooth",
+        "rawValue": "مفعّل",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-11"
+      },
+      {
+        "categoryName": "wireless",
+        "componentName": "Düşük Güç Bluetooth",
+        "rawValue": "مدعوم",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-12"
+      },
+      {
+        "categoryName": "wireless",
+        "componentName": "NFC",
+        "rawValue": "مفعّل",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "N-13"
+      },
+      {
+        "categoryName": "memory",
+        "componentName": "Toplam Bellek",
+        "rawValue": "7.1",
+        "rawValueUnit": "GB",
+        "status": "not_tested",
+        "testId": "R-01"
+      },
+      {
+        "categoryName": "memory",
+        "componentName": "Mevcut Bellek",
+        "rawValue": "2.6",
+        "rawValueUnit": "GB",
+        "status": "not_tested",
+        "testId": "R-02"
+      },
+      {
+        "categoryName": "memory",
+        "componentName": "Bellek Durumu",
+        "rawValue": "طبيعية",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "R-03"
+      },
+      {
+        "categoryName": "storage",
+        "componentName": "Toplam Kapasite",
+        "rawValue": "228.6",
+        "rawValueUnit": "GB",
+        "status": "not_tested",
+        "testId": "S-01"
+      },
+      {
+        "categoryName": "storage",
+        "componentName": "Mevcut Alan",
+        "rawValue": "31.3",
+        "rawValueUnit": "% (71.5 GB)",
+        "status": "not_tested",
+        "testId": "S-02"
+      },
+      {
+        "categoryName": "storage",
+        "componentName": "Yazma Hızı",
+        "rawValue": "241",
+        "rawValueUnit": "MB/s",
+        "status": "not_tested",
+        "testId": "S-03"
+      },
+      {
+        "categoryName": "storage",
+        "componentName": "Okuma Hızı",
+        "rawValue": "2359",
+        "rawValueUnit": "MB/s",
+        "status": "not_tested",
+        "testId": "S-04"
+      },
+      {
+        "categoryName": "storage",
+        "componentName": "Rastgele Okuma",
+        "rawValue": "98932",
+        "rawValueUnit": "IOPS",
+        "status": "not_tested",
+        "testId": "S-05"
+      },
+      {
+        "categoryName": "storage",
+        "componentName": "Rastgele Yazma",
+        "rawValue": "2597",
+        "rawValueUnit": "IOPS",
+        "status": "not_tested",
+        "testId": "S-06"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Ekran Kilidi",
+        "rawValue": "مفعّل",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-01"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Şifreleme",
+        "rawValue": "مُشفّر",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-02"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Güvenlik Yaması",
+        "rawValue": "N/A",
+        "rawValueUnit": "",
+        "status": "unavailable",
+        "testId": "SEC-03"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Root Yetkileri",
+        "rawValue": "مكتشف",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-04"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Geliştirici Modu",
+        "rawValue": "مفعّل",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-05"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "USB Hata Ayıklaması",
+        "rawValue": "مفعّل",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-06"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Bilinmeyen Kaynaklar",
+        "notes": "Need to declare android.permission.REQUEST_INSTALL_PACKAGES to call this api",
+        "rawValue": "N/A",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-07"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Play Protect",
+        "rawValue": "مفعّل",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-08"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "İşletim Sistemi",
+        "rawValue": "Android 11",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-09"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "API Seviyesi",
+        "rawValue": "30",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-10"
+      },
+      {
+        "categoryName": "security",
+        "componentName": "Bootloader",
+        "rawValue": "G977NKSU6FUH3",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SEC-11"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "İvmeölçer",
+        "notes": "1500 readings",
+        "rawValue": "4.02, 0.47, 6.82",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-01"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Jiroskop",
+        "notes": "1500 readings",
+        "rawValue": "0.00, -0.00, 0.00",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-02"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Yakınlık Sensörü",
+        "notes": "1 readings",
+        "rawValue": "5.00",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-03"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Işık Sensörü",
+        "notes": "3 readings",
+        "rawValue": "472.67",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-04"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Pusula",
+        "notes": "14 readings",
+        "rawValue": "10.55, -20.27, -27.08",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-05"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Barometr",
+        "notes": "15 readings",
+        "rawValue": "945.68",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-06"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Ortam Sıcaklığı",
+        "rawValue": "غير متوفر",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-07"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Adım Dedektörü",
+        "rawValue": "غير متوفر",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-08"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Adım Sayacı",
+        "rawValue": "غير متوفر",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-09"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Yerçekimi",
+        "notes": "50 readings",
+        "rawValue": "-0.09, -0.48, 9.79",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-10"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Doğrusal İvme",
+        "notes": "50 readings",
+        "rawValue": "0.00, -0.00, 0.02",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-11"
+      },
+      {
+        "categoryName": "sensors",
+        "componentName": "Rotasyon Vektörü",
+        "notes": "50 readings",
+        "rawValue": "-0.01, -0.02, 0.97, 0.23, -1.00",
+        "rawValueUnit": "",
+        "status": "not_tested",
+        "testId": "SN-12"
+      },
+      {
+        "categoryName": "thermal",
+        "componentName": "Maksimum Sıcaklık",
+        "notes": "لا تتوفر قراءات حرارية على هذا الجهاز",
+        "rawValue": "N/A",
+        "rawValueUnit": "°C",
+        "status": "unavailable",
+        "testId": "T-01"
+      },
+      {
+        "categoryName": "thermal",
+        "componentName": "Yükseliş Hızı",
+        "notes": "لا تتوفر قراءات حرارية على هذا الجهاز",
+        "rawValue": "N/A",
+        "rawValueUnit": "°C/min",
+        "status": "unavailable",
+        "testId": "T-02"
+      },
+      {
+        "categoryName": "thermal",
+        "componentName": "Soğutma Hızı",
+        "notes": "لا تتوفر قراءات حرارية على هذا الجهاز",
+        "rawValue": "N/A",
+        "rawValueUnit": "°C/min",
+        "status": "unavailable",
+        "testId": "T-03"
+      },
+      {
+        "categoryName": "thermal",
+        "componentName": "Termal Bölgeler",
+        "rawValue": "0",
+        "rawValueUnit": "zones",
+        "status": "warning",
+        "testId": "T-04"
+      }
+    ],
+    "manualResults": []
+  },
+  "sessionId": null,
+  "deviceFingerprintSha": "4a69ad9ee14a7c9d282f8792838d038b2b78632f42c0ec6570af485d822c92fd",
+  "timeSeriesStoragePath": "scans/4a69ad9ee14a7c9d282f8792838d038b2b78632f42c0ec6570af485d822c92fd/aba0afae-192b-4121-baf9-f2e004def8a1.ts.json.gz",
+  "aiAudit": {
+    "measuredCategoriesMean": null,
+    "gatesApplied": [
+      {
+        "name": "ROOT_DETECTED",
+        "category": "security",
+        "ceilingLetter": "C",
+        "status": "INPUT_ABSENT",
+        "source": "SEC-04=not_tested (تعذّر التنفيذ/القراءة — لا قياس)",
+        "cappedOverall": false
+      },
+      {
+        "name": "PATCH_AGE",
+        "category": "security",
+        "ceilingLetter": "B",
+        "status": "INPUT_ABSENT",
+        "source": "SEC-03 absent/unparseable",
+        "cappedOverall": false
+      },
+      {
+        "name": "STORAGE_VERIFY_ERRORS",
+        "category": "storage",
+        "ceilingLetter": "D",
+        "status": "NOT_WIRED",
+        "source": "لا اسم حقل مؤكَّد في هذا المستودع",
+        "cappedOverall": false
+      },
+      {
+        "name": "GPU_HASH_MISMATCH",
+        "category": "gpu",
+        "ceilingLetter": "D",
+        "status": "NOT_WIRED",
+        "source": "لا اسم حقل مؤكَّد في هذا المستودع",
+        "cappedOverall": false
+      },
+      {
+        "name": "SUSTAINED_CEILING",
+        "category": "cpu",
+        "ceilingLetter": "C",
+        "status": "DISABLED",
+        "source": "ممنوعة قبل PLAN-03 بنصّ الخطّة",
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "thermal",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "cpu",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "gpu",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "display",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "memory",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "storage",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "camera",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "gps",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "security",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "sensors",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "cellular",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "wireless",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "audio",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      },
+      {
+        "name": "LOW_CATEGORY_COVERAGE",
+        "category": "input",
+        "ceilingLetter": "B",
+        "coveragePct": 0,
+        "status": "INPUT_ABSENT",
+        "source": "لا اختبار مُنفَّذ — الفئة غير مقيسة أصلاً، البوّابة لا تنطبق",
+        "belowThreshold": null,
+        "allNonMeasurement": null,
+        "cappedOverall": false
+      }
+    ],
+    "partialBadLetterUngated": [],
+    "adjustments": [],
+    "disputed": false,
+    "categoryLlmSuggestedLetters": {
+      "battery": null,
+      "thermal": null,
+      "cpu": null,
+      "gpu": null,
+      "display": null,
+      "memory": null,
+      "storage": null,
+      "camera": null,
+      "gps": null,
+      "security": null,
+      "sensors": null,
+      "cellular": null,
+      "wireless": null,
+      "audio": null,
+      "input": null
+    },
+    "crossChecks": [],
+    "modelObservations": [],
+    "issueSetHash": "4a52a09a1b9eae25d262f8b62c26efab3d61cce2f27d5c0716b2813ed8576f85",
+    "lettersHash": "1257061de578604c540ef5217495a50b491c535ab95c29207d1b15a3130a414b",
+    "numbersHash": "a780a5d1cb053c9af44f0d27a29b0ad577bcd32d907c0734cb587d3cf8b5339d",
+    "regeneration": {
+      "attempts": 1,
+      "narrativeIncomplete": true,
+      "droppedFields": [
+        "narrative.summary",
+        "narrative.details",
+        "narrative.verdict",
+        "narrative.buyerAdvice.casual",
+        "narrative.buyerAdvice.gamer",
+        "narrative.buyerAdvice.photographer",
+        "narrative.issueDescriptions"
+      ],
+      "rounds": [
+        {
+          "attempt": 1,
+          "aiModel": null,
+          "guardOk": false,
+          "durationMs": 0,
+          "tokensUsed": null,
+          "rejectedReasons": [
+            "PROVIDER_FAILED_NO_FALLBACK: SIMULATED_NO_MODEL_CALL — عيّنة zero-measured: لا نداء نموذج ولا شبكة"
+          ]
+        }
+      ]
+    },
+    "detailsGuardWaived": null
+  },
+  "source": "analyzeDevice",
+  "createdAt": {
+    "__marker": "FIRESTORE_SERVER_TIMESTAMP"
+  }
+}

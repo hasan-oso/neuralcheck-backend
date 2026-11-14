@@ -1,0 +1,1687 @@
+{
+  "readerVersion": 1,
+  "fieldsVersion": 69,
+  "appVersion": "1.0.11",
+  "applicable": true,
+  "anomalies": [],
+  "absences": {
+    "ABSENT": [],
+    "ABSENT_DECLARED": [
+      "batteryHealth.energyCounter.valueStatus",
+      "verification.aiDelegate.initErrorStatus"
+    ],
+    "NOT_IN_FILE": [],
+    "notInFieldsVersionCount": 4,
+    "removedInFv68Count": 6
+  },
+  "timeSeriesState": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "file",
+      "kind": "file",
+      "detail": null,
+      "recognized": true
+    }
+  },
+  "lists": {
+    "fieldsNotInFile": {
+      "status": "PRESENT",
+      "names": []
+    },
+    "unmeasuredDefaults": {
+      "status": "PRESENT",
+      "names": [
+        "deviceTierMeasured",
+        "intensityFactor",
+        "dataQuality.cpuTempCoveragePct",
+        "dataQuality.gpuTempCoveragePct",
+        "dataQuality.skinTempCoveragePct",
+        "dataQuality.cpuTempPrimarySource"
+      ]
+    },
+    "transitionalAggregates": {
+      "status": "PRESENT",
+      "names": [
+        "thermalHeadroomAvg",
+        "thermalHeadroomPeak",
+        "thermalStatusMax",
+        "maxBatteryTemp",
+        "stressEffectiveness",
+        "dataQuality",
+        "batteryHealth.dischargeRateUnderLoadMa",
+        "batteryHealth.voltageStabilityMv",
+        "batteryHealth.batteryTempMaxC",
+        "batteryHealth.batteryTempRiseC",
+        "batteryHealth.levelDropPct",
+        "batteryHealth.dischargeVsDesignRatioMah",
+        "verificationResults.criticalDefectDetected",
+        "verificationResults.cpuKnownAnswerTotalMsByPhase"
+      ]
+    }
+  },
+  "footerDiagnostics": {
+    "status": "PRESENT",
+    "entries": {
+      "batteryHealth": {
+        "kind": "ok",
+        "detail": null
+      },
+      "batteryHealthSnap": {
+        "kind": "ok",
+        "detail": null
+      },
+      "batteryPairs": {
+        "kind": "ok",
+        "detail": null
+      },
+      "channelReadFailures": {
+        "kind": "ok",
+        "detail": null
+      },
+      "dataQuality": {
+        "kind": "ok",
+        "detail": null
+      },
+      "knownCapacityClassification": {
+        "kind": "ok",
+        "detail": null
+      },
+      "samplesSnapshot": {
+        "kind": "ok",
+        "detail": "size=1606"
+      },
+      "scanStillness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "stressEffectiveness": {
+        "kind": "ok",
+        "detail": null
+      },
+      "thermalLists": {
+        "kind": "ok",
+        "detail": null
+      },
+      "thermalSensorAvailability": {
+        "kind": "ok",
+        "detail": null
+      }
+    }
+  },
+  "layout": {
+    "columnCount": 13,
+    "sampleVectorLength": 13,
+    "sampleWidthConsistent": true,
+    "indexFrom": "position",
+    "columns": [
+      {
+        "index": 0,
+        "name": "timestamp_ms",
+        "unit": "ms",
+        "indexFrom": "position"
+      },
+      {
+        "index": 1,
+        "name": "battery_temp_c",
+        "unit": "°C",
+        "indexFrom": "position"
+      },
+      {
+        "index": 2,
+        "name": "battery_voltage_mv",
+        "unit": "mV",
+        "indexFrom": "position"
+      },
+      {
+        "index": 3,
+        "name": "battery_current_ua",
+        "unit": "µA",
+        "indexFrom": "position"
+      },
+      {
+        "index": 4,
+        "name": "battery_level_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 5,
+        "name": "cpu_freq_max_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      },
+      {
+        "index": 6,
+        "name": "cpu_usage_pct",
+        "unit": "%",
+        "indexFrom": "position"
+      },
+      {
+        "index": 7,
+        "name": "package_power_mw",
+        "unit": "mW",
+        "indexFrom": "position"
+      },
+      {
+        "index": 8,
+        "name": "storage_throughput_mbps",
+        "unit": "MiB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 9,
+        "name": "memory_bandwidth_mbps",
+        "unit": "MiB/s",
+        "indexFrom": "position"
+      },
+      {
+        "index": 10,
+        "name": "gpu_fps",
+        "unit": "fps",
+        "indexFrom": "position"
+      },
+      {
+        "index": 11,
+        "name": "charge_counter_raw",
+        "unit": "as_declared_by_device",
+        "indexFrom": "position"
+      },
+      {
+        "index": 12,
+        "name": "cpu_freq_policy0_khz",
+        "unit": "kHz",
+        "indexFrom": "position"
+      }
+    ],
+    "byName": {
+      "timestamp_ms": 0,
+      "battery_temp_c": 1,
+      "battery_voltage_mv": 2,
+      "battery_current_ua": 3,
+      "battery_level_pct": 4,
+      "cpu_freq_max_khz": 5,
+      "cpu_usage_pct": 6,
+      "package_power_mw": 7,
+      "storage_throughput_mbps": 8,
+      "memory_bandwidth_mbps": 9,
+      "gpu_fps": 10,
+      "charge_counter_raw": 11,
+      "cpu_freq_policy0_khz": 12
+    },
+    "duplicateNames": [],
+    "unresolvedIndices": [],
+    "columnsBeyondSamples": [],
+    "baseLayout": "MATCHES",
+    "baseMissing": [],
+    "baseMismatches": [],
+    "extraChannels": [
+      {
+        "name": "charge_counter_raw",
+        "index": 11
+      },
+      {
+        "name": "cpu_freq_policy0_khz",
+        "index": 12
+      }
+    ],
+    "policyChannels": [
+      {
+        "name": "cpu_freq_policy0_khz",
+        "index": 12,
+        "policy": 0
+      }
+    ],
+    "chargeCounter": {
+      "index": 11,
+      "unit": "as_declared_by_device"
+    }
+  },
+  "throughputUnit": {
+    "appVersion": "1.0.11",
+    "fieldsVersion": 69,
+    "declared": {
+      "storage_throughput_mbps": "MiB/s",
+      "memory_bandwidth_mbps": "MiB/s",
+      "segments": "MiB/s"
+    },
+    "unit": "MiB/s",
+    "basis": "DECLARED_IN_PAYLOAD"
+  },
+  "channelReadFailures": {
+    "map": {
+      "status": "PRESENT"
+    },
+    "counts": {
+      "status": "PRESENT"
+    },
+    "channels": {
+      "timestamp_ms": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_temp_c": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_voltage_mv": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_current_ua": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "battery_level_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_freq_max_khz": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "cpu_usage_pct": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "package_power_mw": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "storage_throughput_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "memory_bandwidth_mbps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "gpu_fps": {
+        "tracking": "NOT_TRACKED_BY_DESIGN",
+        "failedIndices": [],
+        "listedCount": null,
+        "count": null
+      },
+      "charge_counter_raw": {
+        "tracking": "COMPLETE",
+        "failedIndices": [
+          100,
+          101,
+          102,
+          900
+        ],
+        "listedCount": 4,
+        "count": 4,
+        "invalidIndexCount": 0,
+        "outOfRangeCount": 0,
+        "duplicateIndexCount": 0
+      },
+      "cpu_freq_policy0_khz": {
+        "tracking": "COMPLETE",
+        "failedIndices": [],
+        "listedCount": 0,
+        "count": 0,
+        "invalidIndexCount": 0,
+        "outOfRangeCount": 0,
+        "duplicateIndexCount": 0
+      }
+    },
+    "unknownChannels": []
+  },
+  "channelDiscovery": {
+    "status": "PRESENT",
+    "lists": {
+      "attempted": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status",
+        "charge_counter_raw",
+        "energy_counter",
+        "cpu_freq_policy0_khz",
+        "cpu_freq_policy4_khz"
+      ],
+      "available": [
+        "battery_temp_c",
+        "battery_voltage_mv",
+        "battery_current_ua",
+        "cpu_freq_max_khz",
+        "cpu_usage_pct",
+        "thermal_headroom",
+        "thermal_status",
+        "charge_counter_raw",
+        "cpu_freq_policy0_khz"
+      ],
+      "blockedBySelinux": [
+        "cpu_freq_policy4_khz"
+      ],
+      "missing": [
+        "cpu_temp_c",
+        "gpu_temp_c",
+        "skin_temp_c_real",
+        "energy_counter"
+      ]
+    },
+    "reasonsStatus": "PRESENT",
+    "reasons": {
+      "cpu_freq_policy4_khz": {
+        "text": "/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq: open failed: EACCES (Permission denied)",
+        "kind": "BLOCKED_ACCESS_DENIED"
+      },
+      "cpu_temp_c": {
+        "text": "readCpuTemp returned -1.0 (not > 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "energy_counter": {
+        "text": "snapshotHealth().energyCounterNwh returned null (null or 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "gpu_temp_c": {
+        "text": "readGpuTemp returned -1.0 (not > 0); the reader does not expose its error text",
+        "kind": "ERROR_TEXT_NOT_EXPOSED"
+      },
+      "skin_temp_c_real": {
+        "text": "no native skin sensor: ThermalFallback reading=32.8, fromSysfs=false (a battery proxy is not a skin sensor)",
+        "kind": "OTHER"
+      }
+    },
+    "unavailableWithoutReason": []
+  },
+  "cpuPolicies": {
+    "status": "PRESENT",
+    "policies": [
+      {
+        "policy": 0,
+        "relatedCpus": "0 1 2 3",
+        "maxFreq": {
+          "state": "READ",
+          "valueKhz": 1950000,
+          "reason": null
+        }
+      },
+      {
+        "policy": 4,
+        "relatedCpus": "4 5 6 7",
+        "maxFreq": {
+          "state": "UNREADABLE",
+          "valueKhz": null,
+          "reason": "/sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq: open failed: EACCES (Permission denied)"
+        }
+      }
+    ],
+    "channelsWithoutPolicyEntry": [],
+    "policiesWithoutChannel": [
+      4
+    ]
+  },
+  "thermal": {
+    "headroom": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ok",
+          "kind": "ok",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "readings": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "t": 0,
+            "headroom": 0.6,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 10000,
+            "headroom": 0.6118519,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 20000,
+            "headroom": 0.6237037,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 30000,
+            "headroom": 0.63555557,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 40000,
+            "headroom": 0.6474074,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 50000,
+            "headroom": 0.65925926,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 60000,
+            "headroom": 0.6711111,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 70000,
+            "headroom": null,
+            "kind": "nan",
+            "detail": null
+          },
+          {
+            "t": 80000,
+            "headroom": 0.6948148,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 90000,
+            "headroom": 0.7066667,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 100000,
+            "headroom": 0.71851856,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 110000,
+            "headroom": 0.7303704,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 120000,
+            "headroom": 0.74222225,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 130000,
+            "headroom": 0.7540741,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 140000,
+            "headroom": 0.76592594,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 150000,
+            "headroom": 0.7777778,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 160000,
+            "headroom": 0.78962964,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 170000,
+            "headroom": 0.8014815,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 180000,
+            "headroom": 0.81333333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 190000,
+            "headroom": 0.8251852,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 200000,
+            "headroom": null,
+            "kind": "exception",
+            "detail": "getThermalHeadroom: too many calls (rate limited)"
+          },
+          {
+            "t": 210000,
+            "headroom": 0.8488889,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 220000,
+            "headroom": 0.8607407,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 230000,
+            "headroom": 0.87259257,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 240000,
+            "headroom": 0.8844445,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 250000,
+            "headroom": 0.89629626,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 260000,
+            "headroom": 0.90814817,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 270000,
+            "headroom": 0.91999996,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 280000,
+            "headroom": 0.93185186,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 290000,
+            "headroom": 0.94370365,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 300000,
+            "headroom": 0.95555556,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 310000,
+            "headroom": 0.9674074,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 320000,
+            "headroom": 0.97925925,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 330000,
+            "headroom": 0.99111104,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 340000,
+            "headroom": 1.002963,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 350000,
+            "headroom": 1.0148149,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 360000,
+            "headroom": 1.0266666,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 370000,
+            "headroom": 0.9975,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 380000,
+            "headroom": 0.9683333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 390000,
+            "headroom": 0.93916667,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 400000,
+            "headroom": 0.90999997,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 410000,
+            "headroom": 0.8808333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 420000,
+            "headroom": 0.8516666,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 430000,
+            "headroom": 0.8225,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 440000,
+            "headroom": 0.7933333,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 450000,
+            "headroom": 0.76416665,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 460000,
+            "headroom": 0.735,
+            "kind": "ok",
+            "detail": null
+          },
+          {
+            "t": 470000,
+            "headroom": 0.7058333,
+            "kind": "ok",
+            "detail": null
+          }
+        ],
+        "byKind": {
+          "ok": 46,
+          "nan": 1,
+          "exception": 1
+        },
+        "okCount": 46,
+        "okMin": 0.6,
+        "okMax": 1.0266666
+      }
+    },
+    "status": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ok",
+          "kind": "ok",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "events": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "t": 0,
+            "status": 0
+          },
+          {
+            "t": 95000,
+            "status": 1
+          },
+          {
+            "t": 190000,
+            "status": 2
+          },
+          {
+            "t": 285000,
+            "status": 3
+          }
+        ],
+        "maxStatus": 3
+      }
+    }
+  },
+  "batteryPairs": {
+    "state": {
+      "status": "PRESENT",
+      "kind": "BROADCASTS_RECEIVED",
+      "receiverRegistered": true,
+      "broadcastCount": 24,
+      "droppedByCap": 0,
+      "invalidReads": 1
+    },
+    "pairs": {
+      "status": "PRESENT",
+      "items": [
+        {
+          "t": 2000,
+          "voltageRaw": 3748,
+          "currentRaw": -435,
+          "chargeCounterRaw": 1710915,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 22000,
+          "voltageRaw": 3748,
+          "currentRaw": -367,
+          "chargeCounterRaw": 1705432,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 42000,
+          "voltageRaw": 3748,
+          "currentRaw": -1085,
+          "chargeCounterRaw": 1701320,
+          "levelRaw": 43,
+          "levelScale": 100,
+          "tempRaw": 328
+        },
+        {
+          "t": 62000,
+          "voltageRaw": 3637,
+          "currentRaw": -655,
+          "chargeCounterRaw": 1698579,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 334
+        },
+        {
+          "t": 82000,
+          "voltageRaw": 3707,
+          "currentRaw": -339,
+          "chargeCounterRaw": 1695837,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 102000,
+          "voltageRaw": 3707,
+          "currentRaw": null,
+          "chargeCounterRaw": 1693096,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 122000,
+          "voltageRaw": 3707,
+          "currentRaw": -439,
+          "chargeCounterRaw": 1690354,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 142000,
+          "voltageRaw": 3707,
+          "currentRaw": -419,
+          "chargeCounterRaw": 1687613,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 162000,
+          "voltageRaw": 3707,
+          "currentRaw": -566,
+          "chargeCounterRaw": 1684872,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 337
+        },
+        {
+          "t": 182000,
+          "voltageRaw": 3470,
+          "currentRaw": -2148,
+          "chargeCounterRaw": 1675414,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 202000,
+          "voltageRaw": 3470,
+          "currentRaw": -1980,
+          "chargeCounterRaw": 1664448,
+          "levelRaw": 42,
+          "levelScale": 100,
+          "tempRaw": 340
+        },
+        {
+          "t": 222000,
+          "voltageRaw": 3489,
+          "currentRaw": -1828,
+          "chargeCounterRaw": 1653482,
+          "levelRaw": 41,
+          "levelScale": 100,
+          "tempRaw": 356
+        },
+        {
+          "t": 242000,
+          "voltageRaw": 3518,
+          "currentRaw": -1728,
+          "chargeCounterRaw": 1642516,
+          "levelRaw": 41,
+          "levelScale": 100,
+          "tempRaw": 370
+        },
+        {
+          "t": 262000,
+          "voltageRaw": 3518,
+          "currentRaw": -1174,
+          "chargeCounterRaw": 1631551,
+          "levelRaw": 41,
+          "levelScale": 100,
+          "tempRaw": 370
+        },
+        {
+          "t": 282000,
+          "voltageRaw": 3553,
+          "currentRaw": -1147,
+          "chargeCounterRaw": 1620585,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 378
+        },
+        {
+          "t": 302000,
+          "voltageRaw": 3553,
+          "currentRaw": -1069,
+          "chargeCounterRaw": 1609619,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 378
+        },
+        {
+          "t": 322000,
+          "voltageRaw": 3553,
+          "currentRaw": -1584,
+          "chargeCounterRaw": 1598653,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 378
+        },
+        {
+          "t": 342000,
+          "voltageRaw": 3483,
+          "currentRaw": -1758,
+          "chargeCounterRaw": 1587551,
+          "levelRaw": 40,
+          "levelScale": 100,
+          "tempRaw": 387
+        },
+        {
+          "t": 362000,
+          "voltageRaw": 3510,
+          "currentRaw": -1566,
+          "chargeCounterRaw": 1576585,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 397
+        },
+        {
+          "t": 382000,
+          "voltageRaw": 3510,
+          "currentRaw": -529,
+          "chargeCounterRaw": 1558629,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 397
+        },
+        {
+          "t": 402000,
+          "voltageRaw": 3635,
+          "currentRaw": -693,
+          "chargeCounterRaw": 1531214,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 402
+        },
+        {
+          "t": 422000,
+          "voltageRaw": 3635,
+          "currentRaw": -342,
+          "chargeCounterRaw": 1507090,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 402
+        },
+        {
+          "t": 442000,
+          "voltageRaw": 3635,
+          "currentRaw": -298,
+          "chargeCounterRaw": 1501607,
+          "levelRaw": 39,
+          "levelScale": 100,
+          "tempRaw": 402
+        },
+        {
+          "t": 462000,
+          "voltageRaw": 3692,
+          "currentRaw": -555,
+          "chargeCounterRaw": 1496124,
+          "levelRaw": 38,
+          "levelScale": 100,
+          "tempRaw": 393
+        }
+      ]
+    }
+  },
+  "batteryHealth": {
+    "status": "PRESENT",
+    "indicators": {
+      "dischargeRateUnderLoadMa": {
+        "value": 1647.8497596153845,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "voltageStabilityMv": {
+        "value": 46.45574339814751,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "dischargeVsDesignRatioMah": {
+        "value": 220,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "batteryTempRiseC": {
+        "value": 7.400001525878906,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      },
+      "levelDropPct": {
+        "value": 5,
+        "valueStatus": "PRESENT",
+        "state": {
+          "raw": "computed",
+          "kind": "computed",
+          "detail": null,
+          "recognized": true
+        },
+        "stateStatus": "PRESENT"
+      }
+    },
+    "cycleCount": {
+      "value": 187,
+      "valueStatus": "PRESENT",
+      "state": {
+        "raw": "read",
+        "kind": "read",
+        "detail": null,
+        "recognized": true
+      },
+      "stateStatus": "PRESENT",
+      "source": {
+        "raw": "extra_api34",
+        "kind": "extra_api34",
+        "detail": null,
+        "recognized": true
+      },
+      "sourceStatus": "PRESENT"
+    },
+    "chargeCounter": {
+      "value": 1711600,
+      "valueStatus": "PRESENT",
+      "state": {
+        "raw": "read",
+        "kind": "read",
+        "detail": null,
+        "recognized": true
+      },
+      "stateStatus": "PRESENT"
+    },
+    "energyCounter": {
+      "value": null,
+      "valueStatus": "ABSENT_DECLARED",
+      "state": {
+        "raw": "not_read:unsupported_by_device",
+        "kind": "not_read",
+        "detail": "unsupported_by_device",
+        "recognized": true
+      },
+      "stateStatus": "PRESENT"
+    },
+    "designCapacityMah": {
+      "value": 4400,
+      "status": "PRESENT"
+    }
+  },
+  "cpuTemp": {
+    "state": "LIVE_READ_AT_FINALIZE",
+    "valueC": 52,
+    "valueStatus": "PRESENT",
+    "source": {
+      "raw": "live_read_at_finalize",
+      "kind": "live_read_at_finalize",
+      "detail": null,
+      "recognized": true
+    },
+    "sourceStatus": "PRESENT",
+    "legacyMaxCpuTemp": {
+      "status": "REMOVED_IN_FV68",
+      "value": null
+    }
+  },
+  "verification": {
+    "status": "PRESENT",
+    "gpuGemm": {
+      "correct": true,
+      "correctStatus": "PRESENT",
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "passed",
+          "kind": "passed",
+          "detail": null,
+          "recognized": true
+        }
+      }
+    },
+    "gpuFragmentHash": {
+      "matches": 14,
+      "total": 14,
+      "matchesStatus": "PRESENT",
+      "totalStatus": "PRESENT"
+    },
+    "gpuFenceTimeout": {
+      "count": 0,
+      "status": "PRESENT"
+    },
+    "criticalDefect": {
+      "value": false,
+      "valueStatus": "PRESENT",
+      "inputsNotRun": [],
+      "inputsNotRunStatus": "PRESENT"
+    },
+    "workersPin": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "not_attempted:ai_workload_path",
+          "kind": "not_attempted",
+          "detail": "ai_workload_path",
+          "recognized": true
+        }
+      },
+      "pinned": {
+        "workersPinnedBig": null,
+        "workersPinnedMid": null,
+        "workersPinnedLittle": null
+      },
+      "failed": {
+        "workersPinFailedBig": null,
+        "workersPinFailedMid": null,
+        "workersPinFailedLittle": null
+      }
+    },
+    "memory": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "partial:time_cap_reached",
+          "kind": "partial",
+          "detail": "time_cap_reached",
+          "recognized": true
+        }
+      },
+      "errors": {
+        "march": 0,
+        "walkingOnes": 0,
+        "randomVerify": 0
+      },
+      "derived": {
+        "marchPassed": null,
+        "walkingOnesPassed": null
+      },
+      "bytes": {
+        "verified": 1342177280,
+        "buffer": 3221225472,
+        "freeBytes": 5900000000,
+        "testedByWorkload": 23522918400
+      },
+      "timeCapMs": 30000,
+      "durationMs": 30000,
+      "phaseWindows": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "name": "memory_kernel",
+            "startMs": 105780,
+            "endMs": 135780
+          },
+          {
+            "name": "memory_workload",
+            "startMs": 135780,
+            "endMs": 165784
+          }
+        ]
+      }
+    },
+    "storage": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ran",
+          "kind": "ran",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "method": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "dontneed_sequential:o_direct_open_failed:errno=22 (EINVAL)",
+          "kind": "dontneed_sequential",
+          "detail": "o_direct_open_failed:errno=22 (EINVAL)",
+          "recognized": true
+        }
+      },
+      "errors": {
+        "write": 2,
+        "read": 0
+      },
+      "writeErrorsStatus": "PRESENT",
+      "readErrorsStatus": "PRESENT",
+      "bytes": {
+        "compared": 268435456,
+        "planned": 268435456
+      },
+      "durationMs": 2400
+    },
+    "cpuKnownAnswer": {
+      "state": {
+        "status": "PRESENT",
+        "state": {
+          "raw": "ran",
+          "kind": "ran",
+          "detail": null,
+          "recognized": true
+        }
+      },
+      "runs": {
+        "status": "PRESENT",
+        "items": [
+          {
+            "phase": 3,
+            "plannedAtPct": 25,
+            "t": 184695,
+            "tEnd": 184815,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 3,
+            "plannedAtPct": 60,
+            "t": 210945,
+            "tEnd": 211065,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 3,
+            "plannedAtPct": 92,
+            "t": 234945,
+            "tEnd": 235065,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 25,
+            "t": 328743,
+            "tEnd": 328863,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 60,
+            "t": 349743,
+            "tEnd": 349863,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "mismatch",
+                "kind": "mismatch",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664580,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "DIFFERENT"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          },
+          {
+            "phase": 5,
+            "plannedAtPct": 92,
+            "t": 368943,
+            "tEnd": 369063,
+            "skipped": false,
+            "sieve": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "primeCount": 664579,
+              "durationMs": 90,
+              "limit": {
+                "value": 10000000,
+                "basis": "LEGACY_FV68_69_DEFAULT"
+              },
+              "referencePrimeCount": 664579,
+              "primeCountVsReference": "EQUAL"
+            },
+            "sha256": {
+              "status": {
+                "raw": "match",
+                "kind": "match",
+                "detail": null,
+                "recognized": true
+              },
+              "durationMs": 30
+            }
+          }
+        ]
+      },
+      "totalMsByPhase": {
+        "status": "PRESENT",
+        "byPhase": {
+          "3": 360,
+          "5": 360
+        }
+      },
+      "counts": {
+        "runs": 6,
+        "sieveMatch": 5,
+        "sieveMismatch": 1,
+        "sieveNotReached": 0,
+        "sieveSkipped": 0,
+        "sieveCancelled": 0,
+        "sieveError": 0,
+        "shaMatch": 6,
+        "shaMismatch": 0,
+        "shaNotReached": 0,
+        "shaSkipped": 0,
+        "shaCancelled": 0,
+        "shaError": 0,
+        "unrecognized": 0
+      },
+      "mismatches": 1
+    },
+    "aiDelegate": {
+      "delegate": "CPU",
+      "delegateStatus": "PRESENT",
+      "initErrorText": null,
+      "initErrorStatus": "ABSENT_DECLARED",
+      "noInitErrorDeclared": true
+    },
+    "legacy": {
+      "cpuFmaErrors": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "cpuPrimeSieveCorrect": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "memoryMarchPassed": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      },
+      "memoryWalkingOnesPassed": {
+        "status": "REMOVED_IN_FV68",
+        "value": null
+      }
+    },
+    "storageSlcCacheSizeMbStatus": "REMOVED_IN_FV68",
+    "storageThroughputSegmentsUnit": {
+      "status": "PRESENT",
+      "value": "MiB/s"
+    }
+  },
+  "stillness": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "measured",
+      "kind": "measured",
+      "detail": null,
+      "recognized": true
+    },
+    "stateStatus": "PRESENT",
+    "isStill": true,
+    "accelStdDev": 0.29157373,
+    "sampleCount": 1606
+  },
+  "preScanWarnings": {
+    "status": "PRESENT",
+    "state": {
+      "raw": "not_written",
+      "kind": "not_written",
+      "detail": null,
+      "recognized": true
+    }
+  },
+  "measurements": {
+    "items": [
+      {
+        "source": "functionalResults",
+        "testId": "L-02",
+        "status": "PRESENT",
+        "keys": [
+          "satelliteStatusCallbacks",
+          "timeToFirstFixMs",
+          "usedSatellites",
+          "visibleSatellites"
+        ],
+        "unencodable": null,
+        "unreadable": null,
+        "l02": {
+          "satelliteStatusCallbacks": 31,
+          "visibleSatellites": 9,
+          "usedSatellites": 4,
+          "timeToFirstFixMs": 8123,
+          "locationUpdateCount": null,
+          "gpsProviderEnabled": null,
+          "gnssCallbackState": null,
+          "locationUpdatesState": null,
+          "timeToFirstFixState": null,
+          "engineState": "SATELLITES_MEASURED"
+        }
+      },
+      {
+        "source": "functionalResults",
+        "testId": "SN-04",
+        "status": "PRESENT",
+        "keys": [
+          "coverPromptAtMs",
+          "readingsBeforeCover",
+          "readingsDuringCover",
+          "windowMs"
+        ],
+        "unencodable": null,
+        "unreadable": null
+      },
+      {
+        "source": "manualResults",
+        "testId": "M-02",
+        "status": "PRESENT",
+        "keys": [
+          "elapsedMs",
+          "endReason",
+          "gridCols",
+          "gridRows",
+          "maxSimultaneousPointers",
+          "timeToFirstTouchMs",
+          "totalCells",
+          "touchedCells"
+        ],
+        "unencodable": null,
+        "unreadable": null,
+        "touchGrid": {
+          "gridCols": 8,
+          "gridColsStatus": "PRESENT",
+          "gridRows": 15,
+          "gridRowsStatus": "PRESENT",
+          "totalCells": 120,
+          "totalCellsStatus": "PRESENT",
+          "touchedCells": 87,
+          "touchedCellsStatus": "PRESENT",
+          "maxSimultaneousPointers": 1,
+          "maxSimultaneousPointersStatus": "PRESENT",
+          "touchState": "TOUCHED",
+          "elapsedMs": 13800,
+          "elapsedMsStatus": "PRESENT",
+          "elapsedMsBasis": "FROM_FIRST_TOUCH",
+          "timeToFirstTouchMs": 2400,
+          "timeToFirstTouchMsStatus": "PRESENT",
+          "endReason": "user_marked_not_working",
+          "endReasonStatus": "PRESENT",
+          "endReasonState": {
+            "raw": "user_marked_not_working",
+            "kind": "user_marked_not_working",
+            "detail": null,
+            "recognized": true
+          },
+          "gridBasis": "FIXED_8X15",
+          "path": {
+            "state": "NOT_IN_FIELDS_VERSION",
+            "unexpectedKeys": []
+          }
+        }
+      }
+    ],
+    "expectedButAbsent": []
+  },
+  "touchGridAnswer": {
+    "state": "RAW_PRESENT",
+    "manualStatus": "fail",
+    "passRawRelation": "NOT_APPLICABLE_STATUS_NOT_PASS",
+    "rawEndReason": "user_marked_not_working"
+  },
+  "volumeButtonAnswers": {
+    "M-09": {
+      "state": "WITHOUT_RAW",
+      "manualStatus": "warning"
+    },
+    "M-10": {
+      "state": "NOT_IN_MANUAL_RESULTS",
+      "manualStatus": null
+    }
+  },
+  "scanConditions": {
+    "state": "NOT_IN_FIELDS_VERSION",
+    "unexpectedKeys": [],
+    "header": {
+      "isPowerSaveMode": false,
+      "isPowerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "root": {
+      "powerSaveMode": false,
+      "powerSaveModeStatus": "PRESENT",
+      "powerSaveState": null,
+      "powerSaveStateStatus": "NOT_IN_FIELDS_VERSION",
+      "powerSaveStateState": null
+    },
+    "powerSaveBasis": "LEGACY_BOOLEAN_ONLY",
+    "brightnessLock": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindow": {
+      "status": "NOT_IN_FIELDS_VERSION"
+    },
+    "batteryWindowBasis": "LEGACY_FIXED_MIN_NO_MAX",
+    "batteryLevelStart": 43,
+    "batteryLevelStartStatus": "PRESENT",
+    "startLevelVsWindow": "WITHIN"
+  }
+}

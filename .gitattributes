@@ -1,0 +1,14 @@
+functions/test/fixtures/golden/fv69-app-request-payload-derived-from-*.json -text
+functions/test/fixtures/golden/fv69-app-request-payload-derived-from-*.keys.txt -text
+functions/test/fixtures/golden/fv70-app-request-payload-derived-from-*.json -text
+functions/test/fixtures/golden/fv70-app-request-payload-derived-from-*.keys.txt -text
+functions/test/fixtures/golden/fv67-app-request-payload-1.0.10-62507f4-from-golden-34dff2b8.json -text
+functions/test/fixtures/golden/fv67-app-request-payload-1.0.10-62507f4-from-golden-34dff2b8.keys.txt -text
+functions/test/fixtures/golden/fv67-app-request-payload-1.0.10-62507f4-from-golden-34dff2b8.README.md -text
+docs/FV68_CONTRACT.md -text
+functions/test/fixtures/golden/fv68-readings-derived-from-*.json -text
+docs/FV71_CONTRACT_SECTION.md -text
+functions/test/fixtures/golden/fv71-app-request-payload-derived-from-*.json -text
+functions/test/fixtures/golden/fv71-app-request-payload-derived-from-*.keys.txt -text
+functions/test/fixtures/golden/fv71-before-m02-frame-x-app-request-payload-derived-from-*.json -text
+functions/test/fixtures/golden/maintenance-pair-request-*.json -text

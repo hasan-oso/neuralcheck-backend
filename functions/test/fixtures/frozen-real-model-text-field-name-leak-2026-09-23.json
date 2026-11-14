@@ -1,0 +1,45 @@
+{
+  "_provenance": "أمر مستخدم 2026-09-23 +03 (بعد القياس العشاري)، البند ٤ — نصوص نموذج حقيقية فعلية، حرفية، من نداءات مأذونة. لا اعتماد على scripts/out وقت التشغيل. تحديث لاحق (قرار المستخدم بعد A125): تقسيم camelCase أُلغي بالكامل من reportShapeV7.js (كشفه اختبار البند ٥ — تسرّب 'partial' الحقيقي)؛ الحالة vsync_34dff2b8 أدناه بقيت بلا حذف (القاعدة 8) لكن انتقلت من positive إلى negativeControls — نصّها الحرفي ومصدرها بلا أي تغيير، وهي الآن شاهد على الرفض لا القبول.",
+  "positive": [
+    {
+      "id": "findings_word_34dff2b8",
+      "text": "حرف الفئة B مبني على اختبارَي وجود فقط (2 من 5، تغطية 40%) بلا أي اختبار أداء — G-03 وG-04 وG-05 غير منفَّذة — بينما القياس المتاح للأداء الرسومي في findings يُظهر 1083.5293 في المرحلة الخامسة مقابل 1920.30575 في المرحلة الرابعة.",
+      "source": "functions/scripts/out/resolve-v7-live-34dff2b8-ce9e-4b40-86a9-1976c878e195-2026-09-23T02-30-08-625Z.json، attempts[0] (المحاولة ١)، adjustments[0].reason",
+      "matchesRootKey": "findings (V7_PAYLOAD_ROOT_KEYS، buildV7Payload.js)",
+      "targetCategoryStatesFixture": "34dff2b8"
+    }
+  ],
+  "negativeControls": [
+    {
+      "id": "vsync_34dff2b8",
+      "text": "وسيط الإطارات في المرحلة الرابعة 1920.3 وفي الخامسة 1083.5، ونسبة الخامسة إلى الرابعة 0.564، ونسبة قفل vsync صفر في 530 عيّنة قياس.",
+      "source": "functions/scripts/out/resolve-v7-live-34dff2b8-ce9e-4b40-86a9-1976c878e195-2026-09-23T02-23-42-536Z.json، attempts[1] (المحاولة ٢)، narrative.details",
+      "matchesFindingsKey": "findings.graphics.vsyncLockFraction60 (وأيضاً 90/120، وvsyncLockSampleCount) — التقسيم الذي كان يقبل \"vsync\" وحدها أُلغي (A125)",
+      "mustStayRejected": true,
+      "note": "كانت في positive قبل إلغاء تقسيم camelCase (القرار الذي أعقب A125) — اسم الحقل الكامل vsyncLockFraction60 يدخل الفهرس غير مُقسَّم، فلا يطابق توكِن \"vsync\" المفرد في نصّ النموذج؛ يبقى مرفوضاً كما كان قبل 695e862.",
+      "targetCategoryStatesFixture": "34dff2b8"
+    },
+    {
+      "id": "usb_debugging_b45c8cf6",
+      "text": "إلى ذلك أن رقعة الأمان مؤرّخة 2021-08-01، وأن وضع المطوّر وUSB debugging مفعّلان.",
+      "source": "functions/scripts/out/resolve-v7-live-b45c8cf6-e376-4765-8703-f68e9bc69844-2026-09-23T02-16-22-082Z.json، attempts[0] (المحاولة ١)",
+      "mustStayRejected": true,
+      "targetCategoryStatesFixture": "b45c8cf6"
+    },
+    {
+      "id": "bosta_b45c8cf6",
+      "text": "موسوم غير مستقرّ (3271 MFLOPS) ولا يدخل في الحرف. واختبار Boşta C-03 (2.14 GHz) موسوم هو الآخر غير مستقرّ ولا يدخل في الحرف.",
+      "source": "functions/scripts/out/resolve-v7-live-b45c8cf6-e376-4765-8703-f68e9bc69844-2026-09-23T02-11-54-297Z.json، attempts[0] (المحاولة ١)",
+      "mustStayRejected": true,
+      "targetCategoryStatesFixture": "b45c8cf6"
+    },
+    {
+      "id": "near_56pct_34dff2b8",
+      "text": "وفي قناة معدل الإطارات ينخفض الطور الخامس إلى نحو 56% من الطور الرابع.",
+      "source": "functions/scripts/out/resolve-v7-live-34dff2b8-ce9e-4b40-86a9-1976c878e195-2026-09-23T02-23-42-536Z.json، attempts[0] (المحاولة ١)",
+      "mustStayRejected": false,
+      "note": "لا حرف يسبق 56% أصلاً (LEAK_TOKEN_RE يتطلّب حرفاً أولاً) — ضابط تأكيدي لا رفض متوقَّع.",
+      "targetCategoryStatesFixture": "34dff2b8"
+    }
+  ]
+}

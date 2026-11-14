@@ -1,0 +1,518 @@
+{
+  "_provenance": "أمر مستخدم 2026-09-23 +03، البند ٧: \"ومصدر الأجسام ملفّات متتبَّعة، لا scripts/out غير المتتبَّع\" — نسخة مجمَّدة من scripts/out/v7-live-34dff2b8-ce9e-4b40-86a9-1976c878e195-2026-09-22T23-40-34-274Z.json (rawEnvelope فقط، بلا أي حقل مُضاف)، وهو نفس المصدر الذي يستهلكه measure-resolveV7Report-live.js عبر LIVE_FILES/loadRealEnvelope (سطر ~441-448) لسيناريوهات --simulate. guard.ok=true عند الالتقاط. يُستهلَك كمحاولة أولى ناجحة (سيناريوهات ١، ٦).",
+  "_derived": {
+    "label": "مشتقّ، ليس ردّاً حقيقياً",
+    "source": "functions/test/fixtures/frozen-real-envelope-34dff2b8-accepted-2026-09-23.json",
+    "sourceBlob": "5f8451a747aa133712752ccc8ddf3d0db3274324",
+    "reason": "الأصل صار مرفوضاً من الحارس (issueKeys+numbers) بعد أمر «الإعدادات لا تُنزل الحرف» (2026-09-27 +03) — يستهلكه resolveV7ReportSimulateScenarios.test.js سيناريو ١ وسيناريو ٦ (يحتاجان ردّاً مقبولاً). تعديل إضافي 2026-10-01 +03 (أمر «C-07 وS-06» البند ١): ISS-S-06 صارت مخترَعة أيضاً (S-06 healthBearing=false).",
+    "generatedBy": "functions/scripts/generate-derived-from-frozen-real-2026-09-23-envelope-34dff2b8-accepted.js",
+    "generatedAt": "2026-10-06T00:00:00.000Z",
+    "supersedes": "derived-from-frozen-real-2026-09-23-envelope-34dff2b8-accepted.json — النسخة السابقة (مُلتزَمة، لم تُمَسّ في أمر 2026-10-06): تبقى بلا قارئ بعد تحويل قرّائها (D6، القاعدة 34)",
+    "edits": [
+      {
+        "path": "narrative.issueDescriptions",
+        "change": "DELETE_KEYS",
+        "keys": [
+          "DISC-T-01",
+          "DISC-T-02",
+          "DISC-CM-08",
+          "ISS-SEC-05",
+          "ISS-SEC-06",
+          "DISC-SEC-07",
+          "ISS-S-06"
+        ],
+        "reason": "صارت \"مخترَعة\" — نفس سبب b45c8cf6. ISS-S-06 أُضيفت 2026-10-01 +03 (أمر «C-07 وS-06» البند ١ — S-06 healthBearing=false)."
+      },
+      {
+        "path": "narrative.summary / narrative.verdict / narrative.details / crossChecks[1].description",
+        "change": "TEXT_REPLACE",
+        "replacements": [
+          {
+            "path": "narrative.summary",
+            "from": "الفحص جزئي (تغطية 45%)",
+            "to": "الفحص جزئي (تغطية 46%)"
+          },
+          {
+            "path": "narrative.verdict",
+            "from": "تقييم جزئي بتغطية 45%",
+            "to": "تقييم جزئي بتغطية 46%"
+          },
+          {
+            "path": "crossChecks[1].description",
+            "from": "تغطية عامة 45% مقابل متوسط فئات مقيسة",
+            "to": "تغطية عامة 46% مقابل متوسط فئات مقيسة"
+          },
+          {
+            "path": "narrative.details",
+            "from": "لأن التغطية 45% مقابل متوسط فئات مقيسة 93.75%",
+            "to": "لأن التغطية 46% مقابل متوسط فئات مقيسة 93.75%"
+          },
+          {
+            "path": "narrative.details",
+            "from": "الخليوي والمستشعرات وتحديد المواقع: حروف B بقيد التغطية (71.4% و75% و33.3%)،",
+            "to": "الخليوي والمستشعرات: حرفا B بقيد التغطية (71.4% و75%)، وتحديد المواقع بلا حرف لأن الاختبار الوحيد المنفَّذ (L-01) لم يعد يدخل الحرف،"
+          }
+        ],
+        "reason": "\"45%\" لم يعد يطابق أي رقم حقيقي (التغطية الجديدة 45.9% تُقرَّب إلى 46 لا 45)؛ وجملة gps وصفت حرفاً/تغطية لم يعودا موجودين بعد استبعاد L-01 من healthBearing."
+      },
+      {
+        "path": "narrative.issueDescriptions[DISC-CM-*/DISC-SN-*] / narrative.buyerAdvice.photographer / narrative.details",
+        "change": "TEXT_REPLACE",
+        "replacements": [
+          {
+            "path": "DISC-CM-01",
+            "from": "يُقَس CM-01 (الكاميرا الخلفية)",
+            "to": "تُقَس الكاميرا الخلفية"
+          },
+          {
+            "path": "DISC-CM-02",
+            "from": "يُقَس CM-02 (الكاميرا الأمامية)",
+            "to": "تُقَس الكاميرا الأمامية"
+          },
+          {
+            "path": "DISC-CM-03",
+            "from": "CM-03 (التركيز التلقائي)",
+            "to": "التركيز التلقائي"
+          },
+          {
+            "path": "DISC-CM-04",
+            "from": "CM-04 (الفلاش)",
+            "to": "الفلاش"
+          },
+          {
+            "path": "DISC-CM-05",
+            "from": "CM-05 (تسجيل الفيديو)",
+            "to": "تسجيل الفيديو"
+          },
+          {
+            "path": "DISC-CM-06",
+            "from": "CM-06 (دقّة الكاميرا الخلفية)",
+            "to": "دقّة الكاميرا الخلفية"
+          },
+          {
+            "path": "DISC-CM-07",
+            "from": "CM-07 (دقّة الكاميرا الأمامية)",
+            "to": "دقّة الكاميرا الأمامية"
+          },
+          {
+            "path": "DISC-CM-10",
+            "from": "CM-10 (التعرّف على الوجه)",
+            "to": "التعرّف على الوجه"
+          },
+          {
+            "path": "DISC-SN-07",
+            "from": "يُقَس SN-07 (درجة الحرارة المحيطة)",
+            "to": "تُقَس درجة الحرارة المحيطة"
+          },
+          {
+            "path": "DISC-SN-08",
+            "from": "SN-08 (كاشف الخطوات)",
+            "to": "كاشف الخطوات"
+          },
+          {
+            "path": "DISC-SN-09",
+            "from": "SN-09 (عدّاد الخطوات)",
+            "to": "عدّاد الخطوات"
+          },
+          {
+            "path": "buyerAdvice.photographer",
+            "from": "(CM-01 حتى CM-08 وCM-10) ",
+            "to": ""
+          },
+          {
+            "path": "narrative.details",
+            "from": "وSN-07 وSN-08 وSN-09 (غير متوفرة على الجهاز)",
+            "to": "ومستشعرات غير متوفّرة على الجهاز"
+          }
+        ],
+        "reason": "S5 (أمر مستخدم 2026-10-01 +03) يمنع ذكر أي معرّف اختبار في نثر بشري — إزالة الرمز (CM-01 إلخ) مع تصحيح تذكير/تأنيث الفعل حين يتغيّر الفاعل بعد الحذف. أثر جانبي غير مباشر: استعاد أيضاً تطابق النصّ مع collectGateNameTokens بعد أن توقّف عن استخراج \"cm\"/\"sn\" من title (S2 غيّر title). راجع تقرير المهمّة."
+      },
+      {
+        "path": "narrative.buyerAdvice.gamer / crossChecks[2].description / modelObservations[0].text / modelObservations[1].text",
+        "change": "TEXT_REPLACE",
+        "replacements": [
+          {
+            "path": "buyerAdvice.gamer",
+            "from": "يسجّل 0.8483 ثم 0.7016",
+            "to": "يسجّل نسبة مرتفعة ثم 0.7016"
+          },
+          {
+            "path": "buyerAdvice.gamer",
+            "from": "ولم يُرصد قفل تزامن في 530 عيّنة",
+            "to": "ولم يُرصد قفل تزامن في عيّنات القياس"
+          },
+          {
+            "path": "crossChecks[2].description",
+            "from": "وصفر قفل تزامن في 530 عيّنة",
+            "to": "وصفر قفل تزامن في عيّنات القياس"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "from": "نِسَب أقصى نافذة 0.8483 ثم 0.7016",
+            "to": "نِسَب أقصى نافذة مرتفعة ثم 0.7016"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "from": "بنسبة 0.8597 من السعة التصميمية",
+            "to": "بنسبة غير محكومة بعتبة معايَرة من السعة التصميمية"
+          }
+        ],
+        "reason": "مهمّة إخفاء القيم غير المعايَرة عن حمولة النموذج (2026-10-01 +03، البند ٢) — 0.8483 (findings.sustainedCeiling.phase3.meanWindowMaxRatio)، 530 (findings.graphics.vsyncLockSampleCount)، و0.8597 (نسبة سعة بطارية فعلية/تصميمية، مشتقّة من مؤشّر محجوب) صارت بلا مصدر في الحمولة المحجوبة فعلاً — مرفوضة من حارس الأرقام خارج narrative.details (لا تُعفى بالبند ٤). الأرقام المجاورة (0.7016/0.7143/0.7806/3782.75/4400) تبقى مطابَقة فعلاً فلا تُمَسّ."
+      },
+      {
+        "path": "narrative.details / narrative.buyerAdvice.gamer,photographer / crossChecks[2,4] / modelObservations[0,1]",
+        "change": "TEXT_REPLACE",
+        "replacements": [
+          {
+            "path": "narrative.details",
+            "from": "ونِسَب أقصى نافذة 0.8483 في الطور الثالث، و0.7016 في الطور الخامس، و0.7806 مجمّعة، و0.7143 في طور الاستعادة",
+            "to": "ونِسَب أقصى نافذة مقيسة في الطورين الثالث والخامس ومجمّعة وفي طور الاستعادة"
+          },
+          {
+            "path": "narrative.details",
+            "from": "وسيطاً 1920.3 في الطور الرابع و1083.5 في الطور الخامس بنسبة 0.5642 بينهما، ونسبة انزياح 0.8536 في الطور الرابع، وصفر قفل تزامن عند 60 و90 و120 في 530 عيّنة",
+            "to": "هبوطاً في الوسيط بين الطورين الرابع والخامس، وصفر قفل تزامن عند 60 و90 و120"
+          },
+          {
+            "path": "narrative.details",
+            "from": "كتابة عشوائية 2597 IOPS",
+            "to": "كتابة عشوائية مقيسة بلا حكم عليها"
+          },
+          {
+            "path": "narrative.details",
+            "from": "وسعة فعلية 3782.75 mAh بنسبة 0.8597 من التصميم",
+            "to": "وسعة فعلية مقيسة"
+          },
+          {
+            "path": "narrative.details",
+            "from": "وتكامل شحنة 139.91 mAh",
+            "to": "وتكامل شحنة مقيس"
+          },
+          {
+            "path": "narrative.details",
+            "from": "وتيار تفريغ تحت الحمل 1647.85 mA",
+            "to": "وتيار تفريغ تحت الحمل مقيس"
+          },
+          {
+            "path": "narrative.details",
+            "from": "وانحراف جهد 46.46 mV",
+            "to": "وانحراف جهد مقيس"
+          },
+          {
+            "path": "narrative.details",
+            "from": "ومعامل 1.57 يتغيّر",
+            "to": "ومعامل مقيس يتغيّر"
+          },
+          {
+            "path": "narrative.buyerAdvice.gamer",
+            "from": "هبط الوسيط من 1920.3 إلى 1083.5 بنسبة 0.5642",
+            "to": "هبط الوسيط بين الطورين الرابع والخامس"
+          },
+          {
+            "path": "narrative.buyerAdvice.gamer",
+            "from": "يسجّل نسبة مرتفعة ثم 0.7016 و0.7143 عند الاستعادة",
+            "to": "يسجّل نسباً مقيسة عند الاستعادة"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "from": "عند 2597 IOPS",
+            "to": "عند مستوى مقيس"
+          },
+          {
+            "path": "crossChecks[2].description",
+            "from": "(وسيط 1920.3 في الطور الرابع، و1083.5 في الطور الخامس، ونسبة 0.5642 بينهما، وصفر قفل تزامن في عيّنات القياس)",
+            "to": "(وسيط الرسوميات يهبط بين الطورين الرابع والخامس، وصفر قفل تزامن في عيّنات القياس)"
+          },
+          {
+            "path": "crossChecks[4].description",
+            "from": "مع تنبيه كتابة عشوائية 2597 IOPS",
+            "to": "مع تنبيه كتابة عشوائية"
+          },
+          {
+            "path": "modelObservations[0].text",
+            "from": "نِسَب أقصى نافذة مرتفعة ثم 0.7016 و0.7806 مجمّعة مع استعادة 0.7143",
+            "to": "نِسَب أقصى نافذة مقيسة مجمّعة ومع استعادة"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "from": "سعة فعلية 3782.75 mAh بنسبة غير محكومة بعتبة معايَرة من السعة التصميمية",
+            "to": "سعة فعلية مقيسة مقابل السعة التصميمية"
+          }
+        ],
+        "reason": "أمر مستخدم 2026-10-06 (D6) — لا استشهاد برقم محجوب: 0.8483/0.7016/0.7806/0.7143 (findings.sustainedCeiling)، 1920.3/1083.5/0.5642/0.8536/530 (findings.graphics)، 2597 (S-06)، 3782.75/0.8597 (BAT-FCC)، 139.91/1647.85/46.46/1.57 (findings.battery)."
+      }
+    ],
+    "guardVerifiedAtGenerationTime": true,
+    "guardResultAtGenerationTime": {
+      "ok": true,
+      "shape": {
+        "ok": true,
+        "errors": []
+      },
+      "issueKeys": {
+        "ok": true,
+        "inventedIds": []
+      },
+      "numbers": {
+        "ok": true,
+        "unmatchedFields": [],
+        "excludedDevice": [
+          {
+            "field": "narrative.summary",
+            "number": 9820
+          },
+          {
+            "field": "narrative.details",
+            "number": 9820
+          },
+          {
+            "field": "narrative.details",
+            "number": 2.4
+          }
+        ]
+      },
+      "languageLeaks": [],
+      "detailsWaived": null,
+      "excluded": {
+        "deviceSpecNumbers": [
+          {
+            "field": "narrative.summary",
+            "number": 9820
+          },
+          {
+            "field": "narrative.details",
+            "number": 9820
+          },
+          {
+            "field": "narrative.details",
+            "number": 2.4
+          }
+        ],
+        "languageTokens": [
+          {
+            "path": "narrative.summary",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.summary",
+            "token": "USB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Android",
+            "category": "device_spec"
+          },
+          {
+            "path": "narrative.details",
+            "token": "API",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "USB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GHz",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "IOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "DPI",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Hz",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "Mbps",
+            "category": "findings_field_name"
+          },
+          {
+            "path": "narrative.details",
+            "token": "GHz",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.details",
+            "token": "dBm",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.details",
+            "token": "mAh",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.casual",
+            "token": "USB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.casual",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.casual",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.gamer",
+            "token": "Hz",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.buyerAdvice.photographer",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "narrative.issueDescriptions[ISS-SEC-04]",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "USB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[0].description",
+            "token": "SEC",
+            "category": "gate_name"
+          },
+          {
+            "path": "crossChecks[4].description",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "crossChecks[4].description",
+            "token": "GB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "crossChecks[4].description",
+            "token": "MB",
+            "category": "unit_symbol"
+          },
+          {
+            "path": "crossChecks[4].description",
+            "token": "IOPS",
+            "category": "measurement_unit"
+          },
+          {
+            "path": "modelObservations[1].text",
+            "token": "mAh",
+            "category": "unit_symbol"
+          }
+        ]
+      }
+    }
+  },
+  "rawEnvelope": {
+    "id": "3ead0bbc-dc19-413c-b6b4-302ecddecf45",
+    "object": "chat.completion",
+    "created": 1790120364,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"narrative\":{\"summary\":\"جهاز Samsung Galaxy S10 5G بمعالج Exynos 9820. الفحص جزئي (تغطية 46%)، والحرف العام C سببه الأساسي أن الاختبار SEC-04 فشل: صلاحيات الجذر مكتشفة على الجهاز، ويضاف إليها رقعة أمنية قديمة ونمط مطوّر وتصحيح USB مفعّلان. فئات كاملة لم تُقَس أصلاً: الكاميرا (رفض الإذن)، والصوت، والإدخال، والإدارة الحرارية. ما قيس: معالج بحرف A، وتخزين بحرف C فيه تنبيه كتابة عشوائية، وشاشة وذاكرة واتصال لاسلكي بلا أعطاب، وارتفاع حرارة بطارية 7.4 °C خلال الفحص، ومؤشرات بطارية مقيسة لكن بلا عتبات معايَرة فلا حكم نهائي على صحتها.\",\"details\":\"الجهاز Samsung Galaxy S10 5G بمعالج Exynos 9820 ونظام Android 11 (مستوى API 30). الحرف العام C، ومصدره بوّابة كشف صلاحيات الجذر التي أُطلقت فعلاً وأنزلت الحرف العام، والفحص موسوم «تقييم جزئي» لأن التغطية 46% مقابل متوسط فئات مقيسة 93.75%؛ الفارق بين الرقمين تفسّره فئات بلا قياس إطلاقاً لا قياسات فاشلة.\\n\\nفئة الأمان: الحرف D. الاختبار SEC-04 فشل (الجذر مكتشف)، وتنبيهان في SEC-05 وSEC-06 (نمط المطوّر وتصحيح USB مفعّلان)، ورقعة أمنية بتاريخ 2021-08-01 وعمرها 61.7 شهراً بحسب بوّابة الرقعة. بوّابتا كشف الجذر وعمر الرقعة أُطلقتا، لكن الحرف الأساسي كان أسوأ من سقفيهما فلا أثر لقيدهما، وأُضيفت أرضية فشل حالة.\\n\\nالمعالج: الحرف A بعد نجاح 5 من 5 اختبارات منفَّذة، وبوّابة التغطية المنخفضة لم تنطبق (تغطية 100% مع اختبارات قياس). الاختباران C-03 وC-04 موسومان غير مستقرّين ولا يدخلان في الحرف ولا في العطب.\\n\\nالسقف المستدام: ذروة ترددات 2.73 GHz، ونِسَب أقصى نافذة مقيسة في الطورين الثالث والخامس ومجمّعة وفي طور الاستعادة. لكن بوّابة السقف المستدام معطّلة بتصميم النظام قبل استكمال المعايرة، فلم تُقيَّم ولم تؤثر على أي حرف — هذه أرقام حاضرة بلا بوّابة تحكمها الآن.\\n\\nمعالج الرسوميات: الحرف B لكنه سقف تغطية لا عطب: التغطية 40%، والمنفَّذ G-01 وG-02 من صنف حالة فقط، وG-03 وG-04 وG-05 غير مقيسة (تعذّر قياس أداء الرسوميات على هذا الجهاز). في المقابل تسجّل قياسات الرسوميات هبوطاً في الوسيط بين الطورين الرابع والخامس، وصفر قفل تزامن عند 60 و90 و120.\\n\\nالتخزين: الحرف C مع تنبيه S-06 (كتابة عشوائية مقيسة بلا حكم عليها) وأرضية تنبيه حالة مطبَّقة. السعة 228.6 GB منها 31.3% متاحة (71.5 GB)، وS-03 كتابة 241 MB/s، وS-04 قراءة 2359 MB/s، وS-05 قراءة عشوائية 98932 IOPS — والأخيران موسومان غير مستقرّين ولا يدخلان في الحرف.\\n\\nالشاشة والذاكرة والاتصال اللاسلكي: ثلاثة حروف B كلها من بوّابة التغطية المنخفضة لا من عطب (3 من 3 و3 من 3 و6 من 6 ناجحة، لكن كلها من صنف حالة بلا اختبار قياس). الشاشة 1080×2280 و420 DPI و60 Hz. الذاكرة 7.1 GB إجمالاً و2.6 GB متاحة. اللاسلكي متصل عند 43 Mbps على 2.4 GHz وإشارة -64 dBm.\\n\\nالخليوي والمستشعرات: حرفا B بقيد التغطية (71.4% و75%)، وتحديد المواقع بلا حرف لأن الاختبار الوحيد المنفَّذ (L-01) لم يعد يدخل الحرف، مع اختبارات لم تُقَس: N-03 (فتحة واحدة فقط)، وN-04 (رفض إذن قراءة حالة الهاتف)، ومستشعرات غير متوفّرة على الجهاز، وL-02 وL-03 (رفض إذن الموقع). الاختبارات المنفَّذة في هذه الفئات نجحت كلها، ومنها إشارة شبكة 3/4.\\n\\nالكاميرا والإدارة الحرارية والصوت والإدخال: بلا قياس إطلاقاً — كل اختبارات الكاميرا لم تُقَس بسبب رفض إذن الكاميرا، واختبارات الحرارة الثلاثة بلا قراءات حرارية على الجهاز وعدد المناطق الحرارية 0، والصوت والإدخال بلا اختبارات معرَّفة.\\n\\nالبطارية: لا حرف، والسبب المُسمّى هو غياب عتبة معايَرة، والمجمّع مصنَّف «غير كافية». الأرقام المقيسة: 43% إلى 38% خلال الفحص، سعة تصميمية 4400 mAh، وسعة فعلية مقيسة، وتكامل شحنة مقيس، وتيار تفريغ تحت الحمل مقيس، وانحراف جهد مقيس يُعرض مع مستوى الشحن 43% بلا مقارنة بعتبة، ومعامل مقيس يتغيّر مع مستوى الشحن ولا يُحكم به. اختبارات B-01 إلى B-07 نجحت، وB-08 بلا قياس.\\n\\nالحرارة المقيسة عبر البطارية فقط: 32.8 °C ابتداءً، ومتوسط مرحلة الاندفاع 40.09 °C (وسيط 40.2 وأقصى 40.2)، وارتفاع 7.4 °C بمعدل 1.73 °C/دقيقة، بينما حرارة المعالج غير مقيسة لعدم وجود مستشعر، والقيم الصفرية المرتبطة بها مُعلَّمة «غير مقيسة» لا صفراً فعلياً.\",\"verdict\":\"الحرف العام C — تقييم جزئي بتغطية 46%، ومصدر الحرف بوّابة كشف صلاحيات الجذر، ويُقرأ كما وصل دون رفع أو خفض مني.\",\"buyerAdvice\":{\"casual\":\"للاستخدام اليومي: الشاشة والمعالج والذاكرة والاتصال اللاسلكي اجتازت اختباراتها ولا عطب فيها، لكن الجهاز عليه صلاحيات جذر مكتشفة مع نمط مطوّر وتصحيح USB مفعّلين، ورقعة أمنية قديمة، وهذا قد يجعل تطبيقات البنك والدفع ترفض العمل أو يقلّل الأمان عموماً. كذلك 31.3% فقط من المساحة متاحة (71.5 GB من أصل 228.6 GB). إن اشتريته فاطلب تفاصيل سبب تفعيل الجذر، واحسب في السعر تثبيت نظام نظيف من جديد.\",\"gamer\":\"للألعاب: الانطباع الأدائي غير مكتمل. حرارة المعالج غير متوفرة (لا مستشعر)، وفئة الإدارة الحرارية غير مقيسة أصلاً، والحرارة تُقرأ من البطارية فقط: 40.09 °C وسطياً في مرحلة الاندفاع بمعدل ارتفاع 1.73 °C/دقيقة. في اختبار الرسوميات هبط الوسيط بين الطورين الرابع والخامس، أي أداء أقل تحت الحمل المستدام، والسقف المستدام نفسه يسجّل نسباً مقيسة عند الاستعادة، وكلها بلا بوّابة تحكم مفعّلة حالياً. اختبارات معالج الرسوميات الوظيفية الثلاثة لم تُنفَّذ، فلا يمكن تأكيد استقرار الإطارات، والشاشة 60 Hz فقط، ولم يُرصد قفل تزامن في عيّنات القياس.\",\"photographer\":\"للتصوير: لا يمكن قول أي شيء عن الكاميرا — كل اختباراتها لم تُقَس بسبب رفض إذن الكاميرا، فلا دقّة تركيز ولا فلاش ولا تسجيل فيديو مؤكَّد. المتاح للصور: 31.3% من 228.6 GB (71.5 GB) وهي مساحة معقولة، لكن تنبيه الكتابة العشوائية عند مستوى مقيس يخصّ حفظ الملفات الصغيرة واللقطات المتتابعة. إن كانت الكاميرا سبب الشراء، اطلب من البائع تشغيل الكاميرا وتسجيل مقطع أمامك قبل الدفع.\"},\"issueDescriptions\":{\"DISC-T-03\":\"لم يُقَس T-03 (سرعة التبريد) لنفس السبب: غياب القراءات الحرارية على الجهاز يجعل القدرة محجوبة.\",\"POS-cpu\":\"فئة المعالج: كل الاختبارات المنفَّذة (5 من 5، بينها اختبارات قياس) نجحت، ولا عطب مسجَّل عليها.\",\"DISC-G-03\":\"لم يُقَس G-03 (انخفاض الإطارات) لأن أداء الرسوميات تعذّر قياسه على هذا الجهاز — لا عطب، بل اختبار غير منفَّذ.\",\"DISC-G-04\":\"لم يُقَس G-04 (كبح معالج الرسوميات) لنفس السبب: تعذّر قياس أداء الرسوميات على هذا الجهاز.\",\"DISC-G-05\":\"لم يُقَس G-05 (أدنى إطارات) لنفس السبب: تعذّر قياس أداء الرسوميات على هذا الجهاز.\",\"POS-display\":\"فئة الشاشة: 3 من 3 اختبارات نجحت، ولا عطب مسجَّل — القيد الوحيد أن الاختبارات كلها من صنف حالة بلا اختبار قياس.\",\"POS-memory\":\"فئة الذاكرة العشوائية: 3 من 3 اختبارات نجحت، ولا عطب مسجَّل — القيد الوحيد أن الاختبارات كلها من صنف حالة بلا اختبار قياس.\",\"DISC-CM-01\":\"لم تُقَس الكاميرا الخلفية لأن إذن الكاميرا مرفوض — لا حكم على وجود الكاميرا ولا على عملها.\",\"DISC-CM-02\":\"لم تُقَس الكاميرا الأمامية بسبب رفض إذن الكاميرا.\",\"DISC-CM-03\":\"لم يُقَس التركيز التلقائي بسبب رفض إذن الكاميرا، فلا يمكن تأكيد دقّة التركيز.\",\"DISC-CM-04\":\"لم يُقَس الفلاش بسبب رفض إذن الكاميرا.\",\"DISC-CM-05\":\"لم يُقَس تسجيل الفيديو بسبب رفض إذن الكاميرا.\",\"DISC-CM-06\":\"لم يُقَس دقّة الكاميرا الخلفية بسبب رفض إذن الكاميرا.\",\"DISC-CM-07\":\"لم يُقَس دقّة الكاميرا الأمامية بسبب رفض إذن الكاميرا.\",\"DISC-CM-10\":\"لم يُقَس التعرّف على الوجه بسبب رفض إذن الكاميرا.\",\"DISC-L-02\":\"لم يُقَس L-02 (عدد الأقمار المُلتقَطة) لأن إذن الموقع مرفوض، فلا حكم على جودة التقاط الأقمار.\",\"DISC-L-03\":\"لم يُقَس L-03 (دقّة الموقع) لأن إذن الموقع مرفوض.\",\"ISS-SEC-04\":\"فشل في الاختبار SEC-04: صلاحيات الجذر مكتشفة على الجهاز. هذا هو السبب المباشر الذي جعل الحرف العام C، وأدّى إلى أرضية فشل في فئة الأمان.\",\"DISC-SN-07\":\"لم تُقَس درجة الحرارة المحيطة لأن المستشعر غير متوفر على الجهاز — قدرة محجوبة لا عطب.\",\"DISC-SN-08\":\"لم يُقَس كاشف الخطوات لأن المستشعر غير متوفر على الجهاز — قدرة محجوبة لا عطب.\",\"DISC-SN-09\":\"لم يُقَس عدّاد الخطوات لأن المستشعر غير متوفر على الجهاز — قدرة محجوبة لا عطب.\",\"DISC-N-03\":\"لم يُقَس N-03 (الشريحة الثانية) لأن الجهاز بفتحة واحدة فقط — قدرة محجوبة بحكم التصميم، وليست عطباً.\",\"DISC-N-04\":\"لم يُقَس N-04 (نوع الشبكة) لأن إذن قراءة حالة الهاتف مرفوض.\",\"POS-wireless\":\"فئة الاتصال اللاسلكي: 6 من 6 اختبارات نجحت، ولا عطب مسجَّل — القيد الوحيد أن الاختبارات كلها من صنف حالة بلا اختبار قياس.\"}},\"crossChecks\":[{\"description\":\"ثلاثة عناصر في فئة الأمان اجتمعت: الجذر مكتشف (فشل SEC-04)، ونمط المطوّر وتصحيح USB مفعّلان (تنبيه SEC-05 وSEC-06)، ورقعة أمنية عمرها 61.7 شهراً. حرف الفئة D، والحرف العام C مصدره صراحةً بوّابة كشف الجذر؛ وبوّابتا عمر الرقعة والتغطية أُطلقتا أيضاً لكن لم تُنزلا الحرف لأن الحرف الأساسي كان أسوأ من سقفيهما أصلاً.\",\"evidenceRefs\":[\"categoryStates.categories.security.deterministicLetter\",\"categoryStates.categories.security.gatesApplied\",\"categoryStates.overall.letterSource\",\"categoryStates.overall.gatesApplied\"]},{\"description\":\"تغطية عامة 46% مقابل متوسط فئات مقيسة 93.75%: الفارق لا يأتي من قياسات فاشلة بل من فئات بلا قياس إطلاقاً (الكاميرا، الإدارة الحرارية، الصوت، الإدخال) وفئات جزئية مثل نظام تحديد المواقع بتغطية 33.3%.\",\"evidenceRefs\":[\"categoryStates.overall.coverage\",\"categoryStates.overall.measuredCategoriesMean\",\"categoryStates.categories.gps.coverage\",\"categoryStates.categories.camera.state\",\"categoryStates.categories.audio.state\"]},{\"description\":\"قياسات رسوميات مستمرة موجودة على العتاد (وسيط الرسوميات يهبط بين الطورين الرابع والخامس، وصفر قفل تزامن في عيّنات القياس) بينما فئة معالج الرسوميات لم تُنفّذ اختباراتها الوظيفية الثلاثة، فحرفها B جاء من بوّابة التغطية المنخفضة (40%) لا من قياس أداء — أي أن أرقام الأداء حاضرة والحكم عليها غير مكتمل.\",\"evidenceRefs\":[\"findings.graphics.phase4.median\",\"findings.graphics.phase5.median\",\"findings.graphics.ratioPhase5OverPhase4\",\"categoryStates.categories.gpu.gatesApplied\"]},{\"description\":\"الحرارة على هذا الجهاز تُقرأ من البطارية وحدها: 32.8 °C عند البداية، ومتوسط 40.09 °C (وسيط 40.2) في مرحلة الاندفاع، وارتفاع 7.4 °C بمعدل 1.73 °C/دقيقة — في المقابل فئة الإدارة الحرارية غير مقيسة بالكامل (عدد المناطق الحرارية 0) وحرارة المعالج غير متوفرة لعدم وجود مستشعر، فلا يوجد حكم حراري كامل يمكن بناء نصيحة عليه.\",\"evidenceRefs\":[\"findings.channels.battery_temp_c.BURST.mean\",\"findings.thermal.batteryTempRise.valueC\",\"findings.thermal.batteryTempRise.ratePerMinPhases345\",\"categoryStates.categories.thermal.state\",\"findings.notMeasuredFields\"]},{\"description\":\"التخزين: 31.3% متاح فقط (71.5 GB من 228.6 GB) مع تنبيه كتابة عشوائية، وفي الوقت نفسه فإن قراءة 2359 MB/s وقراءة عشوائية 98932 IOPS موسومتان «غير مستقرّ» ولا تدخلان في الحرف — فحرف الفئة C مبني على التنبيه لا على سرعات القراءة.\",\"evidenceRefs\":[\"findings.storage.capacityDerived.availablePct\",\"findings.storage.capacityDerived.availableGb\",\"categoryStates.categories.storage.floorApplied\",\"findings.unstableMeasurements.S-04\",\"findings.unstableMeasurements.S-05\"]}],\"adjustments\":[],\"modelObservations\":[{\"text\":\"أرقام الأداء المستدام موجودة لكن بلا بوّابة تحكمها: نِسَب أقصى نافذة مقيسة مجمّعة ومع استعادة، بينما بوّابة السقف المستدام معطّلة بتصميم النظام قبل استكمال المعايرة، واختبارات معالج الرسوميات الوظيفية الثلاثة غير منفَّذة — هذه ملاحظة على فجوة تغطية لا على عطب.\",\"evidenceRefs\":[\"findings.sustainedCeiling.phase3.meanWindowMaxRatio\",\"findings.sustainedCeiling.phase5.meanWindowMaxRatio\",\"findings.sustainedCeiling.recoveryPhase7Ratio\",\"categoryStates.categories.cpu.gatesApplied\"]},{\"text\":\"مؤشرات البطارية مقيسة كلها لكنها بلا عتبة معايَرة، والمجمّع مصنَّف «غير كافية»، وسبب غياب الحرف رقمي صريح، رغم توفّر سعة فعلية مقيسة مقابل السعة التصميمية 4400 mAh — فلا يمكن استنتاج صحة البطارية من هذه الحمولة، وتكامل الشحنة نفسه غير مقيس بحكم إصدار الحقول.\",\"evidenceRefs\":[\"categoryStates.categories.battery.batteryAggregate.judgment\",\"categoryStates.categories.battery.batteryIndicators.BAT-FCC.value\",\"categoryStates.categories.battery.noLetterReason\",\"findings.battery.consist.status\"]}]}",
+          "reasoning_content": "Let me carefully produce the JSON with four keys: narrative, crossChecks, adjustments, modelObservations.\n\nKey facts:\n- Device: Samsung Galaxy S10 5G, Exynos 9820, Android 11, API 30, security patch 2021-08-01.\n- Overall letter C, letterSource GATE:ROOT_DETECTED, coverage 45%, partialAssessment true, tag \"تقييم جزئي — تغطية 45%\".\n- Root detected SEC-04 fail → ROOT_DETECTED gate FIRED, cappedOverall true.\n- Security category: D, floorApplied STATE_FAIL_FLOOR, gates: ROOT_DETECTED FIRED (cappedThisLetter false — base letter worse), PATCH_AGE FIRED (61.7 months, cappedThisLetter false).\n- Storage: C, warning on S-06 (2597 IOPS random write), floorApplied STATE_WARNING_CEILING. Coverage 100%, 4/4 executed... wait declaredCount 4 executedCount 4 but testIds 6 — hmm. Anyway letter C from score 75.\n- Battery: PARTIAL, state PARTIAL, no deterministicLetter, noLetterReason NO_CALIBRATED_THRESHOLD, batteryIndicators all THRESHOLD_NOT_CALIBRATED, batteryAggregate judgment \"غير كافية\". Fields: B-01 GOOD, B-02 4400 mAh, B-03 32.8°C, B-04 3748 mV, B-05 -1843 µA, B-06 0.63 %/min, B-07 Li-ion, B-08 N/A.\n- Battery findings: socAtStart 43, socAtEnd 38, designCapacityMah 4400, qIntMah 139.91 mAh, dischargeRateUnderLoadMa 1647.85, voltageStabilityMv 46.46, rho 1.57. BAT-FCC value 3782.75 mAh, ratioToDesign 0.8597. All thresholds not calibrated.\n- Thermal: UNMEASURED, coverage 0, T-01..T-03 CAPABILITY_BLOCKED; T-04 zones=0 INFO_ONLY. batteryTempRise valueC 7.4, ratePerMin 1.7345.\n- Camera: UNMEASURED, permission denied (all CM tests).\n- GPU: PARTIAL, coverage 40%, letter B (capped by LOW_CATEGORY_COVERAGE), G-03/04/05 NOT_TESTED. But graphics findings MEASURED: phase4 median 1920.3, phase5 median 1083.5, ratioPhase5OverPhase4 0.5642, vsync locks 0, sample count 530. Hmm — graphics.status MEASURED with drift ratio 0.8536.\n- CPU: A, 100, gates: SUSTAINED_CEILING DISABLED, LOW_CATEGORY_COVERAGE NOT_FIRED.\n- Display: B (capped by low coverage gate FIRED, cappedThisLetter true) — 3/3 STATE only.\n- Memory: B, same.\n- Wireless: B, same.\n- Cellular: B, partial coverage 71.4%.\n- Sensors: B, partial 75%; SN-07/08/09 capability blocked.\n- GPS: B, 33.3% coverage.\n- Audio, Input: UNMEASURED, declaredCount 0.\n\nSustained ceiling: peakFreqKhz 2730000, phase3 meanWindowMaxRatio 0.8483, phase5 0.7016, combined 0.7806, recoveryPhase7Ratio 0.7143. Note SUSTAINED_CEILING gate DISABLED, so no letter impact.\n\nThermal: thermalHeadroomPeak 1.0266666, thermalStatusMax 3. Max CPU temp not measured (NO_CPU_TEMP_SENSOR).\n\nUnstable measurements: C-04, C-03, S-04, S-05 unstable — not entering grade/fault.\n\nAdvisory: S-06 warning (2597 IOPS).\n\nNow issues list for issueDescriptions — I must describe every id present in categoryStates.issues[].id. That's a big list: DISC-T-01..03, POS-cpu, DISC-G-03..05, POS-display, POS-memory, ISS-S-06, DISC-CM-01..10 (missing CM-09? list: CM-01,02,03,04,05,06,07,08,10), DISC-L-02, DISC-L-03, ISS-SEC-04, ISS-SEC-05, ISS-SEC-06, DISC-SEC-07, DISC-SN-07..09, DISC-N-03, DISC-N-04, POS-wireless.\n\nI need to write descriptions for each in Arabic.\n\nCareful: no hallucinated numbers. Every number must be readable from payload.\n\nNow adjustments[]: DOWN direction only, one band max. Should I suggest any? The letters are already capped. E.g., battery category state PARTIAL with no letter — can't adjust (no executed test? Actually battery has executedCount 4... hmm. \"لا تقترح تعديلاً على فئة حالتها UNMEASURED أو ATTESTED_ONLY أو HARNESS_ERROR أو PARTIAL بلا اختبار منفَّذ فعلياً\". Battery is PARTIAL with executedCount 4 — so it has executed tests. But its letter is null; downgrading a null letter is meaningless. I'd rather not adjust.\n\nPossible adjustments: security is already D (worst). Storage C. Hmm. Any category where I have evidence to suggest a downgrade? Maybe none, or maybe none that's justified. Let me consider: the letter C overall is already set by ROOT_DETECTED gate. Categories: gpu B, display B, memory B, wireless B, cellular B, sensors B, gps B, cpu A, storage C, security D, battery null.\n\nCould argue for downgrade of... hmm. Not much. Maybe leave adjustments empty array. That's allowed. The schema requires adjustments field but can be empty.\n\nActually, is there value? Consider storage: has floorApplied STATE_WARNING_CEILING, letter C. Evidence of warning S-06 2597 IOPS. Could argue DOWN? The letter is already penalized. Probably no.\n\nMaybe modelObservations: up to two. E.g., graphics drift ratio phase5/phase4 = 0.5642 while GPU functional tests G-03..G-05 not tested → observation not a fault. And battery indicators measured but no calibrated threshold (batteryAggregate غير كافية). Also the discrepancy: gpu category letter B from coverage gate while graphics findings measured with 0 vsync lock.\n\nCross-checks: \n1. Root detected (SEC-04 fail) + developer mode enabled + USB debugging enabled → security posture.\n2. Security patch 2021-08-01 (61.7 months old per gate source) alongside root detected.\n3. Storage warning S-06 while S-04/S-05 marked UNSTABLE — random write advisory.\n4. Battery: temp rise 7.4°C measured while thermal category unmeasured (no thermal zones; T-04 = 0 zones).\n5. Overall coverage 45% while measuredCategoriesMean 93.75% — partial assessment; camera/GPS blocked by permission denied.\n6. GPU letter B capped by coverage gate, but graphics sustained drift ratio measured.\n\nCareful with numbers sourcing.\n\nLet me now write the narrative.\n\nsummary: brief, simple language, no invented numbers. Mention overall C, partial assessment 45% coverage, root detected, old patch, storage warning, battery/thermal not fully measured (battery temps measured though, but battery letter not issued due to uncalibrated thresholds). Keep it simple.\n\ndetails: technical depth with numbers from findings.\n\nverdict: one line reflecting overall.letter C.\n\nbuyerAdvice: casual, gamer, photographer — distinct.\n\nphotographer: camera category fully unmeasured (permission denied), storage 31.3% available of 228.6 GB, S-06 random write advisory.\n\ngamer: CPU sustained, GPU test not measured, thermal category unmeasured, graphics phase4/phase5 medians 1920.3 and 1083.5, drift ratio 0.5642, burst battery temp max 40.2 °C, vsync lock fraction zero at all rates.\n\ncasual: root detected, dev mode, USB debugging, patch 2021-08-01, battery indicators uncalibrated.\n\nWatch for language: payload language \"ar\" → text in Arabic, technical identifiers in Latin (testId, units, brand). Category names in Arabic in narrative.\n\nNumbers allowed: 45% (coverage), 228.6 GB, 31.3%, 71.5 GB, 2597 IOPS, 4400 mAh, 3782.75 mAh (batteryIndicators BAT-FCC value — that's in categoryStates, allowed), 0.86 ratio (ratioToDesign 0.8597) — I can say \"نحو 0.86\". Hmm, we must not compute new numbers; ratioToDesign is a given field so fine. 7.4°C (batteryTempRise valueC in findings.thermal), 1.73 °C/min (ratePerMinPhases345), 2730000 kHz → 2.73 GHz (peakFreqKhz given; 2.73 GHz also appears in C-02 evidence). Phase ratios: 0.8483, 0.7016, 0.7806, recovery 0.7143. phase4 median 1920.3, phase5 median 1083.5, ratio 0.5642, vsync lock 0 at 60/90/120, sample count 530. Burst temp max 40.2 °C, mean 40.09. Combined mean 38.88. Battery temp 32.8 °C. Voltage stability 46.46 mV. rho 1.57. dischargeRateUnderLoadMa 1647.85. Temperature rise rate 1.73 °C/min. thermalHeadroomPeak 1.0266, thermalStatusMax 3. Patch 2021-08-01, 61.7 months (from gate source). Wi-Fi 43 Mbps 2.4 GHz, signal -64 dBm. Memory 7.1 GB total, 2.6 GB available.\n\nAll fine.\n\nNow issues descriptions — need to write each. Let me be careful with the IDs exactly as given.\n\nList:\n- DISC-T-01: غير مقيس: T-01 (CAPABILITY_BLOCKED)\n- DISC-T-02\n- DISC-T-03\n- POS-cpu\n- DISC-G-03, DISC-G-04, DISC-G-05\n- POS-display\n- POS-memory\n- ISS-S-06\n- DISC-CM-01, 02, 03, 04, 05, 06, 07, 08, 10\n- DISC-L-02, DISC-L-03\n- ISS-SEC-04\n- ISS-SEC-05\n- ISS-SEC-06\n- DISC-SEC-07\n- DISC-SN-07, DISC-SN-08, DISC-SN-09\n- DISC-N-03, DISC-N-04\n- POS-wireless\n\nThat's 30 entries. Fine.\n\nNote ISS-S-06 is warning random write 2597 IOPS — advisory class.\n\nNow adjustments: I'll consider including one for storage? Justification would be weak. Let me think again about whether any category letter should be downgraded with evidence.\n\nCandidates:\n- gpu: letter B already capped by coverage gate. Already limited.\n- cellular: B; N-03 SIM2 capability blocked, N-04 permission denied. Already B by coverage gate.\n- sensors: B.\n- storage: C already.\n- security: D.\n- battery: no letter (null) — can't downgrade nothing.\n- cpu: A — hmm, could I argue a downgrade? Evidence: SUSTAINED_CEILING gate is DISABLED (not evaluated), so sustained performance wasn't gate-checked. But the adjustment must be evidence-based, and the gates say DISABLED by design before PLAN-03. A downgrade on A for CPU... Evidence could be: findings.sustainedCeiling phase5 meanWindowMaxRatio 0.7016 and recoveryPhase7Ratio 0.7143 show sustained ratio well below peak, but the gate that would evaluate this is DISABLED. Hmm, that's a legit reason to downgrade CPU by one band from A to B? The instructions say no re-evaluating gate conditions. But suggesting a downward adjustment with evidence is allowed as my judgment. Risk: it may be seen as re-evaluating the disabled gate. Hmm. The disabled gate means the sustained ceiling gate didn't cap. I could propose a DOWN one-band adjustment for cpu with evidence refs to sustainedCeiling phase5 ratio and recovery ratio. That's plausible and evidence-based. But is it appropriate? The rule says adjustments direction DOWN is the only path actually applied. It might be seen as contradicting the gate being disabled by design (PLAN-03 not done). Hmm.\n\nActually, being cautious: the system explicitly disabled SUSTAINED_CEILING \"ممنوعة قبل PLAN-03 بنصّ الخطّة\". Proposing a DOWN adjustment for CPU would effectively override a deliberate design decision. But the adjustments mechanism exists for the model to flag things. Hmm. Risky either way. I think I'll skip CPU and keep adjustments empty, or include one for... hmm.\n\nAlternatively, could suggest DOWN for storage? It's already C with floor applied. No.\n\nI think empty adjustments is safest and defensible. But maybe the grader expects at least something? The schema allows empty array. I'll go with empty array — no invented downgrades. Actually... let me reconsider: is there a category whose letter is too generous given evidence and not already gated? Let's check letters vs evidence:\n\n- cpu A (5 pass, coverage 100, includes MEASUREMENT tests C-04, C-06, C-07). C-04 is UNSTABLE (doesn't enter grade). C-06 7.4% thermal throttle, C-07 7.9% RSD. Fine, A.\n- display B, memory B, wireless B — all capped B by state-only gate.\n- gpu B — capped.\n- gps B — capped.\n- cellular B — capped.\n- sensors B — capped.\n- storage C — warning.\n- security D — fail.\n\nNothing over-generous. So adjustments = [].\n\nHmm, but maybe the model should have at least a chance. Empty is fine and honest.\n\nmodelObservations (max 2):\n1. الرسوميات: قياسات findings.graphics مسجَّلة (phase4 median 1920.3، phase5 median 1083.5، النسبة 0.5642) بينما اختبارات GPU الوظيفية G-03/G-04/G-05 غير منفَّذة — لا تقاطع يُغلق. Evidence refs: findings.graphics.ratioPhase5OverPhase4, categoryStates.categories.gpu.\n2. بطارية: كل مؤشرات البطارية مقيسة لكن verdict THRESHOLD_NOT_CALIBRATED في المجمّع \"غير كافية\" — لا يمكن الجزم بصحة البطارية رغم توفر أرقام مثل BAT-FCC 3782.75 mAh ونسبة 0.8597 إلى التصميم. Evidence: categoryStates.categories.battery.batteryIndicators.BAT-FCC.\n\nOr observation on thermal: battery temp rise 7.4°C measured while thermal category has no sensors (0 zones). Maybe cross-check instead.\n\nLet me put:\ncrossChecks:\n1. الجذر مكتشف + نمط المطوّر + تصحيح USB مفعّل + رقعة أمنية 2021-08-01 → كلها في فئة الأمان → الحرف D والعام C.\n   evidenceRefs: categoryStates.categories.security.deterministicLetter, categoryStates.overall.letterSource, testResults?? Better use paths within findings/categoryStates. Use \"categoryStates.categories.security.gatesApplied\" and \"categoryStates.overall.gatesApplied\".\n2. التغطية العامة 45% مقابل متوسط الفئات المقيسة 93.75% — فئات كاملة غير مقيسة بسبب أذونات (الكاميرا، GPS) أو غياب مستشعرات (الحرارة) — تقييم جزئي.\n   Hmm, \"متوسط الفئات المقيسة 93.75%\" is in overall.measuredCategoriesMean. OK.\n3. قياسات الرسوميات موجودة في findings.graphics بينما فئة GPU لم تُنفّذ اختباراتها الوظيفية → تناقض في التغطية، letter B من البوّابة لا من قياس.\n4. بطارية: readings of temperature rise 7.4°C and burst max 40.2°C while thermal category unmeasured — الحرارة تُقرأ عبر البطارية فقط.\n5. التخزين: 31.3% متاح من 228.6 GB مع تنبيه الكتابة العشوائية 2597 IOPS.\n6. الأداء المستدام non-gated: sustainedCeiling phase5 meanWindowMaxRatio 0.7016 والاستعادة 0.7143 (رغم أن البوّابة معطّلة).\n\nThen adjustments empty.\n\nWait — but maybe include a DOWN adjustment to make use of the mechanism with strong evidence: e.g., for \"storage\"? no. I'll keep empty.\n\nHmm, let me reconsider one more: security is D already, and overall C is from root. Nothing.\n\nOK.\n\nNow writing details carefully with numbers.\n\ndetails (Arabic): \n\"الجهاز Samsung Galaxy S10 5G بمعالج Exynos 9820 ونظام Android 11 (API 30). الحرف العام C، ومصدره بوّابة ROOT_DETECTED التي أُطلقت (SEC-04 = فشل) وأنزلت الحرف العام فعلياً (cappedOverall = true). التغطية العامة 45% (تقييم جزئي)، بينما متوسط الفئات المقيسة 93.75%... حرارة البطارية 32.8°C في المرحلة الابتدائية، وذروة المرحلة BURST بمتوسط 40.09°C (وسيط 40.2، أقصى 40.2)، وارتفاع حرارة البطارية خلال الفحص 7.4°C بمعدل 1.73°C/دقيقة. مؤشرات البطارية كلها بحالة THRESHOLD_NOT_CALIBRATED والمجمّع 'غير كافية'، مع BAT-FCC 3782.75 mAh ونسبة 0.8597 من السعة التصميمية 4400 mAh... التخزين: 228.6 GB إجمالي، 31.3% متاح (71.5 GB)، تنبيه S-06 كتابة عشوائية 2597 IOPS. المعالج: A مع 5/5... السقف المستدام: الذروة 2.73 GHz ونسب النوافذ 0.8483 في الطور الثالث و0.7016 في الطور الخامس و0.7806 مجمّعة، والاستعادة 0.7143 — لكن بوّابة SUSTAINED_CEILING معطّلة (DISABLED) فلم تؤثر. الرسوميات: وسيط 1920.3 في الطور الرابع و1083.5 في الطور الخامس، ونسبة 0.5642، ولا قفل تزامن عند 60/90/120 (0 من 530).\"\n\nCareful: \"0 من 530\" — vsyncLockFraction60=0 etc., vsyncLockSampleCount=530. OK.\n\nNumbers fine.\n\nVerdict: \"الحرف العام C (مصدره بوّابة ROOT_DETECTED) على تقييم جزئي بتغطية 45% — لا يُقرأ أعلى ولا أدنى.\"\n\nbuyerAdvice:\ncasual: root detected → device has root; implications; old patch; storage. Advise caution / price.\ngamer: sustained ratios, GPU tests not executed, thermal category unmeasured, burst battery temp 40.2°C, GPU FPS medians... mention 'لا قفل تزامن'. Note: gpu_fps values in findings GPU_SUSTAINED mean 1881.2 — that's a weird unit (probably frames). Actually gpu_fps GPU_SUSTAINED median 1910.5. Hmm, gpu_fps in GPU_SUSTAINED mean 1881.23, median 1910.5 — these look like frames counted, not FPS, on a 60Hz display. Careful: writing \"1910 إطاراً في الثانية\" would be wrong. Better to avoid or say the channel gpu_fps carried readings in the GPU_SUSTAINED phase with median 1910.5 but the unit shouldn't be assumed. Hmm — safer to avoid that number in the buyer advice; can mention graphics medians in details? Risky too. I'll mention only the two medians in details as \"قيم القناة gpu_fps\" without unit claims... Actually rule (5)-like: don't mislabel. I could say: \"قناة gpu_fps في المرحلة GPU_SUSTAINED سجّلت وسيطاً 1910.5، وفي COMBINED 1087.45\" — but that's fine as raw number without claiming Hz. Hmm, but might confuse. I'll mention in details with careful wording: \"قناة gpu_fps سجّلت قيماً في الطورين (وسيط 1910.5 في GPU_SUSTAINED و1087.45 في COMBINED) ولا تُقرأ كتردد إطارات مؤكَّد\". Hmm, this might be seen as speculation. Maybe simpler: skip.\n\nI'll include simply that graphics drift ratio and no vsync lock detected.\n\nphotographer: camera fully unmeasured (permission denied), storage 31.3% free of 228.6 GB, S-06 warning.\n\nNow let me make sure no English words leak other than allowed: testIds (SEC-04 etc.), state names? The instruction says no English technical words except device model, chip, units. Things like \"PERMISSION_DENIED\", \"CAPABILITY_BLOCKED\", \"NOT_TESTED\", \"THRESHOLD_NOT_CALIBRATED\", \"DISABLED\", \"FIRED\" — those are data values/keys; the notMeasuredReason should be quoted literally. Hmm — \"استعمل السبب المُسمّى الذي وصلك (notMeasuredReason) حرفياً\". So quoting them is explicitly sanctioned. I'll quote them but maybe sparingly. Actually the guard may flag English words. Risky. The prompt explicitly says to use the named reason literally (\"قل السبب المُسمّى الذي وصلك (notMeasuredReason) حرفياً\"). But other instruction says no English technical words leak. Comments say keys/shared constants stay English where server reads them automatically. For narrative human text, reasons like PERMISSION_DENIED are codes. Hmm. I think it's safer to use Arabic descriptions plus the code in parentheses where needed. For issue descriptions, DISC-CM-01 title already contains \"PERMISSION_DENIED\". I'll write Arabic description with the code in parentheses once. Hmm, risk of \"English word leaked\".\n\nLet me weigh: the previous guidance explicitly sanctioned using notMeasuredReason literally. But guard rejects foreign words. The safest is to write Arabic equivalents and translate the code: \"سبب عدم القياس: رفض إذن الكاميرا\". I think translating is safer for the guard, and the prompt's language rule (no English technical word leaks) is the hard rule enforced by the guard. But then quoting literally was requested... The permissions strings like \"android.permission.CAMERA\" contain Latin. Hmm.\n\nCompromise: use Arabic phrasing like \"إذن الكاميرا مرفوض\" and where a category/test ID is needed use the testId (allowed, e.g., CM-01). Avoid raw codes. I think that's the best.\n\nBut in section for issue descriptions, the id keys remain as-is (server-read). The values in Arabic.\n\nSimilarly for crossChecks descriptions, avoid English codes; call gates by their meaning in Arabic: \"بوّابة كشف الجذر\" — hmm, gate names like ROOT_DETECTED... Should I write \"بوّابة ROOT_DETECTED\"? The prompt says category keys, severity, letters A-D remain English. Gate names aren't listed. To be safe, describe in Arabic: \"بوّابة كشف صلاحيات الجذر\". I'll do Arabic naming, occasionally with the name mentioned as it's a named gate... I'll avoid the Latin name to be safe. Hmm, but the reader may want it. I'll write Arabic.\n\nActually the instruction said \"بوّابة مسمّاة (gatesApplied[])\" and to read status fields. Nothing demands literal names. Arabic it is.\n\nNow, careful: letters A-D kept English: \"الحرف C\", \"الحرف D\", \"الحرف B\", \"الحرف A\" — fine.\n\nUnits: °C, GHz, MB/s, mAh, mV, GB, IOPS, Mbps, dBm, % — allowed.\n\nNow compose.\n\nnarrative.details — keep all numbers sourced.\n\nLet me draft details:\n\n\"الجهاز Samsung Galaxy S10 5G بمعالج Exynos 9820، نظام Android 11 (مستوى API 30)، ورقعة أمنية بتاريخ 2021-08-01. الحرف العام C، ومصدره بوّابة كشف صلاحيات الجذر التي أُطلقت فعلياً وأنزلت الحرف العام (SEC-04 نتيجته فشل)، مع تقييم جزئي لأن التغطية 45%، بينما متوسط الفئات المقيسة 93.75% — فالفجوة بين الرقمين تفسّرها فئات كاملة لم تُقَس أصلاً (الكاميرا بحكم رفض إذن الكاميرا، والصوت والإدخال بلا اختبارات، والحرارة بلا قراءات حرارية).\"\n\nThen battery, thermal, storage, cpu, graphics, display/memory/wireless, gps/camera/sensors/cellular.\n\nGood. Also mention thermalStatusMax 3 and thermalHeadroomPeak 1.0266666? These are payload values; maybe mention: \"المكسب الحراري المتبقي 1.0266666 والحالة الحرارية القصوى 3\" — hmm, units unclear. I'll skip or mention carefully without units: risky reading. Skip.\n\nMention batery voltage stability 46.46 mV deviation with note it's shown without threshold comparison. OK to mention as \"انحراف جهد 46.46 mV، ويُعرض مع مستوى الشحن 43% ولا يُقارن بعتبة\".\n\nMention rho 1.57 with note depends on charge level. Maybe skip to avoid clutter. I'll include briefly.\n\nNow crossChecks: 4-5 items with evidenceRefs.\n\nevidenceRefs paths: e.g. \"categoryStates.categories.security.gatesApplied[0].status\", \"categoryStates.overall.letterSource\", \"findings.thermal.batteryTempRise.valueC\", \"findings.graphics.ratioPhase5OverPhase4\", \"categoryStates.categories.battery.noLetterReason\", \"categoryStates.overall.partialAssessmentTag.coveragePct\", \"findings.storage.capacityDerived.availablePct\", \"testResults[...]\" maybe better avoid.\n\nFine.\n\nNow write everything in JSON. No markdown fences. Just the object.\n\nLet me write the issue descriptions.\n\nDISC-T-01: \"لم يُقَس الاختبار T-01 (أقصى درجة حرارة) لأن قراءات حرارية غير متوفرة على هذا الجهاز — السبب المُسمّى: قدرة محجوبة.\"\nDISC-T-02: \"لم يُقَس T-02 (سرعة الارتفاع الحراري) لنفس السبب...\"\nDISC-T-03: \"لم يُقَس T-03 (سرعة التبريد)...\"\nPOS-cpu: \"فئة المعالج: كل الاختبارات المنفَّذة (5 من 5، بما فيها اختبارات قياسية) نجحت — لا عطب مسجَّل.\"\nDISC-G-03/04/05: \"لم يُقَس G-03 (انخفاض الإطارات)...\" etc.\nPOS-display: \"فئة الشاشة: 3 من 3 اختبارات نجحت بلا عطب.\"\nPOS-memory: \"فئة الذاكرة العشوائية: 3 من 3 نجحت.\"\nISS-S-06: \"تنبيه في الاختبار S-06: الكتابة العشوائية 2597 IOPS — القياس إرشادي (ADVISORY) ولم يُدخل في تقدير العطب.\"\nDISC-CM-*: camera tests unmeasured due to camera permission denial.\nDISC-L-02/03: GPS satellites count & accuracy unmeasured due to location permission denial.\nISS-SEC-04: \"فشل SEC-04: صلاحيات الجذر مكتشفة على الجهاز — هذا هو سبب الحرف العام C.\"\nISS-SEC-05: \"تنبيه SEC-05: نمط المطوّر مفعّل.\"\nISS-SEC-06: \"تنبيه SEC-06: تصحيح USB مفعّل.\"\nDISC-SEC-07: \"لم يُقَس SEC-07 (المصادر غير المعروفة) — قدرة محجوبة (يتطلّب إعلان إذن تثبيت الحزم).\"\nDISC-SN-07/08/09: ambient temp, step detector, step counter unavailable → capability blocked.\nDISC-N-03: \"لم يُقَس N-03 (شريحة SIM الثانية): الجهاز بفتحة واحدة فقط — قدرة محجوبة لا عطب.\"\nDISC-N-04: \"لم يُقَس N-04 (نوع الشبكة) بسبب رفض إذن قراءة حالة الهاتف.\"\nPOS-wireless: \"فئة الاتصال اللاسلكي: 6 من 6 نجحت.\"\n\nNote: the descriptions should avoid English codes — I'll use Arabic equivalents with testId Latin (allowed).\n\nHmm, for DISC-CM-01 etc. I said \"قدرة محجوبة\" — actually reason is PERMISSION_DENIED. Fine, describe as \"إذن الكاميرا مرفوض\".\n\nFor DISC-G-03..05 reason is NOT_TESTED → \"تعذّر قياس أداء الرسوميات على هذا الجهاز\" (notes in the payload literally say that in Arabic). Good, use that phrasing.\n\nNow adjustments: [].\n\nmodelObservations: 2 items.\n\n1. text: \"قياسات الأداء المستدام والرسوميات موجودة من العتاد رغم أن اختبارات فئة معالج الرسوميات الوظيفية لم تُنفَّذ: findings.graphics يسجّل وسيطَين مختلفين للطورين (1920.3 و1083.5) ونسبة بينهما 0.5642، وsustainedCeiling يسجّل نسب نوافذ 0.8483 و0.7016 و0.7806 مع استعادة 0.7143، بينما G-03 وG-04 وG-05 ما زالت غير مقيسة وبوّابة السقف المستدام لفئة المعالج معطّلة — أي أن هذه الأرقام موجودة لكن لا بوّابة تقيسها الآن.\" evidenceRefs: [\"findings.graphics.ratioPhase5OverPhase4\",\"findings.sustainedCeiling.phase5.meanWindowMaxRatio\",\"categoryStates.categories.cpu.gatesApplied[0].status\",\"categoryStates.categories.gpu.coverage\"].\n\nCareful: observation shouldn't be too long. OK.\n\n2. text: \"مؤشرات البطارية مقيسة كلها لكن بلا عتبة معايَرة: المجمّع 'غير كافية'، ورفض إصدار حرف سببه رقمي صريح، رغم توفّر قيمة سعة فعلية 3782.75 mAh ونسبة 0.8597 من السعة التصميمية 4400 mAh — فلا يمكن قراءة صحة البطارية من هذه الحمولة.\" evidenceRefs: [\"categoryStates.categories.battery.batteryAggregate.judgment\",\"categoryStates.categories.battery.batteryIndicators.BAT-FCC.value\",\"categoryStates.categories.battery.noLetterReason\"].\n\nGood.\n\ncrossChecks — write 5:\n\n1. \"الجذر المكتشف ونمط المطوّر وتصحيح USB مفعّلان، إلى جانب رقعة أمنية عمرها 61.7 شهراً — ثلاثة عناصر في فئة الأمان اجتمعت، فحرف الفئة D والعام C مصدره بوّابة كشف الجذر؛ بوّابتا الرقعة الأمنية والتغطية أُطلقتا أيضاً لكن الحرف كان أسوأ منهما أصلاً (لا أثر).\"\nevidenceRefs: [\"categoryStates.categories.security.deterministicLetter\",\"categoryStates.categories.security.gatesApplied\",\"categoryStates.overall.letterSource\"].\nHmm \"61.7 شهراً\" from gate source \"SEC-03=2021-08-01 (61.7 شهراً)\". OK.\n\n2. \"تغطية عامة 45% مقابل متوسط فئات مقيسة 93.75%: الفارق ناتج عن فئات بلا قياس أصلاً (الكاميرا، الحرارة، الصوت، الإدخال) وفئات جزئية (نظام تحديد المواقع 33.3%)، لا عن فشل قياسات.\"\nevidenceRefs: [\"categoryStates.overall.coverage\",\"categoryStates.overall.measuredCategoriesMean\",\"categoryStates.categories.gps.coverage\",\"categoryStates.categories.camera.state\"].\n\n3. \"قياسات رسوميات مستمرة (وسيط الطور الرابع 1920.3 ووسيط الطور الخامس 1083.5، والنسبة بينهما 0.5642، ولا قفل تزامن في 530 عيّنة) مع أن فئة معالج الرسوميات لم تُنفّذ اختباراتها الوظيفية الثلاثة، فحرفها B جاء من بوّابة التغطية لا من قياس أداء.\"\nevidenceRefs: [\"findings.graphics\", \"categoryStates.categories.gpu.gatesApplied\", \"testResults\" hmm]. Use [\"findings.graphics.phase5.median\",\"findings.graphics.ratioPhase5OverPhase4\",\"categoryStates.categories.gpu.gatesApplied[0].cappedThisLetter\"].\n\n4. \"الحرارة على هذا الجهاز تُقرأ من حرارة البطارية فقط (32.8 °C ابتداءً، وذروة 40.09 °C وسيط 40.2 °C في مرحلة الاندفاع، وارتفاع 7.4 °C بمعدل 1.73 °C/دقيقة)، بينما فئة الإدارة الحرارية غير مقيسة بالكامل وحرارة المعالج غير متوفرة (لا مستشعر) — فلا حكم حراري كامل.\"\nevidenceRefs: [\"findings.channels.battery_temp_c.BURST.mean\",\"findings.thermal.batteryTempRise.valueC\",\"categoryStates.categories.thermal.state\",\"findings.notMeasuredFields\"].\n\nHmm \"findings.notMeasuredFields\" is a list containing cpu temp sensor items. Fine.\n\n5. \"التخزين: 31.3% متاح (71.5 GB من 228.6 GB) مع تنبيه كتابة عشوائية 2597 IOPS، في حين أن قراءتي القراءة العشوائية والقراءة التسلسلية موسومتان غير مستقرّتين ولا تدخلان في الحرف.\"\nevidenceRefs: [\"findings.storage.capacityDerived.availablePct\",\"categoryStates.categories.storage.testIds\",\"findings.unstableMeasurements.S-05\",\"findings.unstableMeasurements.S-04\"].\n\nHmm careful: S-05 random read 98932 IOPS, S-04 sequential read 2359 MB/s. Fine.\n\n6. Maybe add: \"بطارية: مؤشرات مقيسة لكن بلا عتبة معايَرة + تكامل الشحنة غير مقيس بحكم إصدار الحقول (HARNESS_VERSION)\" — that's discussed in observation. Keep 5 cross-checks.\n\nNow narrative.summary: simple Arabic, short.\n\n\"جهاز Samsung Galaxy S10 5G بمعالج Exynos 9820. الفحص جزئي (تغطية 45%)، والحرف العام C سببه الأساسي أنه وُجدت على الجهاز صلاحيات جذر (اختبار SEC-04 فشل)، إضافة إلى رقعة أمنية قديمة. فئات كثيرة لم تُقَس أصلاً: الكاميرا (رفض الإذن)، والصوت والإدخال، والحرارة. ما قيس: معالج سليم (A)، وتخزين بحرف C فيه تنبيه كتابة عشوائية، وحرارة بطارية ترتفع 7.4 °C خلال الفحص، ومؤشرات بطارية مقيسة لكن بلا عتبات معايَرة، فلا حكم نهائي على صحة البطارية.\"\n\nGood.\n\nBuyer advice:\n\ncasual: \"إذا كنت تبحث عن هاتف للاستخدام اليومي: الجهاز يعمل، والشاشة والمعالج والذاكرة والاتصال اجتازت اختباراتها، لكن فيه صلاحيات جذر مكتشفة مع نمط مطوّر وتصحيح USB مفعّلين، ورقعة أمنية قديمة — أي أن أي تطبيق بنك أو دفع قد يرفض العمل، والأمان أقل من المتوقّع. كذلك 31.3% فقط من المساحة متاحة (71.5 GB من 228.6 GB). اطلب من البائع تفاصيل استخدام الجهاز، واحسب في السعر إعادة تثبيت نظام نظيف.\"\n\nHmm \"إعادة تثبيت نظام نظيف\" → \"تثبيت نظام نظيف\" fine.\n\ngamer: \"للألعاب: الحرارة على هذا الجهاز تُقاس من البطارية فقط، وفئة الإدارة الحرارية غير مقيسة أصلاً، وحرارة المعالج غير متوفرة (لا مستشعر). ما قيس: سقف ترددات 2.73 GHz مع نسب نوافذ حمل مستدام 0.8483 ثم 0.7016، وفي اختبار الرسوميات هبط الوسيط من 1920.3 إلى 1083.5 (نسبة 0.5642) أي أداء أقل تحت الحمل المستدام. اختبارات معالج الرسوميات الوظيفية الثلاثة لم تُنفَّذ فلا يمكن تأكيد استقرار الإطارات. الشاشة 60 Hz فقط، ولم يُرصد أي قفل تزامن في 530 عيّنة.\"\n\nCareful: \"الشاشة 60 Hz\" from D-03 rawValue 60 Hz — fine.\n\nphotographer: \"للتصوير: لا يمكن قول أي شيء عن الكاميرا — كل اختباراتها (CM-01 حتى CM-08 وCM-10) لم تُقَس بسبب رفض إذن الكاميرا، فلا دقّة تركيز ولا فلاش ولا تسجيل فيديو مؤكَّد. المتاح: 31.3% من 228.6 GB (71.5 GB) وهي مساحة معقولة لالتقاط الصور، لكن تنبيه الكتابة العشوائية 2597 IOPS يخصّ سرعة حفظ الملفات الصغيرة والصور المتتابعة. إن كانت الكاميرا سبب الشراء، اطلب من البائع تسجيل فيديو اختباري وتشغيل الكاميرا أمامك.\"\n\nGood.\n\nNow, narrative.details — write it fully.\n\nLet me be careful about the letter for storage: deterministicLetter \"C\", floorApplied STATE_WARNING_CEILING.\n\nAlso mention security D and its gates: ROOT_DETECTED, PATCH_AGE.\n\nAlso memory: 7.1 GB total, 2.6 GB available (R-01, R-02) — letter B due to state-only gate.\n\nAlso wireless: Wi-Fi 43 Mbps at 2.4 GHz, signal -64 dBm, letter B by coverage gate.\n\nAlso cellular: 3/4 signal, operator Turkcell? Turkcell is a brand — mentioning carrier is fine? It's operator name; region targeting prohibited (no cities/countries/markets). Turkcell is a Turkish operator — mentioning it implies region. Better to say \"المشغّل معرَّف\" without naming. Yes, skip.\n\nNow, one caveat: \"لا تذكر مدن أو دول أو أسواق محدَّدة\" — skip Turkcell.\n\nWrite final JSON.\n\nDouble-check no forbidden English: I'll use Arabic for statuses. Words like \"تقييم جزئي\" fine. Test IDs Latin allowed. Units allowed.\n\nNote in duration: I should avoid words like \"بوّابة\" plus English. Fine.\n\nLet me write the JSON now.\n\nFor the details, keep numbers exact-ish with reasonable rounding: 40.09 (mean 40.0857), 40.2 median. 32.8. 7.4. 1.73 (1.7345). 46.46 (46.45574). 3782.75. 0.8597. 4400. 139.91 mAh (qIntMah). 1647.85 mA discharge rate under load. 228.6 GB, 31.3%, 71.5 GB, 2597 IOPS, 2359 MB/s, 98932 IOPS. 2.73 GHz. 0.8483, 0.7016, 0.7806, 0.7143. 1920.3, 1083.5, 0.5642, 530. 45%, 93.75%, 33.3%, 75%, 71.4%, 40%, 90%, 100%. 61.7 months. 7.1 GB, 2.6 GB. 43 Mbps, -64 dBm. 43%→38% SoC.\n\nAll from payload. Good.\n\nPotential issue: rule (6) — don't derive numbers. \"7.4 °C خلال 1.73 °C/دقيقة\" fine, no derivation. \"نسبة 0.5642\" given. Fine.\n\nWriting now.\n\nOne more: overall.measuredCategoriesMean = 93.75 — I describe as \"متوسط الفئات المقيسة\". Fine.\n\nDetails text:\n\n\"الجهاز Samsung Galaxy S10 5G بمعالج Exynos 9820 ونظام Android 11 (مستوى API 30). الحرف العام C ومصدره بوّابة كشف صلاحيات الجذر (ROOT...)\" — no, Arabic: \"ومصدره بوّابة كشف الجذر التي أُطلقت وأنزلت الحرف العام، والفحص موسوم 'تقييم جزئي' لأن التغطية 45% مقابل متوسط فئات مقيسة 93.75%.\n\nفئة الأمان: الحرف D — الاختبار SEC-04 فشل (الجذر مكتشف)، وتنبيهان في SEC-05 وSEC-06 (نمط المطوّر وتصحيح USB مفعّلان)، ورقعة أمنية بتاريخ 2021-08-01 (عمرها 61.7 شهراً بحسب البوّابة). بوّابتا الرقعة وكشف الجذر أُطلقتا، لكن الحرف الأساسي كان أسوأ من سقفيهما فلا أثر لقيدهما.\n\nالمعالج: الحرف A بعد نجاح 5 من 5 اختبارات منفَّذة، وبوّابة التغطية المنخفضة لم تُطلَق (تغطية 100% مع اختبارات قياس). اختبارا C-03 وC-04 موسومان غير مستقرّين ولا يدخلان في الحرف.\n\nالسقف المستدام: ذروة 2.73 GHz، ونِسَب أقصى نافذة: 0.8483 في الطور الثالث و0.7016 في الطور الخامس و0.7806 مجمّعة، مع 0.7143 في طور الاستعادة — لكن بوّابة السقف المستدام معطّلة بتصميم النظام فلم تُقيَّم ولم تؤثر على أي حرف.\n\nمعالج الرسوميات: الحرف B، لكنه سقف تغطية: 40% تغطية، والاختبارات G-01 وG-02 فقط منفَّذة من صنف حالة، وG-03 وG-04 وG-05 غير مقيسة. قياسات الرسوميات في findings تسجّل وسيطاً 1920.3 في الطور الرابع و1083.5 في الطور الخامس بنسبة 0.5642 بينهما، ونسبة انزياح 0.8536 في الطور الرابع، وصفر قفل تزامن عند 60 و90 و120 في 530 عيّنة.\n\nالتخزين: الحرف C مع تنبيه S-06 (كتابة عشوائية 2597 IOPS) وأرضية تنبيه مطبَّقة؛ السعة 228.6 GB منها 31.3% متاحة (71.5 GB)؛ S-03 كتابة تسلسلية 241 MB/s وS-04 قراءة 2359 MB/s وS-05 قراءة عشوائية 98932 IOPS — والأخيران موسومان غير مستقرّين ولا يدخلان الحرف.\n\nالشاشة والذاكرة والاتصال اللاسلكي: ثلاثة حروف B كلها من بوّابة التغطية المنخفضة لا من عطب (3 من 3 و3 من 3 و6 من 6 ناجحة، لكن كلها من صنف حالة بلا اختبار قياس). الشاشة 1080×2280 و420 نقطة/بوصة و60 Hz. الذاكرة 7.1 GB إجمالاً و2.6 GB متاحة. اللاسلكي متصل عند 43 Mbps على 2.4 GHz وإشارة -64 dBm.\n\nالخليوي والمستشعرات وتحديد المواقع: حروف B بقيد التغطية (71.4% و75% و33.3%)، مع اختبارات لم تُقَس: N-03 (فتحة واحدة فقط)، N-04 (رفض إذن حالة الهاتف)، SN-07 وSN-08 وSN-09 (غير متوفرة)، L-02 وL-03 (رفض إذن الموقع). الاختبارات المنفَّذة في هذه الفئات نجحت كلها.\n\nالكاميرا والحرارة والصوت والإدخال: بلا قياس إطلاقاً — كل اختبارات الكاميرا رُفضت بسبب إذن الكاميرا، واختبارات الحرارة الثلاثة بلا قراءات حرارية على الجهاز (وعدد المناطق الحرارية 0)، والصوت والإدخال بلا اختبارات معرَّفة أصلاً.\n\nالبطارية: لا حرف، والسبب المُسمّى 'لا عتبة معايَرة'؛ الأرقام المقيسة: 43% إلى 38% خلال الفحص، سعة تصميمية 4400 mAh، وسعة فعلية 3782.75 mAh بنسبة 0.8597 من التصميم، وتكامل شحنة 139.91 mAh، وتيار تفريغ تحت الحمل 1647.85 mA، وانحراف جهد 46.46 mV (يُعرض مع مستوى الشحن 43% بلا مقارنة بعتبة)، ومعامل 1.57 (يتغيّر مع مستوى الشحن ولا يُحكم به). اختبارات B-01 إلى B-07 نجحت، وB-08 بلا قياس.\n\nالحرارة المقيسة عبر البطارية: 32.8 °C ابتداءً، ومتوسط مرحلة الاندفاع 40.09 °C (وسيط 40.2 وأقصى 40.2)، وارتفاع 7.4 °C بمعدل 1.73 °C/دقيقة، بينما حرارة المعالج غير مقيسة لعدم وجود مستشعر.\"\n\nGood but long. Fine.\n\nWait: \"نسبة انزياح 0.8536 في الطور الرابع\" — phase4DriftRatio 0.8536. OK.\n\nNow careful: \"الشاشة 1080×2280 و420 نقطة/بوصة\" — DPI unit; allowed? \"420 DPI\" — I used Arabic \"نقطة/بوصة\" fine.\n\nNote: also \"60 Hz\".\n\nAlright, final JSON.\n\nOne more check on issueDescriptions keys: exactly as in payload.\n\nLet me finalize."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 28560,
+      "completion_tokens": 16022,
+      "total_tokens": 44582,
+      "prompt_tokens_details": {
+        "cached_tokens": 4480
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 10861
+      },
+      "prompt_cache_hit_tokens": 4480,
+      "prompt_cache_miss_tokens": 24080
+    },
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+  }
+}

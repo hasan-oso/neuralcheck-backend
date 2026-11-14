@@ -1,0 +1,911 @@
+{
+ "s10": {
+  "file": "s10-timeseries.json",
+  "device": "Samsung Galaxy S10 5G",
+  "api": 30,
+  "totalSamples": 1603,
+  "expectedSamples_footer": 1605,
+  "wall_ms": 479038,
+  "v0_first_ms": 139.0,
+  "v0_last_ms": 478497.0,
+  "sample0_phase": 1,
+  "dt_max_ms": 1027.0,
+  "dt_min_ms": 20.0,
+  "phase_counts": {
+   "INIT": 62,
+   "STORAGE": 77,
+   "MEMORY": 60,
+   "CPU_SUSTAINED": 300,
+   "GPU_SUSTAINED": 292,
+   "COMBINED": 241,
+   "BURST": 451,
+   "COOLDOWN": 120
+  },
+  "phase_span_s": {
+   "INIT": 30.5,
+   "STORAGE": 105.7,
+   "MEMORY": 59.0,
+   "CPU_SUSTAINED": 74.7,
+   "GPU_SUSTAINED": 72.7,
+   "COMBINED": 60.0,
+   "BURST": 45.0,
+   "COOLDOWN": 59.5
+  },
+  "cadence": {
+   "battery_temp": {
+    "changes_whole_scan": 11,
+    "changes_phases_3_5": 6,
+    "distinct_values_whole_scan": 12,
+    "distinct_values_phases_3_5": 7
+   },
+   "battery_voltage": {
+    "changes_whole_scan": 11,
+    "changes_phases_3_5": 6,
+    "distinct_values_whole_scan": 11,
+    "distinct_values_phases_3_5": 7
+   },
+   "battery_level": {
+    "changes_whole_scan": 4,
+    "changes_phases_3_5": 3,
+    "distinct_values_whole_scan": 5,
+    "distinct_values_phases_3_5": 4
+   },
+   "battery_current": {
+    "changes_whole_scan": 1402,
+    "changes_phases_3_5": 830,
+    "distinct_values_whole_scan": 964,
+    "distinct_values_phases_3_5": 602
+   },
+   "cpu_freq": {
+    "changes_whole_scan": 830,
+    "changes_phases_3_5": 462,
+    "distinct_values_whole_scan": 28,
+    "distinct_values_phases_3_5": 23
+   }
+  },
+  "temp_change_times_s": [
+   11,
+   42,
+   72,
+   132,
+   192,
+   223,
+   283,
+   313,
+   343,
+   373,
+   404
+  ],
+  "voltage_change_times_s": [
+   11,
+   42,
+   72,
+   132,
+   192,
+   223,
+   283,
+   313,
+   343,
+   373,
+   404
+  ],
+  "level_change_times_s": [
+   132,
+   223,
+   313,
+   373
+  ],
+  "level_values_at_changes": [
+   83.0,
+   82.0,
+   81.0,
+   80.0
+  ],
+  "temp_values_at_changes": [
+   30.2,
+   30.4,
+   30.8,
+   31.0,
+   32.3,
+   33.4,
+   34.8,
+   35.0,
+   35.8,
+   36.5,
+   35.6
+  ],
+  "voltageStabilityMv_recomputed": 64.78,
+  "voltageStabilityMv_footer": 64.77858884489343,
+  "voltage_distinct_phases_3_5": [
+   3724.0,
+   3744.0,
+   3751.0,
+   3755.0,
+   3774.0,
+   3830.0,
+   3945.0
+  ],
+  "temp_start": 29.8,
+  "temp_max": 36.5,
+  "temp_max_time_s": 373,
+  "temp_max_phase": "COMBINED",
+  "temp_rise": 6.7,
+  "temp_resolution": 0.1999999999999993,
+  "batteryTempMaxC_footer": 36.5,
+  "temp_rise_rate_c_per_min_whole_scan": 0.839,
+  "temp_rise_rate_c_per_min_phases_3_5": 1.588,
+  "temp_phase7_start_end": [
+   35.6,
+   35.6
+  ],
+  "dischargeRateUnderLoadMa_recomputed": 1652.88,
+  "dischargeRateUnderLoadMa_footer": 1652.8847539015605,
+  "current_sign_positive_count": 0,
+  "current_zero_count": 0,
+  "phase6_current_repeat_fraction": 0.433,
+  "mean_abs_current_ma_whole": 1173.6,
+  "mean_abs_current_ma_phase0_first10s": 635.0,
+  "mean_abs_current_ma_phase0_last10s": 1735.6,
+  "peak_power_mw_phase3": 11302.0,
+  "peak_power_mw_phase5": 12650.0,
+  "peak_power_mw_footer": [
+   11302,
+   12650
+  ],
+  "mean_power_mw_phase4": 5030,
+  "mean_power_mw_phase0": 3666,
+  "coulomb_whole_scan_mah": 144.2,
+  "designCapacityMah_footer": 4400,
+  "levelDrop_pct": 4,
+  "levelDrop_x_design_mah": 176.0,
+  "levelDrop_x_design_range_mah": [
+   132.0,
+   220.0
+  ],
+  "level_x_design_over_coulomb": 1.22,
+  "implied_capacity_from_level_steps": [
+   {
+    "from_s": 132,
+    "to_s": 223,
+    "mah_per_pct": 35.7,
+    "implied_capacity_mah": 3570,
+    "implied_ratio_to_design": 0.811
+   },
+   {
+    "from_s": 223,
+    "to_s": 313,
+    "mah_per_pct": 35.6,
+    "implied_capacity_mah": 3560,
+    "implied_ratio_to_design": 0.809
+   },
+   {
+    "from_s": 313,
+    "to_s": 373,
+    "mah_per_pct": 30.09,
+    "implied_capacity_mah": 3009,
+    "implied_ratio_to_design": 0.684
+   }
+  ],
+  "implied_capacity_n_intervals": 3,
+  "implied_capacity_mean_mah": 3380,
+  "implied_capacity_mean_ratio_to_design": 0.768,
+  "chargeCounterUah_footer": 3542000,
+  "chargeCounter_as_uAh_over_design_x_levelEnd": 1.006,
+  "chargeCounter_as_mAh_over_design_x_levelEnd": 1006.25,
+  "peak_freq_khz": 2730000.0,
+  "peak_freq_footer": 2730000,
+  "freq_by_phase": {
+   "INIT": {
+    "n": 62,
+    "mean_mhz": 2004,
+    "max_mhz": 2730,
+    "min_mhz": 1300,
+    "median_mhz": 1950,
+    "mean_ratio_to_peak": 0.734,
+    "max_ratio_to_peak": 1.0
+   },
+   "STORAGE": {
+    "n": 77,
+    "mean_mhz": 1915,
+    "max_mhz": 2730,
+    "min_mhz": 1456,
+    "median_mhz": 1950,
+    "mean_ratio_to_peak": 0.701,
+    "max_ratio_to_peak": 1.0
+   },
+   "MEMORY": {
+    "n": 60,
+    "mean_mhz": 2117,
+    "max_mhz": 2730,
+    "min_mhz": 1742,
+    "median_mhz": 2106,
+    "mean_ratio_to_peak": 0.776,
+    "max_ratio_to_peak": 1.0
+   },
+   "CPU_SUSTAINED": {
+    "n": 300,
+    "mean_mhz": 2168,
+    "max_mhz": 2340,
+    "min_mhz": 1586,
+    "median_mhz": 2210,
+    "mean_ratio_to_peak": 0.794,
+    "max_ratio_to_peak": 0.857
+   },
+   "GPU_SUSTAINED": {
+    "n": 292,
+    "mean_mhz": 1851,
+    "max_mhz": 2470,
+    "min_mhz": 1053,
+    "median_mhz": 1950,
+    "mean_ratio_to_peak": 0.678,
+    "max_ratio_to_peak": 0.905
+   },
+   "COMBINED": {
+    "n": 241,
+    "mean_mhz": 1858,
+    "max_mhz": 2314,
+    "min_mhz": 1586,
+    "median_mhz": 1846,
+    "mean_ratio_to_peak": 0.681,
+    "max_ratio_to_peak": 0.848
+   },
+   "BURST": {
+    "n": 451,
+    "mean_mhz": 1892,
+    "max_mhz": 1976,
+    "min_mhz": 1404,
+    "median_mhz": 1950,
+    "mean_ratio_to_peak": 0.693,
+    "max_ratio_to_peak": 0.724
+   },
+   "COOLDOWN": {
+    "n": 120,
+    "mean_mhz": 1840,
+    "max_mhz": 1950,
+    "min_mhz": 1222,
+    "median_mhz": 1950,
+    "mean_ratio_to_peak": 0.674,
+    "max_ratio_to_peak": 0.714
+   }
+  },
+  "phase3CpuFreqRatio_recomputed": 0.7941,
+  "phase3CpuFreqRatio_footer": 0.7940952,
+  "C06_early_vs_late_pct": 5.47,
+  "C07_rsd_pct": 7.17,
+  "drop_phase3_mean_vs_peak_pct": 20.6,
+  "drop_phase6_max_vs_peak_pct": 27.6,
+  "recovery_phase7_max_ratio": 0.714,
+  "sustained_ceiling_phase3": {
+   "windows": 15,
+   "mean_window_max_ratio": 0.848,
+   "min_window_max_ratio": 0.848,
+   "median_window_max_ratio": 0.848
+  },
+  "sustained_ceiling_phase5": {
+   "windows": 13,
+   "mean_window_max_ratio": 0.724,
+   "min_window_max_ratio": 0.676,
+   "median_window_max_ratio": 0.714
+  },
+  "sustained_ceiling_phases_3_5": {
+   "windows": 28,
+   "mean_window_max_ratio": 0.79,
+   "min_window_max_ratio": 0.676,
+   "median_window_max_ratio": 0.848
+  },
+  "sustained_ceiling_phase6": {
+   "windows": 10,
+   "mean_window_max_ratio": 0.717,
+   "min_window_max_ratio": 0.714,
+   "median_window_max_ratio": 0.714
+  },
+  "last_time_freq_ge_2600MHz_s": 151,
+  "last_time_freq_ge_2340MHz_s": 297,
+  "last_time_freq_ge_2000MHz_s": 320,
+  "phase3_freq_mode_mhz": [
+   [
+    2314,
+    108
+   ],
+   [
+    2210,
+    69
+   ],
+   [
+    2106,
+    43
+   ],
+   [
+    2002,
+    37
+   ]
+  ],
+  "freq_drop_burst_to_sustained_prompt_formula_pct": -14.6,
+  "freqDropFromBurstToSustainedPct_footer": 7.7260056,
+  "throttlingEvents_footer": [],
+  "thermalStatusMax_footer": 2,
+  "thermalHeadroomPeak_footer": 0.9466667,
+  "governorCappingDetected_footer": false,
+  "satGrade_footer": "fully_saturated",
+  "phase0_first10s_freq_median_mhz": 1950.0,
+  "phase0_freq_median_mhz": 1950.0,
+  "usage_mean_phase3": 52.7,
+  "cpuUsageSource_footer": "process_fallback",
+  "usage_mean_phase0_last10s": 74.3,
+  "gpu_fps_nonzero_by_phase": {
+   "GPU_SUSTAINED": {
+    "n_nonzero": 289,
+    "median": 1953.6,
+    "p10": 1648.3,
+    "p90": 2218.1,
+    "min": 121.2,
+    "max": 2469.8
+   },
+   "COMBINED": {
+    "n_nonzero": 241,
+    "median": 1166.9,
+    "p10": 1007.0,
+    "p90": 1620.3,
+    "min": 676.2,
+    "max": 1795.7
+   },
+   "BURST": {
+    "n_nonzero": 2,
+    "median": 499.7,
+    "p10": 381.5,
+    "p90": 617.9,
+    "min": 352.0,
+    "max": 647.5
+   }
+  },
+  "gpu_fps_phase3_leak_samples": [],
+  "phase3_last_index": 498,
+  "G03_if_window_were_phases_4_5_pct": 95.1,
+  "fps_in_60_band_fraction": 0.0,
+  "fps_in_90_band_fraction": 0.0,
+  "fps_in_120_band_fraction": 0.002,
+  "fps_median_phase5_over_phase4": 0.597,
+  "gpuRenderCompletionMs_footer": [
+   36,
+   17
+  ],
+  "gpuFenceTimeoutCount_footer": 0,
+  "gpu_fps_nonzero_outside_4_5": [
+   [
+    1032,
+    "BURST",
+    647.5
+   ],
+   [
+    1033,
+    "BURST",
+    352.0
+   ]
+  ],
+  "storage_v8_nonzero_count_phase1": 34,
+  "storage_v8_distinct_values_phase1": 16,
+  "storage_segments_mbps": [
+   155.0,
+   179.4,
+   195.3,
+   191.4,
+   182.9,
+   179.2,
+   173.3,
+   183.2,
+   172.1,
+   81.9,
+   178.8,
+   79.0,
+   176.9,
+   48.3,
+   73.4,
+   100.7
+  ],
+  "storage_segments_harmonic_mean": 122.3,
+  "storage_segments_first4_mean": 180.3,
+  "storage_bytes_over_duration_mbps": 120.6,
+  "storage_collapse_detector": {
+   "segment_index": 9,
+   "cumulative_gb": 2.5,
+   "mbps": 81.9
+  },
+  "storageSlcCacheSizeMb_footer": 0,
+  "storage_write_duration_s": 35.628,
+  "storage_phase1_idle_fraction": 0.52,
+  "memory_v9_nonzero_mean_phase2": 383.7,
+  "memory_bytes_over_phase2_span_mbps": 408.8,
+  "evidence_gates": {
+   "voltageStabilityMv (v[2] phases 3-5)": {
+    "nSamples": 833,
+    "sourceCadenceUpdates": 6,
+    "passes": true
+   },
+   "batteryTempRise (v[1] whole scan)": {
+    "nSamples": 1603,
+    "sourceCadenceUpdates": 11,
+    "passes": true
+   },
+   "B-06 levelDrop (v[4] whole scan)": {
+    "nSamples": 1603,
+    "sourceCadenceUpdates": 4,
+    "passes": false
+   },
+   "C-06/C-07 (v[5] phase 3)": {
+    "nSamples": 300,
+    "sourceCadenceUpdates": 230,
+    "passes": true
+   },
+   "G-03..05 current window (v[10] phase 3 nonzero)": {
+    "nSamples": 0,
+    "sourceCadenceUpdates": 0,
+    "passes": false
+   },
+   "G-03..05 proposed window (v[10] phases 4+5 nonzero)": {
+    "nSamples": 530,
+    "sourceCadenceUpdates": 529,
+    "passes": true
+   },
+   "dischargeRateUnderLoad (v[3] phases 3-5)": {
+    "nSamples": 833,
+    "sourceCadenceUpdates": 830,
+    "passes": true
+   },
+   "sustained ceiling (v[5] phases 3+5)": {
+    "nSamples": 541,
+    "sourceCadenceUpdates": 321,
+    "passes": true
+   },
+   "coulomb per 1% step (v[4] transitions >= 2 intervals)": {
+    "nSamples": 4,
+    "sourceCadenceUpdates": 3,
+    "passes": false
+   }
+  }
+ },
+ "honor": {
+  "file": "honor-timeseries.json",
+  "device": "Honor MTN-NX1",
+  "api": 36,
+  "totalSamples": 1606,
+  "expectedSamples_footer": 1605,
+  "wall_ms": 479051,
+  "v0_first_ms": 74.0,
+  "v0_last_ms": 478970.0,
+  "sample0_phase": 1,
+  "dt_max_ms": 1012.0,
+  "dt_min_ms": 21.0,
+  "phase_counts": {
+   "INIT": 61,
+   "STORAGE": 77,
+   "MEMORY": 60,
+   "CPU_SUSTAINED": 303,
+   "GPU_SUSTAINED": 291,
+   "COMBINED": 241,
+   "BURST": 453,
+   "COOLDOWN": 120
+  },
+  "phase_span_s": {
+   "INIT": 30.0,
+   "STORAGE": 105.5,
+   "MEMORY": 59.0,
+   "CPU_SUSTAINED": 75.5,
+   "GPU_SUSTAINED": 72.5,
+   "COMBINED": 59.9,
+   "BURST": 45.2,
+   "COOLDOWN": 59.5
+  },
+  "cadence": {
+   "battery_temp": {
+    "changes_whole_scan": 3,
+    "changes_phases_3_5": 1,
+    "distinct_values_whole_scan": 4,
+    "distinct_values_phases_3_5": 2
+   },
+   "battery_voltage": {
+    "changes_whole_scan": 3,
+    "changes_phases_3_5": 1,
+    "distinct_values_whole_scan": 4,
+    "distinct_values_phases_3_5": 2
+   },
+   "battery_level": {
+    "changes_whole_scan": 3,
+    "changes_phases_3_5": 1,
+    "distinct_values_whole_scan": 4,
+    "distinct_values_phases_3_5": 2
+   },
+   "battery_current": {
+    "changes_whole_scan": 1371,
+    "changes_phases_3_5": 825,
+    "distinct_values_whole_scan": 677,
+    "distinct_values_phases_3_5": 434
+   },
+   "cpu_freq": {
+    "changes_whole_scan": 754,
+    "changes_phases_3_5": 342,
+    "distinct_values_whole_scan": 25,
+    "distinct_values_phases_3_5": 21
+   }
+  },
+  "temp_change_times_s": [
+   137,
+   290,
+   443
+  ],
+  "voltage_change_times_s": [
+   137,
+   290,
+   443
+  ],
+  "level_change_times_s": [
+   137,
+   290,
+   443
+  ],
+  "level_values_at_changes": [
+   74.0,
+   73.0,
+   72.0
+  ],
+  "temp_values_at_changes": [
+   32.0,
+   33.0,
+   34.0
+  ],
+  "voltageStabilityMv_recomputed": 8.83,
+  "voltageStabilityMv_footer": 8.826853957297708,
+  "voltage_distinct_phases_3_5": [
+   4087.0,
+   4105.0
+  ],
+  "temp_start": 31.0,
+  "temp_max": 34.0,
+  "temp_max_time_s": 443,
+  "temp_max_phase": "COOLDOWN",
+  "temp_rise": 3.0,
+  "temp_resolution": 1.0,
+  "batteryTempMaxC_footer": 34.0,
+  "temp_rise_rate_c_per_min_whole_scan": 0.376,
+  "temp_rise_rate_c_per_min_phases_3_5": 0.288,
+  "temp_phase7_start_end": [
+   33.0,
+   34.0
+  ],
+  "dischargeRateUnderLoadMa_recomputed": 1032.26,
+  "dischargeRateUnderLoadMa_footer": 1032.2610778443113,
+  "current_sign_positive_count": 0,
+  "current_zero_count": 0,
+  "phase6_current_repeat_fraction": 0.489,
+  "mean_abs_current_ma_whole": 772.7,
+  "mean_abs_current_ma_phase0_first10s": 392.4,
+  "mean_abs_current_ma_phase0_last10s": 1001.1,
+  "peak_power_mw_phase3": 5492.0,
+  "peak_power_mw_phase5": 6776.0,
+  "peak_power_mw_footer": [
+   5492,
+   6776
+  ],
+  "mean_power_mw_phase4": 2518,
+  "mean_power_mw_phase0": 2388,
+  "coulomb_whole_scan_mah": 93.2,
+  "designCapacityMah_footer": 8300,
+  "levelDrop_pct": 3,
+  "levelDrop_x_design_mah": 249.0,
+  "levelDrop_x_design_range_mah": [
+   166.0,
+   332.0
+  ],
+  "level_x_design_over_coulomb": 2.67,
+  "implied_capacity_from_level_steps": [
+   {
+    "from_s": 137,
+    "to_s": 290,
+    "mah_per_pct": 35.1,
+    "implied_capacity_mah": 3510,
+    "implied_ratio_to_design": 0.423
+   },
+   {
+    "from_s": 290,
+    "to_s": 443,
+    "mah_per_pct": 37.0,
+    "implied_capacity_mah": 3700,
+    "implied_ratio_to_design": 0.446
+   }
+  ],
+  "implied_capacity_n_intervals": 2,
+  "implied_capacity_mean_mah": 3605,
+  "implied_capacity_mean_ratio_to_design": 0.434,
+  "chargeCounterUah_footer": 5596,
+  "chargeCounter_as_uAh_over_design_x_levelEnd": 0.001,
+  "chargeCounter_as_mAh_over_design_x_levelEnd": 0.936,
+  "peak_freq_khz": 2304000.0,
+  "peak_freq_footer": 2304000,
+  "freq_by_phase": {
+   "INIT": {
+    "n": 61,
+    "mean_mhz": 1704,
+    "max_mhz": 2304,
+    "min_mhz": 1056,
+    "median_mhz": 1613,
+    "mean_ratio_to_peak": 0.74,
+    "max_ratio_to_peak": 1.0
+   },
+   "STORAGE": {
+    "n": 77,
+    "mean_mhz": 1712,
+    "max_mhz": 2304,
+    "min_mhz": 787,
+    "median_mhz": 1709,
+    "mean_ratio_to_peak": 0.743,
+    "max_ratio_to_peak": 1.0
+   },
+   "MEMORY": {
+    "n": 60,
+    "mean_mhz": 1455,
+    "max_mhz": 2208,
+    "min_mhz": 634,
+    "median_mhz": 1498,
+    "mean_ratio_to_peak": 0.632,
+    "max_ratio_to_peak": 0.958
+   },
+   "CPU_SUSTAINED": {
+    "n": 303,
+    "mean_mhz": 2285,
+    "max_mhz": 2304,
+    "min_mhz": 1114,
+    "median_mhz": 2304,
+    "mean_ratio_to_peak": 0.992,
+    "max_ratio_to_peak": 1.0
+   },
+   "GPU_SUSTAINED": {
+    "n": 291,
+    "mean_mhz": 980,
+    "max_mhz": 2304,
+    "min_mhz": 634,
+    "median_mhz": 787,
+    "mean_ratio_to_peak": 0.425,
+    "max_ratio_to_peak": 1.0
+   },
+   "COMBINED": {
+    "n": 241,
+    "mean_mhz": 2284,
+    "max_mhz": 2304,
+    "min_mhz": 634,
+    "median_mhz": 2304,
+    "mean_ratio_to_peak": 0.991,
+    "max_ratio_to_peak": 1.0
+   },
+   "BURST": {
+    "n": 453,
+    "mean_mhz": 2012,
+    "max_mhz": 2304,
+    "min_mhz": 634,
+    "median_mhz": 2304,
+    "mean_ratio_to_peak": 0.873,
+    "max_ratio_to_peak": 1.0
+   },
+   "COOLDOWN": {
+    "n": 120,
+    "mean_mhz": 1397,
+    "max_mhz": 2304,
+    "min_mhz": 634,
+    "median_mhz": 1402,
+    "mean_ratio_to_peak": 0.607,
+    "max_ratio_to_peak": 1.0
+   }
+  },
+  "phase3CpuFreqRatio_recomputed": 0.9916,
+  "phase3CpuFreqRatio_footer": 0.9915564,
+  "C06_early_vs_late_pct": 5.23,
+  "C07_rsd_pct": 3.33,
+  "drop_phase3_mean_vs_peak_pct": 0.8,
+  "drop_phase6_max_vs_peak_pct": 0.0,
+  "recovery_phase7_max_ratio": 1.0,
+  "sustained_ceiling_phase3": {
+   "windows": 16,
+   "mean_window_max_ratio": 0.997,
+   "min_window_max_ratio": 0.958,
+   "median_window_max_ratio": 1.0
+  },
+  "sustained_ceiling_phase5": {
+   "windows": 12,
+   "mean_window_max_ratio": 1.0,
+   "min_window_max_ratio": 1.0,
+   "median_window_max_ratio": 1.0
+  },
+  "sustained_ceiling_phases_3_5": {
+   "windows": 29,
+   "mean_window_max_ratio": 0.999,
+   "min_window_max_ratio": 0.958,
+   "median_window_max_ratio": 1.0
+  },
+  "sustained_ceiling_phase6": {
+   "windows": 10,
+   "mean_window_max_ratio": 0.974,
+   "min_window_max_ratio": 0.742,
+   "median_window_max_ratio": 1.0
+  },
+  "last_time_freq_ge_2600MHz_s": null,
+  "last_time_freq_ge_2340MHz_s": null,
+  "last_time_freq_ge_2000MHz_s": 475,
+  "phase3_freq_mode_mhz": [
+   [
+    2304,
+    253
+   ],
+   [
+    2208,
+    49
+   ],
+   [
+    1114,
+    1
+   ]
+  ],
+  "freq_drop_burst_to_sustained_prompt_formula_pct": -13.5,
+  "freqDropFromBurstToSustainedPct_footer": 0.84810877,
+  "throttlingEvents_footer": [],
+  "thermalStatusMax_footer": 0,
+  "thermalHeadroomPeak_footer": 0.7262666,
+  "governorCappingDetected_footer": false,
+  "satGrade_footer": "fully_saturated",
+  "phase0_first10s_freq_median_mhz": 1401.6,
+  "phase0_freq_median_mhz": 1612.8,
+  "usage_mean_phase3": 53.6,
+  "cpuUsageSource_footer": "process_fallback",
+  "usage_mean_phase0_last10s": 69.4,
+  "gpu_fps_nonzero_by_phase": {
+   "CPU_SUSTAINED": {
+    "n_nonzero": 2,
+    "median": 88.8,
+    "p10": 64.7,
+    "p90": 112.8,
+    "min": 58.7,
+    "max": 118.9
+   },
+   "GPU_SUSTAINED": {
+    "n_nonzero": 290,
+    "median": 60.2,
+    "p10": 59.8,
+    "p90": 90.2,
+    "min": 29.8,
+    "max": 135.7
+   },
+   "COMBINED": {
+    "n_nonzero": 241,
+    "median": 60.4,
+    "p10": 59.4,
+    "p90": 90.1,
+    "min": 30.0,
+    "max": 111.5
+   },
+   "BURST": {
+    "n_nonzero": 1,
+    "median": 32.1,
+    "p10": 32.1,
+    "p90": 32.1,
+    "min": 32.1,
+    "max": 32.1
+   }
+  },
+  "gpu_fps_phase3_leak_samples": [
+   [
+    499,
+    118.86,
+    241.0
+   ],
+   [
+    500,
+    58.7,
+    241.2
+   ]
+  ],
+  "phase3_last_index": 500,
+  "G03_from_phase3_window_pct": 50.61,
+  "G04_from_phase3_window_pct": 50.61,
+  "G05_from_phase3_window": 59,
+  "G03_if_window_were_phases_4_5_pct": 78.0,
+  "fps_in_60_band_fraction": 0.625,
+  "fps_in_90_band_fraction": 0.316,
+  "fps_in_120_band_fraction": 0.0,
+  "fps_median_phase5_over_phase4": 1.004,
+  "gpuRenderCompletionMs_footer": [
+   16,
+   15
+  ],
+  "gpuFenceTimeoutCount_footer": 0,
+  "gpu_fps_nonzero_outside_4_5": [
+   [
+    499,
+    "CPU_SUSTAINED",
+    118.9
+   ],
+   [
+    500,
+    "CPU_SUSTAINED",
+    58.7
+   ],
+   [
+    1033,
+    "BURST",
+    32.1
+   ]
+  ],
+  "storage_v8_nonzero_count_phase1": 6,
+  "storage_v8_distinct_values_phase1": 6,
+  "storage_segments_mbps": [
+   657.8,
+   696.0,
+   649.2,
+   686.8,
+   720.8,
+   728.8,
+   739.9,
+   735.2,
+   766.4,
+   752.4,
+   720.9,
+   749.6,
+   779.3,
+   756.5,
+   762.1,
+   756.9
+  ],
+  "storage_segments_harmonic_mean": 726.7,
+  "storage_segments_first4_mean": 672.5,
+  "storage_bytes_over_duration_mbps": 679.2,
+  "storage_collapse_detector": null,
+  "storageSlcCacheSizeMb_footer": 0,
+  "storage_write_duration_s": 6.324,
+  "storage_phase1_idle_fraction": 0.92,
+  "memory_v9_nonzero_mean_phase2": 393.6,
+  "memory_bytes_over_phase2_span_mbps": 418.9,
+  "evidence_gates": {
+   "voltageStabilityMv (v[2] phases 3-5)": {
+    "nSamples": 835,
+    "sourceCadenceUpdates": 1,
+    "passes": false
+   },
+   "batteryTempRise (v[1] whole scan)": {
+    "nSamples": 1606,
+    "sourceCadenceUpdates": 3,
+    "passes": false
+   },
+   "B-06 levelDrop (v[4] whole scan)": {
+    "nSamples": 1606,
+    "sourceCadenceUpdates": 3,
+    "passes": false
+   },
+   "C-06/C-07 (v[5] phase 3)": {
+    "nSamples": 303,
+    "sourceCadenceUpdates": 84,
+    "passes": true
+   },
+   "G-03..05 current window (v[10] phase 3 nonzero)": {
+    "nSamples": 2,
+    "sourceCadenceUpdates": 1,
+    "passes": false
+   },
+   "G-03..05 proposed window (v[10] phases 4+5 nonzero)": {
+    "nSamples": 531,
+    "sourceCadenceUpdates": 530,
+    "passes": true
+   },
+   "dischargeRateUnderLoad (v[3] phases 3-5)": {
+    "nSamples": 835,
+    "sourceCadenceUpdates": 825,
+    "passes": true
+   },
+   "sustained ceiling (v[5] phases 3+5)": {
+    "nSamples": 544,
+    "sourceCadenceUpdates": 121,
+    "passes": true
+   },
+   "coulomb per 1% step (v[4] transitions >= 2 intervals)": {
+    "nSamples": 3,
+    "sourceCadenceUpdates": 2,
+    "passes": false
+   }
+  }
+ }
+}

@@ -1,0 +1,206 @@
+{
+  "_meta": {
+    "label": "مشتقّ، ليس ردّاً حقيقياً ولا فحصاً حقيقياً — عيّنات zero-measured من مُدخل حقيقي محوَّل (القاعدة 12)",
+    "userOrder": "ثم عيّنة مشتقّة يولّدها الخادم نفسه من مُدخل لا تُقاس فيه أي فئة، فيمتلئ zeroMeasuredMessage وabstentionReasons. ومصدرها مكتوب، وتطابق ما ينتجه الخادم (القاعدة 41)، وتُنسخ إلى التطبيق والموقع (القاعدة 39).",
+    "whySeparateFile": "القاعدة 41: العيّنة يجب أن تطابق ما يُنتجه الخادم — فلا مفتاح _meta داخل المستند أو الردّ. المصدر والتحويل هنا في ملفّ مستقلّ.",
+    "generatedBy": "functions/scripts/generate-v7-reports-document-sample-zero-measured.js",
+    "guard": "functions/test/v7ZeroMeasuredSamplesContractGuard.test.js",
+    "source": {
+      "timeSeries": "functions/test/fixtures/golden/34dff2b8.ts.json",
+      "functionalResults": "functions/test/fixtures/golden/functionalResults-by-scanid.json[\"34dff2b8-ce9e-4b40-86a9-1976c878e195\"]",
+      "unchanged": "الملفّان الحقيقيان بلا مساس — التحويل نسخة في الذاكرة فقط"
+    },
+    "definition": {
+      "noDataAtAll": "measuredCategoriesMean === null — لا فئة أنتجت حرفاً (categoryStates.js، deriveOverallFromCategories)، لا «لم يُقَس شيء»",
+      "zeroMeasuredMessage": "overall.letter === null && noDataAtAll (buildDisplayShapeV7.js)",
+      "abstentionReasons": "تُبنى حين zeroMeasuredMessage مملوء — لكل فئة بلا حرف {category, reason} (buildAbstentionReasons)"
+    },
+    "chain": "runAnalysisInternal الحقيقية (computeFindings، computeCategoryStates، resolveV7Report، buildDisplayShapeV7) + buildV7ResponseForStorage + buildReportDocument + stripNarrativeDetailsVerdictFromV7Response + buildResponse (verifyReport). المُستبدَل نداء المزوّد وحده.",
+    "simulated": {
+      "what": "callAIv7 يُعيد قيمة providerFailedNoFallback الموثَّقة (callAI.js) — لا نداء نموذج ولا شبكة؛ global.fetch فخّ يرمي طوال البناء",
+      "marker": "SIMULATED_NO_MODEL_CALL — عيّنة zero-measured: لا نداء نموذج ولا شبكة",
+      "effects": "narrativeIncomplete=true (السرد غائب، لا نصّ مُختلَق)؛ audit.regeneration.rounds[0].rejectedReasons يحمل العلامة؛ aiModel=null؛ durationMs=0؛ v5Metrics.bodyBuildMs=null",
+      "analyzedAtMs": 1790208000000
+    },
+    "variants": {
+      "default": {
+        "label": "default (battery NO_CALIBRATED_THRESHOLD)",
+        "scanId": "aba0afae-192b-4121-baf9-f2e004def8a1",
+        "files": {
+          "reportsDocument": "v7-reports-document-sample-zero-measured.json",
+          "rawDocument": "v7-report-raw-sample-zero-measured.json",
+          "clientPayload": "v7-client-payload-sample-zero-measured.json",
+          "verifyReport": "v7-verifyReport-response-sample-zero-measured.json"
+        },
+        "transformation": [
+          {
+            "target": "functionalResults[*].status — عناصر الفئات cpu، gpu، display، memory، storage، security، sensors، cellular، wireless",
+            "from": "القيم الحقيقية (pass/warning/fail/…)",
+            "to": "not_tested",
+            "changedCountByCategory": {
+              "cpu": 7,
+              "display": 3,
+              "gpu": 5,
+              "cellular": 7,
+              "wireless": 6,
+              "memory": 3,
+              "storage": 6,
+              "security": 10,
+              "sensors": 12
+            },
+            "reason": "كي لا تُنتج الفئة حرفاً: declaredCount يبقى (الاختبار ما زال مُصرَّحاً به) وexecutedCount=0 → state=UNMEASURED → DECLARED_BUT_NONE_EXECUTED — الآلية الطبيعية نفسها التي تُنتج thermal/camera/gps على المُدخل الحقيقي. القيمة \"not_tested\" حقيقية في المُدخل نفسه (16 عنصراً تحملها فعلاً). status وحده — rawValue/rawValueUnit/notes/componentName بلا مساس."
+          },
+          {
+            "target": "functionalResults[testId=SEC-03] — status وrawValue",
+            "from": {
+              "status": "pass",
+              "rawValue": "2021-08-01"
+            },
+            "to": {
+              "status": "unavailable",
+              "rawValue": "N/A"
+            },
+            "reason": "بوّابة PATCH_AGE تقرأ rawValue وحده (تتجاهل status — categoryStates.js computeGates). مع التاريخ الحقيقي (2021-08-01، أكثر من 36 شهراً) تُطلَق وتُنقذ حرفاً عامّاً (overall.letter=\"B\"، letterSource=\"GATE:PATCH_AGE\") فلا يبقى letter=null ولا يمتلئ zeroMeasuredMessage (قيس: أوقف التشغيل الأوّل لهذا المولّد). الشكل البديل هو ما يحمله المُدخل نفسه لاختبارات لا قراءة لها: status=\"unavailable\" وrawValue=\"N/A\" (B-08، SEC-07، T-01، T-02، T-03). ROOT_DETECTED يقرأ status وحده، وSEC-04 صار not_tested بالتحويل الأوّل → INPUT_ABSENT."
+          },
+          {
+            "target": "timeSeries.header.scanId",
+            "from": "bcab2f02-a4a3-45e0-831e-190bb2c1a0a4",
+            "to": "aba0afae-192b-4121-baf9-f2e004def8a1",
+            "reason": "معرّف مميَّز لكل عيّنة مشتقّة كي لا تتصادم هوية المستند والمسار (timeSeriesStoragePath) مع عيّنات 34dff2b8 الحقيقية الأخرى؛ تبقى ترويسة السلسلة متّسقة مع scanId المستند."
+          }
+        ],
+        "zeroMeasuredMessage": "لم يُقَس شيء قابل للحكم",
+        "codesCovered": [
+          "DECLARED_BUT_NONE_EXECUTED",
+          "NO_CALIBRATED_THRESHOLD",
+          "NO_HEALTH_BEARING_TESTS_DECLARED"
+        ],
+        "codeCategories": {
+          "DECLARED_BUT_NONE_EXECUTED": [
+            "thermal",
+            "cpu",
+            "gpu",
+            "display",
+            "memory",
+            "storage",
+            "camera",
+            "gps",
+            "security",
+            "sensors",
+            "cellular",
+            "wireless"
+          ],
+          "NO_CALIBRATED_THRESHOLD": [
+            "battery"
+          ],
+          "NO_HEALTH_BEARING_TESTS_DECLARED": [
+            "audio",
+            "input"
+          ]
+        },
+        "findingsStatus": "MEASURED"
+      },
+      "batteryHarnessError": {
+        "label": "battery HARNESS_ERROR (samples=[])",
+        "scanId": "85ca0ceb-e142-4be4-aaf6-c929037538a5",
+        "files": {
+          "reportsDocument": "v7-reports-document-sample-zero-measured-battery-harness-error.json",
+          "rawDocument": "v7-report-raw-sample-zero-measured-battery-harness-error.json",
+          "clientPayload": "v7-client-payload-sample-zero-measured-battery-harness-error.json",
+          "verifyReport": "v7-verifyReport-response-sample-zero-measured-battery-harness-error.json"
+        },
+        "transformation": [
+          {
+            "target": "functionalResults[*].status — عناصر الفئات cpu، gpu، display، memory، storage، security، sensors، cellular، wireless",
+            "from": "القيم الحقيقية (pass/warning/fail/…)",
+            "to": "not_tested",
+            "changedCountByCategory": {
+              "cpu": 7,
+              "display": 3,
+              "gpu": 5,
+              "cellular": 7,
+              "wireless": 6,
+              "memory": 3,
+              "storage": 6,
+              "security": 10,
+              "sensors": 12
+            },
+            "reason": "كي لا تُنتج الفئة حرفاً: declaredCount يبقى (الاختبار ما زال مُصرَّحاً به) وexecutedCount=0 → state=UNMEASURED → DECLARED_BUT_NONE_EXECUTED — الآلية الطبيعية نفسها التي تُنتج thermal/camera/gps على المُدخل الحقيقي. القيمة \"not_tested\" حقيقية في المُدخل نفسه (16 عنصراً تحملها فعلاً). status وحده — rawValue/rawValueUnit/notes/componentName بلا مساس."
+          },
+          {
+            "target": "functionalResults[testId=SEC-03] — status وrawValue",
+            "from": {
+              "status": "pass",
+              "rawValue": "2021-08-01"
+            },
+            "to": {
+              "status": "unavailable",
+              "rawValue": "N/A"
+            },
+            "reason": "بوّابة PATCH_AGE تقرأ rawValue وحده (تتجاهل status — categoryStates.js computeGates). مع التاريخ الحقيقي (2021-08-01، أكثر من 36 شهراً) تُطلَق وتُنقذ حرفاً عامّاً (overall.letter=\"B\"، letterSource=\"GATE:PATCH_AGE\") فلا يبقى letter=null ولا يمتلئ zeroMeasuredMessage (قيس: أوقف التشغيل الأوّل لهذا المولّد). الشكل البديل هو ما يحمله المُدخل نفسه لاختبارات لا قراءة لها: status=\"unavailable\" وrawValue=\"N/A\" (B-08، SEC-07، T-01، T-02، T-03). ROOT_DETECTED يقرأ status وحده، وSEC-04 صار not_tested بالتحويل الأوّل → INPUT_ABSENT."
+          },
+          {
+            "target": "timeSeries.header.scanId",
+            "from": "bcab2f02-a4a3-45e0-831e-190bb2c1a0a4",
+            "to": "85ca0ceb-e142-4be4-aaf6-c929037538a5",
+            "reason": "معرّف مميَّز لكل عيّنة مشتقّة كي لا تتصادم هوية المستند والمسار (timeSeriesStoragePath) مع عيّنات 34dff2b8 الحقيقية الأخرى؛ تبقى ترويسة السلسلة متّسقة مع scanId المستند."
+          },
+          {
+            "target": "timeSeries.samples",
+            "from": "مصفوفة بـ1606 عيّنة",
+            "to": "[]",
+            "reason": "المسار الحقيقي لبطارية HARNESS_ERROR: runAnalysisInternal يستدعي sampleInputsFromRaw(fingerprint) الذي يُعيد sampleInputs=null بلا عيّنات (sampleInputsFromRaw.js)، فتُنتج computeBatteryCategory reason=\"HARNESS_ERROR\" — تحويل على المُدخل لا حقنٌ في الحساب. أثر جانبي حقيقي تحسبه computeFindings نفسها: findings.status=NOT_MEASURED."
+          }
+        ],
+        "zeroMeasuredMessage": "لم يُقَس شيء قابل للحكم",
+        "codesCovered": [
+          "DECLARED_BUT_NONE_EXECUTED",
+          "HARNESS_ERROR",
+          "NO_HEALTH_BEARING_TESTS_DECLARED"
+        ],
+        "codeCategories": {
+          "DECLARED_BUT_NONE_EXECUTED": [
+            "thermal",
+            "cpu",
+            "gpu",
+            "display",
+            "memory",
+            "storage",
+            "camera",
+            "gps",
+            "security",
+            "sensors",
+            "cellular",
+            "wireless"
+          ],
+          "HARNESS_ERROR": [
+            "battery"
+          ],
+          "NO_HEALTH_BEARING_TESTS_DECLARED": [
+            "audio",
+            "input"
+          ]
+        },
+        "findingsStatus": "NOT_MEASURED"
+      }
+    },
+    "codesCoveredAcrossVariants": [
+      "DECLARED_BUT_NONE_EXECUTED",
+      "HARNESS_ERROR",
+      "NO_CALIBRATED_THRESHOLD",
+      "NO_HEALTH_BEARING_TESTS_DECLARED"
+    ],
+    "codesNotReachable": [
+      {
+        "code": "MANUAL_ATTESTATION_ONLY",
+        "reason": "تنتج categoryAbsenceReason هذا الرمز حين state===\"ATTESTED_ONLY\"، وهي لا تنتج إلا حين تكون كل اختبارات الفئة المنفَّذة attested=true، وattested=true لا يُعطى إلا لعناصر manualResults (categoryStates.js buildAllTestResults، isManual:true). لا عنصر manualResults واحد مُلتزَم في المستودع (git grep لمصفوفة manualResults غير فارغة: صفر نتيجة) — كل استعمال حالي `[]`. بناء عنصر كهذا اختلاق شهادة فنّي لم تقع."
+      },
+      {
+        "code": "NO_BATTERY_INDICATORS_MEASURED",
+        "reason": "احتياطي categoryAbsenceReason للبطارية حين لا noLetterReason ولا reason. computeBatteryCategory (categoryStates.js) يضع noLetterReason=CATEGORY_GRADING_LOCKED_TEXT دائماً مع وجود عيّنات (canGrade ثابت false حتى PLAN-03)، ويضع reason=\"HARNESS_ERROR\" حين لا عيّنات — فلا مسار حقيقي يصل الاحتياطي اليوم (حتى مع measuredCount=0 يبقى noLetterReason حاضراً فيخرج NO_CALIBRATED_THRESHOLD). بلوغه يتطلّب تعديل كود الخادم (ممنوع في هذه المهمّة)."
+      }
+    ],
+    "selfChecks": "المولّد يتوقّف إن لم يتحقّق: overall.letter===null وnoDataAtAll===true، zeroMeasuredMessage نصّ غير فارغ، abstentionReasons مصفوفة كائنات {category, reason} غير فارغة، كل فئة deterministicLetter===null، سبب البطارية = رمز المتغيّر، الرمزان المشتركان حاضران، علامة المحاكاة في audit.regeneration، والأشكال الثلاثة تحمل الحقلين نفسيهما.",
+    "excludedFromComparison": "shortId (عشوائي بتصميمه، generateShortId) على المستوى الأعلى للمستند/الردّ"
+  }
+}

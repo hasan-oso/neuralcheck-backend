@@ -1,0 +1,304 @@
+{
+  "generatedAt": "2026-09-23T01:55:30.980Z",
+  "scenarios": {
+    "١. نجاح من المحاولة الأولى": {
+      "outcome": {
+        "threw": null,
+        "result": {
+          "aiModel": "deepseek-flash",
+          "narrativeIncomplete": false,
+          "narrativeIncompleteFields": [],
+          "guardFinalOk": true,
+          "regenerationRejectedReasons": []
+        }
+      },
+      "pass": true,
+      "networkCalls": 1
+    },
+    "٢. رفض ثم نجاح": {
+      "outcome": {
+        "threw": null,
+        "result": {
+          "aiModel": "deepseek-flash",
+          "narrativeIncomplete": false,
+          "narrativeIncompleteFields": [],
+          "guardFinalOk": true,
+          "regenerationRejectedReasons": [
+            "LANGUAGE:narrative.summary=[ot]",
+            "LANGUAGE:narrative.details=[ot]",
+            "LANGUAGE:narrative.verdict=[ot]",
+            "LANGUAGE:narrative.buyerAdvice.casual=[ot]",
+            "LANGUAGE:narrative.issueDescriptions[ISS-SEC-04]=[ot]",
+            "LANGUAGE:crossChecks[0].description=[ot]"
+          ]
+        }
+      },
+      "pass": true,
+      "networkCalls": 2
+    },
+    "٣. رفض مرّتين → عرض جزئي": {
+      "outcome": {
+        "threw": null,
+        "result": {
+          "aiModel": "deepseek-flash",
+          "narrativeIncomplete": true,
+          "narrativeIncompleteFields": [
+            "narrative.buyerAdvice.casual",
+            "narrative.details",
+            "narrative.issueDescriptions[ISS-SEC-04]",
+            "narrative.summary",
+            "narrative.verdict"
+          ],
+          "guardFinalOk": false,
+          "regenerationRejectedReasons": [
+            "LANGUAGE:narrative.summary=[ot]",
+            "LANGUAGE:narrative.details=[ot]",
+            "LANGUAGE:narrative.verdict=[ot]",
+            "LANGUAGE:narrative.buyerAdvice.casual=[ot]",
+            "LANGUAGE:narrative.issueDescriptions[ISS-SEC-04]=[ot]",
+            "LANGUAGE:crossChecks[0].description=[ot]",
+            "LANGUAGE:narrative.summary=[ot]",
+            "LANGUAGE:narrative.details=[ot]",
+            "LANGUAGE:narrative.verdict=[ot]",
+            "LANGUAGE:narrative.buyerAdvice.casual=[ot]",
+            "LANGUAGE:narrative.issueDescriptions[ISS-SEC-04]=[ot]",
+            "LANGUAGE:crossChecks[0].description=[ot]"
+          ]
+        }
+      },
+      "pass": true,
+      "networkCalls": 2
+    },
+    "٤. فشل DeepSeek الصلب (500 مرّتين) + Gemini محجوب": {
+      "outcome": {
+        "threw": "V7: Both DeepSeek and Gemini failed: DeepSeek HTTP 500: {\"error\":{\"message\":\"Internal server error (simulated)\",\"type\":\"server_error\",\"code\":\"internal_error\"}} / Gemini call failed after 2ms: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: Gemini محجوب — لا إذن ولا مفتاح في هذا القياس",
+        "result": null
+      },
+      "pass": true,
+      "networkCalls": 2
+    },
+    "٥. الميزانية الزمنية — موعد نهائي قريب جداً": {
+      "outcome": {
+        "threw": null,
+        "result": {
+          "aiModel": "deepseek-flash",
+          "narrativeIncomplete": true,
+          "narrativeIncompleteFields": [
+            "narrative.buyerAdvice.casual",
+            "narrative.details",
+            "narrative.issueDescriptions[ISS-SEC-04]",
+            "narrative.summary",
+            "narrative.verdict"
+          ],
+          "guardFinalOk": false,
+          "regenerationRejectedReasons": [
+            "LANGUAGE:narrative.summary=[ot]",
+            "LANGUAGE:narrative.details=[ot]",
+            "LANGUAGE:narrative.verdict=[ot]",
+            "LANGUAGE:narrative.buyerAdvice.casual=[ot]",
+            "LANGUAGE:narrative.issueDescriptions[ISS-SEC-04]=[ot]",
+            "LANGUAGE:crossChecks[0].description=[ot]",
+            "TIME_BUDGET_EXHAUSTED: تبقّى 496ms، يلزم 185000ms على الأقلّ"
+          ]
+        }
+      },
+      "pass": true,
+      "networkCalls": 1
+    }
+  },
+  "multiRunTest": {
+    "results": [
+      {
+        "run": 1,
+        "guardFinalOk": true,
+        "networkCalls": 1
+      },
+      {
+        "run": 2,
+        "guardFinalOk": true,
+        "networkCalls": 1
+      },
+      {
+        "run": 3,
+        "guardFinalOk": true,
+        "networkCalls": 1
+      }
+    ],
+    "pass": true
+  },
+  "capTest": {
+    "maxNetworkRequests": 40,
+    "results": [
+      {
+        "seq": 1,
+        "blocked": false
+      },
+      {
+        "seq": 2,
+        "blocked": false
+      },
+      {
+        "seq": 3,
+        "blocked": false
+      },
+      {
+        "seq": 4,
+        "blocked": false
+      },
+      {
+        "seq": 5,
+        "blocked": false
+      },
+      {
+        "seq": 6,
+        "blocked": false
+      },
+      {
+        "seq": 7,
+        "blocked": false
+      },
+      {
+        "seq": 8,
+        "blocked": false
+      },
+      {
+        "seq": 9,
+        "blocked": false
+      },
+      {
+        "seq": 10,
+        "blocked": false
+      },
+      {
+        "seq": 11,
+        "blocked": false
+      },
+      {
+        "seq": 12,
+        "blocked": false
+      },
+      {
+        "seq": 13,
+        "blocked": false
+      },
+      {
+        "seq": 14,
+        "blocked": false
+      },
+      {
+        "seq": 15,
+        "blocked": false
+      },
+      {
+        "seq": 16,
+        "blocked": false
+      },
+      {
+        "seq": 17,
+        "blocked": false
+      },
+      {
+        "seq": 18,
+        "blocked": false
+      },
+      {
+        "seq": 19,
+        "blocked": false
+      },
+      {
+        "seq": 20,
+        "blocked": false
+      },
+      {
+        "seq": 21,
+        "blocked": false
+      },
+      {
+        "seq": 22,
+        "blocked": false
+      },
+      {
+        "seq": 23,
+        "blocked": false
+      },
+      {
+        "seq": 24,
+        "blocked": false
+      },
+      {
+        "seq": 25,
+        "blocked": false
+      },
+      {
+        "seq": 26,
+        "blocked": false
+      },
+      {
+        "seq": 27,
+        "blocked": false
+      },
+      {
+        "seq": 28,
+        "blocked": false
+      },
+      {
+        "seq": 29,
+        "blocked": false
+      },
+      {
+        "seq": 30,
+        "blocked": false
+      },
+      {
+        "seq": 31,
+        "blocked": false
+      },
+      {
+        "seq": 32,
+        "blocked": false
+      },
+      {
+        "seq": 33,
+        "blocked": false
+      },
+      {
+        "seq": 34,
+        "blocked": false
+      },
+      {
+        "seq": 35,
+        "blocked": false
+      },
+      {
+        "seq": 36,
+        "blocked": false
+      },
+      {
+        "seq": 37,
+        "blocked": false
+      },
+      {
+        "seq": 38,
+        "blocked": false
+      },
+      {
+        "seq": 39,
+        "blocked": false
+      },
+      {
+        "seq": 40,
+        "blocked": false
+      },
+      {
+        "seq": 41,
+        "blocked": true,
+        "reason": "CAP_REACHED: السقف 40 طلبات بلغ — رُفض الطلب رقم 41 قبل الإرسال"
+      }
+    ],
+    "pass": true
+  },
+  "sanitizeTest": {
+    "errorMessageSanitized": "Authentication Fails, Your api key: [KEY-REDACTED] is invalid",
+    "pass": true
+  }
+}

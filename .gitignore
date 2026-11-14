@@ -1,0 +1,49 @@
+# === Node ===
+node_modules/
+**/node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log*
+
+# === Environment / secrets (CRITICAL) ===
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# === Firebase ===
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.runtimeconfig.json
+service-account.json
+serviceAccountKey*.json
+*-firebase-adminsdk-*.json
+
+# === Build outputs ===
+functions/lib/
+dist/
+functions/test/output/
+
+# === Logs / temp ===
+log.txt
+*.log
+
+# === Claude agent ===
+.claude/settings.local.json
+.claude/worktrees/
+
+# === IDE / OS ===
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === Extra safety for the public release ===
+google-services.json
+*.pem
+*.p12
+deploy-log/
+docs/deploy-log/
